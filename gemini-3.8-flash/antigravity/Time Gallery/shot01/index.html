@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>时光画廊 (Time Gallery) - 西方艺术史沉浸式巡礼</title>
+  
+  <!-- 离线样式引入 -->
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/welcome.css">
+  <link rel="stylesheet" href="./css/timeline.css">
+  <link rel="stylesheet" href="./css/gallery.css">
+  <link rel="stylesheet" href="./css/modal.css">
+
+  <!-- Three.js ES 模块映射 -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./js/libs/three.module.js"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="app">
+    <!-- 1. 欢迎页视图层 (WelcomeView) -->
+    <section id="welcome-view" class="view-layer active" aria-label="时光画廊欢迎屏"></section>
+
+    <!-- 2. 树状时间轴视图层 (TimelineView) -->
+    <section id="timeline-view" class="view-layer" aria-label="艺术史树状时间轴"></section>
+
+    <!-- 3. 3D 万神殿艺术长廊视图层 (GalleryView) -->
+    <section id="gallery-view" class="view-layer" aria-label="3D 万神殿画廊">
+      <!-- 3D WebGL 渲染画布容器 -->
+      <div id="gallery-canvas-container"></div>
+
+      <!-- HUD 界面覆盖层 -->
+      <div class="gallery-hud">
+        <!-- 顶部导航栏 -->
+        <header class="gallery-navbar">
+          <button type="button" class="btn btn-outline-gold btn-back-timeline" id="btn-gallery-back">
+            ← 返回时间轴
+          </button>
+          <div class="gallery-nav-center">
+            <h2 class="gallery-period-title" id="gallery-period-title">盛期文艺复兴</h2>
+            <span class="gallery-period-sub" id="gallery-period-sub">High Renaissance · 1490–1527</span>
+          </div>
+          <div class="gallery-hall-tag">
+            <span class="hall-tag-dot"></span>
+            <span>万神殿古典回廊</span>
+          </div>
+        </header>
+
+        <!-- 交互准星 -->
+        <div class="gallery-crosshair" id="gallery-crosshair">
+          <div class="crosshair-ring">
+            <div class="crosshair-dot"></div>
+          </div>
+        </div>
+
+        <!-- 核心交互提示 (按 E 或 点击查看画作) -->
+        <div class="gallery-prompt" id="gallery-prompt">
+          <span class="prompt-key-badge">E</span>
+          <span class="prompt-text">按 E 或 点击查看画作</span>
+        </div>
+
+        <!-- 底部键盘漫游操作提示 -->
+        <footer class="gallery-footer-guide">
+          <div class="controls-hint-bar">
+            <div class="hint-item"><span class="hint-key">W A S D</span> 漫步移动</div>
+            <div class="hint-item"><span class="hint-key">鼠标</span> 转动视角</div>
+            <div class="hint-item"><span class="hint-key">E / 点击</span> 查看画作详情</div>
+          </div>
+        </footer>
+      </div>
+
+      <!-- 指针锁定进入漫游遮罩 -->
+      <div class="pointer-lock-overlay" id="pointer-lock-overlay">
+        <div class="lock-card">
+          <div class="lock-card-title">点击画面开启沉浸漫游</div>
+          <div class="lock-card-desc">WASD 漫游 · 鼠标转动视角 · ESC 释放指针</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 画作近全屏详情面板挂载根 (DetailModal) -->
+    <div id="modal-root"></div>
+  </div>
+
+  <!-- 主程序入口 -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

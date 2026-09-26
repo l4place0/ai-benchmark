@@ -1,0 +1,315 @@
+/**
+ * 时光画廊 (Time Gallery) - 画作近全屏详情面板样式
+ * Near-fullscreen artwork detail inspector modal
+ * STRICT: 四周严格保留约 24px 画廊可见背景 (inset: 24px)
+ * 左侧高清原画，右侧全量结构化元数据，单例防重按 E，ESC 键关闭
+ */
+
+.artwork-modal-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(8, 10, 14, 0.76);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.32s var(--ease-out-expo), 
+              visibility 0.32s var(--ease-out-expo);
+}
+
+.artwork-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+/* ==========================================================================
+   STRICT: 四周留出精确保留约 24px 画廊背景 (inset: 24px)
+   ========================================================================== */
+.artwork-modal-card {
+  position: fixed;
+  top: 24px;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  background: rgba(17, 20, 27, 0.94);
+  border: 1px solid var(--gold-border);
+  border-radius: 18px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.85), 
+              0 0 36px rgba(212, 175, 55, 0.16);
+  display: flex;
+  overflow: hidden;
+  z-index: 2010;
+  transform: scale(0.95) translateY(14px);
+  opacity: 0;
+  transition: transform 0.38s var(--ease-spring), 
+              opacity 0.32s var(--ease-out-expo);
+}
+
+.artwork-modal-overlay.active .artwork-modal-card {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* ==========================================================================
+   左侧：大幅画作巨幅展示区 (Large Artwork Display)
+   ========================================================================== */
+.modal-left-art {
+  flex: 1.15;
+  min-width: 0;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, #151821 0%, #090a0d 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px;
+  position: relative;
+  border-right: 1px solid rgba(212, 175, 55, 0.18);
+  overflow: hidden;
+}
+
+.modal-art-frame-wrap {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.8), 
+              0 0 0 4px #262118, 
+              0 0 0 6px var(--gold-dark);
+}
+
+.modal-art-image {
+  max-width: 100%;
+  max-height: calc(100vh - 120px);
+  object-fit: contain;
+  display: block;
+  border-radius: 2px;
+  transition: transform 0.3s var(--ease-smooth);
+}
+
+.modal-art-image:hover {
+  transform: scale(1.015);
+}
+
+/* 典雅悬浮画作缩放提示 */
+.modal-art-zoom-hint {
+  position: absolute;
+  bottom: 16px;
+  left: 24px;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  background: rgba(13, 15, 20, 0.8);
+  padding: 4px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   右侧：全量结构化元数据信息卡 (Structured Metadata)
+   ========================================================================== */
+.modal-right-meta {
+  flex: 0.85;
+  min-width: 380px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 36px 40px;
+  overflow-y: auto;
+  position: relative;
+  background: linear-gradient(135deg, rgba(20, 24, 32, 0.95) 0%, rgba(13, 16, 22, 0.98) 100%);
+}
+
+/* 顶部操作区 (关闭按钮与快捷键提示) */
+.modal-top-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.modal-period-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(29, 53, 87, 0.6);
+  border: 1px solid var(--gold-border);
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  color: var(--gold-light);
+  letter-spacing: 0.08em;
+  font-weight: var(--fw-bold);
+}
+
+.modal-close-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modal-esc-key {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-close-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(29, 53, 87, 0.5) !important;
+  border: 1px solid var(--gold-border) !important;
+  color: var(--text-primary) !important;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.modal-close-btn:hover {
+  background: rgba(29, 53, 87, 0.9) !important;
+  color: var(--gold-bright) !important;
+  border-color: var(--gold-primary) !important;
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0 4px 18px var(--gold-glow);
+}
+
+/* 标题区 */
+.modal-title-area {
+  margin-bottom: 20px;
+}
+
+.modal-title-zh {
+  font-size: clamp(1.8rem, 2.4vw, 2.5rem);
+  font-weight: var(--fw-black);
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.modal-title-en {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--gold-light);
+  letter-spacing: 0.04em;
+  margin-top: 4px;
+}
+
+/* 艺术家与创作年代网格 */
+.modal-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 18px;
+  background: rgba(13, 16, 22, 0.65);
+  border-radius: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  margin-bottom: 24px;
+}
+
+.meta-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meta-field-label {
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  color: var(--gold-dark);
+  text-transform: uppercase;
+}
+
+.meta-field-value {
+  font-size: 0.98rem;
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+}
+
+.meta-field-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* 时期背景与艺术史评述 */
+.modal-section {
+  margin-bottom: 22px;
+}
+
+.modal-section-title {
+  font-size: 0.84rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.14em;
+  color: var(--gold-light);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.modal-section-title::before {
+  content: "✦";
+  color: var(--gold-primary);
+  font-size: 0.7rem;
+}
+
+.modal-section-desc {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* 馆藏来源与授权协议 */
+.modal-license-box {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px dashed rgba(212, 175, 55, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal-source-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.modal-source-label {
+  color: var(--gold-dark);
+  font-weight: var(--fw-bold);
+  white-space: nowrap;
+}
+
+.modal-source-value {
+  color: var(--text-secondary);
+  word-break: break-all;
+}
+
+.modal-license-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: #70b896;
+  background: rgba(112, 184, 150, 0.12);
+  border: 1px solid rgba(112, 184, 150, 0.3);
+  padding: 4px 10px;
+  border-radius: 6px;
+  align-self: flex-start;
+}

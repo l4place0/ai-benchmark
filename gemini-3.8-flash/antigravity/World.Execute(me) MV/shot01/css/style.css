@@ -1,0 +1,196 @@
+/* Cyberpunk Minimalist Monospace Aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700;900&display=swap');
+
+:root {
+  --bg-color: #04060c;
+  --accent-cyan: #00f3ff;
+  --accent-magenta: #ff0055;
+  --accent-amber: #ffb703;
+  --text-main: #e0f4ff;
+  --text-dim: rgba(0, 243, 255, 0.6);
+  --panel-bg: rgba(6, 12, 24, 0.88);
+  --panel-border: rgba(0, 243, 255, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Master Viewport Container */
+#app-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #0a1122 0%, #030509 100%);
+}
+
+/* Canvas Viewport */
+#canvas-wrapper {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#renderCanvas {
+  max-width: 100%;
+  max-height: 100%;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 0 50px rgba(0, 243, 255, 0.15);
+  border: 1px solid rgba(0, 243, 255, 0.3);
+  background-color: #000;
+}
+
+/* Interactive Control Toolbar */
+#control-bar {
+  width: 100%;
+  height: 72px;
+  background: var(--panel-bg);
+  border-top: 1px solid var(--panel-border);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  gap: 20px;
+  z-index: 100;
+}
+
+.controls-left, .controls-center, .controls-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.controls-center {
+  flex: 1;
+  max-width: 800px;
+}
+
+/* Cyberpunk Styled Buttons */
+.btn-cyber {
+  background: rgba(0, 243, 255, 0.1);
+  color: var(--accent-cyan);
+  border: 1px solid var(--accent-cyan);
+  padding: 8px 18px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-cyber:hover {
+  background: var(--accent-cyan);
+  color: #000;
+  box-shadow: 0 0 16px var(--accent-cyan);
+}
+
+.btn-cyber:active {
+  transform: scale(0.96);
+}
+
+/* Dropdown Scene Selector */
+.select-cyber {
+  background: #060e1d;
+  color: var(--accent-cyan);
+  border: 1px solid var(--panel-border);
+  padding: 8px 12px;
+  font-family: inherit;
+  font-size: 12px;
+  border-radius: 2px;
+  cursor: pointer;
+  outline: none;
+}
+
+.select-cyber option {
+  background: #040813;
+  color: #fff;
+}
+
+/* Progress Scrubber */
+#timeSlider {
+  flex: 1;
+  -webkit-appearance: none;
+  height: 6px;
+  background: rgba(0, 243, 255, 0.2);
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+#timeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 10px var(--accent-cyan);
+  cursor: pointer;
+}
+
+#timeLabel {
+  font-size: 13px;
+  color: var(--text-dim);
+  min-width: 110px;
+  font-variant-numeric: tabular-nums;
+}
+
+.status-badge {
+  font-size: 11px;
+  color: var(--accent-magenta);
+  border: 1px solid var(--accent-magenta);
+  padding: 3px 8px;
+  border-radius: 2px;
+  letter-spacing: 1px;
+}
+
+/* Headless Render Mode overrides */
+body.headless-mode {
+  background: #000 !important;
+}
+
+body.headless-mode #control-bar {
+  display: none !important;
+}
+
+body.headless-mode #canvas-wrapper {
+  width: 1920px !important;
+  height: 1080px !important;
+}
+
+body.headless-mode #renderCanvas {
+  width: 1920px !important;
+  height: 1080px !important;
+  max-width: none !important;
+  max-height: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}

@@ -1,0 +1,1311 @@
+{
+  "title": "A Pelican Riding a Bicycle - Master SVG Vector Design Specification",
+  "version": "1.0.0",
+  "author": "Art Director & SVG Architect Agent",
+  "description": "Production-ready geometric, aesthetic, and structural blueprint for an SVG artwork featuring Captain Gulliver, a charming pelican joyfully riding a vintage coastal cruiser bicycle along a sunlit seaside boardwalk.",
+  "canvas": {
+    "viewBox": "0 0 1200 900",
+    "width": 1200,
+    "height": 900,
+    "aspect_ratio": "4:3",
+    "background_aesthetic": {
+      "theme": "Golden Hour Coastal Boardwalk / Sunny Seaside Breeze",
+      "horizon_y": 530,
+      "ground_plane_y": 740,
+      "sky_description": "Luminous seaside atmosphere with a vertical gradient transitioning from soft azure (#7DD3FC) through pale warm cyan (#BAE6FD) to pastel apricot-gold (#FDE68A) near the horizon. Features a soft glowing sun disc with radial warmth and delicate wispy cirrus clouds drifting eastward.",
+      "distant_scenery": [
+        "Distant soft teal-blue ocean horizon (#0284C7 / #0EA5E9) with gentle pastel whitecap wave highlights.",
+        "Silhouetted white lighthouse and keeper's cottage on a distant headland at canvas left.",
+        "Tiny white sailboat leaning gracefully with the offshore breeze.",
+        "Weathered coastal wooden pier railing with posts and crossbeams fading into soft atmospheric haze."
+      ],
+      "ground_description": "Warm weathered wooden boardwalk promenade (#D6D3D1 to #78716C) with horizontal wood grain lines, nautical bolt pegs, and soft directional contact drop shadows cast by the bike tires and the rider."
+    }
+  },
+  "bicycle": {
+    "style": "Classic 1950s Coastal Cruiser / Roadster",
+    "orientation": "Facing Right (dynamic forward motion, 2-degree forward athletic tilt)",
+    "palette": {
+      "frame_base": "#14B8A6",
+      "frame_shade": "#0F766E",
+      "frame_highlight": "#5EEAD4",
+      "frame_accent_pinstripe": "#FEF08A",
+      "chrome_high": "#FFFFFF",
+      "chrome_mid": "#CBD5E1",
+      "chrome_shade": "#64748B",
+      "chrome_dark": "#334155",
+      "leather_saddle_base": "#9A3412",
+      "leather_saddle_shade": "#78350F",
+      "leather_saddle_highlight": "#D97706",
+      "leather_rivets": "#FBBF24",
+      "tires_tread": "#1E293B",
+      "tires_whitewall": "#F8FAFC",
+      "rims_chrome": "#E2E8F0",
+      "pedal_rubber": "#334155",
+      "pedal_reflector": "#F97316",
+      "bell_brass_base": "#F59E0B",
+      "bell_brass_highlight": "#FEF08A"
+    },
+    "geometry": {
+      "wheelbase": 500,
+      "ground_contact_y": 740,
+      "rear_wheel": {
+        "center": {
+          "x": 350,
+          "y": 610
+        },
+        "outer_tire_radius": 130,
+        "tire_thickness": 18,
+        "whitewall_radius": 116,
+        "rim_radius": 102,
+        "rim_thickness": 6,
+        "hub_radius": 16,
+        "axle_cap_radius": 8,
+        "spoke_count": 24,
+        "spoke_stroke_width": 1.5,
+        "spoke_color": "#E2E8F0",
+        "fender": {
+          "style": "Full retro wrap fender with rolled flared lip",
+          "radius": 142,
+          "fender_width": 14,
+          "arc_angles_deg": {
+            "start": 60,
+            "end": 240
+          },
+          "color": "#14B8A6",
+          "pinstripe_color": "#FEF08A",
+          "stays": [
+            {
+              "from": {
+                "x": 350,
+                "y": 610
+              },
+              "to": {
+                "x": 235,
+                "y": 550
+              }
+            },
+            {
+              "from": {
+                "x": 350,
+                "y": 610
+              },
+              "to": {
+                "x": 275,
+                "y": 690
+              }
+            }
+          ]
+        }
+      },
+      "front_wheel": {
+        "center": {
+          "x": 850,
+          "y": 610
+        },
+        "outer_tire_radius": 130,
+        "tire_thickness": 18,
+        "whitewall_radius": 116,
+        "rim_radius": 102,
+        "rim_thickness": 6,
+        "hub_radius": 16,
+        "axle_cap_radius": 8,
+        "spoke_count": 24,
+        "spoke_stroke_width": 1.5,
+        "spoke_color": "#E2E8F0",
+        "fender": {
+          "style": "Flared front fender with ducktail lip",
+          "radius": 142,
+          "fender_width": 14,
+          "arc_angles_deg": {
+            "start": 30,
+            "end": 170
+          },
+          "color": "#14B8A6",
+          "pinstripe_color": "#FEF08A",
+          "stays": [
+            {
+              "from": {
+                "x": 850,
+                "y": 610
+              },
+              "to": {
+                "x": 950,
+                "y": 675
+              }
+            }
+          ]
+        }
+      },
+      "frame": {
+        "type": "Vintage Twin-Arch Cruiser Frame with Cantilever Tank Rails",
+        "key_nodes": {
+          "bottom_bracket_bb": {
+            "x": 580,
+            "y": 610
+          },
+          "seat_lug": {
+            "x": 530,
+            "y": 430
+          },
+          "head_tube_lower": {
+            "x": 790,
+            "y": 440
+          },
+          "head_tube_upper": {
+            "x": 770,
+            "y": 365
+          },
+          "rear_dropouts": {
+            "x": 350,
+            "y": 610
+          },
+          "front_dropouts": {
+            "x": 850,
+            "y": 610
+          }
+        },
+        "tubes": [
+          {
+            "name": "Seat Tube",
+            "type": "Straight",
+            "from": {
+              "x": 580,
+              "y": 610
+            },
+            "to": {
+              "x": 530,
+              "y": 430
+            },
+            "width": 14,
+            "fill_gradient": "bike_frame_teal"
+          },
+          {
+            "name": "Down Tube",
+            "type": "Gentle Lower Curve",
+            "path": "M 790 440 C 730 520, 650 590, 580 610",
+            "width": 16,
+            "fill_gradient": "bike_frame_teal"
+          },
+          {
+            "name": "Top Tube Primary",
+            "type": "Sweeping Arch Cruiser Top Tube",
+            "path": "M 770 380 Q 640 405, 530 430",
+            "width": 13,
+            "fill_gradient": "bike_frame_teal"
+          },
+          {
+            "name": "Top Tube Cantilever Secondary",
+            "type": "Mid-tank Truss Arch",
+            "path": "M 776 405 Q 650 430, 538 455",
+            "width": 11,
+            "fill_gradient": "bike_frame_teal"
+          },
+          {
+            "name": "Seat Stays",
+            "type": "Straight Dual Stay",
+            "from": {
+              "x": 530,
+              "y": 430
+            },
+            "to": {
+              "x": 350,
+              "y": 610
+            },
+            "width": 10,
+            "fill_gradient": "bike_frame_teal"
+          },
+          {
+            "name": "Chain Stays",
+            "type": "Horizontal Lower Stay",
+            "from": {
+              "x": 580,
+              "y": 610
+            },
+            "to": {
+              "x": 350,
+              "y": 610
+            },
+            "width": 11,
+            "fill_gradient": "bike_frame_teal"
+          },
+          {
+            "name": "Head Tube",
+            "type": "Reinforced Steering Column Sleeve",
+            "from": {
+              "x": 770,
+              "y": 365
+            },
+            "to": {
+              "x": 790,
+              "y": 440
+            },
+            "width": 20,
+            "fill_gradient": "bike_frame_teal"
+          }
+        ],
+        "fork": {
+          "crown": {
+            "x": 790,
+            "y": 440,
+            "width": 22,
+            "height": 12
+          },
+          "blades_path": "M 790 440 C 800 500, 815 565, 850 610",
+          "blade_width": 12,
+          "dropout_accent": "Chrome axle lock nut at (850, 610)"
+        }
+      },
+      "steering_and_controls": {
+        "quill_stem": {
+          "column": {
+            "from": {
+              "x": 770,
+              "y": 365
+            },
+            "to": {
+              "x": 760,
+              "y": 325
+            }
+          },
+          "extension": {
+            "from": {
+              "x": 760,
+              "y": 325
+            },
+            "to": {
+              "x": 742,
+              "y": 320
+            }
+          },
+          "material": "Polished Chrome"
+        },
+        "handlebars": {
+          "style": "Swept-Back Cruiser / Gullwing Handlebars with Relaxed Rake",
+          "center_clamp": {
+            "x": 742,
+            "y": 320
+          },
+          "arch_sweep_path": "M 742 320 C 715 305, 680 325, 672 355",
+          "tube_diameter": 9,
+          "grips": {
+            "position": {
+              "x": 672,
+              "y": 355
+            },
+            "length": 46,
+            "angle_deg": 20,
+            "material": "Honey-caramel hand-stitched leather wrap with brass bar-end plugs"
+          }
+        },
+        "bell": {
+          "type": "Vintage Rotary Brass Dome Bell",
+          "center": {
+            "x": 728,
+            "y": 308
+          },
+          "radius": 14,
+          "thumb_trigger": {
+            "x": 718,
+            "y": 312
+          },
+          "chime_soundwaves": [
+            "M 718 290 A 20 20 0 0 0 710 305",
+            "M 710 280 A 30 30 0 0 0 698 300"
+          ]
+        },
+        "brake_cables": {
+          "front_cable": "M 735 324 C 750 350, 775 390, 792 450",
+          "rear_cable": "M 735 324 C 700 370, 620 420, 520 435"
+        }
+      },
+      "saddle": {
+        "style": "Classic Sprung English Touring Leather Saddle (Brooks B67 style)",
+        "cantle_and_nose": "M 485 410 C 490 398, 550 398, 568 412 C 555 423, 498 424, 485 410 Z",
+        "color_fill": "leather_saddle_grad",
+        "copper_rivets": [
+          {
+            "x": 492,
+            "y": 409,
+            "r": 2.5
+          },
+          {
+            "x": 504,
+            "y": 404,
+            "r": 2.5
+          },
+          {
+            "x": 518,
+            "y": 402,
+            "r": 2.5
+          },
+          {
+            "x": 532,
+            "y": 404,
+            "r": 2.5
+          }
+        ],
+        "springs": {
+          "type": "Dual heavy chrome barrel coil springs",
+          "left_spring": {
+            "x": 495,
+            "y": 422,
+            "width": 14,
+            "height": 20,
+            "turns": 4
+          },
+          "right_spring": {
+            "x": 515,
+            "y": 423,
+            "width": 14,
+            "height": 20,
+            "turns": 4
+          }
+        },
+        "seat_post": {
+          "from": {
+            "x": 530,
+            "y": 430
+          },
+          "to": {
+            "x": 520,
+            "y": 412
+          },
+          "diameter": 10,
+          "material": "Polished Chrome"
+        }
+      },
+      "drivetrain": {
+        "chainring": {
+          "center": {
+            "x": 580,
+            "y": 610
+          },
+          "outer_radius": 42,
+          "teeth_count": 46,
+          "style": "Vintage 5-pointed star chrome cutout with decorative lightening holes"
+        },
+        "rear_cog": {
+          "center": {
+            "x": 350,
+            "y": 610
+          },
+          "radius": 18,
+          "teeth_count": 18
+        },
+        "chain": {
+          "top_run": "M 580 568 L 350 592",
+          "bottom_run": "M 350 628 L 580 652",
+          "link_color": "#64748B"
+        },
+        "chainguard": {
+          "style": "Streamlined deco bullet chainguard with chrome accent chevrons",
+          "path": "M 540 584 C 632 584, 632 636, 540 636 L 415 620 L 415 598 Z",
+          "fill": "bike_frame_teal",
+          "accent_stripe": "#FEF08A"
+        },
+        "crankset_and_pedals": {
+          "crank_length": 62,
+          "foreground_right_crank": {
+            "angle_deg": 52,
+            "arm_end": {
+              "x": 625,
+              "y": 660
+            },
+            "spindle_pin": {
+              "x": 625,
+              "y": 660
+            },
+            "pedal_geometry": {
+              "box": {
+                "x": 610,
+                "y": 652,
+                "width": 34,
+                "height": 16,
+                "rx": 4
+              },
+              "material": "Dual fluted black rubber blocks with chrome cage",
+              "reflector": {
+                "x": 615,
+                "y": 656,
+                "width": 8,
+                "height": 8,
+                "fill": "#F97316"
+              }
+            }
+          },
+          "background_left_crank": {
+            "angle_deg": 232,
+            "arm_end": {
+              "x": 535,
+              "y": 560
+            },
+            "spindle_pin": {
+              "x": 535,
+              "y": 560
+            },
+            "pedal_geometry": {
+              "box": {
+                "x": 520,
+                "y": 554,
+                "width": 30,
+                "height": 14,
+                "rx": 3
+              },
+              "material": "Receding rubber pedal tucked behind frame"
+            }
+          }
+        }
+      }
+    }
+  },
+  "pelican": {
+    "name": "Captain Gulliver",
+    "character_concept": "A charming, dashing, and slightly eccentric maritime pelican on a grand seaside cycling expedition. Emotes pure aerodynamic joy, comedic pride, and jaunty determination.",
+    "palette": {
+      "plumage_white": "#FFFFFF",
+      "plumage_cream_highlight": "#FDFBF7",
+      "plumage_shadow_soft": "#E2E8F0",
+      "plumage_shadow_deep": "#94A3B8",
+      "covert_gray": "#CBD5E1",
+      "primaries_slate": "#334155",
+      "primaries_charcoal": "#0F172A",
+      "quill_accents": "#F8FAFC",
+      "bill_culmen_amber": "#F59E0B",
+      "bill_culmen_highlight": "#FBBF24",
+      "bill_nail_hook": "#EA580C",
+      "pouch_translucent_peach": "#FDA4AF",
+      "pouch_salmon_base": "#FB7185",
+      "pouch_rose_deep": "#F43F5E",
+      "pouch_vascular_lines": "#E11D48",
+      "eye_orbital_skin": "#FEF08A",
+      "eye_sclera": "#FFFBEB",
+      "eye_iris": "#D97706",
+      "eye_pupil": "#0F172A",
+      "eye_catchlight": "#FFFFFF",
+      "leg_tarsus_orange": "#F97316",
+      "leg_tarsus_shade": "#C2410C",
+      "webbing_golden_skin": "#FB923C",
+      "talons_charcoal": "#475569",
+      "cap_navy": "#1E3A8A",
+      "cap_visor_deep": "#172554",
+      "cap_racing_stripe": "#EF4444",
+      "scarf_crimson": "#E11D48",
+      "scarf_polkadot": "#FFFFFF"
+    },
+    "anatomy_and_pose": {
+      "posture_description": "Sporting forward lean of approximately 25 degrees. The pelican's plump torso rests snugly above the leather saddle; its strong webbed feet are clamped firmly onto the pedals delivering power; its neck flexes forward in an eager S-curve; wings act like arms with primary feathers skillfully gripping the handlebars.",
+      "torso_and_plumage": {
+        "center": {
+          "x": 540,
+          "y": 365
+        },
+        "contour_path": "M 460 395 C 475 350, 520 325, 595 335 C 635 342, 645 385, 620 425 C 590 450, 520 445, 480 430 Z",
+        "belly_overlap": "Lower belly softly cushions over the saddle nose at (X: 535, Y: 410).",
+        "tail_feathers": {
+          "fan_origin": {
+            "x": 460,
+            "y": 395
+          },
+          "ruffled_plumes": [
+            "M 460 395 C 430 380, 410 405, 435 418 Z",
+            "M 460 402 C 425 398, 405 425, 438 432 Z",
+            "M 460 412 C 435 420, 415 445, 448 444 Z"
+          ],
+          "color": "White plumage with slate-charcoal edging fluttered by tailwinds."
+        }
+      },
+      "neck_and_head": {
+        "neck_structure": {
+          "curve_type": "Graceful serpentine S-curve leaning forward into headwind",
+          "posterior_path": "M 595 335 C 625 295, 650 245, 640 190",
+          "anterior_path": "M 625 360 C 660 325, 680 270, 658 200",
+          "throat_junction": {
+            "x": 658,
+            "y": 200
+          }
+        },
+        "head_cranium": {
+          "crown_center": {
+            "x": 645,
+            "y": 175
+          },
+          "radius": 24,
+          "crest_plumes": [
+            "M 632 165 C 605 152, 595 168, 620 174 Z",
+            "M 630 172 C 600 168, 592 188, 622 184 Z",
+            "M 635 180 C 608 182, 602 200, 628 194 Z"
+          ]
+        },
+        "eye": {
+          "position": {
+            "x": 665,
+            "y": 172
+          },
+          "outer_orbital_skin": {
+            "shape": "Teardrop mask of bare lemon-yellow skin extending towards bill base",
+            "fill": "#FEF08A",
+            "stroke": "#FBBF24"
+          },
+          "sclera": {
+            "cx": 665,
+            "cy": 172,
+            "r": 8,
+            "fill": "#FFFBEB"
+          },
+          "iris": {
+            "cx": 666,
+            "cy": 172,
+            "r": 5.5,
+            "fill": "#D97706"
+          },
+          "pupil": {
+            "cx": 667,
+            "cy": 172,
+            "r": 3.5,
+            "fill": "#0F172A"
+          },
+          "highlights": [
+            {
+              "cx": 666,
+              "cy": 170,
+              "r": 1.5,
+              "fill": "#FFFFFF"
+            },
+            {
+              "cx": 668,
+              "cy": 173,
+              "r": 0.8,
+              "fill": "#FFFFFF"
+            }
+          ],
+          "eyebrow": "Slight arched feather brow expressing happy concentration and wind-blown excitement."
+        }
+      },
+      "bill_and_gular_pouch": {
+        "culmen_upper_bill": {
+          "dorsal_path": "M 675 178 C 730 184, 790 196, 838 212 C 846 216, 844 225, 836 227 C 785 218, 725 204, 678 198 Z",
+          "culmen_keel_ridge": "Golden amber highlight streak along upper dorsal midline",
+          "dertrum_hook_nail": {
+            "tip": {
+              "x": 844,
+              "y": 222
+            },
+            "style": "Prominent downward recurved raptorial nail hook, colored deep amber-orange (#EA580C)"
+          }
+        },
+        "gular_pouch": {
+          "style": "The iconic elastic pelican throat pouch - voluminous, aerodynamic, and semi-translucent",
+          "sag_contour_path": "M 678 198 C 665 242, 685 305, 745 292 C 802 280, 832 238, 836 227 Z",
+          "fill_gradient": "pelican_pouch_grad",
+          "opacity": 0.88,
+          "vascular_ribs": [
+            "M 690 220 C 700 250, 720 280, 745 292",
+            "M 715 210 C 730 240, 755 270, 780 278",
+            "M 745 205 C 765 230, 790 252, 810 255"
+          ],
+          "hitchhiker_easter_egg": {
+            "subject": "Barnaby the Sardine",
+            "location": {
+              "x": 752,
+              "y": 252
+            },
+            "description": "A tiny cheerful silver-blue coastal sardine poking its cute head and fin out over the pouch rim, wearing microscopic lime-green swim goggles and grinning in the headwind!",
+            "colors": {
+              "body": "#38BDF8",
+              "fin": "#7DD3FC",
+              "eye": "#0F172A",
+              "goggles": "#A3E635"
+            }
+          }
+        }
+      },
+      "wings_and_feather_layering": {
+        "background_left_wing": {
+          "shoulder": {
+            "x": 570,
+            "y": 330
+          },
+          "elbow": {
+            "x": 635,
+            "y": 300
+          },
+          "wrist_primaries": {
+            "x": 712,
+            "y": 322
+          },
+          "action": "Reaching forward on the far side of the stem, primary feather fingers resting gently on the far handlebar grip."
+        },
+        "foreground_right_wing": {
+          "shoulder": {
+            "x": 565,
+            "y": 350
+          },
+          "elbow": {
+            "x": 620,
+            "y": 382
+          },
+          "carpal_joint": {
+            "x": 658,
+            "y": 362
+          },
+          "primaries": {
+            "grip_finger_feathers": "M 660 360 C 675 352, 688 360, 680 375 C 670 380, 658 375, 660 360 Z",
+            "bell_ringer_feather": "Extended outer primary feather tip pointing gracefully forward toward the brass bell lever at (725, 312), caught precisely in the act of chiming 'ding-ding!'",
+            "shaft_highlights": "Crisp white quill lines running down slate-charcoal flight feathers."
+          },
+          "feather_groups": [
+            "Marginal & lesser coverts: Creamy pillowy white scallops overlapping smoothly",
+            "Secondary coverts: Pale silver-gray (#CBD5E1) feather scallop layer",
+            "Primary flight feathers: Deep rich obsidian-slate (#1E293B) with aerodynamic taper"
+          ]
+        }
+      },
+      "legs_and_webbed_feet": {
+        "background_left_leg": {
+          "hip": {
+            "x": 535,
+            "y": 415
+          },
+          "knee": {
+            "x": 508,
+            "y": 485
+          },
+          "tarsus": {
+            "from": {
+              "x": 508,
+              "y": 485
+            },
+            "to": {
+              "x": 535,
+              "y": 560
+            }
+          },
+          "foot": {
+            "pedal_contact": {
+              "x": 535,
+              "y": 560
+            },
+            "attitude": "Totipalmate webbed foot flexed high on the upstroke pedal (angle 232 deg), toes wrapped snugly over pedal cage."
+          }
+        },
+        "foreground_right_leg": {
+          "hip": {
+            "x": 555,
+            "y": 425
+          },
+          "feather_pantaloons": "Soft downy white feather fringe draping over the upper thigh at (X: 560, Y: 450)",
+          "knee": {
+            "x": 580,
+            "y": 535
+          },
+          "tarsus": {
+            "from": {
+              "x": 580,
+              "y": 535
+            },
+            "to": {
+              "x": 625,
+              "y": 660
+            },
+            "width": 14,
+            "fill": "#F97316",
+            "texture": "Reticulate scute scales embossed along front shin with sunny yellow highlight line"
+          },
+          "totipalmate_foot": {
+            "center": {
+              "x": 625,
+              "y": 660
+            },
+            "description": "Magnificent broad webbed bird foot bearing down with full muscular force on the low forward pedal (52 deg angle)",
+            "digits": [
+              {
+                "toe": "Hallux (inner toe)",
+                "tip": {
+                  "x": 595,
+                  "y": 658
+                },
+                "claw": "#475569"
+              },
+              {
+                "toe": "Second Digit",
+                "tip": {
+                  "x": 610,
+                  "y": 676
+                },
+                "claw": "#475569"
+              },
+              {
+                "toe": "Third (Middle) Digit",
+                "tip": {
+                  "x": 638,
+                  "y": 682
+                },
+                "claw": "#475569"
+              },
+              {
+                "toe": "Fourth (Outer) Digit",
+                "tip": {
+                  "x": 662,
+                  "y": 670
+                },
+                "claw": "#475569"
+              }
+            ],
+            "webbing_skin": "Vibrant golden-orange leathery skin webbing (#FB923C) stretching between all 4 digits, showing realistic natural crease folds under foot tension."
+          }
+        }
+      },
+      "accessories": {
+        "cycling_cap": {
+          "style": "Classic 4-panel cotton retro cycling cap (casquette)",
+          "crown_position": {
+            "x": 640,
+            "y": 156
+          },
+          "rotation_deg": -8,
+          "colors": {
+            "crown": "#1E3A8A",
+            "racing_stripe": "#EF4444",
+            "flip_visor": "#172554"
+          },
+          "features": "Short brim flipped briskly upward, showing white underside with retro typographic chevron crest; perched jaunty and secure amidst pelican's crown crest plumes."
+        },
+        "flying_scarf": {
+          "style": "Vintage aviator / cycling silk neckerchief",
+          "knot": {
+            "x": 642,
+            "y": 255
+          },
+          "tails": [
+            {
+              "path": "M 642 255 C 590 238, 510 248, 430 230 C 495 258, 570 268, 642 265 Z",
+              "description": "Long primary streamer billowing backward above the rear saddle"
+            },
+            {
+              "path": "M 638 262 C 585 272, 525 300, 460 292 C 520 308, 585 288, 638 272 Z",
+              "description": "Secondary fluttering streamer rippling lower in the airstream"
+            }
+          ],
+          "color": "#E11D48",
+          "polka_dots": "Crisp white circular polka dots (#FFFFFF, radius 3.5px) distributed dynamically along both streamers."
+        }
+      }
+    }
+  },
+  "layers_order": [
+    {
+      "index": 1,
+      "id": "layer_01_canvas_sky",
+      "description": "Background sky gradient rect, sun disk with warm radial glow, distant pastel clouds."
+    },
+    {
+      "index": 2,
+      "id": "layer_02_distant_coastline",
+      "description": "Sea horizon band, distant white lighthouse & headland silhouette, tiny leaning sailboat, pastel ocean ripple bands."
+    },
+    {
+      "index": 3,
+      "id": "layer_03_promenade_and_ground_shadows",
+      "description": "Wooden boardwalk ground plane, plank perspective lines, diffused contact drop shadows for rear wheel, front wheel, crankset, and rider silhouette."
+    },
+    {
+      "index": 4,
+      "id": "layer_04_rear_wheel_assembly",
+      "description": "Rear tire, retro whitewall ring, chrome wheel rim, 24 spokes, rear axle hub, retro mint-teal fender with chrome support stays."
+    },
+    {
+      "index": 5,
+      "id": "layer_05_background_drivetrain_and_leg",
+      "description": "Left crank arm (pointing backward/upward at 232 deg), left rubber pedal, pelican's left leg (feathered thigh, orange tarsus, webbed foot clamped on high pedal)."
+    },
+    {
+      "index": 6,
+      "id": "layer_06_background_wing_and_far_bar",
+      "description": "Far-side handlebar curve, far grip, pelican's left wing extending forward to rest on the far grip."
+    },
+    {
+      "index": 7,
+      "id": "layer_07_bicycle_rear_frame_and_drivetrain",
+      "description": "Rear chain stays, seat stays, rear cog, bicycle chain upper and lower runs, rear chainguard backplate."
+    },
+    {
+      "index": 8,
+      "id": "layer_08_seatpost_and_saddle",
+      "description": "Chrome seatpost tube, chrome dual coil barrel springs, rich caramel leather touring saddle with copper rivets."
+    },
+    {
+      "index": 9,
+      "id": "layer_09_pelican_torso_and_tail",
+      "description": "Fan of ruffled tail feathers, plump body core plumage with underbelly shadow gradients, base of neck."
+    },
+    {
+      "index": 10,
+      "id": "layer_10_pelican_neck_and_head",
+      "description": "Dynamic S-curved neck, head cranium, crest feather plumes, orbital skin mask, golden iris, pupil with specular catchlights, brow ridge."
+    },
+    {
+      "index": 11,
+      "id": "layer_11_pelican_bill_and_gular_pouch",
+      "description": "Upper culmen bill with amber dertrum tip hook, translucent salmon-rose gular pouch with elastic expansion striations, Barnaby the sardine easter egg."
+    },
+    {
+      "index": 12,
+      "id": "layer_12_pelican_accessories",
+      "description": "Navy blue cycling cap with flipped visor, crimson silk scarf knot and dual fluttering polka-dot streamers."
+    },
+    {
+      "index": 13,
+      "id": "layer_13_bicycle_main_frame_and_chainring",
+      "description": "Seat tube, curved twin top cruiser tubes, down tube, head tube, bottom bracket shell, 5-star chrome chainring, painted chainguard cover with speed striping."
+    },
+    {
+      "index": 14,
+      "id": "layer_14_front_fork_and_wheel",
+      "description": "Front fork steerer and curved blades, front mint-teal fender with chrome stay, front tire, whitewall ring, chrome rim, 24 spokes, front axle hub."
+    },
+    {
+      "index": 15,
+      "id": "layer_15_steering_controls_and_bell",
+      "description": "Quill stem, chrome sweeping cruiser handlebar, stitched leather right grip, vintage brass bell with ding soundwave accents, brake levers and curving cables."
+    },
+    {
+      "index": 16,
+      "id": "layer_16_foreground_leg_and_crank",
+      "description": "Pelican right downy thigh pantaloons, muscular orange tarsus with scale textures, expansive webbed foot bearing down on lower pedal, right chrome crank arm."
+    },
+    {
+      "index": 17,
+      "id": "layer_17_foreground_wing",
+      "description": "Pelican right wing covert feathers, gracefully arched primary flight feathers gripping the bar, index primary feather poised playfully at the bell ringer."
+    },
+    {
+      "index": 18,
+      "id": "layer_18_foreground_lighting_and_atmosphere",
+      "description": "Subtle foreground coastal sun glints, speed wind streaks, tiny dust puff at tire contact, overall master vignette."
+    }
+  ],
+  "gradients_and_filters": {
+    "defs": {
+      "linearGradients": [
+        {
+          "id": "sky_gradient",
+          "x1": "0%",
+          "y1": "0%",
+          "x2": "0%",
+          "y2": "100%",
+          "stops": [
+            {
+              "offset": "0%",
+              "color": "#7DD3FC",
+              "opacity": 1
+            },
+            {
+              "offset": "40%",
+              "color": "#BAE6FD",
+              "opacity": 1
+            },
+            {
+              "offset": "70%",
+              "color": "#FED7AA",
+              "opacity": 1
+            },
+            {
+              "offset": "100%",
+              "color": "#FDE68A",
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "id": "sea_gradient",
+          "x1": "0%",
+          "y1": "0%",
+          "x2": "0%",
+          "y2": "100%",
+          "stops": [
+            {
+              "offset": "0%",
+              "color": "#0284C7",
+              "opacity": 0.9
+            },
+            {
+              "offset": "50%",
+              "color": "#0EA5E9",
+              "opacity": 0.8
+            },
+            {
+              "offset": "100%",
+              "color": "#38BDF8",
+              "opacity": 0.7
+            }
+          ]
+        },
+        {
+          "id": "boardwalk_gradient",
+          "x1": "0%",
+          "y1": "0%",
+          "x2": "0%",
+          "y2": "100%",
+          "stops": [
+            {
+              "offset": "0%",
+              "color": "#E7E5E4",
+              "opacity": 1
+            },
+            {
+              "offset": "25%",
+              "color": "#D6D3D1",
+              "opacity": 1
+            },
+            {
+              "offset": "60%",
+              "color": "#A8A29E",
+              "opacity": 1
+            },
+            {
+              "offset": "100%",
+              "color": "#78716C",
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "id": "bike_frame_teal",
+          "x1": "0%",
+          "y1": "0%",
+          "x2": "100%",
+          "y2": "100%",
+          "stops": [
+            {
+              "offset": "0%",
+              "color": "#5EEAD4",
+              "opacity": 1
+            },
+            {
+              "offset": "35%",
+              "color": "#14B8A6",
+              "opacity": 1
+            },
+            {
+              "offset": "80%",
+              "color": "#0F766E",
+              "opacity": 1
+            },
+            {
+              "offset": "100%",
+              "color": "#115E59",
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "id": "chrome_luster",
+          "x1": "0%",
+          "y1": "0%",
+          "x2": "0%",
+          "y2": "100%",
+          "stops": [
+            {
+              "offset": "0%",
+              "color": "#FFFFFF",
+              "opacity": 1
+            },
+            {
+              "offset": "28%",
+              "color": "#E2E8F0",
+              "opacity": 1
+            },
+            {
+              "offset": "48%",
+              "color": "#64748B",
+              "opacity": 1
+            },
+            {
+              "offset": "68%",
+              "color": "#F8FAFC",
+              "opacity": 1
+            },
+            {
+              "offset": "100%",
+              "color": "#94A3B8",
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "id": "leather_saddle_grad",
+          "x1": "0%",
+          "y1": "0%",
+          "x2": "0%",
+          "y2": "100%",
+          "stops": [
+            {
+              "offset": "0%",
+              "color": "#D97706",
+              "opacity": 1
+            },
+            {
+              "offset": "30%",
+              "color": "#B45309",
+              "opacity": 1
+            },
+            {
+              "offset": "75%",
+              "color": "#78350F",
+              "opacity": 1
+            },
+            {
+              "offset": "100%",
+              "color": "#451A03",
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "id": "pelican_bill_grad",
+          "x1": "0%",
+          "y1": "0%",
+          "x2": "100%",
+          "y2": "20%",
+          "stops": [
+            {
+              "offset": "0%",
+              "color": "#FBBF24",
+              "opacity": 1
+            },
+            {
+              "offset": "55%",
+              "color": "#F59E0B",
+              "opacity": 1
+            },
+            {
+              "offset": "88%",
+              "color": "#EA580C",
+              "opacity": 1
+            },
+            {
+              "offset": "100%",
+              "color": "#C2410C",
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "id": "pelican_pouch_grad",
+          "x1": "0%",
+          "y1": "0%",
+          "x2": "80%",
+          "y2": "100%",
+          "stops": [
+            {
+              "offset": "0%",
+              "color": "#FECDD3",
+              "opacity": 0.95
+            },
+            {
+              "offset": "40%",
+              "color": "#FB7185",
+              "opacity": 0.88
+            },
+            {
+              "offset": "78%",
+              "color": "#F43F5E",
+              "opacity": 0.92
+            },
+            {
+              "offset": "100%",
+              "color": "#BE123C",
+              "opacity": 0.96
+            }
+          ]
+        },
+        {
+          "id": "pelican_body_shading",
+          "x1": "20%",
+          "y1": "0%",
+          "x2": "0%",
+          "y2": "100%",
+          "stops": [
+            {
+              "offset": "0%",
+              "color": "#FFFFFF",
+              "opacity": 1
+            },
+            {
+              "offset": "65%",
+              "color": "#F8FAFC",
+              "opacity": 1
+            },
+            {
+              "offset": "85%",
+              "color": "#E2E8F0",
+              "opacity": 1
+            },
+            {
+              "offset": "100%",
+              "color": "#CBD5E1",
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "id": "brass_bell_grad",
+          "x1": "0%",
+          "y1": "0%",
+          "x2": "100%",
+          "y2": "100%",
+          "stops": [
+            {
+              "offset": "0%",
+              "color": "#FEF08A",
+              "opacity": 1
+            },
+            {
+              "offset": "35%",
+              "color": "#FBBF24",
+              "opacity": 1
+            },
+            {
+              "offset": "75%",
+              "color": "#D97706",
+              "opacity": 1
+            },
+            {
+              "offset": "100%",
+              "color": "#78350F",
+              "opacity": 1
+            }
+          ]
+        },
+        {
+          "id": "tarsus_gradient",
+          "x1": "0%",
+          "y1": "0%",
+          "x2": "100%",
+          "y2": "0%",
+          "stops": [
+            {
+              "offset": "0%",
+              "color": "#FDBA74",
+              "opacity": 1
+            },
+            {
+              "offset": "30%",
+              "color": "#F97316",
+              "opacity": 1
+            },
+            {
+              "offset": "100%",
+              "color": "#C2410C",
+              "opacity": 1
+            }
+          ]
+        }
+      ],
+      "radialGradients": [
+        {
+          "id": "sun_glow",
+          "cx": "50%",
+          "cy": "50%",
+          "r": "50%",
+          "stops": [
+            {
+              "offset": "0%",
+              "color": "#FFFFFF",
+              "opacity": 0.95
+            },
+            {
+              "offset": "25%",
+              "color": "#FEF08A",
+              "opacity": 0.75
+            },
+            {
+              "offset": "65%",
+              "color": "#FDBA74",
+              "opacity": 0.3
+            },
+            {
+              "offset": "100%",
+              "color": "#FDBA74",
+              "opacity": 0
+            }
+          ]
+        },
+        {
+          "id": "tire_contact_shadow",
+          "cx": "50%",
+          "cy": "50%",
+          "r": "50%",
+          "stops": [
+            {
+              "offset": "0%",
+              "color": "#0F172A",
+              "opacity": 0.55
+            },
+            {
+              "offset": "35%",
+              "color": "#1E293B",
+              "opacity": 0.3
+            },
+            {
+              "offset": "75%",
+              "color": "#334155",
+              "opacity": 0.1
+            },
+            {
+              "offset": "100%",
+              "color": "#0F172A",
+              "opacity": 0
+            }
+          ]
+        },
+        {
+          "id": "rider_body_shadow",
+          "cx": "50%",
+          "cy": "50%",
+          "r": "50%",
+          "stops": [
+            {
+              "offset": "0%",
+              "color": "#0F172A",
+              "opacity": 0.35
+            },
+            {
+              "offset": "50%",
+              "color": "#1E293B",
+              "opacity": 0.18
+            },
+            {
+              "offset": "100%",
+              "color": "#1E293B",
+              "opacity": 0
+            }
+          ]
+        }
+      ],
+      "filters": [
+        {
+          "id": "soft_shadow_filter",
+          "stdDeviation": 8,
+          "dx": 18,
+          "dy": 24,
+          "opacity": 0.28
+        },
+        {
+          "id": "glow_filter",
+          "stdDeviation": 3.5,
+          "color": "#FEF08A"
+        }
+      ]
+    }
+  },
+  "implementation_checklist_for_render_agent": [
+    "Verify viewBox is exactly '0 0 1200 900' with preserveAspectRatio='xMidYMid meet'.",
+    "Bicycle wheel centers must sit precisely at (350, 610) for rear and (850, 610) for front, with outer tire radius 130 touching ground at Y=740.",
+    "Generate exactly 24 spokes per wheel using parametric angle loops: x = cx + r * cos(theta), y = cy + r * sin(theta).",
+    "Occlusion hierarchy must strictly follow layers_order (1 through 18) to avoid visual sorting glitches between limbs, frame, and wheels.",
+    "The pelican pouch must exhibit translucency (opacity ~0.88) so the charming little passenger sardine is visible inside/peeking out.",
+    "Dynamic windblown details (scarf streamers, crest plumes, tail ruffles) must curve horizontally leftwards to heighten forward cycling momentum."
+  ]
+}

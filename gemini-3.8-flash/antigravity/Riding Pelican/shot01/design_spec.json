@@ -1,0 +1,1135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "meta": {
+    "title": "Pelican Riding a Bicycle - Master Vector Design Specification",
+    "version": "1.0.0",
+    "target_format": "W3C Scalable Vector Graphics (SVG 1.1 / SVG 2.0)",
+    "canvas": {
+      "width": 1000,
+      "height": 800,
+      "viewBox": "0 0 1000 800",
+      "coordinate_origin": "top-left (0,0)",
+      "aspect_ratio": "5:4 (1.25)",
+      "unit": "user units (pixels)",
+      "orientation": "landscape",
+      "ground_plane_y": 710,
+      "curb_horizon_y": 680
+    },
+    "description": "Comprehensive design specification and geometric blueprint for an SVG vector illustration depicting a joyful pelican riding a vintage retro roadster bicycle along a sunlit coastal promenade."
+  },
+  "art_direction": {
+    "genre": "Retro Whimsical Narrative Vector Illustration",
+    "mood_and_tone": "Joyful, buoyant, humorous, determined, sun-drenched coastal breeze",
+    "stylistic_pillars": [
+      "Mid-century European picture book aesthetic with dynamic character silhouette",
+      "Clean mathematical vector contours with varied stroke weights (1.5px to 5px)",
+      "Luminous gradients paired with distinct cell-shading for volume and tactile depth",
+      "Organic coastal breezy atmosphere with streamlined motion accents"
+    ],
+    "lighting_model": {
+      "key_light": {
+        "description": "Warm golden morning sun originating high-left",
+        "vector_origin": { "x": 280, "y": 90 },
+        "angle_deg": 68,
+        "color": "#FFFBEB",
+        "intensity": 1.0
+      },
+      "fill_ambient": {
+        "description": "Cool coastal sky reflection illuminating under-planes and feathers",
+        "color": "#BAE6FD",
+        "intensity": 0.35
+      },
+      "translucency_glow": {
+        "description": "Backlit subsurface scattering through gular pouch and webbed foot margins",
+        "color": "#FDBA74",
+        "intensity": 0.65
+      },
+      "cast_shadows": {
+        "description": "Soft elongated elliptical contact shadows on pavement",
+        "color": "#0F172A",
+        "opacity": 0.22,
+        "blur_std_dev": 6
+      }
+    }
+  },
+  "color_palette": {
+    "pelican_plumage": {
+      "feathers_base": { "hex": "#F8FAFC", "label": "Ivory White", "role": "Primary body highlights and crest" },
+      "feathers_body": { "hex": "#F1F5F9", "label": "Soft Off-White", "role": "Main breast, neck, and torso fill" },
+      "feathers_midtone": { "hex": "#E2E8F0", "label": "Mist Gray", "role": "Feather overlapping edges and soft core shading" },
+      "feathers_shadow": { "hex": "#CBD5E1", "label": "Periwinkle Slate", "role": "Under-belly, under-wing, and neck crease shading" },
+      "covert_feathers": { "hex": "#64748B", "label": "Slate Gray", "role": "Secondary wing covert feather banding" },
+      "primary_flight_feathers": { "hex": "#334155", "label": "Dark Charcoal Slate", "role": "Wingtip primary flight feathers and tail tips" },
+      "feather_accents_deep": { "hex": "#1E293B", "label": "Midnight Slate", "role": "Wing tip quill lines and deep feather separation" }
+    },
+    "pelican_bill_and_pouch": {
+      "culmen_ridge": { "hex": "#FEF08A", "label": "Pale Gold Highlight", "role": "Top highlight glint along the dorsal beak ridge" },
+      "upper_mandible_base": { "hex": "#F59E0B", "label": "Vibrant Golden Amber", "role": "Main upper bill surface" },
+      "upper_mandible_shadow": { "hex": "#D97706", "label": "Deep Ochre", "role": "Under-lip tomia and bill lateral groove" },
+      "culmen_hook_nail": { "hex": "#B45309", "label": "Burnt Sienna Hook", "role": "Down-curved sharp terminal hook on upper beak" },
+      "gular_pouch_base": { "hex": "#FB7185", "label": "Warm Salmon Pink", "role": "Elastic gular pouch middle body" },
+      "gular_pouch_highlight": { "hex": "#FDA4AF", "label": "Coral Rose Glow", "role": "Upper pouch translucent rim and stretch folds" },
+      "gular_pouch_subsurface": { "hex": "#FDBA74", "label": "Luminous Peach Orange", "role": "Internal backlit glow through elastic throat skin" },
+      "gular_pouch_crease": { "hex": "#E11D48", "label": "Crimson Rose Shadow", "role": "Pouch under-sagging shadow and ventral striation creases" }
+    },
+    "pelican_facial_and_limbs": {
+      "orbital_skin": { "hex": "#FECDD3", "label": "Pale Blushing Pink", "role": "Bare facial skin patch around eye and beak base" },
+      "eye_ring": { "hex": "#FFE4E6", "label": "Light Eyelid Rim", "role": "Outer eye contour ring" },
+      "eye_iris": { "hex": "#F59E0B", "label": "Golden Topaz", "role": "Iris ring radiating curiosity and happiness" },
+      "eye_pupil": { "hex": "#0F172A", "label": "Inky Navy Black", "role": "Dilated joyful pupil" },
+      "eye_sparkle": { "hex": "#FFFFFF", "label": "Pure White Glint", "role": "Dual specular highlights (key glint + secondary bounce)" },
+      "leg_tarsus_base": { "hex": "#FB923C", "label": "Warm Coral Orange", "role": "Bare avian tarsus (lower leg)" },
+      "leg_tarsus_shadow": { "hex": "#EA580C", "label": "Deep Tangerine", "role": "Ankle joints, leg undersides, and scales" },
+      "foot_webbing": { "hex": "#FDBA74", "label": "Sunlit Amber Webbing", "role": "Totipalmate webbing membrane stretched between toes" },
+      "foot_webbing_crease": { "hex": "#EA580C", "label": "Tendon Shadow", "role": "Webbing fold arcs and tendon lines" },
+      "claws_talons": { "hex": "#78350F", "label": "Horn Umber", "role": "Pedal-gripping claws on toe tips" }
+    },
+    "bicycle_frame": {
+      "tubing_base": { "hex": "#0D9488", "label": "Retro Seaside Teal", "role": "Vintage enamel bike frame main color" },
+      "tubing_highlight": { "hex": "#14B8A6", "label": "Vibrant Turquoise", "role": "Top tube and fork upper highlights" },
+      "tubing_specular": { "hex": "#2DD4BF", "label": "Luminous Mint", "role": "Reflective tube curvature glints" },
+      "tubing_shadow": { "hex": "#115E59", "label": "Deep Forest Teal", "role": "Lug junctions, bottom bracket shell, and tube underside shadows" },
+      "headbadge_decal": { "hex": "#CCFBF1", "label": "Cream Decal Mint", "role": "Vintage script decals and headbadge fill" }
+    },
+    "bicycle_hardware_and_chrome": {
+      "chrome_bright": { "hex": "#F8FAFC", "label": "Specular Chrome White", "role": "Handlebar, crank, and rim highlight edges" },
+      "chrome_midtone": { "hex": "#CBD5E1", "label": "Polished Silver Steel", "role": "Handlebar stem, cranks, seatpost, wheel rims" },
+      "spokes_silver": { "hex": "#94A3B8", "label": "Spoke Metallic Gray", "role": "Wheel spokes, hub flanges, and chain links" },
+      "hardware_dark": { "hex": "#64748B", "label": "Machined Steel Gray", "role": "Bottom bracket axle, pedal axles, chain cog teeth" },
+      "tire_tread": { "hex": "#334155", "label": "Deep Slate Rubber", "role": "Tire tread surface and bead" },
+      "tire_shadow": { "hex": "#1E293B", "label": "Dark Asphalt Charcoal", "role": "Deep tire profile and tread grooves" },
+      "tire_whitewall": { "hex": "#F1F5F9", "label": "Vintage Whitewall Stripe", "role": "Classic retro whitewall sidewall ring" },
+      "tire_gumwall": { "hex": "#D97706", "label": "Gumwall Amber Stripe", "role": "Optional vintage gumwall sidewall band" }
+    },
+    "leather_and_accents": {
+      "saddle_leather_top": { "hex": "#92400E", "label": "Cognac Leather", "role": "Brooks-style molded leather saddle top" },
+      "saddle_leather_base": { "hex": "#78350F", "label": "Deep Chestnut Brown", "role": "Saddle cantle, skirts, and handlebar grips" },
+      "saddle_leather_shadow": { "hex": "#451A03", "label": "Burnt Espresso", "role": "Saddle under-rail shadows and rivet pockets" },
+      "saddle_rivets": { "hex": "#EAB308", "label": "Polished Brass", "role": "Hammered copper/brass saddle cantle rivets" },
+      "bell_dome_gold": { "hex": "#EAB308", "label": "Vintage Brass Bell", "role": "Rotary handlebar brass bell dome" },
+      "bell_shadow": { "hex": "#CA8A04", "label": "Dark Brass Shadow", "role": "Bell rim and ringer mechanism" }
+    },
+    "accessories_and_cargo": {
+      "cyclist_cap_navy": { "hex": "#1E3A8A", "label": "Vintage Racing Navy", "role": "Cycling casquette main panel" },
+      "cyclist_cap_stripe": { "hex": "#FEF3C7", "label": "Vintage Off-White Stripe", "role": "Casquette center racing band" },
+      "cyclist_cap_visor_coral": { "hex": "#F43F5E", "label": "Retro Coral Accent", "role": "Visor underside accent stripe" },
+      "goggles_leather_strap": { "hex": "#0F172A", "label": "Charcoal Black Strap", "role": "Aviator goggle elastic headstrap" },
+      "goggles_brass_rim": { "hex": "#D97706", "label": "Antiqued Brass Frame", "role": "Round goggle lens bezel" },
+      "goggles_lens_glass": { "hex": "#38BDF8", "label": "Sky Cyan Reflection", "role": "Goggle lens glass with specular glint" },
+      "basket_wicker_light": { "hex": "#FDE68A", "label": "Golden Wicker Cane", "role": "Front parcel basket woven reed highlights" },
+      "basket_wicker_dark": { "hex": "#D97706", "label": "Toasted Wicker Shadow", "role": "Basket weave shadows and border frame" },
+      "basket_straps": { "hex": "#78350F", "label": "Harness Leather", "role": "Leather handlebar attachment buckles" },
+      "fish_body_blue": { "hex": "#38BDF8", "label": "Silvery Cerulean", "role": "Little fresh fish body in basket" },
+      "fish_back_cobalt": { "hex": "#0284C7", "label": "Cobalt Marine Dorsal", "role": "Fish back ridge and dorsal fin" },
+      "fish_belly_pearl": { "hex": "#F0FDFA", "label": "Iridescent Pearl Belly", "role": "Fish underbelly and glistening scales" },
+      "fish_eye_sparkle": { "hex": "#FFFFFF", "label": "Cartoon Specular White", "role": "Derpy fish wide eye highlight" },
+      "fish_mouth_pink": { "hex": "#FB7185", "label": "Fish Gills and Mouth", "role": "Surprised happy open fish mouth" },
+      "water_splash_drops": { "hex": "#7DD3FC", "label": "Splash Cyan", "role": "Dynamic water droplets flinging from fish and pouch" }
+    },
+    "coastal_environment": {
+      "sky_zenith": { "hex": "#38BDF8", "label": "Azure Sky", "role": "Upper sky gradient start" },
+      "sky_mid": { "hex": "#7DD3FC", "label": "Breeze Sky Blue", "role": "Mid atmosphere transition" },
+      "sky_horizon_glow": { "hex": "#FEF08A", "label": "Golden Shore Mist", "role": "Distant coastal warm haze" },
+      "ocean_deep": { "hex": "#0284C7", "label": "Deep Coastal Blue", "role": "Distant ocean horizon band" },
+      "ocean_mid": { "hex": "#0EA5E9", "label": "Pacific Cyan", "role": "Mid sea water surface" },
+      "ocean_wave_crest": { "hex": "#E0F2FE", "label": "Sea Foam White", "role": "Distant sparkling whitecaps and wave ribbons" },
+      "boardwalk_wood_warm": { "hex": "#FCD34D", "label": "Sunlit Boardwalk Timber", "role": "Warm seaside plank surface fill" },
+      "boardwalk_plank_groove": { "hex": "#B45309", "label": "Timber Seam Shadow", "role": "Perspective lines between wooden planks" },
+      "promenade_curb": { "hex": "#E2E8F0", "label": "Coastal Granite Curb", "role": "Upper road border separating path from seaside" },
+      "motion_streamlines": { "hex": "#FFFFFF", "label": "Pure Wind White", "role": "Speed lines indicating breezy forward movement" }
+    }
+  },
+  "geometric_scaffolding": {
+    "key_coordinates": {
+      "ground_road_y": { "x": null, "y": 680, "description": "Boardwalk horizon curb line; contact baseline y=710" },
+      "rear_hub": { "x": 280, "y": 600, "description": "Rear wheel center axis and rear frame dropout" },
+      "front_hub": { "x": 720, "y": 600, "description": "Front wheel center axis and fork dropouts" },
+      "bottom_bracket": { "x": 480, "y": 600, "description": "Bottom bracket spindle and chainring center" },
+      "seat_lug": { "x": 420, "y": 420, "description": "Top of seat tube, intersection of seat tube, top tube, and seat stays" },
+      "head_tube_top": { "x": 660, "y": 340, "description": "Upper headset bearing cup where quill stem enters" },
+      "head_tube_bottom": { "x": 675, "y": 410, "description": "Lower headset cup and fork crown interface" },
+      "head_tube_center": { "x": 667, "y": 375, "description": "Midpoint of head tube structure" },
+      "quill_stem_junction": { "x": 655, "y": 305, "description": "Top of vertical quill stem riser" },
+      "handlebar_clamp": { "x": 668, "y": 305, "description": "Handlebar center clamp at stem extension" },
+      "handlebar_near_grip": { "x": 645, "y": 320, "description": "Left/near handlebar grip clutched by near wing" },
+      "handlebar_far_grip": { "x": 685, "y": 305, "description": "Right/far handlebar grip gripped by far wing" },
+      "brass_bell_mount": { "x": 672, "y": 295, "description": "Mounted bell atop handlebar sweep" },
+      "seatpost_top": { "x": 405, "y": 382, "description": "Seatpost clamp under saddle rails" },
+      "saddle_center": { "x": 390, "y": 400, "description": "Geometric visual center of leather saddle assembly" },
+      "saddle_nose": { "x": 435, "y": 392, "description": "Forward tip of vintage leather saddle" },
+      "saddle_cantle_rear": { "x": 355, "y": 395, "description": "Widened rear curve of saddle with brass rivets" },
+      "near_pedal_axle": { "x": 440, "y": 675, "description": "Near pedal spindle (crank pointing down-and-back)" },
+      "far_pedal_axle": { "x": 520, "y": 525, "description": "Far pedal spindle (crank pointing up-and-forward)" },
+      "pelican_pelvis": { "x": 400, "y": 380, "description": "Pelican sitting contact patch firmly on saddle leather" },
+      "pelican_tail_tip": { "x": 315, "y": 350, "description": "Aft tip of flared jaunty tail feathers" },
+      "pelican_chest": { "x": 525, "y": 320, "description": "Proud puffed breastbone center" },
+      "pelican_neck_throat_turn": { "x": 545, "y": 230, "description": "Inward throat inflection point of the majestic S-curve" },
+      "pelican_neck_nape_turn": { "x": 505, "y": 220, "description": "Outward dorsal nape inflection point of S-curve" },
+      "pelican_head_center": { "x": 560, "y": 160, "description": "Cranial core of pelican skull" },
+      "pelican_eye": { "x": 575, "y": 155, "description": "Pelican eye center (facing right towards destination)" },
+      "pelican_bill_root": { "x": 590, "y": 155, "description": "Junction between feathered forehead and upper mandible" },
+      "pelican_bill_hook_tip": { "x": 765, "y": 205, "description": "Extreme forward tip of upper bill culmen hook" },
+      "pelican_pouch_lowest": { "x": 665, "y": 280, "description": "Nadir of pendulous, wind-stretched gular pouch" },
+      "pelican_pouch_throat_join": { "x": 570, "y": 205, "description": "Base where elastic throat pouch meets neck feathers" },
+      "basket_top_center": { "x": 742, "y": 350, "description": "Top opening rim center of wicker parcel basket" },
+      "fish_head_tip": { "x": 790, "y": 325, "description": "Tip of happy silvery fish snout poking out" }
+    },
+    "kinematic_and_mechanical_relations": {
+      "wheelbase_distance": 440,
+      "wheel_radius": 110,
+      "ground_tangent_y": 710,
+      "crank_arm_length": 85.0,
+      "crank_near_vector": { "dx": -40, "dy": 75, "angle_deg": 118.07, "calculated_length": 85.0 },
+      "crank_far_vector": { "dx": 40, "dy": -75, "angle_deg": -61.93, "calculated_length": 85.0 },
+      "crank_phase_separation_deg": 180.0,
+      "seat_tube_vector": { "dx": -60, "dy": -180, "angle_deg": 71.57, "tube_length": 189.74 },
+      "chainstay_length": 200.0,
+      "seatstay_length": 228.04,
+      "top_tube_vector": { "dx": 240, "dy": -80, "tube_length": 252.98, "slope_deg": -18.43 },
+      "downtube_vector": { "dx": 195, "dy": -190, "tube_length": 272.26, "slope_deg": -44.25 },
+      "head_tube_angle_deg": 77.9,
+      "fork_rake_offset_forward": 45.0
+    }
+  },
+  "svg_layer_manifest": [
+    {
+      "layer_index": 1,
+      "group_id": "layer-01-sky-backdrop",
+      "description": "Infinite coastal sky gradient rect, sunburst aura at (280, 90), drifting cumulus clouds",
+      "blend_mode": "normal",
+      "opacity": 1.0
+    },
+    {
+      "layer_index": 2,
+      "group_id": "layer-02-coastal-horizon-sea",
+      "description": "Ocean horizon at y=525, layered sea waves, miniature distant lighthouse/headland at left",
+      "blend_mode": "normal",
+      "opacity": 1.0
+    },
+    {
+      "layer_index": 3,
+      "group_id": "layer-03-boardwalk-ground-plane",
+      "description": "Sunlit wooden boardwalk path from y=680 to y=800 with perspective plank gaps and granite curb",
+      "blend_mode": "normal",
+      "opacity": 1.0
+    },
+    {
+      "layer_index": 4,
+      "group_id": "layer-04-atmospheric-wind-lines",
+      "description": "Graceful white motion streamlines conveying ocean breeze and forward velocity",
+      "blend_mode": "screen",
+      "opacity": 0.65
+    },
+    {
+      "layer_index": 5,
+      "group_id": "layer-05-contact-cast-shadows",
+      "description": "Ground contact shadow ellipses under tires, drivetrain, and pelican bulk on the boardwalk",
+      "blend_mode": "multiply",
+      "opacity": 0.25
+    },
+    {
+      "layer_index": 6,
+      "group_id": "layer-06-bike-far-side-elements",
+      "description": "Far pedal (520, 525), far crank arm, far wheel rim/spokes inner arc, far fork blade",
+      "blend_mode": "normal",
+      "opacity": 1.0
+    },
+    {
+      "layer_index": 7,
+      "group_id": "layer-07-pelican-far-wing-and-tail",
+      "description": "Right/far wing extended forward gripping far handlebar or balancing in wind, rear tail feathers",
+      "blend_mode": "normal",
+      "opacity": 1.0
+    },
+    {
+      "layer_index": 8,
+      "group_id": "layer-08-pelican-far-leg-and-foot",
+      "description": "Far feathered thigh, far orange tarsus, far webbed foot planted down on far pedal at (520, 525)",
+      "blend_mode": "normal",
+      "opacity": 1.0
+    },
+    {
+      "layer_index": 9,
+      "group_id": "layer-09-bike-rear-wheel-and-fender",
+      "description": "Full rear wheel centered at (280, 600): tire, whitewall stripe, rim, 16 spokes, teal fender, chrome struts",
+      "blend_mode": "normal",
+      "opacity": 1.0
+    },
+    {
+      "layer_index": 10,
+      "group_id": "layer-10-bike-frame-and-drivetrain",
+      "description": "Teal frame tubes (seat, chainstay, seatstay, down, top, head tube), chainring, chain, rear cog",
+      "blend_mode": "normal",
+      "opacity": 1.0
+    },
+    {
+      "layer_index": 11,
+      "group_id": "layer-11-bike-front-wheel-and-fender",
+      "description": "Full front wheel centered at (720, 600): tire, whitewall, rim, 16 spokes, curved fork blade, front fender",
+      "blend_mode": "normal",
+      "opacity": 1.0
+    },
+    {
+      "layer_index": 12,
+      "group_id": "layer-12-saddle-and-cockpit",
+      "description": "Chrome seatpost, Brooks leather saddle at (390, 400), quill stem, cruiser handlebars, brass bell at (672, 295)",
+      "blend_mode": "normal",
+      "opacity": 1.0
+    },
+    {
+      "layer_index": 13,
+      "group_id": "layer-13-front-basket-and-fish",
+      "description": "Woven wicker basket attached to front fork, silvery-blue fish leaning out with goofy happy expression",
+      "blend_mode": "normal",
+      "opacity": 1.0
+    },
+    {
+      "layer_index": 14,
+      "group_id": "layer-14-pelican-torso-and-neck",
+      "description": "Pelican plump pelvis on saddle, proud chest at (525, 320), elegant S-curving neck up to head base",
+      "blend_mode": "normal",
+      "opacity": 1.0
+    },
+    {
+      "layer_index": 15,
+      "group_id": "layer-15-pelican-head-bill-and-pouch",
+      "description": "Pelican head at (560, 160), cap & goggles, happy eye, golden culmen beak to (765, 205), pendulous salmon pouch",
+      "blend_mode": "normal",
+      "opacity": 1.0
+    },
+    {
+      "layer_index": 16,
+      "group_id": "layer-16-pelican-near-leg-and-pedal",
+      "description": "Near thigh, orange tarsus descending to near webbed foot clutching near pedal at (440, 675), near crank arm",
+      "blend_mode": "normal",
+      "opacity": 1.0
+    },
+    {
+      "layer_index": 17,
+      "group_id": "layer-17-pelican-near-wing-and-grip",
+      "description": "Foreground left wing curving down from shoulder (480, 320); primary flight feathers wrapped around handlebar grip (645, 320)",
+      "blend_mode": "normal",
+      "opacity": 1.0
+    },
+    {
+      "layer_index": 18,
+      "group_id": "layer-18-foreground-highlights-and-splashes",
+      "description": "Specular glints on chrome, bell shine, water droplets splashing from fish and pouch, air streaks",
+      "blend_mode": "screen",
+      "opacity": 0.9
+    }
+  ],
+  "detailed_component_specifications": {
+    "environment": {
+      "sky_background": {
+        "tag": "rect",
+        "attributes": { "x": 0, "y": 0, "width": 1000, "height": 680, "fill": "url(#grad-sky)" },
+        "visual_notes": "Vertical gradient shifting from Azure (#38BDF8) down to Breezy Sky (#7DD3FC) and Warm Golden Mist (#FEF08A) near y=680"
+      },
+      "clouds": [
+        {
+          "id": "cloud-01-upper-left",
+          "tag": "path",
+          "d": "M 80 140 C 90 115, 120 110, 135 125 C 150 105, 185 110, 195 130 C 215 130, 225 145, 215 160 C 215 170, 195 175, 180 175 L 90 175 C 75 175, 65 160, 80 140 Z",
+          "fill": "#FFFFFF",
+          "opacity": 0.85
+        },
+        {
+          "id": "cloud-02-mid-right",
+          "tag": "path",
+          "d": "M 820 90 C 830 70, 855 65, 870 78 C 885 62, 915 65, 925 82 C 940 82, 950 95, 942 108 C 942 118, 925 122, 910 122 L 830 122 C 815 122, 808 108, 820 90 Z",
+          "fill": "#FFFFFF",
+          "opacity": 0.75
+        }
+      ],
+      "ocean_horizon": {
+        "tag": "path",
+        "d": "M 0 525 L 1000 525 L 1000 680 L 0 680 Z",
+        "fill": "url(#grad-ocean)",
+        "visual_notes": "Ocean surface between y=525 and y=680, layered with subtle horizontal white foam lines"
+      },
+      "sea_foam_lines": [
+        { "d": "M 40 560 Q 90 557, 150 560 T 260 560", "stroke": "#E0F2FE", "stroke-width": 2, "opacity": 0.5 },
+        { "d": "M 750 580 Q 820 577, 890 580 T 980 580", "stroke": "#E0F2FE", "stroke-width": 2, "opacity": 0.5 }
+      ],
+      "distant_lighthouse": {
+        "tag": "g",
+        "transform": "translate(110, 485)",
+        "elements": [
+          { "tag": "polygon", "points": "15,40 25,40 23,8 17,8", "fill": "#F8FAFC" },
+          { "tag": "rect", "x": 16, "y": 4, "width": 8, "height": 4, "fill": "#F43F5E" },
+          { "tag": "polygon", "points": "16,4 24,4 20,0", "fill": "#1E293B" }
+        ]
+      },
+      "boardwalk_ground": {
+        "tag": "path",
+        "d": "M 0 680 L 1000 680 L 1000 800 L 0 800 Z",
+        "fill": "url(#grad-boardwalk)",
+        "visual_notes": "Perspective road from y=680 to y=800 with warm wood planks (#FCD34D to #F59E0B)"
+      },
+      "boardwalk_curb_border": {
+        "tag": "rect",
+        "attributes": { "x": 0, "y": 678, "width": 1000, "height": 7, "fill": "#E2E8F0" }
+      },
+      "plank_grooves": [
+        { "d": "M 120 800 L 220 685", "stroke": "#B45309", "stroke-width": 2.5, "opacity": 0.4 },
+        { "d": "M 340 800 L 410 685", "stroke": "#B45309", "stroke-width": 2.5, "opacity": 0.4 },
+        { "d": "M 580 800 L 610 685", "stroke": "#B45309", "stroke-width": 2.5, "opacity": 0.4 },
+        { "d": "M 820 800 L 810 685", "stroke": "#B45309", "stroke-width": 2.5, "opacity": 0.4 }
+      ],
+      "wind_streamlines": [
+        { "d": "M 40 280 C 120 275, 180 290, 240 285", "stroke": "#FFFFFF", "stroke-width": 2.5, "stroke-linecap": "round", "opacity": 0.6 },
+        { "d": "M 150 230 C 220 225, 270 235, 330 230", "stroke": "#FFFFFF", "stroke-width": 2.0, "stroke-linecap": "round", "opacity": 0.5 },
+        { "d": "M 780 180 C 840 175, 890 185, 950 180", "stroke": "#FFFFFF", "stroke-width": 2.5, "stroke-linecap": "round", "opacity": 0.7 },
+        { "d": "M 810 240 C 860 236, 910 244, 960 238", "stroke": "#FFFFFF", "stroke-width": 2.0, "stroke-linecap": "round", "opacity": 0.5 }
+      ]
+    },
+    "bicycle_components": {
+      "ground_shadows": {
+        "tag": "g",
+        "elements": [
+          { "tag": "ellipse", "cx": 280, "cy": 712, "rx": 46, "ry": 8, "fill": "#0F172A", "opacity": 0.28 },
+          { "tag": "ellipse", "cx": 720, "cy": 712, "rx": 46, "ry": 8, "fill": "#0F172A", "opacity": 0.28 },
+          { "tag": "ellipse", "cx": 490, "cy": 714, "rx": 185, "ry": 12, "fill": "#0F172A", "opacity": 0.18 }
+        ]
+      },
+      "rear_wheel": {
+        "center": { "x": 280, "y": 600 },
+        "tire": { "cx": 280, "cy": 600, "r": 110, "stroke": "#334155", "stroke-width": 16, "fill": "none" },
+        "whitewall": { "cx": 280, "cy": 600, "r": 99, "stroke": "#F1F5F9", "stroke-width": 4, "fill": "none" },
+        "rim": { "cx": 280, "cy": 600, "r": 94, "stroke": "#CBD5E1", "stroke-width": 6, "fill": "none" },
+        "inner_rim_void": { "cx": 280, "cy": 600, "r": 90, "fill": "none" },
+        "hub": { "cx": 280, "cy": 600, "r": 12, "fill": "#94A3B8", "stroke": "#475569", "stroke-width": 2 },
+        "spokes": {
+          "count": 16,
+          "algorithm": "Radiate from (280,600) to rim circle r=90 at intervals of 22.5 deg",
+          "stroke": "#94A3B8",
+          "stroke-width": 1.25,
+          "sample_spokes": [
+            { "x1": 280, "y1": 588, "x2": 280, "y2": 510 },
+            { "x1": 288, "y1": 592, "x2": 344, "y2": 536 },
+            { "x1": 292, "y1": 600, "x2": 370, "y2": 600 },
+            { "x1": 288, "y1": 608, "x2": 344, "y2": 664 },
+            { "x1": 280, "y1": 612, "x2": 280, "y2": 690 },
+            { "x1": 272, "y1": 608, "x2": 216, "y2": 664 },
+            { "x1": 268, "y1": 600, "x2": 190, "y2": 600 },
+            { "x1": 272, "y1": 592, "x2": 216, "y2": 536 }
+          ]
+        },
+        "fender": {
+          "d": "M 175 600 A 118 118 0 0 1 370 545",
+          "stroke": "#0D9488",
+          "stroke-width": 14,
+          "stroke-linecap": "round",
+          "fill": "none",
+          "struts": [
+            { "d": "M 280 600 L 180 580", "stroke": "#CBD5E1", "stroke-width": 2.5 },
+            { "d": "M 280 600 L 220 500", "stroke": "#CBD5E1", "stroke-width": 2.5 }
+          ]
+        }
+      },
+      "front_wheel": {
+        "center": { "x": 720, "y": 600 },
+        "tire": { "cx": 720, "cy": 600, "r": 110, "stroke": "#334155", "stroke-width": 16, "fill": "none" },
+        "whitewall": { "cx": 720, "cy": 600, "r": 99, "stroke": "#F1F5F9", "stroke-width": 4, "fill": "none" },
+        "rim": { "cx": 720, "cy": 600, "r": 94, "stroke": "#CBD5E1", "stroke-width": 6, "fill": "none" },
+        "hub": { "cx": 720, "cy": 600, "r": 12, "fill": "#94A3B8", "stroke": "#475569", "stroke-width": 2 },
+        "spokes": {
+          "count": 16,
+          "algorithm": "Radiate from (720,600) to rim circle r=90 at intervals of 22.5 deg",
+          "stroke": "#94A3B8",
+          "stroke-width": 1.25
+        },
+        "fender": {
+          "d": "M 625 550 A 118 118 0 0 1 800 645",
+          "stroke": "#0D9488",
+          "stroke-width": 14,
+          "stroke-linecap": "round",
+          "fill": "none",
+          "struts": [
+            { "d": "M 720 600 L 785 630", "stroke": "#CBD5E1", "stroke-width": 2.5 },
+            { "d": "M 720 600 L 640 535", "stroke": "#CBD5E1", "stroke-width": 2.5 }
+          ]
+        }
+      },
+      "frame_geometry": {
+        "seat_tube": {
+          "d": "M 480 600 L 420 420",
+          "stroke": "url(#grad-frame-teal)",
+          "stroke-width": 14,
+          "stroke-linecap": "round",
+          "lug_accent": "Reinforced collar lug at (420, 420) with chrome clamp bolt"
+        },
+        "chain_stays": {
+          "d": "M 480 600 L 280 600",
+          "stroke": "#0D9488",
+          "stroke-width": 12,
+          "stroke-linecap": "round"
+        },
+        "seat_stays": {
+          "d": "M 420 420 L 280 600",
+          "stroke": "#0D9488",
+          "stroke-width": 10,
+          "stroke-linecap": "round"
+        },
+        "down_tube": {
+          "d": "M 480 600 L 675 410",
+          "stroke": "url(#grad-frame-teal)",
+          "stroke-width": 15,
+          "stroke-linecap": "round",
+          "decal": "White cursive text 'Le Pélican' along middle vector"
+        },
+        "top_tube": {
+          "d": "M 420 420 L 660 345",
+          "stroke": "url(#grad-frame-teal)",
+          "stroke-width": 14,
+          "stroke-linecap": "round"
+        },
+        "head_tube": {
+          "d": "M 660 340 L 675 410",
+          "stroke": "#115E59",
+          "stroke-width": 18,
+          "stroke-linecap": "butt",
+          "chrome_cups": [
+            { "d": "M 654 340 L 666 340", "stroke": "#CBD5E1", "stroke-width": 5 },
+            { "d": "M 669 410 L 681 410", "stroke": "#CBD5E1", "stroke-width": 5 }
+          ]
+        },
+        "front_fork": {
+          "d": "M 675 410 C 678 460, 690 535, 720 600",
+          "stroke": "url(#grad-frame-teal)",
+          "stroke-width": 13,
+          "stroke-linecap": "round",
+          "fork_crown_shading": "Shadow accent at underside of head tube"
+        }
+      },
+      "drivetrain": {
+        "chainring": {
+          "cx": 480,
+          "cy": 600,
+          "r": 36,
+          "fill": "#94A3B8",
+          "stroke": "#64748B",
+          "stroke-width": 2.5,
+          "cutouts": [
+            { "cx": 480, "cy": 582, "r": 6, "fill": "#F1F5F9" },
+            { "cx": 495, "cy": 591, "r": 6, "fill": "#F1F5F9" },
+            { "cx": 495, "cy": 609, "r": 6, "fill": "#F1F5F9" },
+            { "cx": 480, "cy": 618, "r": 6, "fill": "#F1F5F9" },
+            { "cx": 465, "cy": 609, "r": 6, "fill": "#F1F5F9" },
+            { "cx": 465, "cy": 591, "r": 6, "fill": "#F1F5F9" }
+          ]
+        },
+        "rear_cog": { "cx": 280, "cy": 600, "r": 16, "fill": "#64748B" },
+        "chain": {
+          "d": "M 480 564 L 280 584 A 16 16 0 0 0 280 616 L 480 636 A 36 36 0 0 0 480 564",
+          "stroke": "#475569",
+          "stroke-width": 4,
+          "fill": "none",
+          "stroke-dasharray": "6,3"
+        },
+        "far_crank_and_pedal": {
+          "crank_arm": { "d": "M 480 600 L 520 525", "stroke": "#94A3B8", "stroke-width": 8, "stroke-linecap": "round" },
+          "pedal_platform": {
+            "tag": "rect",
+            "x": 507,
+            "y": 521,
+            "width": 26,
+            "height": 8,
+            "rx": 3,
+            "fill": "#334155",
+            "stroke": "#64748B",
+            "stroke-width": 1.5
+          }
+        },
+        "near_crank_and_pedal": {
+          "crank_arm": { "d": "M 480 600 L 440 675", "stroke": "#CBD5E1", "stroke-width": 9, "stroke-linecap": "round" },
+          "spindle_cap": { "cx": 480, "cy": 600, "r": 7, "fill": "#F8FAFC", "stroke": "#64748B", "stroke-width": 1.5 },
+          "pedal_platform": {
+            "tag": "rect",
+            "x": 425,
+            "y": 671,
+            "width": 30,
+            "height": 9,
+            "rx": 3,
+            "fill": "#334155",
+            "stroke": "#CBD5E1",
+            "stroke-width": 1.5
+          }
+        }
+      },
+      "saddle_and_seatpost": {
+        "seatpost": { "d": "M 420 420 L 405 385", "stroke": "#CBD5E1", "stroke-width": 9, "stroke-linecap": "square" },
+        "springs": {
+          "d": "M 372 408 Q 380 415, 388 408 Q 396 401, 404 408",
+          "stroke": "#94A3B8",
+          "stroke-width": 4,
+          "fill": "none"
+        },
+        "saddle_leather": {
+          "d": "M 435 392 C 418 386, 385 382, 360 388 C 352 390, 348 402, 356 406 C 375 412, 400 405, 435 396 Z",
+          "fill": "url(#grad-saddle-leather)",
+          "stroke": "#451A03",
+          "stroke-width": 2,
+          "rivets": [
+            { "cx": 358, "y": 393, "r": 1.8, "fill": "#EAB308" },
+            { "cx": 366, "y": 390, "r": 1.8, "fill": "#EAB308" },
+            { "cx": 376, "y": 388, "r": 1.8, "fill": "#EAB308" }
+          ]
+        }
+      },
+      "cockpit_and_handlebars": {
+        "quill_stem": {
+          "d": "M 660 340 L 655 305 L 668 305",
+          "stroke": "#CBD5E1",
+          "stroke-width": 8,
+          "stroke-linecap": "round",
+          "stroke-linejoin": "round",
+          "fill": "none"
+        },
+        "handlebars": {
+          "d": "M 645 320 C 638 310, 645 298, 668 305 C 685 310, 692 315, 685 305",
+          "stroke": "#CBD5E1",
+          "stroke-width": 7,
+          "stroke-linecap": "round",
+          "fill": "none"
+        },
+        "near_grip": {
+          "d": "M 648 318 L 640 326",
+          "stroke": "#78350F",
+          "stroke-width": 10,
+          "stroke-linecap": "round"
+        },
+        "far_grip": {
+          "d": "M 682 303 L 688 307",
+          "stroke": "#78350F",
+          "stroke-width": 9,
+          "stroke-linecap": "round"
+        },
+        "brass_bell": {
+          "center": { "x": 672, "y": 295 },
+          "dome": { "cx": 672, "cy": 295, "r": 8.5, "fill": "url(#grad-brass-bell)", "stroke": "#B45309", "stroke-width": 1.5 },
+          "specular": { "cx": 670, "cy": 293, "r": 2.5, "fill": "#FEF08A" },
+          "thumb_lever": { "d": "M 665 296 L 660 294", "stroke": "#CBD5E1", "stroke-width": 2.5, "stroke-linecap": "round" }
+        }
+      },
+      "front_basket": {
+        "mounting_brackets": [
+          { "d": "M 675 410 L 705 425", "stroke": "#64748B", "stroke-width": 3.5 },
+          { "d": "M 665 340 L 700 365", "stroke": "#64748B", "stroke-width": 3.5 }
+        ],
+        "basket_body": {
+          "d": "M 690 350 L 795 350 L 780 425 L 705 425 Z",
+          "fill": "#FDE68A",
+          "stroke": "#D97706",
+          "stroke-width": 3,
+          "stroke-linejoin": "round"
+        },
+        "wicker_weave_pattern": {
+          "algorithm": "Diagonal lattice grid overlaying the trapezoid basket frame",
+          "strokes_forward": [
+            { "d": "M 700 350 L 715 425" },
+            { "d": "M 720 350 L 735 425" },
+            { "d": "M 740 350 L 755 425" },
+            { "d": "M 760 350 L 775 425" },
+            { "d": "M 780 350 L 785 410" }
+          ],
+          "strokes_backward": [
+            { "d": "M 785 350 L 770 425" },
+            { "d": "M 765 350 L 750 425" },
+            { "d": "M 745 350 L 730 425" },
+            { "d": "M 725 350 L 710 425" }
+          ],
+          "stroke": "#D97706",
+          "stroke-width": 1.5,
+          "opacity": 0.7
+        },
+        "rim_border": {
+          "d": "M 686 350 L 799 350",
+          "stroke": "#B45309",
+          "stroke-width": 5,
+          "stroke-linecap": "round"
+        }
+      },
+      "fish_passenger": {
+        "body_path": {
+          "d": "M 715 415 C 735 385, 755 350, 790 325 C 795 330, 795 340, 785 355 C 770 380, 750 405, 725 420 Z",
+          "fill": "url(#grad-fish-body)",
+          "stroke": "#0284C7",
+          "stroke-width": 2
+        },
+        "tail_fin": {
+          "d": "M 715 415 L 702 428 L 712 410 L 700 405 Z",
+          "fill": "#38BDF8",
+          "stroke": "#0284C7",
+          "stroke-width": 1.5
+        },
+        "dorsal_fin": {
+          "d": "M 760 338 Q 770 322, 782 328 Z",
+          "fill": "#0284C7"
+        },
+        "pectoral_fin": {
+          "d": "M 765 365 C 775 360, 782 368, 775 375 Z",
+          "fill": "#7DD3FC",
+          "stroke": "#0284C7",
+          "stroke-width": 1.2
+        },
+        "eye": {
+          "outer_white": { "cx": 780, "cy": 332, "r": 5.5, "fill": "#FFFFFF", "stroke": "#0F172A", "stroke-width": 1.2 },
+          "pupil": { "cx": 781, "cy": 332, "r": 2.8, "fill": "#0F172A" },
+          "glint": { "cx": 779.5, "cy": 330.5, "r": 1.0, "fill": "#FFFFFF" }
+        },
+        "mouth": {
+          "d": "M 790 327 Q 795 332, 788 335",
+          "stroke": "#FB7185",
+          "stroke-width": 1.5,
+          "fill": "none"
+        },
+        "water_droplets": [
+          { "cx": 804, "cy": 320, "r": 3.2, "fill": "#7DD3FC", "opacity": 0.85 },
+          { "cx": 814, "cy": 332, "r": 2.2, "fill": "#BAE6FD", "opacity": 0.8 },
+          { "cx": 798, "cy": 308, "r": 2.0, "fill": "#7DD3FC", "opacity": 0.7 }
+        ]
+      }
+    },
+    "pelican_anatomy": {
+      "pelvis_and_tail": {
+        "rump_and_tail_contour": {
+          "d": "M 420 380 C 390 375, 360 368, 335 352 L 325 363 L 315 350 C 322 368, 330 380, 355 390 C 375 398, 395 395, 410 392 Z",
+          "fill": "url(#grad-pelican-feathers)",
+          "stroke": "#CBD5E1",
+          "stroke-width": 2,
+          "notes": "Tail feathers pointing backward-upward over the rear fender"
+        },
+        "tail_feather_notches": [
+          { "d": "M 338 355 L 322 360", "stroke": "#334155", "stroke-width": 2.5 },
+          { "d": "M 348 368 L 332 372", "stroke": "#334155", "stroke-width": 2.5 }
+        ]
+      },
+      "torso_and_breast": {
+        "main_body_path": {
+          "d": "M 390 385 C 410 415, 455 425, 495 400 C 520 382, 545 355, 540 310 C 535 270, 520 270, 480 320 C 440 370, 410 375, 390 385 Z",
+          "fill": "url(#grad-pelican-feathers)",
+          "stroke": "#CBD5E1",
+          "stroke-width": 2.5,
+          "notes": "Plump coastal pelican chest puffed forward in confident cycling posture"
+        },
+        "breast_feather_scallops": [
+          { "d": "M 490 340 Q 505 348, 520 338", "stroke": "#CBD5E1", "stroke-width": 1.5, "fill": "none" },
+          { "d": "M 475 360 Q 492 370, 510 358", "stroke": "#CBD5E1", "stroke-width": 1.5, "fill": "none" }
+        ]
+      },
+      "neck_s_curve": {
+        "ventral_throat_path": {
+          "d": "M 535 315 C 540 275, 550 240, 565 210",
+          "stroke": "#CBD5E1",
+          "stroke-width": 2.5,
+          "notes": "Throat contour rising smoothly from breast to lower jaw base"
+        },
+        "dorsal_nape_path": {
+          "d": "M 465 320 C 495 275, 510 240, 498 210 C 490 190, 510 165, 535 155",
+          "stroke": "#CBD5E1",
+          "stroke-width": 2.5,
+          "notes": "Dorsal neck line arching gracefully backwards then forward into head nape"
+        },
+        "neck_solid_envelope": {
+          "d": "M 535 315 C 540 275, 550 240, 565 210 L 570 205 C 555 175, 545 160, 535 155 C 510 165, 490 190, 498 210 C 510 240, 495 275, 465 320 Z",
+          "fill": "url(#grad-pelican-feathers)"
+        }
+      },
+      "head_and_crest": {
+        "skull_profile": {
+          "d": "M 535 155 C 530 145, 540 135, 555 133 C 572 131, 588 140, 592 155 Z",
+          "fill": "#F8FAFC",
+          "stroke": "#CBD5E1",
+          "stroke-width": 2
+        },
+        "crest_tuft": {
+          "d": "M 536 142 L 518 135 L 530 148 L 512 146 L 528 156 Z",
+          "fill": "#F1F5F9",
+          "stroke": "#CBD5E1",
+          "stroke-width": 1.5,
+          "notes": "Feathery head crest blowing back in the coastal breeze"
+        },
+        "bare_facial_skin_lores": {
+          "d": "M 565 150 C 572 145, 586 148, 592 158 C 588 168, 574 168, 568 162 Z",
+          "fill": "#FECDD3",
+          "opacity": 0.8
+        },
+        "eye_assembly": {
+          "outer_rim": { "cx": 575, "cy": 155, "r": 7.5, "fill": "#FFE4E6", "stroke": "#1E293B", "stroke-width": 1.5 },
+          "iris": { "cx": 575, "cy": 155, "r": 5.5, "fill": "#F59E0B" },
+          "pupil": { "cx": 575.5, "cy": 155, "r": 3.2, "fill": "#0F172A" },
+          "primary_sparkle": { "cx": 574, "cy": 153, "r": 1.3, "fill": "#FFFFFF" },
+          "secondary_sparkle": { "cx": 577, "cy": 156.5, "r": 0.7, "fill": "#FFFFFF" },
+          "smile_crease": { "d": "M 568 164 Q 575 167, 582 165", "stroke": "#FB7185", "stroke-width": 1.2, "fill": "none" }
+        }
+      },
+      "cyclist_cap_and_goggles": {
+        "cap_crown": {
+          "d": "M 538 144 C 545 130, 570 126, 588 134 L 585 142 C 570 137, 550 139, 538 144 Z",
+          "fill": "#1E3A8A",
+          "stroke": "#0F172A",
+          "stroke-width": 1.5
+        },
+        "cap_center_stripe": {
+          "d": "M 558 128 L 565 127 L 568 140 L 561 140 Z",
+          "fill": "#FEF3C7"
+        },
+        "flipped_visor": {
+          "d": "M 588 134 C 596 128, 608 120, 614 116 C 612 122, 604 132, 592 138 Z",
+          "fill": "#F59E0B",
+          "stroke": "#B45309",
+          "stroke-width": 1.5,
+          "underside_accent": "Stripe along visor edge in #F43F5E"
+        },
+        "aviator_goggles": {
+          "strap": { "d": "M 538 144 Q 555 142, 572 143", "stroke": "#0F172A", "stroke-width": 3 },
+          "lens_frame": { "cx": 582, "cy": 142, "r": 8.0, "fill": "none", "stroke": "#D97706", "stroke-width": 2.5 },
+          "lens_glass": { "cx": 582, "cy": 142, "r": 6.0, "fill": "#38BDF8", "opacity": 0.8 },
+          "lens_reflection": { "d": "M 578 144 L 585 138", "stroke": "#FFFFFF", "stroke-width": 1.8, "stroke-linecap": "round" }
+        }
+      },
+      "beak_and_gular_pouch": {
+        "upper_mandible": {
+          "d": "M 590 155 C 640 152, 700 165, 755 200 C 765 208, 768 215, 764 218 C 760 219, 755 215, 750 212 C 700 180, 645 170, 595 170 Z",
+          "fill": "url(#grad-bill-amber)",
+          "stroke": "#B45309",
+          "stroke-width": 2.2,
+          "longitudinal_dorsal_culmen": {
+            "d": "M 592 157 C 642 154, 700 167, 754 201",
+            "stroke": "#FEF08A",
+            "stroke-width": 2.0,
+            "fill": "none"
+          },
+          "hook_nail_accent": {
+            "d": "M 758 204 C 766 210, 767 217, 763 218",
+            "stroke": "#78350F",
+            "stroke-width": 3,
+            "fill": "none"
+          }
+        },
+        "gular_pouch": {
+          "d": "M 595 170 C 645 172, 700 183, 752 212 C 725 250, 700 280, 665 280 C 625 280, 595 240, 570 205 C 580 190, 588 178, 595 170 Z",
+          "fill": "url(#grad-gular-pouch)",
+          "stroke": "#E11D48",
+          "stroke-width": 2.0,
+          "stretch_folds": [
+            { "d": "M 610 185 C 635 220, 655 255, 675 272", "stroke": "#FDA4AF", "stroke-width": 1.5, "fill": "none", "opacity": 0.7 },
+            { "d": "M 638 185 C 662 215, 685 245, 710 252", "stroke": "#FDA4AF", "stroke-width": 1.5, "fill": "none", "opacity": 0.7 },
+            { "d": "M 668 190 C 692 212, 715 230, 736 235", "stroke": "#FDA4AF", "stroke-width": 1.2, "fill": "none", "opacity": 0.6 }
+          ]
+        },
+        "lower_mandible_rami": {
+          "d": "M 580 174 L 752 212",
+          "stroke": "#D97706",
+          "stroke-width": 2.5,
+          "fill": "none"
+        }
+      },
+      "wings": {
+        "far_wing": {
+          "shoulder": { "x": 520, "y": 290 },
+          "d": "M 515 295 C 550 270, 600 275, 645 285 C 670 292, 680 300, 685 305 L 678 312 C 655 305, 615 295, 575 305 C 545 315, 525 320, 510 310 Z",
+          "fill": "#CBD5E1",
+          "stroke": "#64748B",
+          "stroke-width": 2,
+          "flight_feathers_trim": { "d": "M 645 285 L 685 305", "stroke": "#334155", "stroke-width": 4 }
+        },
+        "near_wing": {
+          "shoulder": { "x": 480, "y": 320 },
+          "arm_and_coverts": {
+            "d": "M 480 320 C 515 305, 560 315, 600 325 C 625 330, 642 322, 650 320 C 640 335, 620 345, 595 345 C 555 345, 515 365, 475 340 Z",
+            "fill": "url(#grad-pelican-feathers)",
+            "stroke": "#CBD5E1",
+            "stroke-width": 2.5
+          },
+          "covert_feather_layers": [
+            { "d": "M 505 325 Q 525 338, 545 328", "stroke": "#64748B", "stroke-width": 2, "fill": "none" },
+            { "d": "M 535 330 Q 555 342, 575 332", "stroke": "#64748B", "stroke-width": 2, "fill": "none" }
+          ],
+          "flight_feathers_grasping_grip": {
+            "notes": "Curled primary flight feathers wrapped securely around handlebar grip (645, 320)",
+            "primary_01": { "d": "M 632 312 C 642 305, 655 308, 656 318 C 656 325, 645 327, 638 320", "fill": "#334155", "stroke": "#1E293B", "stroke-width": 1.5 },
+            "primary_02": { "d": "M 636 320 C 646 314, 658 316, 660 326 C 660 334, 648 335, 640 328", "fill": "#334155", "stroke": "#1E293B", "stroke-width": 1.5 },
+            "primary_03": { "d": "M 638 328 C 648 324, 660 327, 658 336 C 656 342, 643 342, 638 334", "fill": "#1E293B", "stroke": "#0F172A", "stroke-width": 1.5 }
+          }
+        }
+      },
+      "legs_and_webbed_feet": {
+        "far_leg": {
+          "thigh": { "d": "M 445 400 L 475 455 L 490 450 L 460 395 Z", "fill": "#E2E8F0" },
+          "tarsus": { "d": "M 480 455 L 512 515", "stroke": "#EA580C", "stroke-width": 10, "stroke-linecap": "round" },
+          "webbed_foot": {
+            "d": "M 505 510 L 535 522 L 528 532 L 500 520 Z",
+            "fill": "#FB923C",
+            "stroke": "#EA580C",
+            "stroke-width": 1.5,
+            "notes": "Planted firmly on far pedal platform at (520, 525)"
+          }
+        },
+        "near_leg": {
+          "thigh": {
+            "d": "M 415 415 C 410 445, 418 475, 428 495 L 446 490 C 445 460, 440 430, 435 415 Z",
+            "fill": "url(#grad-pelican-feathers)",
+            "stroke": "#CBD5E1",
+            "stroke-width": 2
+          },
+          "knee_joint": { "cx": 435, "cy": 492, "r": 7, "fill": "#FB923C" },
+          "tarsus": {
+            "d": "M 435 495 L 436 630",
+            "stroke": "url(#grad-tarsus-coral)",
+            "stroke-width": 12,
+            "stroke-linecap": "round",
+            "scale_rings": [
+              { "d": "M 430 525 L 442 525", "stroke": "#EA580C", "stroke-width": 1.5 },
+              { "d": "M 430 555 L 442 555", "stroke": "#EA580C", "stroke-width": 1.5 },
+              { "d": "M 430 585 L 442 585", "stroke": "#EA580C", "stroke-width": 1.5 },
+              { "d": "M 430 615 L 442 615", "stroke": "#EA580C", "stroke-width": 1.5 }
+            ]
+          },
+          "ankle_joint": { "cx": 436, "cy": 632, "r": 8, "fill": "#FB923C" },
+          "webbed_foot": {
+            "membrane_fill": {
+              "d": "M 436 632 L 418 676 C 428 678, 436 677, 442 682 C 450 678, 458 678, 466 675 L 436 632 Z",
+              "fill": "url(#grad-webbing)",
+              "stroke": "#EA580C",
+              "stroke-width": 1.5
+            },
+            "digits_curling_pedal": [
+              {
+                "digit_name": "Toe 2 (Inner)",
+                "d": "M 436 632 L 418 676 C 416 684, 420 688, 424 685",
+                "stroke": "#FB923C",
+                "stroke-width": 5,
+                "stroke-linecap": "round"
+              },
+              {
+                "digit_name": "Toe 3 (Middle)",
+                "d": "M 436 632 L 442 682 C 442 690, 446 692, 448 688",
+                "stroke": "#FB923C",
+                "stroke-width": 5.5,
+                "stroke-linecap": "round"
+              },
+              {
+                "digit_name": "Toe 4 (Outer)",
+                "d": "M 436 632 L 466 675 C 468 683, 472 684, 473 680",
+                "stroke": "#FB923C",
+                "stroke-width": 5,
+                "stroke-linecap": "round"
+              }
+            ],
+            "talons": [
+              { "d": "M 424 685 L 426 690", "stroke": "#78350F", "stroke-width": 2.5 },
+              { "d": "M 448 688 L 450 694", "stroke": "#78350F", "stroke-width": 2.5 },
+              { "d": "M 473 680 L 476 685", "stroke": "#78350F", "stroke-width": 2.5 }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defs_and_gradients_specification": {
+    "linear_gradients": [
+      {
+        "id": "grad-sky",
+        "x1": "0%", "y1": "0%", "x2": "0%", "y2": "100%",
+        "stops": [
+          { "offset": "0%", "stop-color": "#38BDF8", "stop-opacity": 1.0 },
+          { "offset": "60%", "stop-color": "#7DD3FC", "stop-opacity": 1.0 },
+          { "offset": "100%", "stop-color": "#FEF08A", "stop-opacity": 1.0 }
+        ]
+      },
+      {
+        "id": "grad-ocean",
+        "x1": "0%", "y1": "0%", "x2": "0%", "y2": "100%",
+        "stops": [
+          { "offset": "0%", "stop-color": "#0284C7", "stop-opacity": 1.0 },
+          { "offset": "45%", "stop-color": "#0EA5E9", "stop-opacity": 1.0 },
+          { "offset": "100%", "stop-color": "#38BDF8", "stop-opacity": 1.0 }
+        ]
+      },
+      {
+        "id": "grad-boardwalk",
+        "x1": "0%", "y1": "0%", "x2": "0%", "y2": "100%",
+        "stops": [
+          { "offset": "0%", "stop-color": "#FCD34D", "stop-opacity": 1.0 },
+          { "offset": "100%", "stop-color": "#D97706", "stop-opacity": 1.0 }
+        ]
+      },
+      {
+        "id": "grad-frame-teal",
+        "x1": "0%", "y1": "0%", "x2": "100%", "y2": "100%",
+        "stops": [
+          { "offset": "0%", "stop-color": "#2DD4BF", "stop-opacity": 1.0 },
+          { "offset": "30%", "stop-color": "#0D9488", "stop-opacity": 1.0 },
+          { "offset": "100%", "stop-color": "#115E59", "stop-opacity": 1.0 }
+        ]
+      },
+      {
+        "id": "grad-chrome",
+        "x1": "0%", "y1": "0%", "x2": "100%", "y2": "0%",
+        "stops": [
+          { "offset": "0%", "stop-color": "#F8FAFC", "stop-opacity": 1.0 },
+          { "offset": "35%", "stop-color": "#CBD5E1", "stop-opacity": 1.0 },
+          { "offset": "75%", "stop-color": "#94A3B8", "stop-opacity": 1.0 },
+          { "offset": "100%", "stop-color": "#64748B", "stop-opacity": 1.0 }
+        ]
+      },
+      {
+        "id": "grad-saddle-leather",
+        "x1": "0%", "y1": "0%", "x2": "0%", "y2": "100%",
+        "stops": [
+          { "offset": "0%", "stop-color": "#B45309", "stop-opacity": 1.0 },
+          { "offset": "40%", "stop-color": "#92400E", "stop-opacity": 1.0 },
+          { "offset": "100%", "stop-color": "#451A03", "stop-opacity": 1.0 }
+        ]
+      },
+      {
+        "id": "grad-bill-amber",
+        "x1": "0%", "y1": "0%", "x2": "100%", "y2": "50%",
+        "stops": [
+          { "offset": "0%", "stop-color": "#FEF08A", "stop-opacity": 1.0 },
+          { "offset": "40%", "stop-color": "#F59E0B", "stop-opacity": 1.0 },
+          { "offset": "90%", "stop-color": "#D97706", "stop-opacity": 1.0 },
+          { "offset": "100%", "stop-color": "#B45309", "stop-opacity": 1.0 }
+        ]
+      },
+      {
+        "id": "grad-gular-pouch",
+        "x1": "30%", "y1": "0%", "x2": "70%", "y2": "100%",
+        "stops": [
+          { "offset": "0%", "stop-color": "#FDA4AF", "stop-opacity": 0.95 },
+          { "offset": "35%", "stop-color": "#FB7185", "stop-opacity": 0.95 },
+          { "offset": "70%", "stop-color": "#FDBA74", "stop-opacity": 0.95 },
+          { "offset": "100%", "stop-color": "#E11D48", "stop-opacity": 1.0 }
+        ]
+      },
+      {
+        "id": "grad-pelican-feathers",
+        "x1": "20%", "y1": "0%", "x2": "80%", "y2": "100%",
+        "stops": [
+          { "offset": "0%", "stop-color": "#FFFFFF", "stop-opacity": 1.0 },
+          { "offset": "50%", "stop-color": "#F1F5F9", "stop-opacity": 1.0 },
+          { "offset": "100%", "stop-color": "#CBD5E1", "stop-opacity": 1.0 }
+        ]
+      },
+      {
+        "id": "grad-tarsus-coral",
+        "x1": "0%", "y1": "0%", "x2": "100%", "y2": "0%",
+        "stops": [
+          { "offset": "0%", "stop-color": "#FDBA74", "stop-opacity": 1.0 },
+          { "offset": "50%", "stop-color": "#FB923C", "stop-opacity": 1.0 },
+          { "offset": "100%", "stop-color": "#EA580C", "stop-opacity": 1.0 }
+        ]
+      },
+      {
+        "id": "grad-webbing",
+        "x1": "0%", "y1": "0%", "x2": "0%", "y2": "100%",
+        "stops": [
+          { "offset": "0%", "stop-color": "#FDBA74", "stop-opacity": 0.9 },
+          { "offset": "60%", "stop-color": "#FB923C", "stop-opacity": 0.95 },
+          { "offset": "100%", "stop-color": "#EA580C", "stop-opacity": 1.0 }
+        ]
+      },
+      {
+        "id": "grad-fish-body",
+        "x1": "0%", "y1": "0%", "x2": "100%", "y2": "100%",
+        "stops": [
+          { "offset": "0%", "stop-color": "#7DD3FC", "stop-opacity": 1.0 },
+          { "offset": "50%", "stop-color": "#38BDF8", "stop-opacity": 1.0 },
+          { "offset": "100%", "stop-color": "#0284C7", "stop-opacity": 1.0 }
+        ]
+      }
+    ],
+    "radial_gradients": [
+      {
+        "id": "grad-brass-bell",
+        "cx": "35%", "cy": "30%", "r": "70%",
+        "stops": [
+          { "offset": "0%", "stop-color": "#FEF08A", "stop-opacity": 1.0 },
+          { "offset": "50%", "stop-color": "#EAB308", "stop-opacity": 1.0 },
+          { "offset": "100%", "stop-color": "#CA8A04", "stop-opacity": 1.0 }
+        ]
+      }
+    ],
+    "filters": [
+      {
+        "id": "shadow-filter-soft",
+        "tag": "filter",
+        "attributes": { "x": "-20%", "y": "-20%", "width": "140%", "height": "140%" },
+        "children": [
+          {
+            "tag": "feGaussianBlur",
+            "attributes": { "in": "SourceAlpha", "stdDeviation": 5 }
+          },
+          {
+            "tag": "feOffset",
+            "attributes": { "dx": 0, "dy": 4, "result": "offsetblur" }
+          },
+          {
+            "tag": "feComponentTransfer",
+            "attributes": {},
+            "children": [
+              { "tag": "feFuncA", "attributes": { "type": "linear", "slope": 0.25 } }
+            ]
+          },
+          {
+            "tag": "feMerge",
+            "attributes": {},
+            "children": [
+              { "tag": "feMergeNode", "attributes": {} },
+              { "tag": "feMergeNode", "attributes": { "in": "SourceGraphic" } }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "bezier_path_reference_guide": {
+    "upper_mandible_culmen": {
+      "command": "M 590 155 C 640 152, 700 165, 755 200",
+      "start": { "x": 590, "y": 155 },
+      "cp1": { "x": 640, "y": 152 },
+      "cp2": { "x": 700, "y": 165 },
+      "end": { "x": 755, "y": 200 },
+      "geometric_purpose": "Slight upward convex arch of upper bill delivering aerodynamic hydrodynamic elegance"
+    },
+    "beak_hook_nail": {
+      "command": "C 765 208, 768 215, 764 218 C 760 219, 755 215, 750 212",
+      "geometric_purpose": "Classic downward-hooking nail tip characteristic of Pelicanidae feeding mechanics"
+    },
+    "gular_pouch_belly": {
+      "command": "C 725 250, 700 280, 665 280 C 625 280, 595 240, 570 205",
+      "nadir_inflection": { "x": 665, "y": 280 },
+      "geometric_purpose": "Voluminous elastic dip and swing of the pouch under headwind pressure"
+    },
+    "pelican_neck_dorsal_curve": {
+      "command": "M 465 320 C 495 275, 510 240, 498 210 C 490 190, 510 165, 535 155",
+      "geometric_purpose": "Continuous curvature demonstrating the vertebrae flexure of an S-shaped avian neck"
+    },
+    "pelican_chest_profile": {
+      "command": "M 480 320 C 515 305, 545 320, 540 310 C 535 270, 520 270, 480 320",
+      "geometric_purpose": "Puffed out proud pectoral mass resting forward towards the handlebars"
+    },
+    "fork_rake_curve": {
+      "command": "M 675 410 C 678 460, 690 535, 720 600",
+      "start": { "x": 675, "y": 410 },
+      "cp1": { "x": 678, "y": 460 },
+      "cp2": { "x": 690, "y": 535 },
+      "end": { "x": 720, "y": 600 },
+      "geometric_purpose": "Traditional 45px rake forward curve of steel roadster fork blade absorbing road vibration"
+    }
+  },
+  "qa_validation_checklist": [
+    { "item": "Canvas viewBox", "check": "viewBox='0 0 1000 800' exactly matching 5:4 aspect ratio" },
+    { "item": "Ground Contact", "check": "Tire bottoms tangentially meet road baseline at y=710 (600 + 110 = 710)" },
+    { "item": "Wheel Centering", "check": "Rear wheel centered at (280, 600), Front wheel centered at (720, 600), radius 110" },
+    { "item": "Frame Lugs", "check": "Bottom bracket (480, 600), Seat lug (420, 420), Head tube (660, 340 to 675, 410) fully interconnected" },
+    { "item": "Crank Kinematics", "check": "Near crank (440, 675) and far crank (520, 525) diametrically opposed at 180 degrees, length=85px" },
+    { "item": "Pelican Ergonomics", "check": "Pelvis centered on saddle (390-400, 380-400), near foot on near pedal, far foot on far pedal" },
+    { "item": "Beak & Pouch Volume", "check": "Culmen extends to (765, 205); gular pouch hangs below to (665, 280), creating expansive silhouette" },
+    { "item": "Layer Ordering", "check": "Far elements behind frame, frame behind torso, near wing and near leg in immediate foreground" },
+    { "item": "Whimsical Details", "check": "Flipped cycling cap, brass bell, aviator goggles, and fish in front basket with water droplets verified" }
+  ]
+}

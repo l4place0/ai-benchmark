@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mili - world.execute(me); // 同人MV Procedural 1080p60</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="app-container">
+    <!-- Viewport Container with 16:9 Canvas -->
+    <main id="canvas-wrapper">
+      <canvas id="renderCanvas" width="1920" height="1080"></canvas>
+    </main>
+
+    <!-- Interactive Media Control Bar -->
+    <footer id="control-bar">
+      <div class="controls-left">
+        <button id="btnPlay" class="btn-cyber"><span>▶ PLAY</span></button>
+        <select id="sceneSelector" class="select-cyber">
+          <option value="" disabled selected>-- JUMP TO SCENE --</option>
+        </select>
+      </div>
+
+      <div class="controls-center">
+        <input type="range" id="timeSlider" min="0" max="100" value="0" step="0.01">
+        <span id="timeLabel">00:00.0 / 03:32.3</span>
+      </div>
+
+      <div class="controls-right">
+        <span class="status-badge">1080p // 60FPS // PURE f(t)</span>
+        <button id="btnFullscreen" class="btn-cyber"><span>⛶ FULLSCREEN</span></button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Audio Track -->
+  <audio id="bgmAudio" src="assets/audio/world-execute-me.wav" preload="auto"></audio>
+
+  <!-- Modular Logic -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

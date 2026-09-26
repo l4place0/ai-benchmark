@@ -1,0 +1,159 @@
+{
+  "audit_metadata": {
+    "reviewer": "QA & Visual Critic Agent",
+    "task": "Visual Quality Audit & Critical Assessment of Captain Gulliver (Shot 01 Draft)",
+    "target_file": "Riding Pelican/shot01/pelican_draft.png",
+    "source_generator": "Riding Pelican/shot01/build_svg.py",
+    "date": "2026-09-23",
+    "status": "CHANGES_REQUIRED"
+  },
+  "executive_summary": "Visual inspection and geometric analysis of pelican_draft.png and build_svg.py reveal five major structural defects: inverted fender arcs placing fenders underneath tires as ground rockers, a completely occluded bicycle saddle caused by incorrect layer ordering, broken pelican leg anatomy featuring a floating disconnected tarsus and an orphaned thigh fluff, an occluded front fork that disappears behind the front wheel, and disjointed crank/pedal connections. All root causes have been traced to SVG coordinate math (inverted Y angles) and SVG DOM layer ordering.",
+  "issues_identified": [
+    {
+      "id": "ISSUE-01",
+      "component": "Bicycle Fenders (Front & Rear)",
+      "severity": "CRITICAL",
+      "visual_manifestation": "Both rear and front fenders are rendered under/beneath the tires resting near the boardwalk floor like rocking chair rockers or sled skids, instead of arching gracefully over the top half of the wheels.",
+      "root_cause": "Inverted angle math in SVG coordinate space. In SVG, Y increases downwards. The generator used angles 60 deg to 240 deg for the rear fender and 30 deg to 170 deg for the front fender, which places the arcs entirely in the bottom half (Y > center_y) instead of the top half (180 deg to 360 deg). Additionally, fender stays pointed into empty space or downwards toward the ground.",
+      "required_fix": {
+        "rear_fender": {
+          "center": [
+            350,
+            610
+          ],
+          "inner_radius": 135,
+          "outer_radius": 149,
+          "mid_radius": 142,
+          "start_angle_deg": 165,
+          "end_angle_deg": 350,
+          "pinstripe_angles": [
+            168,
+            347
+          ],
+          "stay_connections": [
+            {
+              "from": [
+                350,
+                610
+              ],
+              "to": [
+                213,
+                573
+              ]
+            },
+            {
+              "from": [
+                350,
+                610
+              ],
+              "to": [
+                259,
+                501
+              ]
+            }
+          ]
+        },
+        "front_fender": {
+          "center": [
+            850,
+            610
+          ],
+          "inner_radius": 135,
+          "outer_radius": 149,
+          "mid_radius": 142,
+          "start_angle_deg": 215,
+          "end_angle_deg": 345,
+          "pinstripe_angles": [
+            218,
+            342
+          ],
+          "stay_connections": [
+            {
+              "from": [
+                850,
+                610
+              ],
+              "to": [
+                973,
+                539
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ISSUE-02",
+      "component": "Bicycle Saddle & Seatpost",
+      "severity": "CRITICAL",
+      "visual_manifestation": "No bicycle saddle is visible in the draft. Captain Gulliver appears to float or sit directly onto the top tube, while the teal top frame tubes slice directly through his lower belly.",
+      "root_cause": "Layer stacking inversion. In build_svg.py, layer_08_seatpost_and_saddle was emitted before layer_09_pelican_torso_and_tail, so the opaque white body covered the saddle. Furthermore, layer_13_bicycle_main_frame_and_chainring was emitted after layer_09, causing the bike frame top tubes to render across the pelican torso.",
+      "required_fix": {
+        "layer_reorder": "Move main frame tubing before the pelican body and saddle, and position the saddle and seatpost so that the seatpost rises from seat lug (530, 430) up to (515, 385), supporting a classic Brooks-style sprung leather saddle with dual chrome beehive springs, copper rivets, contrast perimeter stitching, and leather cantle cradling the pelican rump."
+      }
+    },
+    {
+      "id": "ISSUE-03",
+      "component": "Pelican Legs, Tarsus & Webbed Feet",
+      "severity": "CRITICAL",
+      "visual_manifestation": "An orphaned white feather egg hangs suspended under the top tube at (500, 480) with nothing connected to it, while an isolated orange tarsus bar floats mid-air between (580, 535) and (625, 660) with a 40px gap from the thigh.",
+      "root_cause": "Disconnected vector paths in layer_16. The thigh fluff path ended at (570, 495) while the tarsus path began at (580, 535). The far leg in layer_05 also suffered from clumsy geometry.",
+      "required_fix": {
+        "near_leg": {
+          "origin": "Pelican flank/hip at (500, 420)",
+          "thigh_fluff": "Softly shaded feather contour from (495, 415) tapering down to knee at (522, 480)",
+          "tarsus": "Continuous anatomical orange tarsus from knee (522, 480) angling down-forward to ankle at (548, 680), with width 14px, specular highlights, and scale rings",
+          "foot": "Large splayed 3-toed webbed foot resting flat and angled on near pedal platform at (550, 685)"
+        },
+        "far_leg": {
+          "origin": "Far hip at (530, 415)",
+          "thigh_fluff": "Tapering down to far knee at (565, 470)",
+          "tarsus": "Continuous orange tarsus from knee (565, 470) to far pedal at (610, 535)",
+          "foot": "Clamped firmly on far pedal platform"
+        }
+      }
+    },
+    {
+      "id": "ISSUE-04",
+      "component": "Front Fork & Hub Connection",
+      "severity": "HIGH",
+      "visual_manifestation": "The front fork blade terminates prematurely and disappears behind the front wheel, failing to connect to the front axle hub at (850, 610).",
+      "root_cause": "In layer_14_front_fork_and_wheel, the fork path was rendered BEFORE the tire, rim, and spoke circles, so the wheel circles occluded the lower half of the fork blade.",
+      "required_fix": {
+        "fork_reorder": "Render the foreground fork blade AFTER the wheel rim and spokes. The fork blade must curve gracefully from the chrome crown lug at (790, 440) down across the wheel to the front axle dropout at (850, 610), terminating in a chrome axle acorn nut."
+      }
+    },
+    {
+      "id": "ISSUE-05",
+      "component": "Crankset, Chainguard & Pedals",
+      "severity": "HIGH",
+      "visual_manifestation": "Crank arms and pedal connections lacked clear structural linkage from the bottom bracket (580, 610) to the pedals.",
+      "root_cause": "Arbitrary crank arm coordinates and occlusion by chainguard without proper foreground/background separation.",
+      "required_fix": {
+        "near_crank": "Solid chrome arm from BB (580, 610) to near pedal axle at (550, 685) (dx = -30, dy = +75, length = 80.8px)",
+        "far_crank": "Solid chrome arm from BB (580, 610) to far pedal axle at (610, 535) (dx = +30, dy = -75, length = 80.8px, exactly 180 deg opposite)",
+        "pedals": "Detailed pedal platforms with rubber grip blocks, axle spindle, and amber reflectors"
+      }
+    },
+    {
+      "id": "ISSUE-06",
+      "component": "Overall Polish & Character Cohesion",
+      "severity": "MEDIUM",
+      "visual_manifestation": "Need refined lighting highlights, glints, crisp pinstripes, and flawless visual hierarchy across all 18 layers.",
+      "root_cause": "Minor layering and aesthetic inconsistencies.",
+      "required_fix": "Ensure all elements (Barnaby the sardine, cycling cap, polka dot scarf, brass bell, ocean horizon, boardwalk shadows) render cleanly with zero visual artifacts."
+    }
+  ],
+  "verification_checklist": [
+    "Rear fender arches over top of rear wheel (165 deg to 350 deg) with stays to rear hub (350, 610)",
+    "Front fender arches over top of front wheel (215 deg to 345 deg) with stay to front hub (850, 610)",
+    "Seatpost extends from seat tube (530, 430) to saddle (515, 385)",
+    "Brooks sprung leather saddle is visible, cradling pelican rump",
+    "Pelican torso sits on saddle above top tube; top tube does not bisect pelican body",
+    "Near leg connects seamlessly: hip -> thigh fluff -> orange tarsus -> near pedal at (550, 685)",
+    "Far leg connects seamlessly: far hip -> far thigh fluff -> far tarsus -> far pedal at (610, 535)",
+    "Crank arms connect BB (580, 610) to both pedals at 180 deg opposite angles",
+    "Front fork blade connects cleanly from head tube (790, 440) to front axle hub (850, 610) in foreground",
+    "High-resolution PNG render verifies zero geometry gaps or occlusion errors"
+  ]
+}

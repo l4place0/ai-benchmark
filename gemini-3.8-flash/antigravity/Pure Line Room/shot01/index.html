@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pure Line Room // 矢量线稿空间</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- 3D WebGL Canvas Layer -->
+  <div id="canvas-container"></div>
+
+  <!-- Minimalist Architectural HUD Overlay -->
+  <div class="ui-overlay">
+    <!-- Header -->
+    <header class="ui-header">
+      <div class="brand-title">
+        <div class="brand-main">
+          <span class="status-dot"></span>
+          <span>PURE LINE ROOM</span>
+          <span style="font-weight: 300; opacity: 0.5;">// ARCHITECTURAL SKETCH</span>
+        </div>
+        <div class="brand-sub">矢量线稿互动空间 · 纯浏览器离线单机艺术作品</div>
+      </div>
+
+      <div class="header-status">
+        <div class="status-item" id="time-display">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span id="clock-text">--:--:--</span>
+        </div>
+        <div class="status-item" id="mode-display">
+          <span id="env-mode-label">昼间模式 / DAY</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Bottom Section: Target Inspector & Controls Toolbar -->
+    <div class="ui-bottom">
+      <!-- Target Object Inspector (Active on Hover/Interaction) -->
+      <div class="ui-inspector" id="inspector">
+        <div class="inspector-card">
+          <div class="inspector-tag">
+            <span id="insp-id">ITEM [ 00 ]</span>
+            <span id="insp-state">READY</span>
+          </div>
+          <div class="inspector-name" id="insp-name">选择物件以探索</div>
+          <div class="inspector-hint" id="insp-hint">移动光标悬停在房间物体上进行线稿观察与互动</div>
+        </div>
+      </div>
+
+      <!-- Action Toolbar -->
+      <nav class="ui-toolbar">
+        <!-- Preset Cameras -->
+        <button class="toolbar-btn active" id="btn-cam-overview" title="全景视角">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          </svg>
+          <span>全景</span>
+        </button>
+        <button class="toolbar-btn" id="btn-cam-desk" title="书桌特写">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          <span>工作桌</span>
+        </button>
+        <button class="toolbar-btn" id="btn-cam-lounge" title="休息角特写">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span>休息角</span>
+        </button>
+
+        <div class="toolbar-divider"></div>
+
+        <!-- Day / Night Toggle -->
+        <button class="toolbar-btn" id="btn-toggle-theme" title="切换昼夜环境">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="icon-theme">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <span id="theme-btn-text">昼间</span>
+        </button>
+
+        <!-- Audio Mute/Unmute -->
+        <button class="toolbar-btn" id="btn-toggle-audio" title="声音开关">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="icon-audio">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <span id="audio-btn-text">声音开启</span>
+        </button>
+
+        <!-- Guide Catalog -->
+        <button class="toolbar-btn" id="btn-open-guide" title="互动指南">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span>物件清单</span>
+        </button>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Audio Prompt Floating Banner -->
+  <div class="audio-init-prompt" id="audio-prompt">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+    </svg>
+    <span>点击任意位置以激活程序化音频与沉浸音效</span>
+  </div>
+
+  <!-- Modal Interactive Items Catalog -->
+  <div class="modal-backdrop" id="guide-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title">房间物件与交互指南 (20+ ITEMS CATALOG)</div>
+        <button class="modal-close-btn" id="btn-close-guide">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="guide-grid" id="guide-list">
+          <!-- Dynamically populated or static list -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Three.js Engine & Application Scripts (100% Offline Standalone & Direct file:/// Protocol Compatible) -->
+  <script src="./js/libs/three.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
