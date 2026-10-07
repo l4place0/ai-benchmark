@@ -1,0 +1,1 @@
+{"name":"world-execute-me-botanical-machine","private":true,"version":"1.0.0","description":"Deterministic WebGL / Canvas music film","scripts":{"render":"tools\\node.exe tools/render.cjs","preview":"tools\\node.exe tools/render.cjs --preview"}}

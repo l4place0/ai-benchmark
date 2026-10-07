@@ -1,0 +1,20 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+for(const f of ['src/v2','output/v2/qa','tmp/v2','logs/v2','research/v2','assets/textures/v2'])fs.mkdirSync(path.join(root,f),{recursive:true});
+if(fs.existsSync(path.join(root,'scripts/render-v2.mjs'))&&fs.existsSync(path.join(root,'scripts/verify-v2.mjs'))){console.log('Existing V2 render scripts preserved.');process.exit(0);}
+let s=fs.readFileSync(path.join(root,'scripts/render.mjs'),'utf8');
+s=s.replace("const duration=sample?4:","const startArg=args.indexOf('--start'),durationArg=args.indexOf('--duration');\nconst start=startArg>=0?Number(args[startArg+1]):0;\nconst duration=durationArg>=0?Number(args[durationArg+1]):sample?4:");
+s=s.replaceAll('output/qa/','output/v2/qa/').replaceAll('output/world-execute-me_1080p60.mp4','output/v2/world-execute-me_paper-theatre_1080p60.mp4').replaceAll('output/render-report.json','output/v2/render-report.json').replaceAll('logs/','logs/v2/').replaceAll('research/storyboard.json','research/v2/storyboard.json').replaceAll('/src/index.html','/src/v2/index.html');
+s=s.replace('duration,frames,fps:60','duration,frames,fps:60,start');
+s=s.replace("'-i',path.join(root,'assets/audio/source/audio.mp3')","'-ss',String(start),'-i',path.join(root,'assets/audio/source/audio.mp3')");
+s=s.replace("source:'Browser WebGL + Canvas, deterministic frame timestamps'","start,source:'Browser Canvas 2D; original articulated paper theatre; deterministic frame timestamps'");
+s=s.replace('const times=[1.8,6,12,18,26,31.5,35,38.5,42,47,57,62,72,78,83,86.5,92,97,108,114,122,129,138,145,150,155,160,165,173,183,193,200,206.7,209.5,212,214];','const times=[1.8,6,12,18,26,31.5,35,38.5,42,47,57,62,72,78,83,86.5,92,97,108,114,122,129,138,145,150,155,160,165,173,183,193,200,206.7,209.5,212,214];');
+s=s.replace("if(qa){\n  const times", "if(qa){\n  const audit=await evaluate('window.auditFrames()');fs.writeFileSync(path.join(root,'research/v2/scene-audit.json'),JSON.stringify(audit,null,2));if(!audit.passed)throw Error('Frame determinism failed');\n  const times");
+fs.writeFileSync(path.join(root,'scripts/render-v2.mjs'),s);
+let v=fs.readFileSync(path.join(root,'scripts/verify.mjs'),'utf8');
+v=v.replaceAll('output/world-execute-me_1080p60.mp4','output/v2/world-execute-me_paper-theatre_1080p60.mp4').replaceAll('output/render-report.json','output/v2/render-report.json').replaceAll('output/verification.json','output/v2/verification.json').replaceAll('output/qa/','output/v2/qa/').replaceAll('output/contact-sheet.jpg','output/v2/contact-sheet.jpg').replaceAll('tmp/contact','tmp/v2/contact').replaceAll('tmp/final-audio.f32','tmp/v2/final-audio.f32').replaceAll('tmp/motion-','tmp/v2/motion-');
+v=v.replace("three:'0.180.0'","renderer:'Canvas2D — Paper Theatre v2'");
+fs.writeFileSync(path.join(root,'scripts/verify-v2.mjs'),v);
+console.log('V2 directories and isolated render / verification scripts ready.');

@@ -1,0 +1,8 @@
+DURATION: 212.331 s
+BPM: 130.133 (snapped 130)
+BEAT0: 0.234 s (period 0.4615s)
+LRC_OFFSET: 0.07 s (netease timeline -> local audio)
+PEAK_RMS: 0.6659
+ENERGY(2s/char, rms/peak: "."=<5% "-"=<15% "#"=rest):
+  0m|##############################################################################
+  3m|##########################...

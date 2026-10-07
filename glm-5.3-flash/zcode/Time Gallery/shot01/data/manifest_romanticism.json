@@ -1,0 +1,179 @@
+{
+  "period": {
+    "id": "romanticism",
+    "nameZh": "浪漫主义",
+    "nameEn": "Romanticism",
+    "years": "1780–1850",
+    "introZh": "浪漫主义与启蒙理性分道扬镳，拥抱激情、想象与自然的崇高：戏剧性的明暗、奔放的笔触与宏大的景观，抒发个体面对命运、革命与风暴时的震颤。德拉克洛瓦让色彩成为情感的号角，透纳把光与大气化为一团颤动的色雾，弗里德里希以静默的风景叩问永恒，戈雅则以黑暗直指战争的残酷。",
+    "accent": "#2f6d68",
+    "coverPaintingId": "eugene-delacroix-liberty-leading-the-people",
+    "painters": [
+      {
+        "nameZh": "欧仁·德拉克洛瓦",
+        "nameEn": "Eugène Delacroix",
+        "years": "1798–1863"
+      },
+      {
+        "nameZh": "约瑟夫·马洛德·威廉·透纳",
+        "nameEn": "J. M. W. Turner",
+        "years": "1775–1851"
+      },
+      {
+        "nameZh": "卡斯帕·大卫·弗里德里希",
+        "nameEn": "Caspar David Friedrich",
+        "years": "1774–1840"
+      },
+      {
+        "nameZh": "弗朗西斯科·戈雅",
+        "nameEn": "Francisco Goya",
+        "years": "1746–1828"
+      }
+    ]
+  },
+  "paintings": [
+    {
+      "id": "eugene-delacroix-liberty-leading-the-people",
+      "file": "assets/paintings/romanticism/eugene-delacroix-liberty-leading-the-people.jpg",
+      "titleZh": "自由引导人民",
+      "titleEn": "Liberty Leading the People",
+      "artistZh": "欧仁·德拉克洛瓦",
+      "artistEn": "Eugène Delacroix",
+      "artistBirth": "1798",
+      "artistDeath": "1863",
+      "year": "1830",
+      "period": "romanticism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Delacroix_-_Le_28_Juillet._La_Libert%C3%A9_guidant_le_peuple.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1541
+    },
+    {
+      "id": "eugene-delacroix-the-barque-of-dante",
+      "file": "assets/paintings/romanticism/eugene-delacroix-the-barque-of-dante.jpg",
+      "titleZh": "但丁之舟",
+      "titleEn": "The Barque of Dante",
+      "artistZh": "欧仁·德拉克洛瓦",
+      "artistEn": "Eugène Delacroix",
+      "artistBirth": "1798",
+      "artistDeath": "1863",
+      "year": "1822",
+      "period": "romanticism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Delacroix_-_The_Barque_of_Dante.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1437
+    },
+    {
+      "id": "j-m-w-turner-the-fighting-temeraire",
+      "file": "assets/paintings/romanticism/j-m-w-turner-the-fighting-temeraire.jpg",
+      "titleZh": "被拖去解体的无畏号战舰",
+      "titleEn": "The Fighting Temeraire",
+      "artistZh": "约瑟夫·马洛德·威廉·透纳",
+      "artistEn": "J. M. W. Turner",
+      "artistBirth": "1775",
+      "artistDeath": "1851",
+      "year": "1839",
+      "period": "romanticism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Fighting_Temeraire,_JMW_Turner,_National_Gallery.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1426
+    },
+    {
+      "id": "j-m-w-turner-rain-steam-and-speed",
+      "file": "assets/paintings/romanticism/j-m-w-turner-rain-steam-and-speed.jpg",
+      "titleZh": "雨、蒸汽和速度",
+      "titleEn": "Rain, Steam and Speed – The Great Western Railway",
+      "artistZh": "约瑟夫·马洛德·威廉·透纳",
+      "artistEn": "J. M. W. Turner",
+      "artistBirth": "1775",
+      "artistDeath": "1851",
+      "year": "1844",
+      "period": "romanticism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rain_Steam_and_Speed_the_Great_Western_Railway.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1433
+    },
+    {
+      "id": "j-m-w-turner-the-slave-ship",
+      "file": "assets/paintings/romanticism/j-m-w-turner-the-slave-ship.jpg",
+      "titleZh": "奴隶船",
+      "titleEn": "The Slave Ship",
+      "artistZh": "约瑟夫·马洛德·威廉·透纳",
+      "artistEn": "J. M. W. Turner",
+      "artistBirth": "1775",
+      "artistDeath": "1851",
+      "year": "1840",
+      "period": "romanticism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:J.M.W._Turner_Slave_Ship_(_Slavers_Throwing_Overboard_the_Dead_and_Dying,_Typhoon_Coming_On)._1840.png",
+      "license": "Public Domain / CC0 (Wikimedia Commons)",
+      "width": 1254,
+      "height": 932
+    },
+    {
+      "id": "caspar-david-friedrich-wanderer-above-the-sea-of-fog",
+      "file": "assets/paintings/romanticism/caspar-david-friedrich-wanderer-above-the-sea-of-fog.jpg",
+      "titleZh": "雾海上的旅人",
+      "titleEn": "Wanderer above the Sea of Fog",
+      "artistZh": "卡斯帕·大卫·弗里德里希",
+      "artistEn": "Caspar David Friedrich",
+      "artistBirth": "1774",
+      "artistDeath": "1840",
+      "year": "c. 1818",
+      "period": "romanticism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 2459
+    },
+    {
+      "id": "caspar-david-friedrich-the-sea-of-ice",
+      "file": "assets/paintings/romanticism/caspar-david-friedrich-the-sea-of-ice.jpg",
+      "titleZh": "冰海",
+      "titleEn": "The Sea of Ice",
+      "artistZh": "卡斯帕·大卫·弗里德里希",
+      "artistEn": "Caspar David Friedrich",
+      "artistBirth": "1774",
+      "artistDeath": "1840",
+      "year": "1823–1824",
+      "period": "romanticism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Das_Eismeer_-_Hamburger_Kunsthalle.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1492
+    },
+    {
+      "id": "francisco-goya-the-third-of-may-1808",
+      "file": "assets/paintings/romanticism/francisco-goya-the-third-of-may-1808.jpg",
+      "titleZh": "1808年5月3日",
+      "titleEn": "The Third of May 1808",
+      "artistZh": "弗朗西斯科·戈雅",
+      "artistEn": "Francisco Goya",
+      "artistBirth": "1746",
+      "artistDeath": "1828",
+      "year": "1814",
+      "period": "romanticism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:El_Tres_de_Mayo,_by_Francisco_de_Goya,_from_Prado_thin_black_margin.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1483
+    },
+    {
+      "id": "francisco-goya-la-maja-desnuda",
+      "file": "assets/paintings/romanticism/francisco-goya-la-maja-desnuda.jpg",
+      "titleZh": "裸体的马哈",
+      "titleEn": "La maja desnuda",
+      "artistZh": "弗朗西斯科·戈雅",
+      "artistEn": "Francisco Goya",
+      "artistBirth": "1746",
+      "artistDeath": "1828",
+      "year": "c. 1797–1800",
+      "period": "romanticism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maja_desnuda_(museo_del_Prado).jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 974
+    }
+  ]
+}

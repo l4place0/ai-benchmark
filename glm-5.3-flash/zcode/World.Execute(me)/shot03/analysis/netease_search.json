@@ -1,0 +1,390 @@
+{
+  "result": {
+    "songs": [
+      {
+        "album": {
+          "publishTime": 1476201600007,
+          "size": 17,
+          "artist": {
+            "img1v1Url": "https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "musicSize": 0,
+            "albumSize": 0,
+            "img1v1": 0,
+            "name": "",
+            "alias": [],
+            "id": 0,
+            "picId": 0
+          },
+          "copyrightId": 0,
+          "name": "Miracle Milk",
+          "id": 34906502,
+          "picId": 18801648835570108,
+          "mark": 0,
+          "status": 1
+        },
+        "fee": 1,
+        "duration": 211906,
+        "rtype": 0,
+        "ftype": 0,
+        "artists": [
+          {
+            "img1v1Url": "https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "musicSize": 0,
+            "albumSize": 0,
+            "img1v1": 0,
+            "name": "Mili",
+            "alias": [],
+            "id": 339594,
+            "picId": 0
+          }
+        ],
+        "copyrightId": 663018,
+        "mvid": 14518921,
+        "name": "world.execute (me) ;",
+        "alias": [],
+        "id": 435278010,
+        "mark": 17180139520,
+        "status": 0
+      },
+      {
+        "album": {
+          "publishTime": 1676563200000,
+          "size": 0,
+          "artist": {
+            "img1v1Url": "https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "musicSize": 0,
+            "albumSize": 0,
+            "img1v1": 0,
+            "name": "",
+            "alias": [],
+            "id": 0,
+            "picId": 0
+          },
+          "copyrightId": 0,
+          "name": "world execute.(me);",
+          "id": 160196714,
+          "picId": 109951168315778400,
+          "mark": 0,
+          "status": 1
+        },
+        "fee": 0,
+        "duration": 212400,
+        "rtype": 0,
+        "ftype": 0,
+        "artists": [
+          {
+            "img1v1Url": "https://p2.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "musicSize": 0,
+            "albumSize": 0,
+            "img1v1": 0,
+            "name": "花莫雨衡",
+            "alias": [],
+            "id": 50936636,
+            "picId": 0
+          }
+        ],
+        "copyrightId": 0,
+        "mvid": 0,
+        "name": "world.execute (me) ;",
+        "alias": [],
+        "id": 2023141733,
+        "mark": 128,
+        "status": 0
+      },
+      {
+        "album": {
+          "publishTime": 1654185600000,
+          "size": 13,
+          "artist": {
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "musicSize": 0,
+            "albumSize": 0,
+            "img1v1": 0,
+            "name": "",
+            "alias": [],
+            "id": 0,
+            "picId": 0
+          },
+          "copyrightId": 1418220,
+          "name": "Key Ingredient",
+          "id": 145178540,
+          "picId": 109951167436225800,
+          "mark": 0,
+          "status": 1
+        },
+        "fee": 8,
+        "duration": 224495,
+        "rtype": 0,
+        "ftype": 0,
+        "artists": [
+          {
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "musicSize": 0,
+            "albumSize": 0,
+            "img1v1": 0,
+            "name": "Mili",
+            "alias": [],
+            "id": 339594,
+            "picId": 0
+          }
+        ],
+        "copyrightId": 1418220,
+        "mvid": 14533166,
+        "name": "world.execute (me) ; [Key Ingredient ver.]",
+        "alias": [],
+        "id": 1948528659,
+        "mark": 17717010432,
+        "status": 0
+      },
+      {
+        "album": {
+          "publishTime": 1597852800000,
+          "size": 1,
+          "artist": {
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "musicSize": 0,
+            "albumSize": 0,
+            "img1v1": 0,
+            "name": "",
+            "alias": [],
+            "id": 0,
+            "picId": 0
+          },
+          "copyrightId": 1416692,
+          "name": "World.Execute(me)",
+          "id": 94084145,
+          "picId": 109951165243736510,
+          "mark": 0,
+          "status": 1
+        },
+        "fee": 8,
+        "duration": 217000,
+        "rtype": 0,
+        "ftype": 0,
+        "artists": [
+          {
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "musicSize": 0,
+            "albumSize": 0,
+            "img1v1": 0,
+            "name": "Jinja",
+            "alias": [],
+            "id": 46450841,
+            "picId": 0
+          }
+        ],
+        "copyrightId": 1416692,
+        "transNames": [
+          "世界，执行处决我"
+        ],
+        "mvid": 0,
+        "name": "World.Execute(me)",
+        "alias": [],
+        "id": 1471780839,
+        "mark": 17717010432,
+        "status": 0
+      },
+      {
+        "album": {
+          "publishTime": 1540642282408,
+          "size": 1,
+          "artist": {
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "musicSize": 0,
+            "albumSize": 0,
+            "img1v1": 0,
+            "name": "",
+            "alias": [],
+            "id": 0,
+            "picId": 0
+          },
+          "copyrightId": 0,
+          "name": "world.execute(me); （cover Mili）",
+          "id": 74110878,
+          "picId": 109951163629391200,
+          "mark": 0,
+          "status": 1
+        },
+        "fee": 0,
+        "duration": 212112,
+        "rtype": 0,
+        "ftype": 0,
+        "artists": [
+          {
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "musicSize": 0,
+            "albumSize": 0,
+            "img1v1": 0,
+            "name": "三无Marblue",
+            "alias": [],
+            "id": 1056002,
+            "picId": 0
+          }
+        ],
+        "copyrightId": 0,
+        "mvid": 0,
+        "name": "world.execute(me);（翻自 Mili）",
+        "alias": [],
+        "id": 1320990503,
+        "mark": 262144,
+        "status": 0
+      },
+      {
+        "album": {
+          "publishTime": 1674662400000,
+          "size": 3,
+          "artist": {
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "musicSize": 0,
+            "albumSize": 0,
+            "img1v1": 0,
+            "name": "",
+            "alias": [],
+            "id": 0,
+            "picId": 0
+          },
+          "copyrightId": 0,
+          "name": "鱼鱼酋长翻调合集",
+          "id": 158821547,
+          "picId": 109951168261142990,
+          "mark": 0,
+          "status": 1
+        },
+        "fee": 0,
+        "duration": 214000,
+        "rtype": 0,
+        "ftype": 0,
+        "artists": [
+          {
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "musicSize": 0,
+            "albumSize": 0,
+            "img1v1": 0,
+            "name": "鱼鱼酋长",
+            "alias": [],
+            "id": 55400089,
+            "picId": 0
+          },
+          {
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "musicSize": 0,
+            "albumSize": 0,
+            "img1v1": 0,
+            "name": "星尘",
+            "alias": [],
+            "id": 0,
+            "picId": 0
+          }
+        ],
+        "copyrightId": 0,
+        "mvid": 0,
+        "name": "World.Execute(me);",
+        "alias": [],
+        "id": 2048034693,
+        "mark": 537133184,
+        "status": 0
+      },
+      {
+        "album": {
+          "publishTime": 1563292800000,
+          "size": 1,
+          "artist": {
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "musicSize": 0,
+            "albumSize": 0,
+            "img1v1": 0,
+            "name": "",
+            "alias": [],
+            "id": 0,
+            "picId": 0
+          },
+          "copyrightId": 0,
+          "name": "world.execute (me)；",
+          "id": 80360545,
+          "picId": 109951164219136290,
+          "mark": 0,
+          "status": 0
+        },
+        "fee": 0,
+        "duration": 212062,
+        "rtype": 0,
+        "ftype": 0,
+        "artists": [
+          {
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "musicSize": 0,
+            "albumSize": 0,
+            "img1v1": 0,
+            "name": "akimi",
+            "alias": [],
+            "id": 32683618,
+            "picId": 0
+          }
+        ],
+        "copyrightId": 0,
+        "mvid": 0,
+        "name": "world.execute (me) ;",
+        "alias": [],
+        "id": 1378436448,
+        "mark": 262144,
+        "status": 0
+      },
+      {
+        "album": {
+          "publishTime": 1654185600000,
+          "size": 13,
+          "artist": {
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "musicSize": 0,
+            "albumSize": 0,
+            "img1v1": 0,
+            "name": "",
+            "alias": [],
+            "id": 0,
+            "picId": 0
+          },
+          "copyrightId": 1418220,
+          "name": "Key Ingredient (Instrumental)",
+          "id": 145179749,
+          "picId": 109951167436291180,
+          "mark": 0,
+          "status": 1
+        },
+        "fee": 8,
+        "duration": 222774,
+        "rtype": 0,
+        "ftype": 0,
+        "artists": [
+          {
+            "img1v1Url": "https://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg",
+            "musicSize": 0,
+            "albumSize": 0,
+            "img1v1": 0,
+            "name": "Mili",
+            "alias": [],
+            "id": 339594,
+            "picId": 0
+          }
+        ],
+        "copyrightId": 1418220,
+        "mvid": 0,
+        "name": "world.execute (me) ; [Key Ingredient ver.] [Instrumental]",
+        "alias": [],
+        "id": 1948529074,
+        "mark": 17716879360,
+        "status": 0
+      }
+    ],
+    "songCount": 95
+  },
+  "code": 200,
+  "trp": {
+    "rules": [
+      "search_tab_song::1471780839::searchAlg$isGlobalQuality$1",
+      "search_tab_song::435278010::searchAlg$isGlobalQuality$1",
+      "search_tab_song::1948528659::searchAlg$isGlobalQuality$1",
+      "search_tab_song::1320990503::searchAlg$isGlobalQuality$1",
+      "search_tab_song::2023141733::searchAlg$isGlobalQuality$1"
+    ]
+  }
+}

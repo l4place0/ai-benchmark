@@ -1,0 +1,179 @@
+{
+  "period": {
+    "id": "impressionism",
+    "nameZh": "印象派",
+    "nameEn": "Impressionism",
+    "years": "1860–1890",
+    "introZh": "19 世纪 70 年代的巴黎，莫奈、雷诺阿、德加等人走出画室，直接在户外面对光色作画：细碎跳跃的笔触捕捉大气与光影的瞬间颤动，让“瞬间印象”取代精雕细琢的轮廓。马奈以大胆的平面化构图为其开路，这一曾被讥讽的“印象派”自此改写了西方绘画的方向。",
+    "accent": "#4f86b5",
+    "coverPaintingId": "claude-monet-impression-sunrise",
+    "painters": [
+      {
+        "nameZh": "克劳德·莫奈",
+        "nameEn": "Claude Monet",
+        "years": "1840–1926"
+      },
+      {
+        "nameZh": "皮埃尔-奥古斯特·雷诺阿",
+        "nameEn": "Pierre-Auguste Renoir",
+        "years": "1841–1919"
+      },
+      {
+        "nameZh": "埃德加·德加",
+        "nameEn": "Edgar Degas",
+        "years": "1834–1917"
+      },
+      {
+        "nameZh": "爱德华·马奈",
+        "nameEn": "Édouard Manet",
+        "years": "1832–1883"
+      }
+    ]
+  },
+  "paintings": [
+    {
+      "id": "claude-monet-impression-sunrise",
+      "file": "assets/paintings/impressionism/claude-monet-impression-sunrise.jpg",
+      "titleZh": "印象·日出",
+      "titleEn": "Impression, Sunrise",
+      "artistZh": "克劳德·莫奈",
+      "artistEn": "Claude Monet",
+      "artistBirth": "1840",
+      "artistDeath": "1926",
+      "year": "1872",
+      "period": "impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Claude_Monet,_Impression,_soleil_levant.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1600,
+      "height": 1245
+    },
+    {
+      "id": "claude-monet-water-lilies",
+      "file": "assets/paintings/impressionism/claude-monet-water-lilies.jpg",
+      "titleZh": "睡莲",
+      "titleEn": "Water Lilies",
+      "artistZh": "克劳德·莫奈",
+      "artistEn": "Claude Monet",
+      "artistBirth": "1840",
+      "artistDeath": "1926",
+      "year": "1906",
+      "period": "impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Water_Lilies_-_1906,_Ryerson.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1845
+    },
+    {
+      "id": "claude-monet-woman-with-a-parasol",
+      "file": "assets/paintings/impressionism/claude-monet-woman-with-a-parasol.jpg",
+      "titleZh": "撑阳伞的女人",
+      "titleEn": "Woman with a Parasol – Madame Monet and Her Son",
+      "artistZh": "克劳德·莫奈",
+      "artistEn": "Claude Monet",
+      "artistBirth": "1840",
+      "artistDeath": "1926",
+      "year": "1875",
+      "period": "impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Woman_with_a_Parasol_-_Madame_Monet_and_Her_Son_-_Google_Art_Project.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 2385
+    },
+    {
+      "id": "pierre-auguste-renoir-dance-at-le-moulin-de-la-galette",
+      "file": "assets/paintings/impressionism/pierre-auguste-renoir-dance-at-le-moulin-de-la-galette.jpg",
+      "titleZh": "煎饼磨坊的舞会",
+      "titleEn": "Dance at Le Moulin de la Galette",
+      "artistZh": "皮埃尔-奥古斯特·雷诺阿",
+      "artistEn": "Pierre-Auguste Renoir",
+      "artistBirth": "1841",
+      "artistDeath": "1919",
+      "year": "1876",
+      "period": "impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Renoir,_Pierre-Auguste_-_Dance_at_Le_Moulin_de_la_Galette,_1876.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1427
+    },
+    {
+      "id": "pierre-auguste-renoir-luncheon-of-the-boating-party",
+      "file": "assets/paintings/impressionism/pierre-auguste-renoir-luncheon-of-the-boating-party.jpg",
+      "titleZh": "游船上的午宴",
+      "titleEn": "Luncheon of the Boating Party",
+      "artistZh": "皮埃尔-奥古斯特·雷诺阿",
+      "artistEn": "Pierre-Auguste Renoir",
+      "artistBirth": "1841",
+      "artistDeath": "1919",
+      "year": "1881",
+      "period": "impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pierre-Auguste_Renoir_-_Luncheon_of_the_Boating_Party_-_Google_Art_Project.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1422
+    },
+    {
+      "id": "edgar-degas-the-dance-class",
+      "file": "assets/paintings/impressionism/edgar-degas-the-dance-class.jpg",
+      "titleZh": "舞蹈课",
+      "titleEn": "The Dance Class",
+      "artistZh": "埃德加·德加",
+      "artistEn": "Edgar Degas",
+      "artistBirth": "1834",
+      "artistDeath": "1917",
+      "year": "1875",
+      "period": "impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Edgar_Degas_-_La_Classe_de_danse.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 2204
+    },
+    {
+      "id": "edgar-degas-the-star",
+      "file": "assets/paintings/impressionism/edgar-degas-the-star.jpg",
+      "titleZh": "明星",
+      "titleEn": "L'Étoile (The Star)",
+      "artistZh": "埃德加·德加",
+      "artistEn": "Edgar Degas",
+      "artistBirth": "1834",
+      "artistDeath": "1917",
+      "year": "1878",
+      "period": "impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Edgar_Degas_-_Ballet_(L%27%C3%89toile).jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 2794
+    },
+    {
+      "id": "edouard-manet-a-bar-at-the-folies-bergere",
+      "file": "assets/paintings/impressionism/edouard-manet-a-bar-at-the-folies-bergere.jpg",
+      "titleZh": "女神游乐厅的吧台",
+      "titleEn": "A Bar at the Folies-Bergère",
+      "artistZh": "爱德华·马奈",
+      "artistEn": "Édouard Manet",
+      "artistBirth": "1832",
+      "artistDeath": "1883",
+      "year": "1882",
+      "period": "impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Edouard_Manet,_A_Bar_at_the_Folies-Berg%C3%A8re.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1434
+    },
+    {
+      "id": "edouard-manet-the-luncheon-on-the-grass",
+      "file": "assets/paintings/impressionism/edouard-manet-the-luncheon-on-the-grass.jpg",
+      "titleZh": "草地上的午餐",
+      "titleEn": "The Luncheon on the Grass",
+      "artistZh": "爱德华·马奈",
+      "artistEn": "Édouard Manet",
+      "artistBirth": "1832",
+      "artistDeath": "1883",
+      "year": "1863",
+      "period": "impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Edouard_Manet_-_Luncheon_on_the_Grass_-_Google_Art_Project.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1492
+    }
+  ]
+}

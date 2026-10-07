@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>world.execute(me); — procedural fan MV</title>
+<style>
+  @font-face{font-family:'JetBrains Mono';src:url('fonts/jetbrains-mono-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:block}
+  @font-face{font-family:'JetBrains Mono';src:url('fonts/jetbrains-mono-latin-700-normal.woff2') format('woff2');font-weight:700;font-display:block}
+  html,body{margin:0;height:100%;background:#000;overflow:hidden}
+  #stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#000}
+  canvas{width:100vw;height:100vh;object-fit:contain;display:block}
+  #hint{position:fixed;left:14px;bottom:12px;color:#67e8f9;font:12px 'JetBrains Mono',monospace;opacity:.75;pointer-events:none;text-shadow:0 0 6px #0891b2}
+  #hint.off{display:none}
+</style>
+</head>
+<body>
+<div id="stage"><canvas id="cv" width="1920" height="1080"></canvas></div>
+<div id="hint">world.execute(me); — click to play with sound · space pause · ←/→ seek 5s · renderer calls __renderFrame(t)</div>
+<script src="timeline.js"></script>
+<script src="mv_core.js"></script>
+<script src="mv_main.js"></script>
+</body>
+</html>

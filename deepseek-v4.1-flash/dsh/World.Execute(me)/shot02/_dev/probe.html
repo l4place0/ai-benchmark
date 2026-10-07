@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>probe</title></head>
+<body style="margin:0;background:#000">
+<canvas id="c" width="1920" height="1080"></canvas>
+<script>
+window.__probe = (async () => {
+  const out = {};
+  const c = document.getElementById('c');
+  const gl = c.getContext('webgl2', { antialias: false, preserveDrawingBuffer: true });
+  out.webgl2 = !!gl;
+  if (gl) {
+    const dbg = gl.getExtension('WEBGL_debug_renderer_info');
+    out.vendor = dbg ? gl.getParameter(dbg.UNMASKED_VENDOR_WEBGL) : gl.getParameter(gl.VENDOR);
+    out.renderer = dbg ? gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER);
+    out.maxTex = gl.getParameter(gl.MAX_TEXTURE_SIZE);
+    out.floatBlend = !!gl.getExtension('EXT_color_buffer_float');
+    out.floatLinear = !!gl.getExtension('OES_texture_float_linear');
+    // draw one frame to prove the pipeline runs
+    gl.clearColor(0.1, 0.4, 0.8, 1); gl.clear(gl.COLOR_BUFFER_BIT);
+  }
+  out.videoEncoder = typeof VideoEncoder !== 'undefined';
+  out.audioDecoder = typeof AudioDecoder !== 'undefined';
+  if (out.videoEncoder) {
+    try {
+      const cfgs = [
+        { name: 'avc1.640032', hw: 'prefer-hardware' },
+        { name: 'avc1.640032', hw: 'prefer-software' },
+        { name: 'avc1.640028', hw: 'prefer-hardware' },
+        { name: 'avc1.4d0032', hw: 'prefer-hardware' },
+        { name: 'avc1.42E032', hw: 'prefer-hardware' },
+      ];
+      out.h264 = [];
+      for (const { name, hw } of cfgs) {
+        const s = await VideoEncoder.isConfigSupported({
+          codec: name, width: 1920, height: 1080, bitrate: 24000000, framerate: 60,
+          hardwareAcceleration: hw, avc: { format: 'annexb' }, latencyMode: 'quality',
+        });
+        out.h264.push(name + '/' + hw + '=' + !!s.supported);
+      }
+    } catch (e) { out.h264 = ['error: ' + e.message]; }
+  }
+  return out;
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+/* Anime Style Glassmorphism UI for Sakura Station Three.js Scene */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+:root {
+  --sakura-pink: #ff7597;
+  --sakura-light: #ffe4ec;
+  --sakura-glow: rgba(255, 117, 151, 0.45);
+  --mint-green: #34d399;
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --shadow-soft: 0 10px 30px rgba(30, 41, 59, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'M PLUS Rounded 1c', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-primary);
+  background-color: #000;
+}
+
+#canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* UI Overlay Layer */
+#ui-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px 32px;
+}
+
+/* Interactive elements re-enable pointer-events */
+.interactive {
+  pointer-events: auto;
+}
+
+/* Glass Card Component */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-soft);
+  border-radius: var(--radius-lg);
+  padding: 12px 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Header Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.brand-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-icon {
+  font-size: 28px;
+  animation: sakuraFloat 3s ease-in-out infinite;
+}
+
+@keyframes sakuraFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(6deg); }
+}
+
+.brand-text h1 {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-text h1 span {
+  font-size: 13px;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--sakura-pink), #f43f5e);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.brand-sub {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 1.5px;
+}
+
+.top-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.styled-select {
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius-md);
+  padding: 8px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.styled-select:focus {
+  border-color: var(--sakura-pink);
+  box-shadow: 0 0 0 3px var(--sakura-glow);
+}
+
+/* Action Button */
+.ui-btn {
+  background: white;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius-md);
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.ui-btn:hover {
+  background: var(--sakura-light);
+  border-color: var(--sakura-pink);
+  color: #db2777;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--sakura-glow);
+}
+
+.ui-btn:active {
+  transform: translateY(0);
+}
+
+.ui-btn.active {
+  background: linear-gradient(135deg, var(--sakura-pink), #f43f5e);
+  border-color: #f43f5e;
+  color: white;
+  box-shadow: 0 4px 14px var(--sakura-glow);
+}
+
+/* Bottom Bar: Camera Shots & Free Roam Controls */
+.bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  gap: 20px;
+}
+
+.shots-palette {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.palette-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-right: 4px;
+}
+
+.shot-btn {
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.shot-btn .key-hint {
+  font-size: 10px;
+  background: rgba(0, 0, 0, 0.08);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 4px;
+}
+
+.shot-btn.active .key-hint {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+.tools-palette {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Quick Help / Roam Tip Toast */
+.roam-tip {
+  position: absolute;
+  bottom: 84px;
+  left: 32px;
+  background: rgba(15, 23, 42, 0.85);
+  color: white;
+  backdrop-filter: blur(10px);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.roam-tip kbd {
+  background: #334155;
+  border: 1px solid #475569;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: monospace;
+  font-size: 11px;
+}
+
+/* Modal Info Dialog */
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.modal-backdrop.show {
+  display: flex;
+}
+
+.modal-box {
+  background: white;
+  border-radius: 20px;
+  padding: 28px 36px;
+  max-width: 540px;
+  width: 90%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.modal-header h2 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.modal-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #334155;
+}
+
+.modal-body ul {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.modal-body li {
+  margin-bottom: 6px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  #ui-overlay {
+    padding: 16px;
+  }
+  .bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tools-palette {
+    width: 100%;
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
+}

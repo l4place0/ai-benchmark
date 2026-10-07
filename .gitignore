@@ -19,5 +19,58 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Generated video exceeds GitHub's per-file size limit
-**/output/*.mp4
+# Regenerable intermediate files and caches
+tmp/
+temp/
+cache/
+.cache/
+.npm-cache/
+npm-cache/
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.bak
+*.rgb
+*.f32
+*.h264
+*.done
+logs/
+**/World.Execute(me) MV/**/renders/
+**/output/qa/
+**/output/test_rhythm/
+**/render/samples/
+**/frames_test/
+
+# Machine-local runtimes, browser profiles, and downloaded models
+.venv/
+venv/
+pyenv/
+.chrome/
+**/tools/python/
+**/tools/uv-cache/
+**/tools/uv-tools/
+**/tools/chrome-profile/
+**/tools/hf/
+**/tools/browser/
+**/tools/browsers/
+**/tools/chrome/
+**/tools/node/
+**/tools/ffmpeg/
+**/tools/dl/
+**/tools/*.exe
+**/tools/*.tgz
+**/_dev/dl/
+
+# Keep bundled JavaScript needed by previews and analysis scripts
+!**/tools/three/package/build/
+!**/tools/three/package/build/**
+!**/tools/essentia/package/dist/
+!**/tools/essentia/package/dist/**
+
+**/tools/bin/*.exe
+**/_dev/shots/
+**/_dev/qa/
+
+
+**/output/**/qa/

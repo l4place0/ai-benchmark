@@ -1,0 +1,53 @@
+{
+  "desktopDiff": {
+    "totalPixels": 1296000,
+    "numDiffPixels": 110,
+    "mismatchPercent": 0.01,
+    "similarity": 99.99
+  },
+  "mobileDiff": {
+    "totalPixels": 304500,
+    "numDiffPixels": 64471,
+    "mismatchPercent": 21.17,
+    "similarity": 78.83
+  },
+  "mobileCleanDiff": {
+    "totalPixels": 304500,
+    "numDiffPixels": 0,
+    "mismatchPercent": 0,
+    "similarity": 100
+  },
+  "allAssetsValid": true,
+  "checks": {
+    "darkModeToggle": true,
+    "categoryTabs": {
+      "count": 5,
+      "hasActiveLine": true
+    },
+    "searchFilter": {
+      "matchCount": 1,
+      "resetCount": 5,
+      "works": true
+    },
+    "likeInteraction": {
+      "before": "53",
+      "after": "54",
+      "incremented": true
+    },
+    "commentDrawer": {
+      "drawerOpen": false,
+      "drawerClosed": true,
+      "emojiCount": 75,
+      "emojiInserted": true
+    },
+    "loginModal": {
+      "loginOpen": true,
+      "loginClosed": true
+    },
+    "mobileDrawer": {
+      "navOpen": true,
+      "navClosed": true
+    },
+    "lightbox": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "mv-render-shot03",
+  "private": true,
+  "version": "1.0.0",
+  "description": "world.execute(me); fan MV take03 - offline renderer (puppeteer + chrome-for-testing, all inside workspace)",
+  "dependencies": {
+    "puppeteer": "*",
+    "@fontsource/jetbrains-mono": "^5.2.5",
+    "@fontsource/cinzel": "^5.2.5"
+  }
+}

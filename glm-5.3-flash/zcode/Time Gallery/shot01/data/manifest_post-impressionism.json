@@ -1,0 +1,179 @@
+{
+  "period": {
+    "id": "post-impressionism",
+    "nameZh": "后印象派",
+    "nameEn": "Post-Impressionism",
+    "years": "1885–1910",
+    "introZh": "后印象派承接印象派对光色的解放，却不再满足于捕捉转瞬即逝的表象：梵高以燃烧般的笔触倾泻内心，塞尚在自然中重建坚实的结构，高更走向原始与象征，修拉用科学的点彩凝固光线。他们各异的探索，直接开启了 20 世纪表现主义、立体主义与抽象艺术的先声。",
+    "accent": "#d1a327",
+    "coverPaintingId": "vincent-van-gogh-the-starry-night",
+    "painters": [
+      {
+        "nameZh": "文森特·梵高",
+        "nameEn": "Vincent van Gogh",
+        "years": "1853–1890"
+      },
+      {
+        "nameZh": "保罗·塞尚",
+        "nameEn": "Paul Cézanne",
+        "years": "1839–1906"
+      },
+      {
+        "nameZh": "保罗·高更",
+        "nameEn": "Paul Gauguin",
+        "years": "1848–1903"
+      },
+      {
+        "nameZh": "乔治·修拉",
+        "nameEn": "Georges Seurat",
+        "years": "1859–1891"
+      }
+    ]
+  },
+  "paintings": [
+    {
+      "id": "vincent-van-gogh-the-starry-night",
+      "file": "assets/paintings/post-impressionism/vincent-van-gogh-the-starry-night.jpg",
+      "titleZh": "星月夜",
+      "titleEn": "The Starry Night",
+      "artistZh": "文森特·梵高",
+      "artistEn": "Vincent van Gogh",
+      "artistBirth": "1853",
+      "artistDeath": "1890",
+      "year": "1889",
+      "period": "post-impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1520
+    },
+    {
+      "id": "vincent-van-gogh-sunflowers",
+      "file": "assets/paintings/post-impressionism/vincent-van-gogh-sunflowers.jpg",
+      "titleZh": "向日葵",
+      "titleEn": "Sunflowers",
+      "artistZh": "文森特·梵高",
+      "artistEn": "Vincent van Gogh",
+      "artistBirth": "1853",
+      "artistDeath": "1890",
+      "year": "1888",
+      "period": "post-impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vincent_Willem_van_Gogh_127.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 2423
+    },
+    {
+      "id": "vincent-van-gogh-cafe-terrace-at-night",
+      "file": "assets/paintings/post-impressionism/vincent-van-gogh-cafe-terrace-at-night.jpg",
+      "titleZh": "夜间露天咖啡座",
+      "titleEn": "Café Terrace at Night",
+      "artistZh": "文森特·梵高",
+      "artistEn": "Vincent van Gogh",
+      "artistBirth": "1853",
+      "artistDeath": "1890",
+      "year": "1888",
+      "period": "post-impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vincent_Willem_van_Gogh_-_Cafe_Terrace_at_Night_(Yorck).jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 2408
+    },
+    {
+      "id": "vincent-van-gogh-wheatfield-with-crows",
+      "file": "assets/paintings/post-impressionism/vincent-van-gogh-wheatfield-with-crows.jpg",
+      "titleZh": "麦田群鸦",
+      "titleEn": "Wheatfield with Crows",
+      "artistZh": "文森特·梵高",
+      "artistEn": "Vincent van Gogh",
+      "artistBirth": "1853",
+      "artistDeath": "1890",
+      "year": "1890",
+      "period": "post-impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Wheatfield_with_crows_-_Google_Art_Project.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 913
+    },
+    {
+      "id": "paul-cezanne-the-card-players",
+      "file": "assets/paintings/post-impressionism/paul-cezanne-the-card-players.jpg",
+      "titleZh": "玩纸牌者",
+      "titleEn": "The Card Players",
+      "artistZh": "保罗·塞尚",
+      "artistEn": "Paul Cézanne",
+      "artistBirth": "1839",
+      "artistDeath": "1906",
+      "year": "1890–1892",
+      "period": "post-impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Les_Joueurs_de_cartes,_par_Paul_C%C3%A9zanne.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1575
+    },
+    {
+      "id": "paul-cezanne-mont-sainte-victoire",
+      "file": "assets/paintings/post-impressionism/paul-cezanne-mont-sainte-victoire.jpg",
+      "titleZh": "圣维克多山",
+      "titleEn": "Mont Sainte-Victoire",
+      "artistZh": "保罗·塞尚",
+      "artistEn": "Paul Cézanne",
+      "artistBirth": "1839",
+      "artistDeath": "1906",
+      "year": "c. 1897",
+      "period": "post-impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:La_Montagne_Sainte-Victoire_vue_de_la_carri%C3%A8re_Bib%C3%A9mus,_par_Paul_C%C3%A9zanne.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1527
+    },
+    {
+      "id": "paul-gauguin-the-yellow-christ",
+      "file": "assets/paintings/post-impressionism/paul-gauguin-the-yellow-christ.jpg",
+      "titleZh": "黄色基督",
+      "titleEn": "The Yellow Christ",
+      "artistZh": "保罗·高更",
+      "artistEn": "Paul Gauguin",
+      "artistBirth": "1848",
+      "artistDeath": "1903",
+      "year": "1889",
+      "period": "post-impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin_-_Le_Christ_jaune_(The_Yellow_Christ)_-_1946-4_-_Albright%E2%80%93Knox_Art_Gallery.tiff",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 2415
+    },
+    {
+      "id": "paul-gauguin-tahitian-women-on-the-beach",
+      "file": "assets/paintings/post-impressionism/paul-gauguin-tahitian-women-on-the-beach.jpg",
+      "titleZh": "海滩上的塔希提妇女",
+      "titleEn": "Tahitian Women on the Beach (Femmes de Tahiti)",
+      "artistZh": "保罗·高更",
+      "artistEn": "Paul Gauguin",
+      "artistBirth": "1848",
+      "artistDeath": "1903",
+      "year": "1891",
+      "period": "post-impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Paul_Gauguin_056.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1432
+    },
+    {
+      "id": "georges-seurat-a-sunday-on-la-grande-jatte",
+      "file": "assets/paintings/post-impressionism/georges-seurat-a-sunday-on-la-grande-jatte.jpg",
+      "titleZh": "大碗岛的星期天下午",
+      "titleEn": "A Sunday on La Grande Jatte",
+      "artistZh": "乔治·修拉",
+      "artistEn": "Georges Seurat",
+      "artistBirth": "1859",
+      "artistDeath": "1891",
+      "year": "1884–1886",
+      "period": "post-impressionism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Georges_Seurat_-_A_Sunday_on_La_Grande_Jatte_--_1884_-_Google_Art_Project.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 3840,
+      "height": 2556
+    }
+  ]
+}

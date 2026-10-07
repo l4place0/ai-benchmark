@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="color-scheme" content="light dark">
+<title>Pure Line Room · 线稿房间</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="room">
+    <canvas id="stage" aria-label="A vector line-drawn room you can explore and operate."></canvas>
+    <div id="hint" class="hint">
+      <span class="k">拖动</span> 环视房间 · <span class="k">滚轮</span> 推近拉远 · <span class="k">点击</span> 操作物件 · <span class="k">Tab</span> 依次选择 · <span class="k">R</span> 复位 · <span class="k">M</span> 静音
+    </div>
+    <div id="toast" class="toast"></div>
+    <noscript>
+      <p class="noscript">This piece is drawn and animated entirely in JavaScript. Please enable JavaScript.</p>
+    </noscript>
+  </div>
+
+  <script src="js/math.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/graphics.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/palette.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/interact.js"></script>
+  <script src="js/layout.js"></script>
+
+  <script src="js/objects/room.js"></script>
+  <script src="js/objects/window.js"></script>
+  <script src="js/objects/door.js"></script>
+  <script src="js/objects/desk.js"></script>
+  <script src="js/objects/chair.js"></script>
+  <script src="js/objects/shelf.js"></script>
+  <script src="js/objects/sideboard.js"></script>
+  <script src="js/objects/sofa.js"></script>
+  <script src="js/objects/table.js"></script>
+  <script src="js/objects/rug.js"></script>
+  <script src="js/objects/lamp.js"></script>
+  <script src="js/objects/cup.js"></script>
+  <script src="js/objects/globe.js"></script>
+  <script src="js/objects/clock.js"></script>
+  <script src="js/objects/fan.js"></script>
+  <script src="js/objects/chime.js"></script>
+  <script src="js/objects/record.js"></script>
+  <script src="js/objects/art.js"></script>
+  <script src="js/objects/switch.js"></script>
+
+  <script src="js/build.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

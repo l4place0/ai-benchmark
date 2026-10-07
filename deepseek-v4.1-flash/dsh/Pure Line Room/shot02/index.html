@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Pure Line Room · 线稿房间</title>
+<meta name="description" content="一个纯浏览器、离线的互动线稿房间。">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f6f4ef'/%3E%3Cpath d='M5 25V11l11-6 11 6v14' fill='none' stroke='%2317171b' stroke-width='2'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<main id="shell">
+  <canvas id="stage" aria-label="互动线稿房间"></canvas>
+
+  <!-- cursor tag: the only "UI" for objects, it names whatever is under the pen -->
+  <div id="tag" aria-hidden="true">
+    <span id="tag-label"></span>
+    <span id="tag-hint"></span>
+  </div>
+
+  <!-- minimal corner furniture, styled as ink on paper -->
+  <header id="hud">
+    <div class="title">Pure&nbsp;Line&nbsp;Room</div>
+    <div class="sub">拖动旋转 · 滚轮缩放 · 点击房间里的物件</div>
+    <div class="sub dim">已发现 <b id="found-count">0</b> / <b id="found-total">0</b> 个可互动物件</div>
+  </header>
+
+  <button id="sound-toggle" type="button" aria-label="开关声音" aria-pressed="true">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+      <path d="M4 9.5h3.2L12 5.4v13.2L7.2 14.5H4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+      <path class="wave1" d="M15 8.6a4.4 4.4 0 0 1 0 6.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <path class="wave2" d="M17.6 6.2a7.8 7.8 0 0 1 0 11.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      <path class="slash" d="M15 15.5 20.5 8.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+  <div id="boot-error" role="status"></div>
+</main>
+
+<script src="js/bundle.js" defer></script>
+</body>
+</html>

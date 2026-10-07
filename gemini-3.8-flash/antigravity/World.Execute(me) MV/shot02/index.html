@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mili - world.execute(me); // Full Fan MV (Shot 02)</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@600;800;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="canvas-container">
+    <canvas id="mv-canvas" width="1920" height="1080"></canvas>
+  </div>
+
+  <audio id="audio-player" src="./assets/audio/world-execute-me.wav" preload="auto"></audio>
+
+  <div id="control-bar">
+    <button id="btn-play" class="control-btn">▶ PLAY</button>
+    <div id="scrubber-container">
+      <input type="range" id="timeline-scrubber" min="0" max="1000" value="0">
+      <span id="time-display">00:00.0 / 03:36.0</span>
+    </div>
+    <select id="act-select" title="Jump to Act"></select>
+    <button id="btn-fullscreen" class="control-btn">⛶ FULLSCREEN</button>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

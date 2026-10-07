@@ -1,0 +1,59 @@
+{
+  "pages": {
+    "home": {
+      "route": "/",
+      "title": "若志 • 随笔",
+      "similarity": 99.97,
+      "verdict": "PASS"
+    },
+    "about": {
+      "route": "/about",
+      "status": 200,
+      "title": "关于 - 若志 • 随笔",
+      "verdict": "PASS"
+    },
+    "archives": {
+      "route": "/archives",
+      "status": 200,
+      "title": "归档 - 若志 • 随笔",
+      "verdict": "PASS"
+    },
+    "messages": {
+      "route": "/messages",
+      "status": 200,
+      "title": "留言 - 若志 • 随笔",
+      "verdict": "PASS"
+    },
+    "photos": {
+      "route": "/photos",
+      "status": 200,
+      "title": "分类 相册 下的文章 - 若志 • 随笔",
+      "verdict": "PASS"
+    },
+    "circle": {
+      "route": "/circle",
+      "status": 200,
+      "title": "友圈 - 若志 • 随笔",
+      "verdict": "PASS"
+    },
+    "links": {
+      "route": "/links",
+      "status": 200,
+      "title": "友链 - 若志 • 随笔",
+      "verdict": "PASS"
+    },
+    "post_detail": {
+      "route": "/archives/362/",
+      "status": 200,
+      "title": "随笔#“豆包AI手机” - 若志 • 随笔",
+      "verdict": "PASS"
+    }
+  },
+  "interactions": {
+    "spaRouting": true,
+    "guestbookPosting": true,
+    "postLike": true,
+    "darkMode": true
+  },
+  "overallVerdict": "PASS"
+}

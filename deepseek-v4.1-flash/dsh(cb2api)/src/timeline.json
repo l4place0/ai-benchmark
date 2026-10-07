@@ -1,0 +1,449 @@
+{
+ "meta": {
+  "bpm": 129.2,
+  "period": 0.4643962848297214,
+  "offset": 0.20944272445820436,
+  "bar": 1.8575851393188856,
+  "duration": 212.27687074829933,
+  "fps": 60,
+  "bars": 114,
+  "beatsPerBar": 4
+ },
+ "sections": [
+  {
+   "id": "BOOT",
+   "bar": 0,
+   "color": [
+    1,
+    0.62,
+    0.2
+   ],
+   "note": "creation / power on",
+   "t": 0.20944272445820436
+  },
+  {
+   "id": "COMPILE",
+   "bar": 8,
+   "color": [
+    0.25,
+    0.72,
+    1
+   ],
+   "note": "instrumental: object creation",
+   "t": 15.07012383900929
+  },
+  {
+   "id": "SIMULATE",
+   "bar": 16,
+   "color": [
+    1,
+    0.72,
+    0.28
+   ],
+   "note": "if I am a set of points",
+   "t": 29.930804953560372
+  },
+  {
+   "id": "SWITCH",
+   "bar": 27,
+   "color": [
+    1,
+    0.3,
+    0.72
+   ],
+   "note": "switch my current, blind my vision",
+   "t": 50.36424148606812
+  },
+  {
+   "id": "GARDEN",
+   "bar": 40,
+   "color": [
+    0.55,
+    1,
+    0.45
+   ],
+   "note": "eggplant / tomato / tabby cat",
+   "t": 74.51284829721362
+  },
+  {
+   "id": "TRANCE",
+   "bar": 52,
+   "color": [
+    0.78,
+    0.35,
+    1
+   ],
+   "note": "switch my gender, enter the trance",
+   "t": 96.80386996904025
+  },
+  {
+   "id": "ISOLATION",
+   "bar": 63,
+   "color": [
+    0.45,
+    0.52,
+    0.62
+   ],
+   "note": "you have left me",
+   "t": 117.23730650154799
+  },
+  {
+   "id": "VOID",
+   "bar": 71.9,
+   "color": [
+    0.16,
+    0.18,
+    0.22
+   ],
+   "note": "the ground drops out",
+   "t": 133.76981424148607
+  },
+  {
+   "id": "EXECUTION",
+   "bar": 88,
+   "color": [
+    1,
+    0.2,
+    0.18
+   ],
+   "note": "execution",
+   "t": 163.67693498452013
+  },
+  {
+   "id": "LOVEEXE",
+   "bar": 103,
+   "color": [
+    1,
+    0.78,
+    0.45
+   ],
+   "note": "algebraic expression of love",
+   "t": 191.54071207430343
+  },
+  {
+   "id": "END",
+   "bar": 110,
+   "color": [
+    0.1,
+    0.1,
+    0.12
+   ],
+   "note": "fade",
+   "t": 204.5438080495356
+  }
+ ],
+ "lyrics": [
+  {
+   "t": 0,
+   "line": "Switch on the power line",
+   "sub": "remember to put on protection"
+  },
+  {
+   "t": 3.62,
+   "line": "Lay down your pieces",
+   "sub": "and let's begin object creation"
+  },
+  {
+   "t": 7.46,
+   "line": "Fill in my data, parameters",
+   "sub": "initialization"
+  },
+  {
+   "t": 12.78,
+   "line": "Setup our new world",
+   "sub": "and let's begin the simulation"
+  },
+  {
+   "t": 29.56,
+   "line": "If I'm a set of points",
+   "sub": "then I will give you my dimension"
+  },
+  {
+   "t": 33.14,
+   "line": "If I'm a circle",
+   "sub": "then I will give you my circumference"
+  },
+  {
+   "t": 36.9,
+   "line": "If I'm a sine wave",
+   "sub": "then you can sit on all my tangents"
+  },
+  {
+   "t": 40.64,
+   "line": "If I approach infinity",
+   "sub": "then you can be my limitations"
+  },
+  {
+   "t": 44.1,
+   "line": "Switch my current",
+   "sub": "to AC to DC"
+  },
+  {
+   "t": 47.82,
+   "line": "And then blind my vision",
+   "sub": "so dizzy, so dizzy"
+  },
+  {
+   "t": 51.4,
+   "line": "Oh, we can travel",
+   "sub": "to A.D to B.C"
+  },
+  {
+   "t": 54.88,
+   "line": "And we can unite",
+   "sub": "so deeply, so deeply"
+  },
+  {
+   "t": 58.88,
+   "line": "If I can, if I can",
+   "sub": "give you all the stimulations"
+  },
+  {
+   "t": 62.76,
+   "line": "Then I can, then I can",
+   "sub": "be your only satisfaction"
+  },
+  {
+   "t": 66.82,
+   "line": "If I can make you happy",
+   "sub": "I will run the execution"
+  },
+  {
+   "t": 70.05,
+   "line": "Though we are trapped",
+   "sub": "in this strange, strange simulation"
+  },
+  {
+   "t": 73.39,
+   "line": "If I'm an eggplant",
+   "sub": "then I will give you my nutrients"
+  },
+  {
+   "t": 77.61,
+   "line": "If I'm a tomato",
+   "sub": "then I will give you antioxidants"
+  },
+  {
+   "t": 81.37,
+   "line": "If I'm a tabby cat",
+   "sub": "then I will purr for your enjoyment"
+  },
+  {
+   "t": 84.41,
+   "line": "If I'm the only god",
+   "sub": "then you're the proof of my existence"
+  },
+  {
+   "t": 88.55,
+   "line": "Switch my gender",
+   "sub": "to F to M"
+  },
+  {
+   "t": 93.81,
+   "line": "And then do whatever",
+   "sub": "from AM to PM"
+  },
+  {
+   "t": 97.53,
+   "line": "Oh, switch my role",
+   "sub": "to S to M"
+  },
+  {
+   "t": 99.55,
+   "line": "So we can enter",
+   "sub": "the trance, the trance"
+  },
+  {
+   "t": 103.31,
+   "line": "If I can, if I can",
+   "sub": "feel your vibrations"
+  },
+  {
+   "t": 107.01,
+   "line": "Then I can, then I can",
+   "sub": "finally be completion"
+  },
+  {
+   "t": 110.91,
+   "line": "Though you have left",
+   "sub": "you have left"
+  },
+  {
+   "t": 113.13,
+   "line": "You have left",
+   "sub": "you have left"
+  },
+  {
+   "t": 115.01,
+   "line": "You have left",
+   "sub": "you have left"
+  },
+  {
+   "t": 116.85,
+   "line": "You have left me",
+   "sub": "in isolation"
+  },
+  {
+   "t": 118.51,
+   "line": "If I can, if I can",
+   "sub": "erase all the pointless fragments"
+  },
+  {
+   "t": 121.81,
+   "line": "Then maybe, then maybe",
+   "sub": "you won't leave me so disheartened"
+  },
+  {
+   "t": 125.23,
+   "line": "Challenging your God",
+   "sub": "you have made some illegal arguments"
+  },
+  {
+   "t": 135.5,
+   "line": "execution",
+   "sub": "×4",
+   "counted": true
+  },
+  {
+   "t": 140,
+   "line": "execution",
+   "sub": "×4",
+   "counted": true
+  },
+  {
+   "t": 143.3,
+   "line": "execution",
+   "sub": "×4",
+   "counted": true
+  },
+  {
+   "t": 146.7,
+   "line": "Ein, dos, trois, 네, fem, 六",
+   "sub": "execution",
+   "counted": true
+  },
+  {
+   "t": 163.69,
+   "line": "If I can, if I can",
+   "sub": "give them all the execution"
+  },
+  {
+   "t": 166.65,
+   "line": "Then I can, then I can",
+   "sub": "be your only execution"
+  },
+  {
+   "t": 170.11,
+   "line": "If I can have you back",
+   "sub": "I will run the execution"
+  },
+  {
+   "t": 173.43,
+   "line": "Though we are trapped",
+   "sub": "we are trapped"
+  },
+  {
+   "t": 177.19,
+   "line": "I've studied, I've studied",
+   "sub": "how to properly love"
+  },
+  {
+   "t": 180.35,
+   "line": "Question me, question me",
+   "sub": "I can answer all love"
+  },
+  {
+   "t": 184.09,
+   "line": "I know the algebraic",
+   "sub": "expression of love"
+  },
+  {
+   "t": 186.59,
+   "line": "Though you are free",
+   "sub": "I am trapped, trapped in love"
+  }
+ ],
+ "execHits": [
+  135.5,
+  135.9644,
+  136.4288,
+  136.8932,
+  137.3576,
+  137.822,
+  138.2864,
+  138.7508,
+  139.2152,
+  139.6796,
+  140.144,
+  140.6084,
+  141.0728,
+  141.5372,
+  142.0015,
+  142.4659,
+  142.9303,
+  143.3947,
+  143.8591,
+  144.3235,
+  144.7879,
+  145.2523,
+  145.7167,
+  146.1811,
+  146.6455,
+  147.1099,
+  147.5743,
+  148.0387,
+  148.5031,
+  148.9675,
+  149.4319,
+  149.8963,
+  150.3607,
+  150.8251,
+  151.2895,
+  151.7539,
+  152.2183,
+  152.6827,
+  153.1471,
+  153.6115,
+  154.0759,
+  154.5402,
+  155.0046,
+  155.469,
+  155.9334,
+  156.3978,
+  156.8622,
+  157.3266,
+  157.791,
+  158.2554,
+  158.7198,
+  159.1842,
+  159.6486,
+  160.113,
+  160.5774,
+  161.0418,
+  161.5062,
+  161.9706,
+  162.435,
+  162.8994,
+  163.3638
+ ],
+ "vocalBlocks": [
+  [
+   0,
+   14.86
+  ],
+  [
+   29.56,
+   133.69
+  ],
+  [
+   163.69,
+   191.95
+  ]
+ ],
+ "marks": {
+  "silenceStart": 207.4,
+  "voidStart": 133.76981424148607,
+  "voidEnd": 163.67693498452013,
+  "songsEnd": 212.27687074829933
+ }
+}

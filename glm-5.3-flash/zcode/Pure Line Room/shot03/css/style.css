@@ -1,0 +1,36 @@
+html, body { margin: 0; padding: 0; overflow: hidden; background: #fbfaf5; }
+#cv { display: block; touch-action: none; }
+
+#toasts {
+  position: fixed; left: 0; right: 0; bottom: 34px;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  pointer-events: none; z-index: 20;
+}
+.toast {
+  font: 14px Georgia, "Times New Roman", serif;
+  color: #23262b; background: rgba(251, 250, 245, 0.92);
+  border: 1px solid #23262b; border-radius: 4px;
+  padding: 7px 16px; letter-spacing: 0.06em;
+  opacity: 0; transform: translateY(8px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.toast.show { opacity: 1; transform: translateY(0); }
+
+#intro {
+  position: fixed; inset: 0; z-index: 30;
+  background: #fbfaf5;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; user-select: none;
+  transition: opacity 1s ease;
+}
+#intro.hide { opacity: 0; pointer-events: none; }
+#intro .box { text-align: center; color: #23262b; }
+#intro h1 {
+  font: 300 46px Georgia, "Times New Roman", serif;
+  letter-spacing: 0.55em; margin: 0 0 10px 0.55em;
+}
+#intro .sub { font: italic 15px Georgia, serif; color: #565b63; margin: 0 0 34px; letter-spacing: 0.2em; }
+#intro .hints { display: flex; gap: 26px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
+#intro .hints span { font: 12.5px Georgia, serif; color: #565b63; letter-spacing: 0.1em; }
+#intro .enter { font: 14px Georgia, serif; color: #23262b; letter-spacing: 0.3em; animation: pulse 2.4s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }

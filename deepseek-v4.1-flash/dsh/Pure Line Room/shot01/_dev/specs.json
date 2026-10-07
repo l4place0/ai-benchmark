@@ -1,0 +1,5 @@
+[
+  { "name": "N1 look 125", "out": "_dev/n1.png", "orbit": [0.00, 1.45, 0.00], "look": [0.30, 1.25, -1.90], "yaw": 0.30, "pitch": 0.03, "dist": 3.07, "fov": 46, "day": 1, "hour": 11, "noavoid": true },
+  { "name": "N2 look 115", "out": "_dev/n2.png", "orbit": [0.00, 1.45, 0.00], "look": [0.30, 1.12, -1.95], "yaw": 0.30, "pitch": 0.03, "dist": 3.07, "fov": 46, "day": 1, "hour": 11, "noavoid": true },
+  { "name": "N3 look 130 wide", "out": "_dev/n3.png", "orbit": [0.10, 1.45, 0.10], "look": [0.30, 1.30, -1.90], "yaw": 0.28, "pitch": 0.02, "dist": 3.00, "fov": 50, "day": 1, "hour": 11, "noavoid": true }
+]

@@ -1,0 +1,10 @@
+{
+  "name": "time-gallery",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "《时光画廊》—— 纯浏览器离线沉浸式西方艺术史科普游戏",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

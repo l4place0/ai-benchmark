@@ -1,0 +1,514 @@
+# Hakka Tulou Village MTL Material Definition
+
+newmtl mat_1_Grass_Light
+Kd 0.3725 0.5255 0.2667
+Ka 0.1118 0.1576 0.0800
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_2_Grass_Mid
+Kd 0.3137 0.4549 0.2196
+Ka 0.0941 0.1365 0.0659
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_3_Grass_Dark
+Kd 0.2667 0.3843 0.1882
+Ka 0.0800 0.1153 0.0565
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_4_Rock_Gray
+Kd 0.4706 0.4471 0.4078
+Ka 0.1412 0.1341 0.1224
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_5_Rock_Dark
+Kd 0.3843 0.3608 0.3294
+Ka 0.1153 0.1082 0.0988
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_6_Dirt_Bank
+Kd 0.5686 0.4784 0.3686
+Ka 0.1706 0.1435 0.1106
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_7_Plinth_Carved_Base
+Kd 0.2549 0.2353 0.2157
+Ka 0.0765 0.0706 0.0647
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_10_Water_Stream
+Kd 0.3294 0.5569 0.6118
+Ka 0.0988 0.1671 0.1835
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_11_Water_Pond
+Kd 0.2745 0.4784 0.5333
+Ka 0.0824 0.1435 0.1600
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_12_Water_Paddy
+Kd 0.3765 0.5647 0.5098
+Ka 0.1129 0.1694 0.1529
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_13_Lotus_Pad
+Kd 0.2196 0.4000 0.2667
+Ka 0.0659 0.1200 0.0800
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_15_Rice_Young
+Kd 0.4392 0.6745 0.3294
+Ka 0.1318 0.2024 0.0988
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_16_Rice_Lush
+Kd 0.5020 0.7451 0.3765
+Ka 0.1506 0.2235 0.1129
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_17_Vegetable_Crop
+Kd 0.3451 0.5569 0.2353
+Ka 0.1035 0.1671 0.0706
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_18_Tilled_Soil
+Kd 0.5804 0.4706 0.3137
+Ka 0.1741 0.1412 0.0941
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_19_Terrace_Wall
+Kd 0.4235 0.3373 0.2353
+Ka 0.1271 0.1012 0.0706
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_20_Tea_Bush
+Kd 0.2431 0.4392 0.1804
+Ka 0.0729 0.1318 0.0541
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_25_Stone_Road_Light
+Kd 0.6510 0.6353 0.6118
+Ka 0.1953 0.1906 0.1835
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_26_Stone_Road_Mid
+Kd 0.5647 0.5490 0.5255
+Ka 0.1694 0.1647 0.1576
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_27_Stone_Road_Dark
+Kd 0.4863 0.4706 0.4510
+Ka 0.1459 0.1412 0.1353
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_28_Dirt_Road
+Kd 0.5686 0.5176 0.4549
+Ka 0.1706 0.1553 0.1365
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_30_Earth_Tulou1_Main
+Kd 0.8314 0.6431 0.3843
+Ka 0.2494 0.1929 0.1153
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_31_Earth_Tulou1_Mid
+Kd 0.7647 0.5804 0.3451
+Ka 0.2294 0.1741 0.1035
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_32_Earth_Tulou1_Light
+Kd 0.8941 0.6980 0.4392
+Ka 0.2682 0.2094 0.1318
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_33_Earth_Tulou1_Dark
+Kd 0.6980 0.5176 0.3059
+Ka 0.2094 0.1553 0.0918
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_34_Earth_Plinth_Stone
+Kd 0.5686 0.5490 0.5176
+Ka 0.1706 0.1647 0.1553
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_40_Earth_Tulou2_Main
+Kd 0.7373 0.4863 0.3059
+Ka 0.2212 0.1459 0.0918
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_41_Earth_Tulou2_Mid
+Kd 0.6745 0.4392 0.2667
+Ka 0.2024 0.1318 0.0800
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_42_Earth_Tulou2_Light
+Kd 0.8000 0.5412 0.3529
+Ka 0.2400 0.1624 0.1059
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_43_Earth_Tulou2_Dark
+Kd 0.6118 0.3922 0.2353
+Ka 0.1835 0.1176 0.0706
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_50_Earth_Tulou3_Main
+Kd 0.8549 0.6824 0.4471
+Ka 0.2565 0.2047 0.1341
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_51_Earth_Tulou3_Mid
+Kd 0.7922 0.6196 0.4000
+Ka 0.2376 0.1859 0.1200
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_52_Earth_Tulou3_Light
+Kd 0.9020 0.7294 0.4941
+Ka 0.2706 0.2188 0.1482
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_60_House_Wall_Buff
+Kd 0.7686 0.6118 0.4157
+Ka 0.2306 0.1835 0.1247
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_61_House_Wall_Ochre
+Kd 0.7059 0.5490 0.3686
+Ka 0.2118 0.1647 0.1106
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_62_House_Wall_Gray
+Kd 0.6510 0.5882 0.5333
+Ka 0.1953 0.1765 0.1600
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_63_Hall_Wall_WhiteBuff
+Kd 0.8784 0.8000 0.6824
+Ka 0.2635 0.2400 0.2047
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_70_Roof_Slate_Main
+Kd 0.2039 0.2196 0.2431
+Ka 0.0612 0.0659 0.0729
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_71_Roof_Slate_Dark
+Kd 0.1569 0.1725 0.1882
+Ka 0.0471 0.0518 0.0565
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_72_Roof_Slate_Light
+Kd 0.2667 0.2824 0.3059
+Ka 0.0800 0.0847 0.0918
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_73_Roof_Ridge
+Kd 0.3373 0.3529 0.3765
+Ka 0.1012 0.1059 0.1129
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_74_Roof_Moss
+Kd 0.2902 0.3373 0.2745
+Ka 0.0871 0.1012 0.0824
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_80_Wood_Beam_Dark
+Kd 0.3686 0.2431 0.1725
+Ka 0.1106 0.0729 0.0518
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_81_Wood_Plank_Floor
+Kd 0.4549 0.3137 0.2275
+Ka 0.1365 0.0941 0.0682
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_82_Wood_Railing
+Kd 0.5333 0.3765 0.2745
+Ka 0.1600 0.1129 0.0824
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_83_Wood_Door_Trim
+Kd 0.2902 0.1804 0.1255
+Ka 0.0871 0.0541 0.0376
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_84_Wood_Light_Fence
+Kd 0.6118 0.4627 0.3373
+Ka 0.1835 0.1388 0.1012
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_90_Bamboo_Stalk
+Kd 0.3608 0.5647 0.2431
+Ka 0.1082 0.1694 0.0729
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_91_Bamboo_Leaf_Light
+Kd 0.2745 0.4784 0.1882
+Ka 0.0824 0.1435 0.0565
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_92_Bamboo_Leaf_Dark
+Kd 0.2118 0.3922 0.1490
+Ka 0.0635 0.1176 0.0447
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_93_Pine_Needle
+Kd 0.1647 0.3059 0.1804
+Ka 0.0494 0.0918 0.0541
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_94_Pine_Dark
+Kd 0.1255 0.2353 0.1412
+Ka 0.0376 0.0706 0.0424
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_95_Tree_Trunk
+Kd 0.3137 0.2196 0.1490
+Ka 0.0941 0.0659 0.0447
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_96_Foliage_Bright
+Kd 0.3922 0.6118 0.2745
+Ka 0.1176 0.1835 0.0824
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_97_Persimmon_Fruit
+Kd 0.8627 0.4314 0.1569
+Ka 0.2588 0.1294 0.0471
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_100_Straw_Grain
+Kd 0.7647 0.6078 0.2667
+Ka 0.2294 0.1824 0.0800
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_101_Firewood_Stack
+Kd 0.4314 0.2902 0.1882
+Ka 0.1294 0.0871 0.0565
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_102_Ceramic_Jar
+Kd 0.5255 0.3529 0.2353
+Ka 0.1576 0.1059 0.0706
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_103_Stone_Mill_Well
+Kd 0.6431 0.6235 0.6039
+Ka 0.1929 0.1871 0.1812
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_104_Villager_Cloth_Blue
+Kd 0.1569 0.2353 0.3843
+Ka 0.0471 0.0706 0.1153
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_105_Villager_Skin
+Kd 0.8784 0.7216 0.5647
+Ka 0.2635 0.2165 0.1694
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_106_Villager_Hat_Straw
+Kd 0.8078 0.7059 0.4549
+Ka 0.2424 0.2118 0.1365
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_107_Lantern_Red
+Kd 0.7451 0.1725 0.1490
+Ka 0.2235 0.0518 0.0447
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+
+newmtl mat_108_Water_Buffalo
+Kd 0.3922 0.3725 0.3529
+Ka 0.1176 0.1118 0.1059
+Ks 0.05 0.05 0.05
+Ns 10.0
+d 1.0
+illum 2
+

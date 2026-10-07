@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>🌸 桜ヶ丘駅 (Sakuragaoka Station) - 三渲二樱花车站</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Import Three.js via ES Modules with fast global CDN -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="canvas-container"></div>
+
+  <!-- Anime UI Overlay -->
+  <div id="ui-overlay">
+    <!-- Header Title -->
+    <header class="anime-header">
+      <div class="station-badge">
+        <span class="badge-kanji">桜ヶ丘駅</span>
+        <span class="badge-romaji">SAKURAGAOKA STATION</span>
+      </div>
+      <div class="header-desc">
+        <span class="sub-text">日系青春动画风格 · 三渲二交互场景</span>
+        <span class="time-tag">午後四時の春風 · 4:00 PM</span>
+      </div>
+    </header>
+
+    <!-- Top Cinematic Camera Bar -->
+    <nav class="camera-bar">
+      <button class="cam-btn active" data-cam="street" title="经典街角与车站远眺">
+        <span class="cam-icon">🎬</span>
+        <span class="cam-name">主街景致</span>
+      </button>
+      <button class="cam-btn" data-cam="crossing" title="铁路道口与警报器">
+        <span class="cam-icon">🚊</span>
+        <span class="cam-name">铁路道口</span>
+      </button>
+      <button class="cam-btn" data-cam="platform" title="站台候车雨棚与电车">
+        <span class="cam-icon">🚉</span>
+        <span class="cam-name">车站月台</span>
+      </button>
+      <button class="cam-btn" data-cam="plaza" title="站前广场与巨型樱树">
+        <span class="cam-icon">🌸</span>
+        <span class="cam-name">站前广场</span>
+      </button>
+      <button class="cam-btn" data-cam="cafe" title="咖啡馆与花店街角">
+        <span class="cam-icon">☕</span>
+        <span class="cam-name">町内商店街</span>
+      </button>
+      <button class="cam-btn" data-cam="rooftop" title="俯瞰小镇全景天际线">
+        <span class="cam-icon">🕊️</span>
+        <span class="cam-name">屋顶全景</span>
+      </button>
+      <div class="cam-divider"></div>
+      <button class="mode-btn" id="btn-walk" title="第一人称沉浸漫游 (WASD移动 + 鼠标视角)">
+        <span class="cam-icon">🚶</span>
+        <span class="cam-name">地面漫步</span>
+      </button>
+      <button class="mode-btn" id="btn-orbit" title="鼠标自由旋转与平移">
+        <span class="cam-icon">🔄</span>
+        <span class="cam-name">自由观察</span>
+      </button>
+    </nav>
+
+    <!-- Floating Interactive Controls (Bottom Left) -->
+    <aside class="control-panel">
+      <div class="panel-section">
+        <label class="control-label">
+          <span>🌸 飘落花瓣密度</span>
+          <span id="petal-val-text" class="val-badge">中等 (2,400片)</span>
+        </label>
+        <input type="range" id="petal-slider" min="600" max="4000" step="200" value="2400">
+      </div>
+
+      <div class="panel-section">
+        <label class="control-label">
+          <span>☀️ 时间与光线</span>
+        </label>
+        <div class="time-presets">
+          <button class="time-btn active" data-time="afternoon">春日午后 16:00</button>
+          <button class="time-btn" data-time="sunset">暮色晚霞 17:45</button>
+          <button class="time-btn" data-time="morning">清晨朝阳 08:30</button>
+        </div>
+      </div>
+
+      <div class="panel-section sound-section">
+        <div class="sound-row">
+          <button class="sound-toggle-btn" id="sound-btn">
+            <span id="sound-icon">🔈</span>
+            <span id="sound-text">播放环境音 (微风·道口·雀鸣)</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="panel-section toggles-row">
+        <label class="checkbox-label">
+          <input type="checkbox" id="chk-train-anim" checked>
+          <span>电车微风摆动</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="chk-crossing-blink" checked>
+          <span>道口红灯闪烁</span>
+        </label>
+      </div>
+    </aside>
+
+    <!-- Walk Instructions Overlay (Hidden by default, shown when walk mode active) -->
+    <div id="walk-hud" class="hidden">
+      <div class="crosshair">+</div>
+      <div class="walk-tips">
+        <span>[W/A/S/D] 移动 · [鼠标] 环顾四周 · [Shift] 奔跑 · [ESC] 退出漫游</span>
+      </div>
+    </div>
+
+    <!-- Info / Storyteller Badge (Bottom Right) -->
+    <footer class="scene-footer">
+      <button id="info-btn" class="info-toggle" title="场景设计说明">
+        <span>ℹ️ 场景设计</span>
+      </button>
+      <div id="info-modal" class="info-modal hidden">
+        <div class="modal-header">
+          <h3>三渲二樱花车站 (Sakuragaoka Station)</h3>
+          <button id="close-info" class="close-btn">&times;</button>
+        </div>
+        <div class="modal-content">
+          <p><strong>美术风格：</strong>日系青春动漫三渲二 (Cel-Shaded / Toon Shading)，新海诚色彩氛围与细腻生活细节。</p>
+          <ul>
+            <li><strong>空间层次：</strong>主街纵深引导、站前小广场、平交道口、双轨铁道与远山天际线。</li>
+            <li><strong>建筑群落：</strong>独栋住宅（含二楼晒衣阳台与室外机）、和菓子店「さくら堂」、便利店「DAILY POP」、精品咖啡馆「CAFE CERISIER」、花日和花店。</li>
+            <li><strong>铁道设施：</strong>地面车站本屋（售票机、自动闸机、站名牌）、月台雨棚、双轨钢轨与碎石道床、架空接触网、道口红黑黄警报柱。</li>
+            <li><strong>生活化痕迹：</strong>自动贩卖机、红色圆形邮筒、公用绿色电话亭、停放自行车、墙头卧猫、电线上麻雀、沥青路面「止まれ」标线与反光凸面镜。</li>
+            <li><strong>动态效果：</strong>3D真实受风落樱粒子系统、道口交替双红灯闪烁、电车呼吸微晃动、环境音效合成。</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Main Three.js Entry Script -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

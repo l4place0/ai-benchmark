@@ -1,0 +1,88 @@
+{
+  "project": "GLASS GARDEN",
+  "root": "D:\\l4place\\Workspace\\ai-benchmark\\gpt-6.1-sol\\World.Execute(me) MV\\shot01",
+  "generated": "2026-10-07T08:55:44.804Z",
+  "entries": [
+    {
+      "file": "assets/audio/original.osz",
+      "source": "https://assets.ppy.sh/artists/331/Miracle%20Milk/Mili%20-%20world.execute(me)%3B.osz",
+      "credit": "Mili, original Miracle Milk recording; rights retained by owners",
+      "bytes": 5006392,
+      "sha256": "9330ba29b7969cb36109e3fda48124362afc44d0b488b79b2757b623c53bc823"
+    },
+    {
+      "file": "assets/audio/source/audio.mp3",
+      "source": "Extracted from original.osz",
+      "credit": "Mili",
+      "bytes": 5097683,
+      "sha256": "028ea8b1cf10c5faeca6ff4b2f6acbe3bd0926a5c2c045e7893857d505dbad61"
+    },
+    {
+      "file": "assets/textures/cosmic-cliffs.png",
+      "source": "https://assets.science.nasa.gov/dynamicimage/assets/science/missions/webb/science/2022/07/STScI-01GA6KKWG229B16K4Q38CH3BXS.png?fit=clip&w=2000",
+      "credit": "NASA, ESA, CSA, STScI",
+      "bytes": 5883403,
+      "sha256": "4341ffd8a597959ef97857239971170707be77e3ce0ae8c7e9e782f078dfe2ed"
+    },
+    {
+      "file": "assets/fonts/CormorantGaramond.ttf",
+      "source": "https://github.com/google/fonts/tree/main/ofl/cormorantgaramond",
+      "licence": "SIL OFL",
+      "bytes": 1195560,
+      "sha256": "b20b7d9626dd956b2c5e558692ad328b1f19e3275e2782db4fa07670d83f35e0"
+    },
+    {
+      "file": "assets/fonts/IBMPlexMono.ttf",
+      "source": "https://github.com/google/fonts/tree/main/ofl/ibmplexmono",
+      "licence": "SIL OFL",
+      "bytes": 135580,
+      "sha256": "6a3412f058c7d8dfd9170c41e85ade48e5156ecb89356110ca57a0a27734af46"
+    },
+    {
+      "file": "tools/three/package/build/three.module.js",
+      "source": "https://registry.npmjs.org/three/-/three-0.180.0.tgz",
+      "licence": "MIT",
+      "version": "0.180.0",
+      "bytes": 603113,
+      "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a"
+    },
+    {
+      "file": "tools/chrome/chrome-headless-shell-win64/chrome-headless-shell.exe",
+      "source": "https://storage.googleapis.com/chrome-for-testing-public/155.0.8059.39/win64/chrome-headless-shell-win64.zip",
+      "version": "155.0.8059.39",
+      "bytes": 219395584,
+      "sha256": "cb3e6c88734823d828042d9a153ca9c8f5989301456d4fcda76079a88c475791"
+    },
+    {
+      "file": "tools/node/node.exe",
+      "source": "Copied from existing local runtime",
+      "version": "26.4.0",
+      "bytes": 103230280,
+      "sha256": "3193d7f751b8a07bd4acc70e81946ae9c6efdee83e07ad1c8d0e4089df7c5cef"
+    },
+    {
+      "file": "tools/ffmpeg/ffmpeg.exe",
+      "source": "Copied from existing local FFmpeg distribution",
+      "bytes": 227823104,
+      "sha256": "589e50b766d251afdf181dd664d40bd94407e200b019989fd7468c7d118a28d0"
+    },
+    {
+      "file": "src/mv.js",
+      "source": "Original project source",
+      "bytes": 31461,
+      "sha256": "9005fbdc0eee6cddcd6827314581ce1b4e5e3d3c9f2ae375f4232fd065d85699"
+    },
+    {
+      "file": "src/index.html",
+      "source": "Original project source",
+      "bytes": 1391,
+      "sha256": "b500146f3da355cfde8731904cc18664b6b66d83ad7c48dcfe2380d2f433ab55"
+    },
+    {
+      "file": "scripts/render.mjs",
+      "source": "Original project source",
+      "bytes": 8074,
+      "sha256": "8080a723b144cfde25d27dba91e8017c0b2a3cc0bd8aaaadf0bbbb3c1ab808b6"
+    }
+  ]
+}

@@ -1,0 +1,1064 @@
+{
+  "verification": {
+    "version": 2,
+    "checks": {
+      "resolution": true,
+      "fps": true,
+      "frames": true,
+      "duration": true,
+      "audioCoverage": true,
+      "completeDecode": true,
+      "frameQuantization": true,
+      "cutCoverage": true
+    },
+    "allPassed": true,
+    "duration": 216,
+    "fps": "60/1",
+    "frameCount": 12960,
+    "cutCount": 113,
+    "beatCount": 446,
+    "fileBytes": 659968894,
+    "sourceAudioSeconds": 212.3305,
+    "timingNote": "The <=8.334ms figure is frame quantization relative to detected/refined onset positions. It is not a claim of human-verified musical alignment accuracy.",
+    "eventChecks": [
+      {
+        "frame": 209,
+        "time": 3.4833333333333334,
+        "section": "boot",
+        "beat": 7,
+        "sourceOnset": 3.48,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 430,
+        "time": 7.166666666666667,
+        "section": "boot",
+        "beat": 15,
+        "sourceOnset": 7.17,
+        "errorMs": -3.333
+      },
+      {
+        "frame": 652,
+        "time": 10.866666666666667,
+        "section": "boot",
+        "beat": 23,
+        "sourceOnset": 10.86,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 874,
+        "time": 14.566666666666666,
+        "section": "overture",
+        "beat": 31,
+        "sourceOnset": 14.56,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 984,
+        "time": 16.4,
+        "section": "overture",
+        "beat": 35,
+        "sourceOnset": 16.4,
+        "errorMs": 0
+      },
+      {
+        "frame": 1094,
+        "time": 18.233333333333334,
+        "section": "overture",
+        "beat": 39,
+        "sourceOnset": 18.23,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 1205,
+        "time": 20.083333333333332,
+        "section": "overture",
+        "beat": 43,
+        "sourceOnset": 20.09,
+        "errorMs": -6.667
+      },
+      {
+        "frame": 1317,
+        "time": 21.95,
+        "section": "overture",
+        "beat": 47,
+        "sourceOnset": 21.95,
+        "errorMs": 0
+      },
+      {
+        "frame": 1427,
+        "time": 23.783333333333335,
+        "section": "overture",
+        "beat": 51,
+        "sourceOnset": 23.78,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 1538,
+        "time": 25.633333333333333,
+        "section": "overture",
+        "beat": 55,
+        "sourceOnset": 25.63,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 1648,
+        "time": 27.466666666666665,
+        "section": "overture",
+        "beat": 59,
+        "sourceOnset": 27.46,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 1759,
+        "time": 29.316666666666666,
+        "section": "geometry",
+        "beat": 63,
+        "sourceOnset": 29.31,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 1981,
+        "time": 33.016666666666666,
+        "section": "geometry",
+        "beat": 71,
+        "sourceOnset": 33.02,
+        "errorMs": -3.333
+      },
+      {
+        "frame": 2201,
+        "time": 36.68333333333333,
+        "section": "geometry",
+        "beat": 79,
+        "sourceOnset": 36.69,
+        "errorMs": -6.667
+      },
+      {
+        "frame": 2424,
+        "time": 40.4,
+        "section": "geometry",
+        "beat": 87,
+        "sourceOnset": 40.4,
+        "errorMs": 0
+      },
+      {
+        "frame": 2645,
+        "time": 44.083333333333336,
+        "section": "polarity",
+        "beat": 95,
+        "sourceOnset": 44.09,
+        "errorMs": -6.667
+      },
+      {
+        "frame": 2756,
+        "time": 45.93333333333333,
+        "section": "polarity",
+        "beat": 99,
+        "sourceOnset": 45.94,
+        "errorMs": -6.667
+      },
+      {
+        "frame": 2866,
+        "time": 47.766666666666666,
+        "section": "polarity",
+        "beat": 103,
+        "sourceOnset": 47.77,
+        "errorMs": -3.333
+      },
+      {
+        "frame": 2977,
+        "time": 49.61666666666667,
+        "section": "polarity",
+        "beat": 107,
+        "sourceOnset": 49.61,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 3089,
+        "time": 51.483333333333334,
+        "section": "polarity",
+        "beat": 111,
+        "sourceOnset": 51.48,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 3199,
+        "time": 53.31666666666667,
+        "section": "polarity",
+        "beat": 115,
+        "sourceOnset": 53.32,
+        "errorMs": -3.333
+      },
+      {
+        "frame": 3310,
+        "time": 55.166666666666664,
+        "section": "polarity",
+        "beat": 119,
+        "sourceOnset": 55.17,
+        "errorMs": -3.333
+      },
+      {
+        "frame": 3420,
+        "time": 57,
+        "section": "polarity",
+        "beat": 123,
+        "sourceOnset": 57,
+        "errorMs": 0
+      },
+      {
+        "frame": 3532,
+        "time": 58.86666666666667,
+        "section": "chorus",
+        "beat": 127,
+        "sourceOnset": 58.86,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 3643,
+        "time": 60.71666666666667,
+        "section": "chorus",
+        "beat": 131,
+        "sourceOnset": 60.71,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 3753,
+        "time": 62.55,
+        "section": "chorus",
+        "beat": 135,
+        "sourceOnset": 62.55,
+        "errorMs": 0
+      },
+      {
+        "frame": 3863,
+        "time": 64.38333333333334,
+        "section": "chorus",
+        "beat": 139,
+        "sourceOnset": 64.39,
+        "errorMs": -6.667
+      },
+      {
+        "frame": 3975,
+        "time": 66.25,
+        "section": "chorus",
+        "beat": 143,
+        "sourceOnset": 66.242856,
+        "errorMs": 7.144
+      },
+      {
+        "frame": 4085,
+        "time": 68.08333333333333,
+        "section": "chorus",
+        "beat": 147,
+        "sourceOnset": 68.08897784615385,
+        "errorMs": -5.645
+      },
+      {
+        "frame": 4194,
+        "time": 69.9,
+        "section": "chorus",
+        "beat": 151,
+        "sourceOnset": 69.9,
+        "errorMs": 0
+      },
+      {
+        "frame": 4307,
+        "time": 71.78333333333333,
+        "section": "chorus",
+        "beat": 155,
+        "sourceOnset": 71.78,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 4417,
+        "time": 73.61666666666666,
+        "section": "garden",
+        "beat": 159,
+        "sourceOnset": 73.62,
+        "errorMs": -3.333
+      },
+      {
+        "frame": 4639,
+        "time": 77.31666666666666,
+        "section": "garden",
+        "beat": 167,
+        "sourceOnset": 77.32,
+        "errorMs": -3.333
+      },
+      {
+        "frame": 4861,
+        "time": 81.01666666666667,
+        "section": "garden",
+        "beat": 175,
+        "sourceOnset": 81.01,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 5082,
+        "time": 84.7,
+        "section": "garden",
+        "beat": 183,
+        "sourceOnset": 84.70407446153847,
+        "errorMs": -4.074
+      },
+      {
+        "frame": 5304,
+        "time": 88.4,
+        "section": "duality",
+        "beat": 191,
+        "sourceOnset": 88.39631815384615,
+        "errorMs": 3.682
+      },
+      {
+        "frame": 5414,
+        "time": 90.23333333333333,
+        "section": "duality",
+        "beat": 195,
+        "sourceOnset": 90.23,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 5526,
+        "time": 92.1,
+        "section": "duality",
+        "beat": 199,
+        "sourceOnset": 92.1,
+        "errorMs": 0
+      },
+      {
+        "frame": 5636,
+        "time": 93.93333333333334,
+        "section": "duality",
+        "beat": 203,
+        "sourceOnset": 93.9346836923077,
+        "errorMs": -1.35
+      },
+      {
+        "frame": 5746,
+        "time": 95.76666666666667,
+        "section": "duality",
+        "beat": 207,
+        "sourceOnset": 95.76,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 5858,
+        "time": 97.63333333333334,
+        "section": "duality",
+        "beat": 211,
+        "sourceOnset": 97.63,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 5967,
+        "time": 99.45,
+        "section": "duality",
+        "beat": 215,
+        "sourceOnset": 99.45,
+        "errorMs": 0
+      },
+      {
+        "frame": 6079,
+        "time": 101.31666666666666,
+        "section": "duality",
+        "beat": 219,
+        "sourceOnset": 101.31917107692308,
+        "errorMs": -2.504
+      },
+      {
+        "frame": 6190,
+        "time": 103.16666666666667,
+        "section": "union",
+        "beat": 223,
+        "sourceOnset": 103.16,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 6301,
+        "time": 105.01666666666667,
+        "section": "union",
+        "beat": 227,
+        "sourceOnset": 105.01,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 6410,
+        "time": 106.83333333333333,
+        "section": "union",
+        "beat": 231,
+        "sourceOnset": 106.84,
+        "errorMs": -6.667
+      },
+      {
+        "frame": 6523,
+        "time": 108.71666666666667,
+        "section": "union",
+        "beat": 235,
+        "sourceOnset": 108.71,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 6633,
+        "time": 110.55,
+        "section": "isolation",
+        "beat": 239,
+        "sourceOnset": 110.55,
+        "errorMs": 0
+      },
+      {
+        "frame": 6744,
+        "time": 112.4,
+        "section": "isolation",
+        "beat": 243,
+        "sourceOnset": 112.4,
+        "errorMs": 0
+      },
+      {
+        "frame": 6854,
+        "time": 114.23333333333333,
+        "section": "isolation",
+        "beat": 247,
+        "sourceOnset": 114.23,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 6966,
+        "time": 116.1,
+        "section": "isolation",
+        "beat": 251,
+        "sourceOnset": 116.1,
+        "errorMs": 0
+      },
+      {
+        "frame": 7076,
+        "time": 117.93333333333334,
+        "section": "erase",
+        "beat": 255,
+        "sourceOnset": 117.94,
+        "errorMs": -6.667
+      },
+      {
+        "frame": 7187,
+        "time": 119.78333333333333,
+        "section": "erase",
+        "beat": 259,
+        "sourceOnset": 119.78,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 7297,
+        "time": 121.61666666666666,
+        "section": "erase",
+        "beat": 263,
+        "sourceOnset": 121.62,
+        "errorMs": -3.333
+      },
+      {
+        "frame": 7409,
+        "time": 123.48333333333333,
+        "section": "erase",
+        "beat": 267,
+        "sourceOnset": 123.48,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 7518,
+        "time": 125.3,
+        "section": "erase",
+        "beat": 271,
+        "sourceOnset": 125.3,
+        "errorMs": 0
+      },
+      {
+        "frame": 7629,
+        "time": 127.15,
+        "section": "erase",
+        "beat": 275,
+        "sourceOnset": 127.15,
+        "errorMs": 0
+      },
+      {
+        "frame": 7741,
+        "time": 129.01666666666668,
+        "section": "erase",
+        "beat": 279,
+        "sourceOnset": 129.01,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 7852,
+        "time": 130.86666666666667,
+        "section": "erase",
+        "beat": 283,
+        "sourceOnset": 130.86,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 7961,
+        "time": 132.68333333333334,
+        "section": "erase",
+        "beat": 287,
+        "sourceOnset": 132.69,
+        "errorMs": -6.667
+      },
+      {
+        "frame": 8073,
+        "time": 134.55,
+        "section": "descent",
+        "beat": 291,
+        "sourceOnset": 134.55,
+        "errorMs": 0
+      },
+      {
+        "frame": 8183,
+        "time": 136.38333333333333,
+        "section": "descent",
+        "beat": 295,
+        "sourceOnset": 136.39,
+        "errorMs": -6.667
+      },
+      {
+        "frame": 8295,
+        "time": 138.25,
+        "section": "descent",
+        "beat": 299,
+        "sourceOnset": 138.25,
+        "errorMs": 0
+      },
+      {
+        "frame": 8405,
+        "time": 140.08333333333334,
+        "section": "descent",
+        "beat": 303,
+        "sourceOnset": 140.09,
+        "errorMs": -6.667
+      },
+      {
+        "frame": 8516,
+        "time": 141.93333333333334,
+        "section": "descent",
+        "beat": 307,
+        "sourceOnset": 141.93,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 8627,
+        "time": 143.78333333333333,
+        "section": "descent",
+        "beat": 311,
+        "sourceOnset": 143.78,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 8737,
+        "time": 145.61666666666667,
+        "section": "descent",
+        "beat": 315,
+        "sourceOnset": 145.62,
+        "errorMs": -3.333
+      },
+      {
+        "frame": 8848,
+        "time": 147.46666666666667,
+        "section": "execution",
+        "beat": 319,
+        "sourceOnset": 147.46,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 8903,
+        "time": 148.38333333333333,
+        "section": "execution",
+        "beat": 321,
+        "sourceOnset": 148.38,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 8959,
+        "time": 149.31666666666666,
+        "section": "execution",
+        "beat": 323,
+        "sourceOnset": 149.32,
+        "errorMs": -3.333
+      },
+      {
+        "frame": 9014,
+        "time": 150.23333333333332,
+        "section": "execution",
+        "beat": 325,
+        "sourceOnset": 150.24,
+        "errorMs": -6.667
+      },
+      {
+        "frame": 9070,
+        "time": 151.16666666666666,
+        "section": "execution",
+        "beat": 327,
+        "sourceOnset": 151.16,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 9125,
+        "time": 152.08333333333334,
+        "section": "execution",
+        "beat": 329,
+        "sourceOnset": 152.08,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 9181,
+        "time": 153.01666666666668,
+        "section": "execution",
+        "beat": 331,
+        "sourceOnset": 153.01,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 9236,
+        "time": 153.93333333333334,
+        "section": "execution",
+        "beat": 333,
+        "sourceOnset": 153.93,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 9292,
+        "time": 154.86666666666667,
+        "section": "execution",
+        "beat": 335,
+        "sourceOnset": 154.86,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 9346,
+        "time": 155.76666666666668,
+        "section": "execution",
+        "beat": 337,
+        "sourceOnset": 155.76,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 9402,
+        "time": 156.7,
+        "section": "execution",
+        "beat": 339,
+        "sourceOnset": 156.7,
+        "errorMs": 0
+      },
+      {
+        "frame": 9457,
+        "time": 157.61666666666667,
+        "section": "execution",
+        "beat": 341,
+        "sourceOnset": 157.62,
+        "errorMs": -3.333
+      },
+      {
+        "frame": 9735,
+        "time": 162.25,
+        "section": "finalchorus",
+        "beat": 351,
+        "sourceOnset": 162.25,
+        "errorMs": 0
+      },
+      {
+        "frame": 9790,
+        "time": 163.16666666666666,
+        "section": "finalchorus",
+        "beat": 353,
+        "sourceOnset": 163.17,
+        "errorMs": -3.333
+      },
+      {
+        "frame": 9845,
+        "time": 164.08333333333334,
+        "section": "finalchorus",
+        "beat": 355,
+        "sourceOnset": 164.08,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 9900,
+        "time": 165,
+        "section": "finalchorus",
+        "beat": 357,
+        "sourceOnset": 165,
+        "errorMs": 0
+      },
+      {
+        "frame": 9956,
+        "time": 165.93333333333334,
+        "section": "finalchorus",
+        "beat": 359,
+        "sourceOnset": 165.9334356923077,
+        "errorMs": -0.102
+      },
+      {
+        "frame": 10010,
+        "time": 166.83333333333334,
+        "section": "finalchorus",
+        "beat": 361,
+        "sourceOnset": 166.84,
+        "errorMs": -6.667
+      },
+      {
+        "frame": 10067,
+        "time": 167.78333333333333,
+        "section": "finalchorus",
+        "beat": 363,
+        "sourceOnset": 167.78,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 10123,
+        "time": 168.71666666666667,
+        "section": "finalchorus",
+        "beat": 365,
+        "sourceOnset": 168.71,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 10178,
+        "time": 169.63333333333333,
+        "section": "finalchorus",
+        "beat": 367,
+        "sourceOnset": 169.62567938461538,
+        "errorMs": 7.654
+      },
+      {
+        "frame": 10232,
+        "time": 170.53333333333333,
+        "section": "finalchorus",
+        "beat": 369,
+        "sourceOnset": 170.53,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 10288,
+        "time": 171.46666666666667,
+        "section": "finalchorus",
+        "beat": 371,
+        "sourceOnset": 171.46,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 10342,
+        "time": 172.36666666666667,
+        "section": "finalchorus",
+        "beat": 373,
+        "sourceOnset": 172.37,
+        "errorMs": -3.333
+      },
+      {
+        "frame": 10399,
+        "time": 173.31666666666666,
+        "section": "finalchorus",
+        "beat": 375,
+        "sourceOnset": 173.32,
+        "errorMs": -3.333
+      },
+      {
+        "frame": 10454,
+        "time": 174.23333333333332,
+        "section": "finalchorus",
+        "beat": 377,
+        "sourceOnset": 174.23,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 10509,
+        "time": 175.15,
+        "section": "finalchorus",
+        "beat": 379,
+        "sourceOnset": 175.15,
+        "errorMs": 0
+      },
+      {
+        "frame": 10565,
+        "time": 176.08333333333334,
+        "section": "finalchorus",
+        "beat": 381,
+        "sourceOnset": 176.09,
+        "errorMs": -6.667
+      },
+      {
+        "frame": 10620,
+        "time": 177,
+        "section": "elegy",
+        "beat": 383,
+        "sourceOnset": 177,
+        "errorMs": 0
+      },
+      {
+        "frame": 10842,
+        "time": 180.7,
+        "section": "elegy",
+        "beat": 391,
+        "sourceOnset": 180.7,
+        "errorMs": 0
+      },
+      {
+        "frame": 11063,
+        "time": 184.38333333333333,
+        "section": "elegy",
+        "beat": 399,
+        "sourceOnset": 184.38,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 11284,
+        "time": 188.06666666666666,
+        "section": "elegy",
+        "beat": 407,
+        "sourceOnset": 188.07,
+        "errorMs": -3.333
+      },
+      {
+        "frame": 11506,
+        "time": 191.76666666666668,
+        "section": "elegy",
+        "beat": 415,
+        "sourceOnset": 191.77,
+        "errorMs": -3.333
+      },
+      {
+        "frame": 11618,
+        "time": 193.63333333333333,
+        "section": "outro",
+        "beat": 419,
+        "sourceOnset": 193.63,
+        "errorMs": 3.333
+      },
+      {
+        "frame": 11839,
+        "time": 197.31666666666666,
+        "section": "outro",
+        "beat": 427,
+        "sourceOnset": 197.31,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 12061,
+        "time": 201.01666666666668,
+        "section": "outro",
+        "beat": 435,
+        "sourceOnset": 201.01,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 12283,
+        "time": 204.71666666666667,
+        "section": "outro",
+        "beat": 443,
+        "sourceOnset": 204.71,
+        "errorMs": 6.667
+      },
+      {
+        "frame": 12338,
+        "time": 205.63333333333333,
+        "section": "terminal",
+        "beat": 445,
+        "sourceOnset": 205.63,
+        "errorMs": 3.333
+      }
+    ],
+    "probe": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.64002a",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1088,
+          "has_b_frames": 0,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuv420p",
+          "level": 42,
+          "chroma_location": "left",
+          "field_order": "progressive",
+          "refs": 1,
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "60/1",
+          "avg_frame_rate": "60/1",
+          "time_base": "1/60000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 12960000,
+          "duration": "216.000000",
+          "bit_rate": "24183559",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "12960",
+          "nb_read_frames": "12960",
+          "extradata_size": 44,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler"
+          }
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_long_name": "AAC (Advanced Audio Coding)",
+          "profile": "LC",
+          "codec_type": "audio",
+          "codec_tag_string": "mp4a",
+          "codec_tag": "0x6134706d",
+          "mime_codec_string": "mp4a.40.2",
+          "sample_fmt": "fltp",
+          "sample_rate": "48000",
+          "channels": 2,
+          "channel_layout": "stereo",
+          "bits_per_sample": 0,
+          "initial_padding": 1024,
+          "id": "0x2",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/48000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 10368000,
+          "duration": "216.000000",
+          "bit_rate": "250642",
+          "nb_frames": "10126",
+          "nb_read_frames": "10125",
+          "extradata_size": 5,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "SoundHandler"
+          }
+        },
+        {
+          "index": 2,
+          "codec_name": "bin_data",
+          "codec_long_name": "binary data",
+          "codec_type": "data",
+          "codec_tag_string": "text",
+          "codec_tag": "0x74786574",
+          "id": "0x3",
+          "r_frame_rate": "0/0",
+          "avg_frame_rate": "0/0",
+          "time_base": "1/240000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 51840000,
+          "duration": "216.000000",
+          "bit_rate": "13",
+          "nb_frames": "18",
+          "extradata_size": 63,
+          "disposition": {
+            "default": 0,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "eng",
+            "handler_name": "SubtitleHandler"
+          }
+        }
+      ],
+      "format": {
+        "filename": "revision02/output/world.execute-me_v2_1080p60.mp4",
+        "nb_streams": 3,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "216.000000",
+        "size": "659968894",
+        "bit_rate": "24443292",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "title": "world.execute(me) - Rhythm Edit v2",
+          "artist": "Mili",
+          "encoder": "Lavf63.1.102"
+        }
+      }
+    }
+  },
+  "hashes": {
+    "0": "bdd33ef04389b8b3b1433cc7e71a303aa6f220fee52dab1d64e01b359b925290",
+    "1": "ff557c28737083df653f0799f0accdba0208c0783b2e09206dd02a5d8c1be1b8",
+    "2": "7bbb27c14fff4d6232d570d907bdc6d5f446688c75b77bef90f06116ffa5404f",
+    "3": "04b025152490f03b3a0edbfdf75f7d40da0dd8413b8e20177ae7f0c8df37d8f1",
+    "4": "c3498bfd1474ba43db1c049dc69697e716a87f3ed68e1ad35cd08a44500e01d3",
+    "5": "01250e07abca680b151853aa306f4fea51815588b910bad4c457df8f9e23253a",
+    "6": "a7921904d5ac68e5921ae3f3fb1ad38868029c0c561b4300e7b6b4abf67107ce",
+    "7": "762ef15d99a929bb1dd7c5f3618eb989d9e9b8e78a9515a1456745d90d7b632b",
+    "8": "aefbfbed3d5357c511261c75bd98ad2f6c37dab815669c0cc8c3aa49da77c320",
+    "9": "fbd85f069b8f40a5c27309eac587df66505a42e007953fd2d026bccd45f36c6a",
+    "10": "e2a3a3b9997bc6c1ee4dd006841259c69e8e921abadceace9b3b6e5676c11627",
+    "11": "72d52791b6c4c0a27df11525211d95f3dfc44e232e174004c166b0ac746de72e"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "passed": true,
+  "width": 1920,
+  "height": 1080,
+  "fps": "60/1",
+  "frameCount": 12862,
+  "videoDuration": 214.366667,
+  "songDuration": 212.362449,
+  "audioDuration": 214.366667,
+  "audioChannels": 2,
+  "audioCodec": "aac",
+  "audioSampleRate": "44100",
+  "videoCodec": "h264",
+  "pixelFormat": "yuv420p",
+  "sizeBytes": 494439425,
+  "completeDecode": {
+    "passed": true,
+    "errors": ""
+  },
+  "audioSynchronization": {
+    "offsetSamples": 0,
+    "offsetMilliseconds": 0,
+    "correlation": 0.999096600943704
+  },
+  "motion": [
+    {
+      "time": 18,
+      "uniqueAdjacentFrames": 3,
+      "hashes": [
+        "a215723b6b837eca453d4cac8e61be405d096a394bd35acc866852e6caf9aabf",
+        "a2ab44de97ff58fdad3877286a1038845297bd6e8a6ade2fc3d118e59aac8386",
+        "f3bbf5aa507c47f3b0866b78af0cdaf5dab02c87b7f01045148f8e3868527b18"
+      ]
+    },
+    {
+      "time": 62,
+      "uniqueAdjacentFrames": 3,
+      "hashes": [
+        "65ffdc7ac0b9964080fa2280f4f45332b1c28ed0c7872c3b85984bd739543a4e",
+        "eccec0e45f84db10b2f5c2eb544ad2973edf9ed38510fbe4350f6ded60f76fb2",
+        "8eddd00d49209145461369a372960e42cc74da3b92413c6ad6a5393ef475b096"
+      ]
+    },
+    {
+      "time": 150,
+      "uniqueAdjacentFrames": 3,
+      "hashes": [
+        "e9212b0c1423aa61fe0786a0135ab2eefb172d8ffeb4eff446a3ade820de4be8",
+        "f9440a454800d78ac263e810744e6d4eec6f7cca6f22c13fdc7218a0d08cd3be",
+        "311f786134f0cb9a16bcfcf4a45482d830e44ce6cd96638ca92f3f3445466c70"
+      ]
+    },
+    {
+      "time": 200,
+      "uniqueAdjacentFrames": 3,
+      "hashes": [
+        "c6d12d7719ca245e284b2948380d8eb1b8be39b4f32cfd1a94597fc80ca26fa7",
+        "907cb70fa87a20e799207aa99843efb81d0229834b0ea6f54e1b65fc4287e858",
+        "a1d64028467053a32bd86f3fc69b94e723d1140de6cf2c00f70d0e06397070db"
+      ]
+    }
+  ],
+  "versions": {
+    "node": "v26.4.0",
+    "ffmpeg": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers\r",
+    "ffprobe": "ffprobe version 9.0.2-full_build-www.gyan.dev Copyright (c) 2007-2026 the FFmpeg developers\r",
+    "chrome": "155.0.8059.39",
+    "three": "0.180.0"
+  },
+  "sha256": "86dc845ff49762b757a7fcb7721a53ec1cf4227d49f51cde48591204cfcbcd9d"
+}

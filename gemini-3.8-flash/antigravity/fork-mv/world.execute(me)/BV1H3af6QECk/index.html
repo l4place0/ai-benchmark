@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mili - world.execute(me); // Opus 5.5 Remake MV</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="canvasContainer">
+    <canvas id="mvCanvas"></canvas>
+
+    <div id="playerControls">
+      <button id="playBtn" class="btn">▶ Play</button>
+      <input type="range" id="timeSlider" min="0" max="1000" value="0">
+      <span id="timeDisplay">00:00.00 / 03:32.35</span>
+      <select id="sceneSelect">
+        <option value="0">Jump to Scene...</option>
+      </select>
+      <button id="fullscreenBtn" class="btn secondary-btn">⛶ Fullscreen</button>
+    </div>
+  </div>
+
+  <audio id="mvAudio" src="assets/audio/audio.wav" preload="auto"></audio>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

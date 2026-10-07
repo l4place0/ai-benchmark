@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>纯线之室 · Pure Line Room</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f3efe7'/%3E%3Crect x='5' y='7' width='22' height='18' fill='none' stroke='%232a2723' stroke-width='2'/%3E%3Cline x1='5' y1='25' x2='27' y2='25' stroke='%232a2723' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='4' fill='none' stroke='%232a2723' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="mode-day">
+<canvas id="stage"></canvas>
+
+<header id="hud-top">
+  <div id="title">
+    <h1>纯线之室</h1>
+    <span>PURE LINE ROOM</span>
+  </div>
+  <nav id="hud-btns">
+    <button id="btn-sound" class="hud-btn" title="声音开关" aria-label="声音开关"></button>
+    <button id="btn-night" class="hud-btn" title="昼夜切换" aria-label="昼夜切换"></button>
+    <button id="btn-help" class="hud-btn" title="说明" aria-label="说明">?</button>
+  </nav>
+</header>
+
+<div id="tooltip" hidden></div>
+<div id="toast" hidden></div>
+
+<footer id="hud-bottom">
+  <div id="hint">拖动环视 · 滚轮缩放 · 右键平移 · 双击复位 · 点击物件互动</div>
+  <div id="discover">发现 <b id="discover-n">0</b> / <span id="discover-all">–</span></div>
+</footer>
+
+<div id="help-card" hidden>
+  <div class="help-inner">
+    <h2>纯线之室</h2>
+    <p class="help-sub">一间用线条画出来的房间 · 它是活的</p>
+    <ul>
+      <li><b>拖动</b> — 环视房间，<b>滚轮</b> — 远近，<b>右键拖动</b> — 平移，<b>双击空白</b> — 复位</li>
+      <li><b>点击</b>房间里的一切试试：门、窗、窗帘、台灯、吊扇、唱片机……</li>
+      <li>有的物件自己就会动：钟走真实时间，杯子里有热气，风铃在等一阵风。</li>
+      <li>关上百叶与电灯，把夜晚留在窗外 —— 房间会换一种方式亮着。</li>
+      <li>找到全部互动（右下角计数）就等于把房间住了一遍。</li>
+    </ul>
+    <button id="btn-help-close">开始探索</button>
+  </div>
+</div>
+
+<noscript><div class="noscript">需要启用 JavaScript 才能进入这间房间。</div></noscript>
+
+<script>
+/* 运行时错误收集（质量自检用） */
+window.__ERRS = [];
+window.addEventListener('error', function (e) {
+  window.__ERRS.push((e.message || 'error') + ' @ ' + (e.filename || '').split('/').pop() + ':' + e.lineno);
+});
+window.addEventListener('unhandledrejection', function (e) {
+  window.__ERRS.push('rejection: ' + (e.reason && e.reason.message || e.reason));
+});
+</script>
+<script src="js/engine.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/objects_arch.js"></script>
+<script src="js/objects_deco.js"></script>
+<script src="js/objects_study.js"></script>
+<script src="js/objects_lounge.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

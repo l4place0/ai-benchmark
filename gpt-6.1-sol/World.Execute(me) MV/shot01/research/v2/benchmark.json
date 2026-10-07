@@ -1,0 +1,14 @@
+{
+  "frames": 30,
+  "elapsedMilliseconds": 1468.5,
+  "context": {
+    "alpha": false,
+    "colorSpace": "srgb",
+    "colorType": "unorm8",
+    "desynchronized": true,
+    "toneMapping": {
+      "mode": "standard"
+    },
+    "willReadFrequently": false
+  }
+}

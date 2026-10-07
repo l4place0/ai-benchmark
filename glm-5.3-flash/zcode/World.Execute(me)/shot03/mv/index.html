@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>world.execute(me); — fan MV take03 "orrery"</title>
+<style>
+  @font-face { font-family: "JetBrains Mono"; src: url("./fonts/jetbrains-mono-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: block; }
+  @font-face { font-family: "JetBrains Mono"; src: url("./fonts/jetbrains-mono-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-display: block; }
+  @font-face { font-family: Cinzel; src: url("./fonts/cinzel-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: block; }
+  @font-face { font-family: Cinzel; src: url("./fonts/cinzel-latin-700-normal.woff2") format("woff2"); font-weight: 700; font-display: block; }
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  #screen { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; image-rendering: auto; cursor: pointer; }
+  #overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    font-family: "JetBrains Mono", monospace; color: #cfd6e4; font-size: 22px; letter-spacing: 2px;
+    background: rgba(0,0,0,.35); user-select: none; }
+</style>
+</head>
+<body>
+<canvas id="screen"></canvas>
+<div id="overlay">▶ click to play — world.execute(me); (take 03 “orrery”) · space: pause · ←/→: ±5s</div>
+<script src="./timeline.js"></script>
+<script src="./mv_core.js"></script>
+<script src="./mv_main.js"></script>
+<script>
+  (async () => {
+    const params = new URLSearchParams(location.search);
+    if (params.has('render')) {
+      await init('render');
+      setupRenderAPI();
+    } else {
+      await init('live');
+      live();
+    }
+  })().catch(e => { document.getElementById('overlay').textContent = 'INIT ERROR: ' + e.message; console.error(e); });
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "title": "若志 • 随笔",
+  "css": [
+    "https://rz.sb/usr/themes/A-Sleek/src/css/app.css?v=202311271058",
+    "https://rz.sb/usr/themes/A-Sleek/src/css/style.css?v=2026",
+    "https://rz.sb/usr/themes/A-Sleek/src/icon/remixicon.css",
+    "https://rz.sb/usr/themes/A-Sleek/src/css/qq_widget.css",
+    "https://rz.sb/usr/themes/A-Sleek/src/css/markdown.css"
+  ],
+  "scripts": [
+    "https://rz.sb/usr/themes/A-Sleek/src/js/plugins/jquery.js",
+    "https://rz.sb/usr/themes/A-Sleek/src/js/load.js?v=2026",
+    "https://rz.sb/usr/themes/A-Sleek/src/js/plugins/lazyload.js",
+    "https://rz.sb/usr/themes/A-Sleek/src/js/plugins/pjax.js",
+    "https://rz.sb/usr/themes/A-Sleek/src/js/plugins/tokeninput.js",
+    "https://rz.sb/usr/themes/A-Sleek/src/js/plugins/view-image.min.js",
+    "https://rz.sb/usr/themes/A-Sleek/src/js/plugins/qq_widget.js",
+    "https://rz.sb/usr/themes/A-Sleek/src/js/plugins/flexible.js",
+    "https://rz.sb/usr/themes/A-Sleek/src/js/plugins/marked.min.js",
+    "https://rz.sb/usr/themes/A-Sleek/src/js/plugins/tinymce/tinymce.min.js",
+    "https://rz.sb/usr/themes/A-Sleek/src/js/app.js?v=202511082302"
+  ],
+  "images": [
+    "https://q1.qlogo.cn/g?b=qq&nk=80360650&s=100",
+    "https://cravatar.cn/avatar/d41d8cd98f00b204e9800998ecf8427e?d=mm",
+    "https://rz.isi.indevs.in/irils-imgs/usr/uploads/2025/12/2528495709.png",
+    "https://rz.isi.indevs.in/irils-imgs/usr/uploads/2025/12/2175131578.png",
+    "https://rz.isi.indevs.in/irils-imgs/usr/uploads/2025/12/263988800.png",
+    "https://rz.isi.indevs.in/irils-imgs/usr/uploads/time/69244898a1d80.jpg",
+    "https://rz.isi.indevs.in/irils-imgs/usr/uploads/time/688187080795d.jpg",
+    "https://rz.isi.indevs.in/irils-imgs/usr/uploads/time/688187088c593.jpg",
+    "https://rz.isi.indevs.in/irils-imgs/usr/uploads/time/68818709295d5.jpg",
+    "https://rz.isi.indevs.in/irils-imgs/usr/uploads/time/68818709b7f53.jpg",
+    "https://rz.isi.indevs.in/irils-imgs/usr/uploads/time/6880496682b4a.jpg",
+    "https://rz.isi.indevs.in/irils-imgs/usr/uploads/time/6880496763362.jpg",
+    "https://rz.isi.indevs.in/irils-imgs/usr/uploads/time/6880496807778.jpg",
+    "https://rz.isi.indevs.in/irils-imgs/usr/uploads/time/68804965a8f66.jpg"
+  ]
+}

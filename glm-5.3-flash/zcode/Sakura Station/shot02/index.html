@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>桜ヶ丘駅 · Sakura Station — shot02</title>
+<style>
+  html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #0d1016; }
+  #app { position: fixed; inset: 0; }
+  canvas { display: block; }
+
+  /* ---- 电影感暗角（极轻） ---- */
+  #vignette {
+    position: fixed; inset: 0; pointer-events: none; z-index: 5;
+    background: radial-gradient(ellipse at 50% 42%, rgba(0,0,0,0) 62%, rgba(20,16,28,.14) 88%, rgba(16,12,24,.26) 100%);
+  }
+
+  /* ---- 标题卡 ---- */
+  #titlecard {
+    position: fixed; top: 26px; left: 30px; z-index: 10; pointer-events: none;
+    color: #fff; text-shadow: 0 1px 10px rgba(40,60,90,.55), 0 0 2px rgba(40,60,90,.4);
+    font-family: "Yu Gothic", "Meiryo", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+    opacity: 0; transform: translateY(-8px); transition: opacity 1.4s ease .4s, transform 1.4s ease .4s;
+  }
+  #titlecard .jp { font-size: 30px; font-weight: 600; letter-spacing: 6px; }
+  #titlecard .sub { font-size: 12.5px; letter-spacing: 3px; margin-top: 4px; opacity: .85; }
+
+  /* ---- 操作提示 ---- */
+  #hint {
+    position: fixed; left: 30px; bottom: 22px; z-index: 10; pointer-events: none;
+    color: #f4f8fb; opacity: 0; transition: opacity 1.2s ease 1.6s;
+    font-family: "Yu Gothic", "Meiryo", "Noto Sans JP", sans-serif;
+    font-size: 12px; letter-spacing: 1.5px; line-height: 1.9;
+    text-shadow: 0 1px 6px rgba(30,40,60,.6);
+  }
+  #hint b { display: inline-block; padding: 0 7px; margin-right: 4px; border: 1px solid rgba(255,255,255,.55);
+    border-radius: 4px; font-weight: 500; font-size: 11px; background: rgba(255,255,255,.12); }
+
+  /* ---- 视角切换按钮 ---- */
+  #views { position: fixed; right: 26px; bottom: 22px; z-index: 10; display: flex; gap: 8px;
+    opacity: 0; transition: opacity 1.2s ease 2.2s; }
+  #views button {
+    appearance: none; cursor: pointer; padding: 7px 14px; font-size: 12px; letter-spacing: 2px;
+    color: #f5f9fc; background: rgba(30,42,60,.42); border: 1px solid rgba(255,255,255,.35);
+    border-radius: 999px; backdrop-filter: blur(6px);
+    font-family: "Yu Gothic", "Meiryo", "Noto Sans JP", sans-serif; transition: background .25s;
+  }
+  #views button:hover { background: rgba(255,140,170,.45); }
+
+  /* ---- 加载画面 ---- */
+  #loader {
+    position: fixed; inset: 0; z-index: 50; display: flex; flex-direction: column; gap: 18px;
+    align-items: center; justify-content: center; background: linear-gradient(180deg, #fdeff3 0%, #e8f3f8 100%);
+    transition: opacity 1s ease; font-family: "Yu Gothic", "Meiryo", "Noto Sans JP", sans-serif;
+  }
+  #loader.done { opacity: 0; pointer-events: none; }
+  #loader .sakura { font-size: 54px; animation: sway 2.4s ease-in-out infinite; }
+  #loader .txt { color: #7a6a76; letter-spacing: 6px; font-size: 14px; }
+  #loader .bar { width: 200px; height: 3px; border-radius: 2px; background: #f4d7e0; overflow: hidden; }
+  #loader .bar i { display: block; height: 100%; width: 40%; border-radius: 2px; background: #e989a8;
+    animation: slide 1.2s ease-in-out infinite; }
+  @keyframes sway { 0%,100% { transform: translateY(0) rotate(-8deg); } 50% { transform: translateY(-10px) rotate(10deg); } }
+  @keyframes slide { 0% { transform: translateX(-100%); } 100% { transform: translateX(350%); } }
+
+  #fatal { position: fixed; inset: 0; z-index: 60; display: none; align-items: center; justify-content: center;
+    color: #fff; background: #1a2130; font-family: monospace; font-size: 13px; text-align: center; padding: 40px; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="vignette"></div>
+
+<div id="titlecard">
+  <div class="jp">桜ヶ丘駅</div>
+  <div class="sub">SAKURAGAOKA STATION — 三渲二樱花车站 / shot02</div>
+</div>
+
+<div id="hint">
+  <div><b>拖动</b> 旋转视角 · <b>滚轮</b> 缩放 · <b>右键</b> 平移</div>
+  <div><b>C</b> 漫游模式（WASD 移动） · <b>1 / 2 / 3</b> 切换机位</div>
+</div>
+
+<div id="views">
+  <button data-v="1">站前大桥</button>
+  <button data-v="2">站台</button>
+  <button data-v="3">道口</button>
+</div>
+
+<div id="loader">
+  <div class="sakura">🌸</div>
+  <div class="txt">正在铺满樱花的小镇……</div>
+  <div class="bar"><i></i></div>
+</div>
+<div id="fatal"></div>
+
+<!-- three.js：优先本地离线副本，失败则回退 CDN -->
+<script src="vendor/three.min.js"></script>
+<script>
+  if (!window.THREE) {
+    document.write('<script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"><\/script>');
+  }
+</script>
+
+<script src="js/core.js"></script>
+<script src="js/environment.js"></script>
+<script src="js/buildings.js"></script>
+<script src="js/street.js"></script>
+<script src="js/nature.js"></script>
+<script src="js/actors.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

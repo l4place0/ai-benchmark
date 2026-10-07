@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>world.execute(me); — procedural fan MV</title>
+<meta name="viewport" content="width=1920">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="stage" width="1920" height="1080"></canvas>
+  <div id="hud">booting…</div>
+  <div id="keys">
+    <b>space</b> play / pause &nbsp;·&nbsp; <b>← →</b> step a frame &nbsp;·&nbsp;
+    <b>↑ ↓</b> ±5 s &nbsp;·&nbsp; <b>home</b> rewind &nbsp;·&nbsp;
+    <code>?t=SECONDS&amp;still=1</code> to freeze a frame
+  </div>
+  <script type="module">
+    import './js/main.js';
+    // ?t=<seconds> jumps straight to a moment; &still=1 renders exactly one frame
+    const q = new URLSearchParams(location.search);
+    if (q.has('t')) {
+      const t = parseFloat(q.get('t'));
+      const wait = setInterval(() => {
+        if (window.MV && window.MV.ready) {
+          clearInterval(wait);
+          window.MV.renderAt(t);
+          if (q.get('still') === '1') {
+            document.getElementById('hud').style.display = 'none';
+            document.getElementById('keys').style.display = 'none';
+          }
+        }
+      }, 60);
+    }
+  </script>
+</body>
+</html>

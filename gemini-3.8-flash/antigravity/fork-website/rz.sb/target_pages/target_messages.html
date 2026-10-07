@@ -1,0 +1,515 @@
+<!DOCTYPE html><html class="overflow-x-hidden dark" data-dpr="1"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta id="scriptUrl" mode="production" content="https://rz.sb/usr/themes/A-Sleek/src/js/app.js?v=202511082302">
+    <title>留言 - 若志 • 随笔</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://q1.qlogo.cn/g?b=qq&amp;nk=80360650&amp;s=100">
+    <link rel="stylesheet" href="https://rz.sb/usr/themes/A-Sleek/src/css/app.css?v=202311271058">
+    <link rel="stylesheet" href="https://rz.sb/usr/themes/A-Sleek/src/css/style.css?v=2026">
+    <link rel="stylesheet" href="https://rz.sb/usr/themes/A-Sleek/src/icon/remixicon.css">
+    <link rel="stylesheet" href="https://rz.sb/usr/themes/A-Sleek/src/css/qq_widget.css">
+    <link rel="stylesheet" href="https://rz.sb/usr/themes/A-Sleek/src/css/markdown.css">
+    <script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/jquery.js"></script>
+    <!--  <script type="text/javascript" src="https://tj.rzv.cc/stat.php?link=lnk_68772e4937736"></script> -->
+    <!-- 通过自有函数输出HTML头部信息 background-image: url(https://cdn.rzv.cc/picgo/09b8fbffcb38e81a04e1a2b79ca15636.jpg?imageSlim); -->
+    <meta name="description" content="留言">
+<meta name="generator" content="Typecho 1.2.1">
+<meta name="template" content="A-Sleek">
+<link rel="pingback" href="https://rz.sb/action/xmlrpc">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://rz.sb/action/xmlrpc?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://rz.sb/action/xmlrpc?wlw">
+<link rel="alternate" type="application/rss+xml" title="留言 » 若志 • 随笔 » RSS 2.0" href="https://rz.sb/feed/messages">
+<link rel="alternate" type="application/rdf+xml" title="留言 » 若志 • 随笔 » RSS 1.0" href="https://rz.sb/feed/rss/messages">
+<link rel="alternate" type="application/atom+xml" title="留言 » 若志 • 随笔 » ATOM 1.0" href="https://rz.sb/feed/atom/messages">
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-page-5'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-page-5'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<style></style></head>
+
+<body class="bg-gray-100 transition dark:bg-slate-900 selection:bg-blue-400 selection:text-white overflow-hidden" style="
+        background-position: 50% 0;
+        background-attachment: fixed;
+        background-size: cover;">
+    <div class="body-bg dark:bg-slate-900 hidden md:block">
+        <div class="slider-thumb b-left"></div>
+        <div class="slider-thumb b-right"></div>
+    </div>
+    <div class="container lg:container mx-auto md:shadow relative flex md:mt-8 md:rounded-xl bg-gray-50 dark:bg-slate-700 mb-2">
+        <sidebar class="nav_menu p-3 md:p-4 bg-gray-50 dark:bg-slate-700 md:rounded-l-xl md:block transition border-r md:border-none dark:border-r-slate-800">
+    <div class="sticky top-4 md:rounded-lg h-full">
+        <a href="https://rz.sb/about" class="nav_menu_btn w-14 h-14 p-1 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-full">
+            <img class="rounded-full" src="https://q1.qlogo.cn/g?b=qq&amp;nk=80360650&amp;s=100" alt="tx">
+        </a>
+        <hr class="my-2 dark:border-slate-800">
+        <div class="side_menu text-gray-500">
+            <a href="https://rz.sb/" class="nav_menu_btn w-14 h-14 p-2 mb-3 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg">
+                <i class="ri-bubble-chart-line ri-lg"></i>
+            </a>
+            <a href="https://rz.sb/archives" class="nav_menu_btn w-14 h-14 p-2 mb-3 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg">
+                <i class="ri-archive-line ri-lg"></i>
+            </a>
+            <a href="https://rz.sb/messages" class="nav_menu_btn w-14 h-14 p-2 mb-3 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg text-blue-400 border-blue-400 dark:border-blue-400">
+                <i class="ri-chat-1-line ri-lg"></i>
+            </a>
+            <a href="https://rz.sb/photos" class="nav_menu_btn w-14 h-14 p-2 mb-3 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg">
+                <i class="ri-landscape-line ri-lg"></i>
+            </a>
+            <a href="https://rz.sb/circle" class="nav_menu_btn w-14 h-14 p-2 mb-3 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg">
+                <i class="ri-user-voice-line ri-lg"></i>
+            </a>
+            <a href="https://rz.sb/links" class="nav_menu_btn w-14 h-14 p-2 mb-3 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg">
+                <i class="ri-user-heart-line ri-lg"></i>
+            </a>
+        </div>
+        <div class="absolute bottom-0 text-gray-500 nav_menu_foot">
+            <div id="GoTop" class="cursor-pointer nav_menu_btn w-14 h-14 p-2 mb-3 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg hidden">
+                <i class="ri-arrow-up-s-line ri-lg"></i>
+            </div>
+                            <div id="showLogin" class="cursor-pointer nav_menu_btn w-14 h-14 p-2 mb-3 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg">
+                    <i class="ri-login-box-line ri-lg"></i>
+                </div>
+                        <div id="changeMode" onclick="switchNightMode()" class="cursor-pointer nav_menu_btn w-14 h-14 p-2 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg">
+                <i class="ri-contrast-2-line ri-lg"></i>
+            </div>
+        </div>
+    </div>
+    <div class="nav-mask"></div>
+</sidebar>        <main class="flex-1 relative md:rounded-xl main_element overflow-auto border dark:border-none border-slate-200">
+                <section id="Login" class="qui-page bg-gray-50 dark:bg-slate-900">
+        <div class="qui-page-content">
+            <div class="w-full h-full flex items-center justify-center text-gray-900 relative">
+                <div class="absolute right-0 bottom-0 left-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -100 1440 320"><path class="login_Waves" fill="#EDF2F7" fill-opacity="1" d="M0,96L26.7,112C53.3,128,107,160,160,181.3C213.3,203,267,213,320,192C373.3,171,427,117,480,122.7C533.3,128,587,192,640,229.3C693.3,267,747,277,800,245.3C853.3,213,907,139,960,138.7C1013.3,139,1067,213,1120,224C1173.3,235,1227,181,1280,154.7C1333.3,128,1387,128,1413,128L1440,128L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
+                </div>
+                <div class="qui-page-action-btn-cancel cancel2 w-full h-full z-10 absolute left-0 top-0"></div>
+                <div class="p-8 mx-1 relative bg-white dark:bg-slate-800 rounded-lg shadow z-20">
+                    <div class="mb-6 text-center">
+                        <p class="text-slate-500">Login</p>
+                    </div>
+                    <div class="rounded p-4">
+                        <form id="loginForm" action="https://rz.sb/index.php/action/login?_=2cfb11e1969e80bf58054716240bda82">
+                            <input type="hidden" name="referer" value="https://rz.sb/">
+                            <label class="block text-gray-700">
+                                <input class="w-full mb-4 rounded bg-gray-50 dark:bg-slate-700 p-2 text-sm text-slate-500 placeholder:text-slate-400/70 hover:border-slate-400 focus:outline-none transition border dark:border-slate-800" placeholder="用户名" type="text" id="name" name="name" autocomplete="on">
+                            </label>
+                            <label class="block text-gray-700">
+                                <input class="w-full mb-4 rounded bg-gray-50 dark:bg-slate-700 p-2 text-sm text-slate-500 placeholder:text-slate-400/70 hover:border-slate-400 focus:outline-none transition border dark:border-slate-800" placeholder="密码" type="password" id="password" name="password" autocomplete="on">
+                            </label>
+                            <div class="mt-3 flex items-center justify-between gap-2">
+                                <label for="remember" class="text-sm text-slate-500"><input checked="" type="checkbox" name="remember" class="checkbox" value="1" id="remember"> 下次自动登录</label>
+                                <button class="login_button inline-flex justify-center items-center space-x-2 border focus:outline-none px-5 py-1 text-xs leading-6 rounded border-blue-400 bg-blue-400 text-white hover:text-white hover:bg-blue-500 hover:border-blue-500 active:bg-blue-400 active:border-blue-400 transform transition duration-75 active:scale-90">登陆</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            <header class="w-full px-4 pt-2 md:pt-4 pb-2 md:pb-1 sticky top-0 z-20 bg-white dark:bg-slate-800 md:rounded-tr-xl md:border-l dark:border-l-slate-800 md:dark:border-t dark:border-t-slate-700 md:dark:border-r dark:border-r-slate-700 transition">
+                <form method="post" action="https://rz.sb/" role="search" class="flex items-center space-x-3 w-full">
+                    <div class="menu_button flex items-center justify-center md:hidden">
+                        <button type="button" class="menu_button_item flex justify-center items-center">
+                            <span class="menu_button_item-container">
+                                <span class="menu_button_item-top"></span>
+                                <span class="menu_button_item-middle"></span>
+                                <span class="menu_button_item-bottom"></span>
+                            </span>
+                        </button>
+                    </div>
+                    <label class="relative flex flex-1 md:!ml-0">
+                        <input class="form-input peer w-full rounded bg-gray-50 dark:bg-slate-700 px-3 py-2 pl-9 text-sm text-slate-400 placeholder:text-slate-400/70 hover:border-slate-400 focus:outline-none transition" placeholder="Search here..." name="s" type="text" id="search">
+                        <div class="pointer-events-none absolute flex h-full w-10 items-center justify-center text-slate-400">
+                            <i class="ri-search-2-line transition-colors duration-200"></i>
+                        </div>
+                    </label>
+                    <button type="submit" id="showLoadingTip" class="inline-flex justify-center items-center space-x-2 border focus:outline-none px-5 py-1 text-xs leading-6 rounded border-blue-400 bg-blue-400 text-white hover:text-white hover:bg-blue-500 hover:border-blue-500 active:bg-blue-400 active:border-blue-400 transform transition duration-75 active:scale-90">
+                        搜索
+                    </button>
+                </form>
+            </header>
+            
+
+<div id="BottomActionDialog" class="qui-bottom-action">
+    <div class="qui-bottom-action-mask"></div>
+    <div class="qui-bottom-action-content dark:text-slate-400 dark:bg-slate-800">
+        <div class="qui-bottom-action-header">
+            <div class="qui-bottom-action-header-btn-confirm text-xs cursor-pointer" title="点击此处访问该文章"><span>1</span> <font>条评论</font></div>
+            <div class="qui-bottom-action-header-bar">
+                <div class="qui-bottom-action-header-bar-cont dark:bg-slate-700"></div>
+            </div>
+            <div class="qui-bottom-action-header-btn-cancel bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:text-slate-400 rounded-full p-1 flex items-center justify-center cursor-pointer">
+                <i class="ri-close-line"></i></div>
+        </div>
+        <div class="qui-bottom-action-panel mt-3 text-gray-600 dark:text-gray-400 relative">
+
+            <div id="comments" class="comments">
+                <div class="mx-auto p-4 comments-lists">
+                    <div class="comments-null h-64 flex justify-center items-center">空空如也~</div>
+                    <div class="comments-list"></div>
+                </div>
+                
+                <form method="post" action="https://rz.sb/messages/comment" id="comment-form" role="form" class="IndexCommentform comment-form comment-respond sticky left-0 bottom-0 w-full p-2 bg-gray-50 dark:bg-slate-700 border-t dark:border-t-slate-800 rounded-t-lg">
+                                            <div class="user-info-body w-full bg-white dark:bg-slate-800 rounded-t hidden">
+                            <div class="p-2 flex items-center justify-between gap-2">
+                                <input class="form-input peer w-full rounded bg-gray-50 dark:bg-slate-700 p-2 text-sm text-slate-500 placeholder:text-slate-400/70 hover:border-slate-400 focus:outline-none transition" placeholder="*昵称" id="author" value="" type="text" name="author" autocomplete="on">
+                                <input class="form-input peer w-full rounded bg-gray-50 dark:bg-slate-700 p-2 text-sm text-slate-500 placeholder:text-slate-400/70 hover:border-slate-400 focus:outline-none transition" placeholder="*邮箱" id="mail" value="" type="email" name="mail" autocomplete="on">
+                                <input class="form-input peer w-full rounded bg-gray-50 dark:bg-slate-700 p-2 text-sm text-slate-500 placeholder:text-slate-400/70 hover:border-slate-400 focus:outline-none transition" placeholder="网址" id="url" value="" type="url" name="url" autocomplete="on">
+                            </div>
+                        </div>
+                                        <div class="absolute right-0 top-2 z-20 flex items-center justify-center bg-gray-50 dark:bg-slate-700 text-slate-500 cursor-pointer text-sm">
+                        <div id="cancelReply" class="cancelReply" onclick="cancelReply();" title="点击取消回复" style="display: none;">取消</div>
+                    </div>
+                    <textarea id="message-textarea" name="text" oninput="autoResize(this)" rows="4" cols="0" class="message-textarea w-full flex-1 p-2 rounded OwO-textarea textarea text-slate-500 placeholder:text-slate-400/70 text-sm dark:bg-slate-800 resize-none" placeholder="说点什么吧..."></textarea>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                                                            <a href="#" class="user-info w-8 h-8 flex justify-center items-center bg-white dark:bg-slate-800 text-slate-500 hover:border border-blue-400 rounded p-1">
+                                    <img class="rounded" src="https://cravatar.cn/avatar/d41d8cd98f00b204e9800998ecf8427e?d=mm" width="30" height="30">                                </a>
+                                                        <a title="添加表情" id="emoji-icons-btn" href="#" class="w-8 h-8 flex justify-center items-center bg-white dark:bg-slate-800 text-slate-500 hover:border border-blue-400 rounded">
+                                <i class="ri-emotion-happy-line"></i>
+                            </a>
+                            <a title="添加链接" href="#" onclick="document.getElementById('message-textarea').value+='[链接描述](https://)' " class="w-8 h-8 flex justify-center items-center bg-white dark:bg-slate-800 text-slate-500 hover:border border-blue-400 rounded">
+                                <i class="ri-link-m"></i>
+                            </a>
+                            <span title="私密评论" class="comment-secret w-8 h-8 flex justify-center items-center bg-white dark:bg-slate-800 text-slate-500 hover:border border-blue-400 rounded">
+                                <input type="checkbox" id="secret-button2" name="private" class="hidden">
+                                <label for="secret-button2" class="secret-label" title="开启该功能，该动态为私密">
+                                    <i class="ri-chat-private-line"></i>
+                                    <i class="ri-chat-private-fill hidden"></i>
+                                </label>
+                            </span>
+                        </div>
+                        <input type="submit" class="submit inline-flex justify-center items-center space-x-2 border focus:outline-none px-5 py-1 text-xs leading-6 rounded border-blue-400 bg-blue-400 text-white hover:text-white hover:bg-blue-500 hover:border-blue-500 active:bg-blue-400 active:border-blue-400 transform transition duration-75 active:scale-90" value="发送">
+                    </div>
+                    <div class="emoji-icons hidden">
+                        <div class="grid grid-cols-6 md:grid-cols-15 gap-2 overflow-auto h-40 mt-2 border-8 border-white dark:border-slate-800 bg-white dark:bg-slate-800 rounded place-items-center">
+                            <i class="emoji-icon">😀</i><i class="emoji-icon">😁</i><i class="emoji-icon">😂</i><i class="emoji-icon">😃</i><i class="emoji-icon">😄</i><i class="emoji-icon">😅</i><i class="emoji-icon">😆</i><i class="emoji-icon">😇</i><i class="emoji-icon">😈</i><i class="emoji-icon">😉</i><i class="emoji-icon">😊</i><i class="emoji-icon">😋</i><i class="emoji-icon">😌</i><i class="emoji-icon">😍</i><i class="emoji-icon">😎</i><i class="emoji-icon">😏</i><i class="emoji-icon">😐</i><i class="emoji-icon">😑</i><i class="emoji-icon">😒</i><i class="emoji-icon">😓</i><i class="emoji-icon">😔</i><i class="emoji-icon">😕</i><i class="emoji-icon">😖</i><i class="emoji-icon">😗</i><i class="emoji-icon">😘</i><i class="emoji-icon">😙</i><i class="emoji-icon">😚</i><i class="emoji-icon">😛</i><i class="emoji-icon">😜</i><i class="emoji-icon">😝</i><i class="emoji-icon">😞</i><i class="emoji-icon">😟</i><i class="emoji-icon">😠</i><i class="emoji-icon">😡</i><i class="emoji-icon">😢</i><i class="emoji-icon">😣</i><i class="emoji-icon">😤</i><i class="emoji-icon">😥</i><i class="emoji-icon">😦</i><i class="emoji-icon">😧</i><i class="emoji-icon">😨</i><i class="emoji-icon">😩</i><i class="emoji-icon">😪</i><i class="emoji-icon">😫</i><i class="emoji-icon">😬</i><i class="emoji-icon">😭</i><i class="emoji-icon">😮</i><i class="emoji-icon">😯</i><i class="emoji-icon">😰</i><i class="emoji-icon">😱</i><i class="emoji-icon">😲</i><i class="emoji-icon">😳</i><i class="emoji-icon">😴</i><i class="emoji-icon">😵</i><i class="emoji-icon">😶</i><i class="emoji-icon">😷</i><i class="emoji-icon">😸</i><i class="emoji-icon">😹</i><i class="emoji-icon">😺</i><i class="emoji-icon">😻</i><i class="emoji-icon">😼</i><i class="emoji-icon">😽</i><i class="emoji-icon">😾</i><i class="emoji-icon">😿</i><i class="emoji-icon">🙀</i><i class="emoji-icon">🙁</i><i class="emoji-icon">🙂</i><i class="emoji-icon">🙃</i><i class="emoji-icon">🙄</i><i class="emoji-icon">🙅</i><i class="emoji-icon">🙆</i><i class="emoji-icon">🙇</i><i class="emoji-icon">🙈</i><i class="emoji-icon">🙉</i><i class="emoji-icon">🙊</i><i class="emoji-icon">🙋</i><i class="emoji-icon">🙌</i><i class="emoji-icon">🙍</i><i class="emoji-icon">🙎</i><i class="emoji-icon">🙏</i><i class="emoji-icon">🤚</i><i class="emoji-icon">🤛</i><i class="emoji-icon">🤜</i><i class="emoji-icon">🤝</i><i class="emoji-icon">🤞</i><i class="emoji-icon">🤟</i><i class="emoji-icon">🤠</i><i class="emoji-icon">🤡</i><i class="emoji-icon">🤢</i><i class="emoji-icon">🤣</i><i class="emoji-icon">🤤</i><i class="emoji-icon">🤥</i><i class="emoji-icon">🤦</i><i class="emoji-icon">🤧</i><i class="emoji-icon">🤨</i><i class="emoji-icon">🤩</i><i class="emoji-icon">🤪</i><i class="emoji-icon">🤫</i><i class="emoji-icon">🤬</i><i class="emoji-icon">🤭</i><i class="emoji-icon">🤮</i><i class="emoji-icon">🤯</i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    </div>
+            <div class="pjax-content bg-white dark:bg-slate-800 md:border-l dark:border-l-slate-800 md:dark:border-r dark:border-r-slate-700 md:dark:border-b dark:border-b-slate-700 relative md:rounded-br-xl">
+                 
+                    <div class="page-loader w-full h-full absolute bottom-0 z-50 bg-white dark:bg-slate-800 px-4 pt-2 pb-2" style="display: none;">
+                        <div class="v-align-center bg-gray-50 dark:bg-slate-700 relative w-full h-full table rounded">
+                        <div class="middle-content table-cell text-center align-middle">
+                            <div class="anim-pg bg-gray-200 dark:bg-slate-600">
+                            <span class="bg-blue-400"></span>
+                            </div>
+                            <p class="text-sm text-gray-400">Loading...</p>
+                        </div>
+                        </div>
+                    </div>
+                
+<div class="bg-white dark:bg-slate-800 whitespace-nowrap text-sm px-4 border-b-4 border-b-gray-50 dark:border-b-slate-700 sticky top-0 z-10">
+    <div class="flex relative">
+        <ul class="flex space-x-4 dark:text-gray-400 overflow-auto w-full">
+            <li class="page_tab_common w-8 py-2 h-full text-center transition page_tab_active">留言 <sup>823</sup>                            </li>
+        </ul>
+        <div style="height: 2px;" class="tab__line w-8 absolute left-0 -bottom-3px bg-blue-400 transition"></div>
+    </div>
+</div>
+<div class="page_content w-full relative overflow-x-hidden h-screens md:h-81vh text-gray-600 dark:text-gray-400 bg-gray-50 dark:bg-slate-700">
+        
+
+<section id="p_comments" class="comments bg-white dark:bg-slate-800">
+        <div class="mx-auto p-4 p-omments-lists">
+                    <ol class="comment-list">
+    <li id="comment-6158" class="messages messages-l Comments-by-user   comment-parent comment-odd depth-1">
+        <div class="avatar rounded border dark:border-slate-700 relative">
+            <img class="rounded" src="https://q2.qlogo.cn/headimg_dl?dst_uin=669318585&amp;spec=100" alt="tx" width="32" height="32">                            <div id="createReply" onclick="createReply('6158','Magic清风') " title="回复给Magic清风" class="messages-at w-full h-full absolute left-0 top-0 flex justify-center items-center bg-gray-50 dark:bg-slate-700 cursor-pointer">@</div>
+                                </div>
+        <div class="content">
+            <div class="flex items-center mb-1 gap-1 name content-info"><a href="https://skylan.cc" "="" target="_blank" rel="external nofollow"><b>Magic清风</b></a><div class="messages-time text-gray-400 dark:text-gray-500">9月3日</div></div>
+            <div title="9月3日" class="contents rounded-md shadow-sm bg-gray-50 dark:bg-slate-700" view-image="">
+                <div class="text break-all">
+                    <p>我也躺平了</p>                                    </div>
+            </div>
+        </div>
+    </li>
+
+    
+    <li id="comment-6149" class="messages messages-l Comments-by-user   comment-parent comment-even depth-1">
+        <div class="avatar rounded border dark:border-slate-700 relative">
+            <img class="rounded" src="https://cravatar.cn/avatar/3c4e3a77bfbbbdcb48562ccf97fde7e1" alt="tx" width="32" height="32">                            <div id="createReply" onclick="createReply('6149','怸歪') " title="回复给怸歪" class="messages-at w-full h-full absolute left-0 top-0 flex justify-center items-center bg-gray-50 dark:bg-slate-700 cursor-pointer">@</div>
+                                </div>
+        <div class="content">
+            <div class="flex items-center mb-1 gap-1 name content-info"><a href="https://cycy.fun" "="" target="_blank" rel="external nofollow"><b>怸歪</b></a><div class="messages-time text-gray-400 dark:text-gray-500">8月15日</div></div>
+            <div title="8月15日" class="contents rounded-md shadow-sm bg-gray-50 dark:bg-slate-700" view-image="">
+                <div class="text break-all">
+                    <p>这是什么系统？这么好看？</p>                                    </div>
+            </div>
+        </div>
+    </li>
+
+    
+    <li id="comment-6146" class="messages messages-l Comments-by-user   comment-parent comment-odd depth-1">
+        <div class="avatar rounded border dark:border-slate-700 relative">
+            <img class="rounded" src="https://cravatar.cn/avatar/8e5566d153dba1c372c54eae02401d96" alt="tx" width="32" height="32">                            <div id="createReply" onclick="createReply('6146','扶苏') " title="回复给扶苏" class="messages-at w-full h-full absolute left-0 top-0 flex justify-center items-center bg-gray-50 dark:bg-slate-700 cursor-pointer">@</div>
+                                </div>
+        <div class="content">
+            <div class="flex items-center mb-1 gap-1 name content-info"><a href="https://pwsz.com/" "="" target="_blank" rel="external nofollow"><b>扶苏</b></a><div class="messages-time text-gray-400 dark:text-gray-500">8月13日</div></div>
+            <div title="8月13日" class="contents rounded-md shadow-sm bg-gray-50 dark:bg-slate-700" view-image="">
+                <div class="text break-all">
+                    <p>你是真的懒。。。竟然这么久没更新~</p>                                    </div>
+            </div>
+        </div>
+    </li>
+
+    
+    <li id="comment-6138" class="messages messages-l Comments-by-user   comment-parent comment-even depth-1">
+        <div class="avatar rounded border dark:border-slate-700 relative">
+            <img class="rounded" src="https://q2.qlogo.cn/headimg_dl?dst_uin=585&amp;spec=100" alt="tx" width="32" height="32">                            <div id="createReply" onclick="createReply('6138','58') " title="回复给58" class="messages-at w-full h-full absolute left-0 top-0 flex justify-center items-center bg-gray-50 dark:bg-slate-700 cursor-pointer">@</div>
+                                </div>
+        <div class="content">
+            <div class="flex items-center mb-1 gap-1 name content-info"><b>58</b><div class="messages-time text-gray-400 dark:text-gray-500">7月1日</div></div>
+            <div title="7月1日" class="contents rounded-md shadow-sm bg-gray-50 dark:bg-slate-700" view-image="">
+                <div class="text break-all">
+                    <p>厉害</p>                                    </div>
+            </div>
+        </div>
+    </li>
+
+    
+    <li id="comment-6136" class="messages messages-l Comments-by-user   comment-parent comment-odd depth-1">
+        <div class="avatar rounded border dark:border-slate-700 relative">
+            <img class="rounded" src="https://q2.qlogo.cn/headimg_dl?dst_uin=2250711369&amp;spec=100" alt="tx" width="32" height="32">                            <div id="createReply" onclick="createReply('6136','帅秃顶') " title="回复给帅秃顶" class="messages-at w-full h-full absolute left-0 top-0 flex justify-center items-center bg-gray-50 dark:bg-slate-700 cursor-pointer">@</div>
+                                </div>
+        <div class="content">
+            <div class="flex items-center mb-1 gap-1 name content-info"><a href="https://145914.xyz/" "="" target="_blank" rel="external nofollow"><b>帅秃顶</b></a><div class="messages-time text-gray-400 dark:text-gray-500">6月25日</div></div>
+            <div title="6月25日" class="contents rounded-md shadow-sm bg-gray-50 dark:bg-slate-700" view-image="">
+                <div class="text break-all">
+                    <p>路过打卡，佬友这个博客做的真不错</p>                                    </div>
+            </div>
+        </div>
+    </li>
+
+    
+    <li id="comment-6135" class="messages messages-l Comments-by-user   comment-parent comment-even depth-1">
+        <div class="avatar rounded border dark:border-slate-700 relative">
+            <img class="rounded" src="https://q2.qlogo.cn/headimg_dl?dst_uin=2094336809&amp;spec=100" alt="tx" width="32" height="32">                            <div id="createReply" onclick="createReply('6135','Lychee') " title="回复给Lychee" class="messages-at w-full h-full absolute left-0 top-0 flex justify-center items-center bg-gray-50 dark:bg-slate-700 cursor-pointer">@</div>
+                                </div>
+        <div class="content">
+            <div class="flex items-center mb-1 gap-1 name content-info"><b>Lychee</b><div class="messages-time text-gray-400 dark:text-gray-500">6月24日</div></div>
+            <div title="6月24日" class="contents rounded-md shadow-sm bg-gray-50 dark:bg-slate-700" view-image="">
+                <div class="text break-all">
+                    <p>佬友路过，想问下网站是部署在哪里的，感觉访问和图片加载速度都可以的我</p>                                    </div>
+            </div>
+        </div>
+    </li>
+
+            <div class="comment-children">
+            <ol class="comment-list">
+    <li id="comment-6141" class="messages messages-l Comments-by-user  By-authors comment-child comment-level-odd comment-odd depth-2">
+        <div class="avatar rounded border dark:border-slate-700 relative">
+            <img class="rounded" src="https://cravatar.cn/avatar/1fd6f6445f5a58b6c72835bb49071229" alt="tx" width="32" height="32">                            <div id="createReply" onclick="createReply('6141','若志奕鑫') " title="回复给若志奕鑫" class="messages-at w-full h-full absolute left-0 top-0 flex justify-center items-center bg-gray-50 dark:bg-slate-700 cursor-pointer">@</div>
+                        <svg t="1655533356614" class="icon absolute bottom-0 right-0" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1253" width="18" height="18"><path d="M907.8 467.1l-79.2-77.7v-98c-0.1-34.9 10.3-97.9-24.4-98H609L560.2 120c-24.6-24.6-68.8-30.7-93.4-6.1l-53 79.6H267.3c-34.8 0.1-74.9 27.5-75 62.4v128.3l-77.5 83c-24.5 24.7-24.5 64.7 0 89.4l77.5 84.1V769c0.1 34.9 15.8 61.3 50.6 61.4h146.4l77.4 79.4c24.6 24.6 64.5 24.6 89.1 0l77.5-79.4h122c34.8-0.1 73.1-38.6 73.2-73.5V634.4l79.2-77.8c24.6-24.8 24.6-64.7 0.1-89.5zM511.9 704.8L288.2 384.1H448l63.3 191 64.5-191h159.8L511.9 704.8z" p-id="1254" fill="#1296db"></path></svg>        </div>
+        <div class="content">
+            <div class="flex items-center mb-1 gap-1 name content-info"><a href="https://rz.sb" "="" target="_blank" rel="external nofollow"><b>若志奕鑫</b></a><a class="comments-at text-blue-400" href="#comment-6135">@Lychee</a><div class="messages-time text-gray-400 dark:text-gray-500">7月3日</div></div>
+            <div title="7月3日" class="contents rounded-md shadow-sm bg-gray-50 dark:bg-slate-700" view-image="">
+                <div class="text break-all">
+                    <p>腾讯云香港轻量鸡</p>                                    </div>
+            </div>
+        </div>
+    </li>
+
+    </ol>        </div>
+    
+    <li id="comment-6134" class="messages messages-l Comments-by-user   comment-parent comment-odd depth-1">
+        <div class="avatar rounded border dark:border-slate-700 relative">
+            <img class="rounded" src="https://cravatar.cn/avatar/3eb0186f3f2df9bcdcde5d136b18ef1c" alt="tx" width="32" height="32">                            <div id="createReply" onclick="createReply('6134','Gavin') " title="回复给Gavin" class="messages-at w-full h-full absolute left-0 top-0 flex justify-center items-center bg-gray-50 dark:bg-slate-700 cursor-pointer">@</div>
+                                </div>
+        <div class="content">
+            <div class="flex items-center mb-1 gap-1 name content-info"><b>Gavin</b><div class="messages-time text-gray-400 dark:text-gray-500">6月17日</div></div>
+            <div title="6月17日" class="contents rounded-md shadow-sm bg-gray-50 dark:bg-slate-700" view-image="">
+                <div class="text break-all">
+                    <p>佬友路过，蛮好看的~</p>                                    </div>
+            </div>
+        </div>
+    </li>
+
+    
+    <li id="comment-6131" class="messages messages-l Comments-by-user   comment-parent comment-even depth-1">
+        <div class="avatar rounded border dark:border-slate-700 relative">
+            <img class="rounded" src="https://cravatar.cn/avatar/11b22ff7845f712126edb2511be11ccc" alt="tx" width="32" height="32">                            <div id="createReply" onclick="createReply('6131','Liary') " title="回复给Liary" class="messages-at w-full h-full absolute left-0 top-0 flex justify-center items-center bg-gray-50 dark:bg-slate-700 cursor-pointer">@</div>
+                                </div>
+        <div class="content">
+            <div class="flex items-center mb-1 gap-1 name content-info"><b>Liary</b><div class="messages-time text-gray-400 dark:text-gray-500">6月15日</div></div>
+            <div title="6月15日" class="contents rounded-md shadow-sm bg-gray-50 dark:bg-slate-700" view-image="">
+                <div class="text break-all">
+                    <p>路过冒泡</p>                                    </div>
+            </div>
+        </div>
+    </li>
+
+    
+    <li id="comment-6125" class="messages messages-l Comments-by-user   comment-parent comment-odd depth-1">
+        <div class="avatar rounded border dark:border-slate-700 relative">
+            <img class="rounded" src="https://cravatar.cn/avatar/2b6b0a6fa164c1fb075867d62addf7bf" alt="tx" width="32" height="32">                            <div id="createReply" onclick="createReply('6125','insight') " title="回复给insight" class="messages-at w-full h-full absolute left-0 top-0 flex justify-center items-center bg-gray-50 dark:bg-slate-700 cursor-pointer">@</div>
+                                </div>
+        <div class="content">
+            <div class="flex items-center mb-1 gap-1 name content-info"><b>insight</b><div class="messages-time text-gray-400 dark:text-gray-500">6月12日</div></div>
+            <div title="6月12日" class="contents rounded-md shadow-sm bg-gray-50 dark:bg-slate-700" view-image="">
+                <div class="text break-all">
+                    <p>这个博客风格不错啊</p>                                    </div>
+            </div>
+        </div>
+    </li>
+
+    
+    <li id="comment-6123" class="messages messages-l Comments-by-user   comment-parent comment-even depth-1">
+        <div class="avatar rounded border dark:border-slate-700 relative">
+            <img class="rounded" src="https://cravatar.cn/avatar/2b96ea98aba1b2a1f2d2394a0948c7be" alt="tx" width="32" height="32">                            <div id="createReply" onclick="createReply('6123','THEATLAS') " title="回复给THEATLAS" class="messages-at w-full h-full absolute left-0 top-0 flex justify-center items-center bg-gray-50 dark:bg-slate-700 cursor-pointer">@</div>
+                                </div>
+        <div class="content">
+            <div class="flex items-center mb-1 gap-1 name content-info"><a href="https://home.lianjh.online" "="" target="_blank" rel="external nofollow"><b>THEATLAS</b></a><div class="messages-time text-gray-400 dark:text-gray-500">6月9日</div></div>
+            <div title="6月9日" class="contents rounded-md shadow-sm bg-gray-50 dark:bg-slate-700" view-image="">
+                <div class="text break-all">
+                    <p>路过冒泡😀</p>                                    </div>
+            </div>
+        </div>
+    </li>
+
+    </ol>            <ol class="page-navigator"><li class="current"><a href="https://rz.sb/messages/comment-page-1#comments">1</a></li><li><a href="https://rz.sb/messages/comment-page-2#comments">2</a></li><li><span>👀</span></li><li><a href="https://rz.sb/messages/comment-page-43#comments">43</a></li><li class="next"><a href="https://rz.sb/messages/comment-page-2#comments">👉</a></li></ol>            </div>
+            <form id="p-comments-from" method="post" action="https://rz.sb/messages/comment" role="form" name="comment" class="respond-page-5 sticky comment-form comment-respond bottom-0 w-full p-2 bg-gray-50 dark:bg-slate-700 border-t dark:border-t-slate-800">
+                            <div class="user-info-body w-full bg-white dark:bg-slate-800 rounded-t hidden">
+                    <div class="p-2 flex items-center justify-between gap-2">
+                        <input class="form-input peer w-full rounded bg-gray-50 dark:bg-slate-700 p-2 text-sm text-slate-500 placeholder:text-slate-400/70 hover:border-slate-400 focus:outline-none transition" placeholder="*昵称" id="author" value="" type="text" name="author" autocomplete="on">
+                        <input class="form-input peer w-full rounded bg-gray-50 dark:bg-slate-700 p-2 text-sm text-slate-500 placeholder:text-slate-400/70 hover:border-slate-400 focus:outline-none transition" placeholder="*邮箱" id="mail" value="" type="email" name="mail" autocomplete="on">
+                        <input class="form-input peer w-full rounded bg-gray-50 dark:bg-slate-700 p-2 text-sm text-slate-500 placeholder:text-slate-400/70 hover:border-slate-400 focus:outline-none transition" placeholder="网址" id="url" value="" type="url" name="url" autocomplete="on">
+                    </div>
+                </div>
+                        <div class="absolute right-0 top-2 z-20 flex items-center justify-center bg-gray-50 dark:bg-slate-700 text-slate-500 cursor-pointer text-sm">
+                <div id="cancelReply" class="cancelReply" onclick="cancelReply();" title="点击取消回复" style="display: none;">取消</div>
+            </div>
+                            <textarea rows="7" cols="0" name="text" id="message-textarea3" oninput="autoResize(this)" class="w-full flex-1 p-2 rounded OwO-textarea textarea text-slate-500 placeholder:text-slate-400/70 text-sm dark:bg-slate-800 resize-none" placeholder="请输入留言内容..."></textarea>
+                        <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                                            <a href="#" class="user-info w-8 h-8 flex justify-center items-center bg-white dark:bg-slate-800 text-slate-500 hover:border border-blue-400 rounded p-1">
+                            <img class="rounded ls-is-cached lazyloaded" src="https://cravatar.cn/avatar/d41d8cd98f00b204e9800998ecf8427e?d=mm" width="30" height="30">                        </a>
+                                        <a title="添加表情" id="emoji-icons-btn2" href="#" class="w-8 h-8 flex justify-center items-center bg-white dark:bg-slate-800 text-slate-500 hover:border border-blue-400 rounded">
+                        <i class="ri-emotion-happy-line"></i>
+                    </a>
+                    <a title="添加链接" href="#" onclick="document.getElementById('message-textarea3').value+='[链接描述](https://)' " class="w-8 h-8 flex justify-center items-center bg-white dark:bg-slate-800 text-slate-500 hover:border border-blue-400 rounded">
+                        <i class="ri-link-m"></i>
+                    </a>
+                    <span title="私密评论" class="comment-secret w-8 h-8 flex justify-center items-center bg-white dark:bg-slate-800 text-slate-500 hover:border border-blue-400 rounded">
+                        <input type="checkbox" id="secret-button" name="private" class="hidden">
+                        <label for="secret-button3" class="secret-label" title="开启该功能，该动态为私密">
+                            <i class="ri-chat-private-line"></i>
+                            <i class="ri-chat-private-fill hidden"></i>
+                        </label>
+                    </span>
+                </div>
+                <input type="submit" class="submit inline-flex justify-center items-center space-x-2 border focus:outline-none px-5 py-1 text-xs leading-6 rounded border-blue-400 bg-blue-400 text-white hover:text-white hover:bg-blue-500 hover:border-blue-500 active:bg-blue-400 active:border-blue-400 transform transition duration-75 active:scale-90" value="发送">
+            </div>
+            <div class="emoji-icons hidden">
+                <div class="grid grid-cols-6 md:grid-cols-15 gap-2 overflow-auto h-40 mt-2 border-8 border-white dark:border-slate-800 bg-white dark:bg-slate-800 rounded place-items-center">
+                    <i class="emoji-icon">😀</i><i class="emoji-icon">😁</i><i class="emoji-icon">😂</i><i class="emoji-icon">😃</i><i class="emoji-icon">😄</i><i class="emoji-icon">😅</i><i class="emoji-icon">😆</i><i class="emoji-icon">😇</i><i class="emoji-icon">😈</i><i class="emoji-icon">😉</i><i class="emoji-icon">😊</i><i class="emoji-icon">😋</i><i class="emoji-icon">😌</i><i class="emoji-icon">😍</i><i class="emoji-icon">😎</i><i class="emoji-icon">😏</i><i class="emoji-icon">😐</i><i class="emoji-icon">😑</i><i class="emoji-icon">😒</i><i class="emoji-icon">😓</i><i class="emoji-icon">😔</i><i class="emoji-icon">😕</i><i class="emoji-icon">😖</i><i class="emoji-icon">😗</i><i class="emoji-icon">😘</i><i class="emoji-icon">😙</i><i class="emoji-icon">😚</i><i class="emoji-icon">😛</i><i class="emoji-icon">😜</i><i class="emoji-icon">😝</i><i class="emoji-icon">😞</i><i class="emoji-icon">😟</i><i class="emoji-icon">😠</i><i class="emoji-icon">😡</i><i class="emoji-icon">😢</i><i class="emoji-icon">😣</i><i class="emoji-icon">😤</i><i class="emoji-icon">😥</i><i class="emoji-icon">😦</i><i class="emoji-icon">😧</i><i class="emoji-icon">😨</i><i class="emoji-icon">😩</i><i class="emoji-icon">😪</i><i class="emoji-icon">😫</i><i class="emoji-icon">😬</i><i class="emoji-icon">😭</i><i class="emoji-icon">😮</i><i class="emoji-icon">😯</i><i class="emoji-icon">😰</i><i class="emoji-icon">😱</i><i class="emoji-icon">😲</i><i class="emoji-icon">😳</i><i class="emoji-icon">😴</i><i class="emoji-icon">😵</i><i class="emoji-icon">😶</i><i class="emoji-icon">😷</i><i class="emoji-icon">😸</i><i class="emoji-icon">😹</i><i class="emoji-icon">😺</i><i class="emoji-icon">😻</i><i class="emoji-icon">😼</i><i class="emoji-icon">😽</i><i class="emoji-icon">😾</i><i class="emoji-icon">😿</i><i class="emoji-icon">🙀</i><i class="emoji-icon">🙁</i><i class="emoji-icon">🙂</i><i class="emoji-icon">🙃</i><i class="emoji-icon">🙄</i><i class="emoji-icon">🙅</i><i class="emoji-icon">🙆</i><i class="emoji-icon">🙇</i><i class="emoji-icon">🙈</i><i class="emoji-icon">🙉</i><i class="emoji-icon">🙊</i><i class="emoji-icon">🙋</i><i class="emoji-icon">🙌</i><i class="emoji-icon">🙍</i><i class="emoji-icon">🙎</i><i class="emoji-icon">🙏</i><i class="emoji-icon">🤚</i><i class="emoji-icon">🤛</i><i class="emoji-icon">🤜</i><i class="emoji-icon">🤝</i><i class="emoji-icon">🤞</i><i class="emoji-icon">🤟</i><i class="emoji-icon">🤠</i><i class="emoji-icon">🤡</i><i class="emoji-icon">🤢</i><i class="emoji-icon">🤣</i><i class="emoji-icon">🤤</i><i class="emoji-icon">🤥</i><i class="emoji-icon">🤦</i><i class="emoji-icon">🤧</i><i class="emoji-icon">🤨</i><i class="emoji-icon">🤩</i><i class="emoji-icon">🤪</i><i class="emoji-icon">🤫</i><i class="emoji-icon">🤬</i><i class="emoji-icon">🤭</i><i class="emoji-icon">🤮</i><i class="emoji-icon">🤯</i>
+                </div>
+            </div>
+        </form>
+    </section></div>
+
+			</div>
+        </main>
+    </div>
+<footer class="p-4 text-center fixed bottom-0 right-0 hidden md:block">
+	<p class="text-sm text-gray-400">©<a href="/" rel="nofollow noopener">RZ.SB</a> 2018-2026</p>
+    
+    <script>
+        Config = {
+            homeUrl: 'https://rz.sb/',
+            themeUrl: 'https://rz.sb/usr/themes/A-Sleek/',
+            pageSize : '5',
+            SrcCdnDir: 'https://rz.sb/usr/themes/A-Sleek/',
+            login: 'false',
+            author: '',
+            mail: '',
+            dark_mode: 'off'
+        } 
+    </script>
+</footer>
+
+<script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/load.js?v=2026"></script><script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/lazyload.js"></script>
+<script>
+//window.document.oncontextmenu = function(){ return false;} 
+</script>
+
+
+
+<script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/pjax.js"></script><script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/tokeninput.js"></script><script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/view-image.min.js"></script><script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/qq_widget.js"></script><script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/flexible.js"></script><script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/marked.min.js"></script><script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/tinymce/tinymce.min.js"></script><script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/app.js?v=202511082302"></script></body></html>

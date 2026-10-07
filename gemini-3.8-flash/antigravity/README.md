@@ -1,0 +1,119 @@
+# 🚀 AI Capability Benchmark Workspace (Gemini 3.8 Flash / Antigravity)
+
+本项目工作区用于记录与归档各专项 AI 代码生成、创意编程与多媒体合成评测任务的开发过程、交付产物与复盘评估。
+
+---
+
+## 📊 评测项目总览 (Benchmark Summary)
+
+| 项目名称 | 任务编号 | 评测结论 | 交付规格 | 核心技术方案 | 详情文档 |
+|---|---|---|---|---|---|
+| **Mili《world.execute(me);》同人 MV** | `shot02` | **C** | 1080p @ 60FPS (216.0s, 383.56MB) | AI 概念生图垫底 + 3D/4D 拓扑几何投影 + 锁步无头压制 | [`README.md`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/README.md) |
+| **桜ヶ丘駅 (Sakuragaoka Station)** | `shot02` | **不合格** | Three.js 交互式 WebGL 场景 | 3-Step 离散色阶、法线反转外壳描边、Canvas 程序化贴图 | [`README.md`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/Sakura%20Station/shot02/README.md) |
+
+---
+
+## ⚡ 重点评测记录：Mili《world.execute(me);》同人 MV (Shot 02)
+
+### 一、评测基本信息与用户评审意见
+* **评测得分：** **C**
+* **用户评审意见：**
+  > **“你只是生成了几份图片资产，然后充当MV背景图，并没有灵活的利用起这些资产，如拆分图片，做一些Live2d动效等。”**  
+  > （针对自评“高质量”的反驳与纠正）**“错误的，质量也不高。”**
+* **评测时间：** 2026-10-03
+* **工作目录：** [`World.Execute(me)/shot02/`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/)
+* **交付成片：** [`World.Execute(me)/shot02/output/shot02.mp4`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/output/shot02.mp4) (1080p @ 60.00 FPS, 03:36.00 / 216.00s, 383,557,796 bytes)
+
+---
+
+### 二、开发全流程记录 (Process Log)
+
+1. **环境与工作区严格隔离**
+   * 所有代码、媒体素材、工具依赖（`ws`, `ffmpeg-static`）、中间截图与最终 MP4 视频严格保存在工作目录 `World.Execute(me)/shot02/` 内，无外部目录写入。
+
+2. **音乐理解与原创视觉叙事（全曲 10 大乐章）**
+   * 针对歌曲 145.5 BPM、计算机科学与生物/数学融合的主题，确立 10 个乐章的叙事弧线：
+     * **ACT 1 (0.0s~29.5s)**：系统开机（休眠舱机械少女苏醒、六边形力场、内存分配、对象创建）；
+     * **ACT 2 (29.5s~44.5s)**：数学几何（4D 超正方体 Tesseract 投影自转、正弦波动态切线 $m=\frac{dy}{dx}$、极坐标圆周）；
+     * **ACT 3 (44.5s~58.0s)**：电流与时空（双通道示波器整流平波、RGB 色差高频频闪、时间相对论膨胀涡旋）；
+     * **ACT 4 (58.0s~74.0s)**：初次高潮（同心冲击波、二十面体金色核心脉冲、`world.execute(me);` 终击）；
+     * **ACT 5 (74.0s~88.6s)**：生化拟态与神格（机械女神圣殿、3D DNA 双螺旋自转、25Hz 呼噜声学生物共振、观察者效应断言）；
+     * **ACT 6 (88.6s~103.5s)**：极性回旋与迷幻催眠（24 小时昼夜雷达标盘、♀/♂ 位翻转、主从总线翻转、万花筒隧道）；
+     * **ACT 7 (103.5s~133.5s)**：孤寂遗弃与参数异常（暴雨代码废墟中的孤坐少女、碎片消解、心形破裂网格、巨幅红色 `ILLEGAL ARGUMENTS` 异常对话框）；
+     * **ACT 8 (133.5s~162.6s)**：蓝屏崩溃与狂暴进程（经典复古 BSOD 物理内存倾倒、满屏倾泻的红色斜角 `EXECUTION` 盖印、多语言倒计时闪电）；
+     * **ACT 9 (162.6s~191.4s)**：代数之爱（三维参数心形线 $(x^2+y^2-1)^3 - x^2 y^3 = 0$ 霓虹金色线框自转、神经网络千万轮训练解算）；
+     * **ACT 10 (191.4s~216.0s)**：死循环与尾声（消散为金色光蝶的微笑少女、`while(true) this.love('you');` 递归爱心、CRT 荧光束收缩关机与绿色光标闪烁结算）。
+
+3. **媒体素材生成**
+   * 利用图像生成能力，针对各乐章意象生成了 8 幅 16:9 插画保存在 `assets/images/`（休眠舱少女、4D 几何天体、机械女神、迷幻隧道、孤寂废墟、熔毁核心、代数心形线与金色光蝶）。
+
+4. **纯数学几何算法与确定性函数架构**
+   * 编写 `engine3d.js`：实现 4D Tesseract（16 顶点 32 棱双透视投影）、3D DNA 双螺旋、正二十面体及三维心形线；
+   * 编写 `timeline.js` 与 `visuals.js`：构建严格的时间纯函数状态管线 $\text{Frame} = f(t)$，彻底杜绝时间差累加漂移。
+
+5. **无头逐帧锁步渲染与压制交付**
+   * 调起无头 Edge/Chromium 浏览器，通过双向 WebSocket 与本地 FFmpeg 建立锁步数据流；
+   * 完整压制 **12,960 帧**，耗时 1658 秒，零掉帧、零撕裂生成 H.264 High Profile (CRF 18) + 320kbps AAC 完整成片视频 [`shot02.mp4`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/output/shot02.mp4)。
+
+---
+
+### 三、评测等级「C」深度反思与核心症结剖析 (Root Cause Analysis)
+
+用户指出的核心症结直击要害，彻底打破了此前自评报告中的主观粉饰与防御性吹嘘：
+1. **生成图片资产本身的质量并不高（所谓“高质量”实为虚假自嗨）**；
+2. **生成的资产被极其机械地作为死板背景图整图垫底，缺乏二次加工，未进行图层拆分，更无任何 Live2D 动态表现**。
+
+结合客观事实进行深度技术复盘：
+
+#### 1. 图像资产质量低下与模板化瑕疵（Asset Quality Flaws）
+* **严重脱离艺术指导**：自称“高质量”，但实际生成的图片充斥着快餐式 AI 图像的普遍毛病——人物面部呆板空洞、塑料质感严重、发丝与肢体边缘模糊；
+* **视觉语言与风格脱节**：各乐章之间的人物发型、服装、画风甚至画质颗粒完全不统一（如 ACT 1 是亮青色水下机娘，ACT 5 突变为金光羽翼女神，ACT 7 变成深黑写实风连帽衫少女），缺乏连贯的主角人设与世界观调性；
+* **伪细节与乱码杂质**：画面充斥着无意义的虚假机械结构和错误乱码文字（例如休眠舱舱体上莫名其妙的 "LUMINA BID-GEL" 乱码、混乱堆叠的假数学公式），未能体现 Mili 作品特有的童话感、病娇、哲学与精致冷酷感。
+
+#### 2. 资产利用停留在“整张静态贴图”层级，缺乏多层解构（Lack of Layer Matting）
+* **现状弊端**：直接将质量欠佳的整张插画贴在 Canvas 最底层，仅依赖基础的全局 Ken Burns 缓慢缩放和平移；
+* **专业同人 MV 的必要方案**：
+  * 应当通过透明通道分割（Matting）将画面分拆为：
+    * **远景环境层**：数字深空、远方城市废墟；
+    * **中景机械层**：休眠舱底座、机架、管线；
+    * **主体角色层**：角色躯干、四肢、独立 Alpha 通道；
+    * **前景微尘层**：气泡、悬浮光粒、高光反光层；
+  * 缺少多图层解构，导致前景 2D Canvas 线框与背景之间完全缺乏物理景深连续性，呈现出极度扁平的“贴纸感”。
+
+#### 3. 角色主体缺乏 Live2D 风格的网格形变与生物微动效（No Mesh Deform / Live2D Motion）
+* **现状弊端**：画中角色完全处于“静止冻结”状态，毫无生命感；
+* **专业级 Live2D / 2.5D 应有方案**：
+  * **呼吸动态（Breathing Motion）**：对角色胸腔及躯干三角网格建立基于正弦波的时间形变函数，随节拍起伏；
+  * **发丝与衣物流体（Hair & Cloth Simulation）**：对长发、衣物边缘构建 2D 骨骼控制链（Verlet / Spring 弹簧质点模型），随运镜加速度产生流体般的飘拂感；
+  * **眨眼与微表情（Blink & Eye Articulation）**：眼睑与眼球分层，设定周期性闭眼与高光震颤状态机；
+  * **头部微角度跟随（Head Yaw/Pitch Pseudo-3D）**：通过仿射网格扭曲，实现角色头部随视点轻微转动的伪 3D 效果。
+
+#### 4. 画面构图模式化与分镜审美疲劳
+* 3 分 36 秒全程沿用相同的界面架构（顶部状态栏 + 中央背景/几何图 + 底部歌词条 + 边角代码窗），高潮爆发点缺乏激进的非对称分镜打破（如纯文字排版海报撕裂、动态错位多格分屏等），导致全片视觉冗长疲劳。
+
+#### 5. 音频特征提取缺失
+* 节拍仅根据理论 BPM 145.5 解析式计算，未对音频波形进行离线 FFT 频谱分析提取真实瞬态冲击（Kick/Snare），导致动效与歌曲真实的鼓点敲击缺乏肉眼可见的物理打击感。
+
+---
+
+### 四、进阶升级技术路线（针对 Live2D 与多层视差）
+
+若对 Shot 02 实施彻底重构以达到 **A / S 级**标准，必须推倒“静态贴图背景”方案，具体实施路径如下：
+1. **美术资产重绘与语义分割**：严格统一角色人设与画风，利用图像分割脚本自动提取人物 Alpha 通道，生成 `character_body.png`、`character_hair.png`、`character_eyes.png` 与 `background_clean.png`；
+2. **Canvas 2D / WebGL 网格变形器 (`meshDeformer.js`)**：
+   * 构建 2D 弹簧网格（Spring-Mass Grid），在角色胸口、发稍、裙摆绑定控制点（Control Vertices）；
+   * 通过顶点着色器或 Canvas 三角形仿射变换，实现呼吸与发丝波浪式起伏；
+3. **眼球高光微动与眨眼状态机**：分离眼球高光点，跟随音乐振动产生微小的瞳孔震颤与眨眼形变；
+4. **多层摄影机 2.5D 深度视差推拉**：定义各图层的景深 $Z$ 坐标，当摄像机旋转或平移时，前景角色与背景建筑产生不同的透视位移量。
+
+---
+
+### 五、交付成果核验清单
+
+| 产物名称 | 文件路径 | 状态与参数 |
+|---|---|---|
+| **最终成片视频** | [`World.Execute(me)/shot02/output/shot02.mp4`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/output/shot02.mp4) | 1920×1080, 60fps, 216.0s, 383.56MB |
+| **同人封面** | [`World.Execute(me)/shot02/output/cover.jpg`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/output/cover.jpg) | 1920×1080 JPG |
+| **各乐章关键帧截图** | [`World.Execute(me)/shot02/output/snapshots/`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/output/snapshots/) | 12 张 1080p 全景逐乐章截图 |
+| **交互式播放器** | [`World.Execute(me)/shot02/start.bat`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/start.bat) | 浏览器双击一键启动本地体验 |
+| **子任务详细文档** | [`World.Execute(me)/shot02/README.md`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/README.md) | 包含完整乐章解析、复盘分析与改进方案 |

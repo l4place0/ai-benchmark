@@ -1,0 +1,78 @@
+{
+  "project": "The Acceptance Machine",
+  "version": 2,
+  "createdAt": "2026-10-07T14:58:28.990Z",
+  "renderer": "Browser Canvas 2D",
+  "root": "D:\\l4place\\Workspace\\ai-benchmark\\gpt-6.1-sol\\World.Execute(me) MV\\shot01",
+  "paper": {
+    "source": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Paper002_4K_Color.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Paper002_4K_Color.jpg",
+    "originalProject": "https://ambientcg.com/view?id=Paper002",
+    "author": "Lennart Demes / ambientCG",
+    "license": "CC0-1.0",
+    "localFile": "paper-ambientcg.jpg",
+    "use": "Tinted paper surfaces and a subtle static paper-fibre composite."
+  },
+  "music": {
+    "artist": "Mili",
+    "recording": "Miracle Milk",
+    "source": "https://osu.ppy.sh/beatmaps/artists/331"
+  },
+  "entries": [
+    {
+      "file": "src/v2/art.js",
+      "bytes": 12852,
+      "sha256": "2edd91af41c1ed1e8dad2e9174e5ca4dcc042d8b6fafee4112ad8d5b0666a273"
+    },
+    {
+      "file": "src/v2/mv.js",
+      "bytes": 32463,
+      "sha256": "22dd6596837f075d5fe5fa353f6b9bfc2a604b5cacb78a586efca1d5065d776f"
+    },
+    {
+      "file": "src/v2/index.html",
+      "bytes": 1197,
+      "sha256": "7d86ac1036927526b1fbf06e1a4efd0445962290b5f7ff4b3805bd008dd17d71"
+    },
+    {
+      "file": "scripts/render-v2.mjs",
+      "bytes": 9997,
+      "sha256": "b9eaa5741f7b8c6244456905934f8e8f1086abf08edcd12ed6cc3803c952dcf2"
+    },
+    {
+      "file": "scripts/render-v2-segmented.mjs",
+      "bytes": 6421,
+      "sha256": "cbc7e568dbea6a39ce779407c23ce931c2092b72bc7796010a6bc81133b1fd0c"
+    },
+    {
+      "file": "scripts/verify-v2.mjs",
+      "bytes": 5808,
+      "sha256": "a7cf3c0abfe8b2684c1c0646f0f24c991ce9e12251f9c4f9b2d72a756b22983e"
+    },
+    {
+      "file": "assets/textures/v2/paper-ambientcg.jpg",
+      "bytes": 5744713,
+      "sha256": "fed4bf44cc94058f65af0ac83b4e3d65d16bb02a14332eb361999cada6cff59e"
+    },
+    {
+      "file": "assets/audio/source/audio.mp3",
+      "bytes": 5097683,
+      "sha256": "028ea8b1cf10c5faeca6ff4b2f6acbe3bd0926a5c2c045e7893857d505dbad61"
+    },
+    {
+      "file": "assets/fonts/CormorantGaramond.ttf",
+      "bytes": 1195560,
+      "sha256": "b20b7d9626dd956b2c5e558692ad328b1f19e3275e2782db4fa07670d83f35e0"
+    },
+    {
+      "file": "assets/fonts/IBMPlexMono.ttf",
+      "bytes": 135580,
+      "sha256": "6a3412f058c7d8dfd9170c41e85ade48e5156ecb89356110ca57a0a27734af46"
+    },
+    {
+      "file": "output/v2/world-execute-me_paper-theatre_1080p60.mp4",
+      "bytes": 166795150,
+      "sha256": "dc488550001e662e3ede0d9d4cf9f4d0e32fe9b3336f946e333e583a3a3c3ad1"
+    }
+  ]
+}

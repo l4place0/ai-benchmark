@@ -1,0 +1,110 @@
+{
+  "tulous": [
+    {
+      "name": "Tulou_Main 振昌楼(核心圆楼)",
+      "shape": "circle",
+      "outerDia": 34,
+      "floors": 4,
+      "wallH": 13,
+      "center": [
+        88,
+        76
+      ]
+    },
+    {
+      "name": "Tulou_Secondary 环兴楼(中型圆楼)",
+      "shape": "circle",
+      "outerDia": 24,
+      "floors": 3,
+      "wallH": 9,
+      "center": [
+        52,
+        120
+      ]
+    },
+    {
+      "name": "Tulou_Small 庆成楼(方形土楼)",
+      "shape": "square",
+      "outerW": 24,
+      "outerD": 20,
+      "floors": 3,
+      "wallH": 10,
+      "center": [
+        128,
+        42
+      ]
+    }
+  ],
+  "houses": 13,
+  "props": 30,
+  "totalVoxels": 474092,
+  "byGroup": {
+    "terrain": 425804,
+    "building": 20716,
+    "vegetation": 24660,
+    "water": 2669,
+    "other": 243
+  },
+  "sceneSize": [
+    170,
+    150,
+    54
+  ],
+  "camera": [
+    {
+      "view": "render_01_main_view.png",
+      "target": [
+        74,
+        76,
+        12
+      ],
+      "azimuthDeg": 207,
+      "elevationDeg": 31,
+      "orthoHalfWidth": 80
+    },
+    {
+      "view": "render_02_full_diorama.png",
+      "target": [
+        85,
+        72,
+        9
+      ],
+      "azimuthDeg": 207,
+      "elevationDeg": 38,
+      "orthoHalfWidth": 110
+    },
+    {
+      "view": "render_03_tulou_detail.png",
+      "target": [
+        88,
+        76,
+        14
+      ],
+      "azimuthDeg": 197,
+      "elevationDeg": 55,
+      "orthoHalfWidth": 24
+    },
+    {
+      "view": "render_04_village_relations.png",
+      "target": [
+        80,
+        78,
+        13
+      ],
+      "azimuthDeg": 232,
+      "elevationDeg": 34,
+      "orthoHalfWidth": 80
+    }
+  ],
+  "lighting": {
+    "sunAzimuthDeg": 225,
+    "sunElevationDeg": 44,
+    "sunColor": [
+      1.06,
+      0.97,
+      0.82
+    ],
+    "skyAmbient": "hemisphere",
+    "shadows": "raycast sun-visibility + 3-tap soft"
+  }
+}

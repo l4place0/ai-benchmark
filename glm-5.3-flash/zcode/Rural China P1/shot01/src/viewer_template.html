@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>客家土楼 · Hakka Tulou — Voxel Diorama</title>
+<style>
+  html,body{margin:0;height:100%;overflow:hidden;background:#aebac6;font-family:"Segoe UI",system-ui,"Microsoft YaHei",sans-serif}
+  #c{position:fixed;inset:0;width:100%;height:100%;display:block;cursor:grab;touch-action:none}
+  #c.drag{cursor:grabbing}
+  #vignette{position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,rgba(0,0,0,0) 62%,rgba(30,38,50,.18) 100%)}
+  #ui{position:fixed;left:18px;top:16px;color:#2c3540;text-shadow:0 1px 0 rgba(255,255,255,.5);user-select:none;pointer-events:none}
+  #ui h1{font-size:21px;margin:0 0 3px;letter-spacing:2px;font-weight:600}
+  #ui p{margin:0;font-size:12px;opacity:.72;letter-spacing:.5px}
+  #btns{position:fixed;left:18px;bottom:18px;display:flex;gap:8px;flex-wrap:wrap;max-width:70vw}
+  #btns button{border:1px solid rgba(44,53,64,.35);background:rgba(255,255,255,.55);color:#2c3540;padding:6px 13px;border-radius:6px;font-size:13px;cursor:pointer;font-family:inherit}
+  #btns button:hover{background:rgba(255,255,255,.85)}
+  #btns button.on{background:#2c3540;color:#fff;border-color:#2c3540}
+  #hint{position:fixed;right:18px;bottom:18px;font-size:12px;color:#2c3540;opacity:.6;user-select:none;text-align:right;pointer-events:none}
+  #err{position:fixed;inset:0;display:none;place-items:center;color:#5a2c2c;font-size:15px}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="vignette"></div>
+<div id="ui">
+  <h1>客家土楼 · Hakka Tulou</h1>
+  <p>Voxel Diorama — __STATS__</p>
+</div>
+<div id="btns">
+  <button data-v="hero" class="on">等距主视</button>
+  <button data-v="full">俯视全景</button>
+  <button data-v="gate">入口细节</button>
+  <button data-v="plan">平面图</button>
+  <button id="spin">自动旋转</button>
+  <button id="reset">重置视角</button>
+</div>
+<div id="hint">左键拖动旋转 · 滚轮缩放 · 双击重置</div>
+<div id="err">当前浏览器不支持 WebGL,无法展示 3D 场景。</div>
+<script>
+'use strict';
+/* ============ 数据解码 ============ */
+const B64 = "__DATA__";
+function b64ToBuf(s) {
+  const bin = atob(s);
+  const u = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
+  return u.buffer;
+}
+const buf = b64ToBuf(B64);
+const dv = new DataView(buf);
+const nV = dv.getUint32(0, true);
+const nQ = dv.getUint32(4, true);
+const TX = dv.getFloat32(8, true), TY = dv.getFloat32(12, true), TZ = dv.getFloat32(16, true);
+const VO = 24;                       // 顶点数据偏移
+const IO = VO + nV * 14;             // 索引数据偏移
+
+/* ============ WebGL 初始化 ============ */
+const canvas = document.getElementById('c');
+const gl = canvas.getContext('webgl', { antialias: true, alpha: false }) ||
+           canvas.getContext('experimental-webgl', { antialias: true, alpha: false });
+if (!gl) { document.getElementById('err').style.display = 'grid'; throw new Error('no webgl'); }
+
+function sh(type, src) {
+  const s = gl.createShader(type);
+  gl.shaderSource(s, src); gl.compileShader(s);
+  if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s));
+  return s;
+}
+function prog(vs, fs) {
+  const p = gl.createProgram();
+  gl.attachShader(p, sh(gl.VERTEX_SHADER, vs));
+  gl.attachShader(p, sh(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(p);
+  if (!gl.getProgramParameter(p, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(p));
+  return p;
+}
+
+/* --- 场景着色:与离线渲染器同一套光照(暖阳+天光+AO+体素投影) --- */
+const meshProg = prog(`
+  attribute vec3 aPos;
+  attribute vec3 aNrm;
+  attribute vec3 aCol;
+  attribute float aAO;
+  attribute float aSH;
+  uniform mat4 uMVP;
+  varying vec3 vCol;
+  void main() {
+    vec3 n = normalize(aNrm);
+    float lam = max(dot(n, vec3(0.627, -0.440, 0.643)), 0.0);
+    vec3 amb = mix(vec3(0.31, 0.28, 0.24), vec3(0.50, 0.57, 0.66), n.z * 0.5 + 0.5);
+    float aoF = 0.40 + 0.60 * aAO;
+    float shF = 0.22 + 0.78 * aSH;
+    vec3 v = aCol * (amb * aoF + vec3(1.06, 0.97, 0.85) * lam * shF);
+    vCol = 1.16 * (1.0 - exp(-1.30 * v));
+    gl_Position = uMVP * vec4(aPos * 0.5, 1.0);
+  }
+`, `
+  precision mediump float;
+  varying vec3 vCol;
+  void main() { gl_FragColor = vec4(vCol, 1.0); }
+`);
+
+/* --- 天空背景 --- */
+const skyProg = prog(`
+  attribute vec2 aP;
+  varying vec2 vP;
+  void main() { vP = aP; gl_Position = vec4(aP, 0.9999, 1.0); }
+`, `
+  precision mediump float;
+  varying vec2 vP;
+  uniform vec2 uRes;
+  void main() {
+    float y01 = vP.y * 0.5 + 0.5;
+    float t0 = 1.0 - (1.0 - y01) / 0.72;
+    vec3 col = t0 > 0.0
+      ? mix(vec3(0.86, 0.88, 0.89), vec3(0.62, 0.69, 0.78), clamp(t0, 0.0, 1.0))
+      : mix(vec3(0.86, 0.88, 0.89), vec3(0.77, 0.80, 0.82), clamp(-t0, 0.0, 1.0));
+    float n = fract(sin(dot(gl_FragCoord.xy, vec2(12.9898, 78.233))) * 43758.5453);
+    gl_FragColor = vec4(col + (n - 0.5) * (1.5 / 255.0), 1.0);
+  }
+`);
+
+/* ============ 缓冲区 ============ */
+const vbo = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
+gl.bufferData(gl.ARRAY_BUFFER, new Uint8Array(buf, VO, nV * 14), gl.STATIC_DRAW);
+
+const ibo = gl.createBuffer();
+gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, ibo);
+gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(buf, IO, nQ * 6), gl.STATIC_DRAW);
+
+const skyVbo = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, skyVbo);
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+
+/* ============ 相机与矩阵 ============ */
+const PRESETS = {
+  hero: { az: 150, el: 40, w: 64, t: [0, -3, 8.5] },
+  full: { az: 100, el: 52, w: 74, t: [0, 1, 7] },
+  gate: { az: 148, el: 26, w: 22, t: [3, -12, 8] },
+  plan: { az: 0, el: 89.9, w: 62, t: [0, 0, 6] },
+};
+const DEFAULT = PRESETS.hero;
+const cam = { az: DEFAULT.az, el: DEFAULT.el, w: DEFAULT.w, t: DEFAULT.t.slice() };
+let spin = false, dirty = true;
+
+function mul(a, b) {
+  const o = new Float32Array(16);
+  for (let c = 0; c < 4; c++) for (let r = 0; r < 4; r++) {
+    o[c * 4 + r] = a[r] * b[c * 4] + a[4 + r] * b[c * 4 + 1] + a[8 + r] * b[c * 4 + 2] + a[12 + r] * b[c * 4 + 3];
+  }
+  return o;
+}
+function lookAt(eye, c) {
+  let zx = eye[0] - c[0], zy = eye[1] - c[1], zz = eye[2] - c[2];
+  let l = Math.hypot(zx, zy, zz); zx /= l; zy /= l; zz /= l;
+  let xx = -zy, xy = zx, xz = 0;                       // cross((0,0,1), z)
+  l = Math.hypot(xx, xy, xz) || 1e-9; xx /= l; xy /= l; xz /= l;
+  const yx = zy * xz - zz * xy, yy = zz * xx - zx * xz, yz = zx * xy - zy * xx;
+  const ex = eye[0], ey = eye[1], ez = eye[2];
+  return new Float32Array([
+    xx, yx, zx, 0,
+    xy, yy, zy, 0,
+    xz, yz, zz, 0,
+    -(xx * ex + xy * ey + xz * ez),
+    -(yx * ex + yy * ey + yz * ez),
+    -(zx * ex + zy * ey + zz * ez), 1,
+  ]);
+}
+function ortho(l, r, b, t, n, f) {
+  return new Float32Array([
+    2 / (r - l), 0, 0, 0,
+    0, 2 / (t - b), 0, 0,
+    0, 0, -2 / (f - n), 0,
+    -(r + l) / (r - l), -(t + b) / (t - b), -(f + n) / (f - n), 1,
+  ]);
+}
+
+function resize() {
+  const dpr = window.devicePixelRatio || 1;
+  const w = Math.round(canvas.clientWidth * dpr), h = Math.round(canvas.clientHeight * dpr);
+  if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; dirty = true; }
+}
+window.addEventListener('resize', () => { resize(); dirty = true; });
+
+/* ============ 交互 ============ */
+const pointers = new Map();
+let pinchDist = 0;
+canvas.addEventListener('pointerdown', (e) => {
+  canvas.setPointerCapture(e.pointerId);
+  pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  canvas.classList.add('drag');
+  if (pointers.size === 2) {
+    const p = [...pointers.values()];
+    pinchDist = Math.hypot(p[0].x - p[1].x, p[0].y - p[1].y);
+  }
+});
+canvas.addEventListener('pointermove', (e) => {
+  const p = pointers.get(e.pointerId);
+  if (!p) return;
+  const dx = e.clientX - p.x, dy = e.clientY - p.y;
+  p.x = e.clientX; p.y = e.clientY;
+  if (pointers.size === 1) {
+    cam.az += dx * 0.3;
+    cam.el = Math.min(89.9, Math.max(3, cam.el + dy * 0.3));
+    dirty = true;
+  } else if (pointers.size === 2) {
+    const q = [...pointers.values()];
+    const d = Math.hypot(q[0].x - q[1].x, q[0].y - q[1].y);
+    if (pinchDist > 0) { cam.w = Math.min(160, Math.max(8, cam.w * pinchDist / d)); dirty = true; }
+    pinchDist = d;
+  }
+});
+function endPointer(e) { pointers.delete(e.pointerId); if (!pointers.size) canvas.classList.remove('drag'); }
+canvas.addEventListener('pointerup', endPointer);
+canvas.addEventListener('pointercancel', endPointer);
+canvas.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  cam.w = Math.min(160, Math.max(8, cam.w * Math.exp(e.deltaY * 0.001)));
+  dirty = true;
+}, { passive: false });
+canvas.addEventListener('dblclick', () => { setView('hero'); });
+
+const btns = [...document.querySelectorAll('#btns button[data-v]')];
+function setView(name) {
+  const p = PRESETS[name];
+  cam.az = p.az; cam.el = p.el; cam.w = p.w; cam.t = p.t.slice();
+  btns.forEach(b => b.classList.toggle('on', b.dataset.v === name));
+  dirty = true;
+}
+btns.forEach(b => b.addEventListener('click', () => setView(b.dataset.v)));
+document.getElementById('reset').addEventListener('click', () => setView('hero'));
+const spinBtn = document.getElementById('spin');
+spinBtn.addEventListener('click', () => {
+  spin = !spin;
+  spinBtn.classList.toggle('on', spin);
+});
+
+/* ============ 渲染循环 ============ */
+resize();
+let lastT = performance.now();
+function frame(now) {
+  requestAnimationFrame(frame);
+  if (spin) { cam.az = (cam.az + (now - lastT) * 0.012) % 360; dirty = true; }
+  lastT = now;
+  if (!dirty) return;
+  dirty = false;
+  resize();
+
+  gl.viewport(0, 0, canvas.width, canvas.height);
+  gl.disable(gl.DEPTH_TEST);
+  gl.useProgram(skyProg);
+  gl.bindBuffer(gl.ARRAY_BUFFER, skyVbo);
+  const aP = gl.getAttribLocation(skyProg, 'aP');
+  gl.enableVertexAttribArray(aP);
+  gl.vertexAttribPointer(aP, 2, gl.FLOAT, false, 0, 0);
+  gl.uniform2f(gl.getUniformLocation(skyProg, 'uRes'), canvas.width, canvas.height);
+  gl.drawArrays(gl.TRIANGLES, 0, 3);
+
+  const aspect = canvas.width / canvas.height;
+  const azR = cam.az * Math.PI / 180, elR = cam.el * Math.PI / 180;
+  const dcam = [Math.sin(azR) * Math.cos(elR), Math.cos(azR) * Math.cos(elR), Math.sin(elR)];
+  const eye = [cam.t[0] + dcam[0] * 300, cam.t[1] + dcam[1] * 300, cam.t[2] + dcam[2] * 300];
+  const proj = ortho(-cam.w / 2, cam.w / 2, -cam.w / (2 * aspect), cam.w / (2 * aspect), -600, 900);
+  const view = lookAt(eye, cam.t);
+  const mvp = mul(proj, view);
+
+  gl.enable(gl.DEPTH_TEST);
+  gl.clear(gl.DEPTH_BUFFER_BIT);
+  gl.useProgram(meshProg);
+  gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
+  const S = 14;
+  const loc = (n) => gl.getAttribLocation(meshProg, n);
+  let a;
+  a = loc('aPos'); gl.enableVertexAttribArray(a); gl.vertexAttribPointer(a, 3, gl.SHORT, false, S, 0);
+  a = loc('aNrm'); gl.enableVertexAttribArray(a); gl.vertexAttribPointer(a, 3, gl.BYTE, true, S, 6);
+  a = loc('aCol'); gl.enableVertexAttribArray(a); gl.vertexAttribPointer(a, 3, gl.UNSIGNED_BYTE, true, S, 9);
+  a = loc('aAO'); gl.enableVertexAttribArray(a); gl.vertexAttribPointer(a, 1, gl.UNSIGNED_BYTE, true, S, 12);
+  a = loc('aSH'); gl.enableVertexAttribArray(a); gl.vertexAttribPointer(a, 1, gl.UNSIGNED_BYTE, true, S, 13);
+  gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, ibo);
+  gl.uniformMatrix4fv(gl.getUniformLocation(meshProg, 'uMVP'), false, mvp);
+  gl.drawElements(gl.TRIANGLES, nQ * 6, gl.UNSIGNED_SHORT, 0);
+}
+requestAnimationFrame(frame);
+</script>
+</body>
+</html>

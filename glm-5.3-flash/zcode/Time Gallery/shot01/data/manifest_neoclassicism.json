@@ -1,0 +1,121 @@
+{
+  "period": {
+    "id": "neoclassicism",
+    "nameZh": "新古典主义",
+    "nameEn": "Neoclassicism",
+    "years": "1750–1820",
+    "introZh": "新古典主义兴起于启蒙运动与法国大革命之际，以古希腊罗马的庄重秩序对抗洛可可的纤巧浮华：严谨的素描、雕塑般的人体与舞台式的构图，传达英雄气概与公民道德。大卫以《荷拉斯兄弟之宣誓》为革命时代立像，安格尔则以纯净的线条与优雅的轮廓把古典理想推向极致。",
+    "accent": "#4a6d8c",
+    "coverPaintingId": "jacques-louis-david-oath-of-the-horatii",
+    "painters": [
+      {
+        "nameZh": "雅克-路易·大卫",
+        "nameEn": "Jacques-Louis David",
+        "years": "1748–1825"
+      },
+      {
+        "nameZh": "让-奥古斯特-多米尼克·安格尔",
+        "nameEn": "Jean-Auguste-Dominique Ingres",
+        "years": "1780–1867"
+      }
+    ]
+  },
+  "paintings": [
+    {
+      "id": "jacques-louis-david-oath-of-the-horatii",
+      "file": "assets/paintings/neoclassicism/jacques-louis-david-oath-of-the-horatii.jpg",
+      "titleZh": "荷拉斯兄弟之宣誓",
+      "titleEn": "Oath of the Horatii",
+      "artistZh": "雅克-路易·大卫",
+      "artistEn": "Jacques-Louis David",
+      "artistBirth": "1748",
+      "artistDeath": "1825",
+      "year": "1784",
+      "period": "neoclassicism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_Oath_of_the_Horatii_-_Google_Art_Project.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1497
+    },
+    {
+      "id": "jacques-louis-david-the-death-of-marat",
+      "file": "assets/paintings/neoclassicism/jacques-louis-david-the-death-of-marat.jpg",
+      "titleZh": "马拉之死",
+      "titleEn": "The Death of Marat",
+      "artistZh": "雅克-路易·大卫",
+      "artistEn": "Jacques-Louis David",
+      "artistBirth": "1748",
+      "artistDeath": "1825",
+      "year": "1793",
+      "period": "neoclassicism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Death_of_Marat_by_David.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 2471
+    },
+    {
+      "id": "jacques-louis-david-napoleon-crossing-the-alps",
+      "file": "assets/paintings/neoclassicism/jacques-louis-david-napoleon-crossing-the-alps.jpg",
+      "titleZh": "拿破仑翻越阿尔卑斯山",
+      "titleEn": "Napoleon Crossing the Alps",
+      "artistZh": "雅克-路易·大卫",
+      "artistEn": "Jacques-Louis David",
+      "artistBirth": "1748",
+      "artistDeath": "1825",
+      "year": "1801",
+      "period": "neoclassicism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_Napoleon_Crossing_the_Alps_-_Kunsthistorisches_Museum.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1576,
+      "height": 1876
+    },
+    {
+      "id": "jacques-louis-david-the-coronation-of-napoleon",
+      "file": "assets/paintings/neoclassicism/jacques-louis-david-the-coronation-of-napoleon.jpg",
+      "titleZh": "拿破仑加冕大典",
+      "titleEn": "The Coronation of Napoleon",
+      "artistZh": "雅克-路易·大卫",
+      "artistEn": "Jacques-Louis David",
+      "artistBirth": "1748",
+      "artistDeath": "1825",
+      "year": "1805–1807",
+      "period": "neoclassicism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Coronation_of_Napoleon_(1805-1807).jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 3840,
+      "height": 2415
+    },
+    {
+      "id": "jean-auguste-dominique-ingres-la-grande-odalisque",
+      "file": "assets/paintings/neoclassicism/jean-auguste-dominique-ingres-la-grande-odalisque.jpg",
+      "titleZh": "大宫女",
+      "titleEn": "La Grande Odalisque",
+      "artistZh": "让-奥古斯特-多米尼克·安格尔",
+      "artistEn": "Jean-Auguste-Dominique Ingres",
+      "artistBirth": "1780",
+      "artistDeath": "1867",
+      "year": "1814",
+      "period": "neoclassicism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jean_Auguste_Dominique_Ingres,_La_Grande_Odalisque,_1814.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1069
+    },
+    {
+      "id": "jean-auguste-dominique-ingres-la-source",
+      "file": "assets/paintings/neoclassicism/jean-auguste-dominique-ingres-la-source.jpg",
+      "titleZh": "泉",
+      "titleEn": "La Source",
+      "artistZh": "让-奥古斯特-多米尼克·安格尔",
+      "artistEn": "Jean-Auguste-Dominique Ingres",
+      "artistBirth": "1780",
+      "artistDeath": "1867",
+      "year": "1856",
+      "period": "neoclassicism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Jean_Auguste_Dominique_Ingres_-_The_Spring_-_Google_Art_Project_2.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 3835
+    }
+  ]
+}

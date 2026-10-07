@@ -1,0 +1,1229 @@
+<!DOCTYPE html><html class="overflow-x-hidden dark" data-dpr="1"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta id="scriptUrl" mode="production" content="https://rz.sb/usr/themes/A-Sleek/src/js/app.js?v=202511082302">
+    <title>友圈 - 若志 • 随笔</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://q1.qlogo.cn/g?b=qq&amp;nk=80360650&amp;s=100">
+    <link rel="stylesheet" href="https://rz.sb/usr/themes/A-Sleek/src/css/app.css?v=202311271058">
+    <link rel="stylesheet" href="https://rz.sb/usr/themes/A-Sleek/src/css/style.css?v=2026">
+    <link rel="stylesheet" href="https://rz.sb/usr/themes/A-Sleek/src/icon/remixicon.css">
+    <link rel="stylesheet" href="https://rz.sb/usr/themes/A-Sleek/src/css/qq_widget.css">
+    <link rel="stylesheet" href="https://rz.sb/usr/themes/A-Sleek/src/css/markdown.css">
+    <script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/jquery.js"></script>
+    <!--  <script type="text/javascript" src="https://tj.rzv.cc/stat.php?link=lnk_68772e4937736"></script> -->
+    <!-- 通过自有函数输出HTML头部信息 background-image: url(https://cdn.rzv.cc/picgo/09b8fbffcb38e81a04e1a2b79ca15636.jpg?imageSlim); -->
+    <meta name="description" content="友圈">
+<meta name="generator" content="Typecho 1.2.1">
+<meta name="template" content="A-Sleek">
+<link rel="pingback" href="https://rz.sb/action/xmlrpc">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://rz.sb/action/xmlrpc?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://rz.sb/action/xmlrpc?wlw">
+<script type="text/javascript">
+(function () {
+    window.TypechoComment = {
+        dom : function (id) {
+            return document.getElementById(id);
+        },
+    
+        create : function (tag, attr) {
+            var el = document.createElement(tag);
+        
+            for (var key in attr) {
+                el.setAttribute(key, attr[key]);
+            }
+        
+            return el;
+        },
+
+        reply : function (cid, coid) {
+            var comment = this.dom(cid), parent = comment.parentNode,
+                response = this.dom('respond-page-9'), input = this.dom('comment-parent'),
+                form = 'form' == response.tagName ? response : response.getElementsByTagName('form')[0],
+                textarea = response.getElementsByTagName('textarea')[0];
+
+            if (null == input) {
+                input = this.create('input', {
+                    'type' : 'hidden',
+                    'name' : 'parent',
+                    'id'   : 'comment-parent'
+                });
+
+                form.appendChild(input);
+            }
+
+            input.setAttribute('value', coid);
+
+            if (null == this.dom('comment-form-place-holder')) {
+                var holder = this.create('div', {
+                    'id' : 'comment-form-place-holder'
+                });
+
+                response.parentNode.insertBefore(holder, response);
+            }
+
+            comment.appendChild(response);
+            this.dom('cancel-comment-reply-link').style.display = '';
+
+            if (null != textarea && 'text' == textarea.name) {
+                textarea.focus();
+            }
+
+            return false;
+        },
+
+        cancelReply : function () {
+            var response = this.dom('respond-page-9'),
+            holder = this.dom('comment-form-place-holder'), input = this.dom('comment-parent');
+
+            if (null != input) {
+                input.parentNode.removeChild(input);
+            }
+
+            if (null == holder) {
+                return true;
+            }
+
+            this.dom('cancel-comment-reply-link').style.display = 'none';
+            holder.parentNode.insertBefore(response, holder);
+            return false;
+        }
+    };
+})();
+</script>
+<style></style></head>
+
+<body class="bg-gray-100 transition dark:bg-slate-900 selection:bg-blue-400 selection:text-white overflow-hidden" style="
+        background-position: 50% 0;
+        background-attachment: fixed;
+        background-size: cover;">
+    <div class="body-bg dark:bg-slate-900 hidden md:block">
+        <div class="slider-thumb b-left"></div>
+        <div class="slider-thumb b-right"></div>
+    </div>
+    <div class="container lg:container mx-auto md:shadow relative flex md:mt-8 md:rounded-xl bg-gray-50 dark:bg-slate-700 mb-2">
+        <sidebar class="nav_menu p-3 md:p-4 bg-gray-50 dark:bg-slate-700 md:rounded-l-xl md:block transition border-r md:border-none dark:border-r-slate-800">
+    <div class="sticky top-4 md:rounded-lg h-full">
+        <a href="https://rz.sb/about" class="nav_menu_btn w-14 h-14 p-1 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-full">
+            <img class="rounded-full" src="https://q1.qlogo.cn/g?b=qq&amp;nk=80360650&amp;s=100" alt="tx">
+        </a>
+        <hr class="my-2 dark:border-slate-800">
+        <div class="side_menu text-gray-500">
+            <a href="https://rz.sb/" class="nav_menu_btn w-14 h-14 p-2 mb-3 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg">
+                <i class="ri-bubble-chart-line ri-lg"></i>
+            </a>
+            <a href="https://rz.sb/archives" class="nav_menu_btn w-14 h-14 p-2 mb-3 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg">
+                <i class="ri-archive-line ri-lg"></i>
+            </a>
+            <a href="https://rz.sb/messages" class="nav_menu_btn w-14 h-14 p-2 mb-3 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg">
+                <i class="ri-chat-1-line ri-lg"></i>
+            </a>
+            <a href="https://rz.sb/photos" class="nav_menu_btn w-14 h-14 p-2 mb-3 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg">
+                <i class="ri-landscape-line ri-lg"></i>
+            </a>
+            <a href="https://rz.sb/circle" class="nav_menu_btn w-14 h-14 p-2 mb-3 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg text-blue-400 border-blue-400 dark:border-blue-400">
+                <i class="ri-user-voice-line ri-lg"></i>
+            </a>
+            <a href="https://rz.sb/links" class="nav_menu_btn w-14 h-14 p-2 mb-3 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg">
+                <i class="ri-user-heart-line ri-lg"></i>
+            </a>
+        </div>
+        <div class="absolute bottom-0 text-gray-500 nav_menu_foot">
+            <div id="GoTop" class="cursor-pointer nav_menu_btn w-14 h-14 p-2 mb-3 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg hidden">
+                <i class="ri-arrow-up-s-line ri-lg"></i>
+            </div>
+                            <div id="showLogin" class="cursor-pointer nav_menu_btn w-14 h-14 p-2 mb-3 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg">
+                    <i class="ri-login-box-line ri-lg"></i>
+                </div>
+                        <div id="changeMode" onclick="switchNightMode()" class="cursor-pointer nav_menu_btn w-14 h-14 p-2 bg-white dark:bg-slate-800 flex justify-center items-center border-2 border-white dark:border-slate-600 shadow hover:text-blue-400 hover:border-blue-400 dark:hover:border-blue-400 transform transition duration-75 active:scale-90 rounded-lg">
+                <i class="ri-contrast-2-line ri-lg"></i>
+            </div>
+        </div>
+    </div>
+    <div class="nav-mask"></div>
+</sidebar>        <main class="flex-1 relative md:rounded-xl main_element overflow-auto border dark:border-none border-slate-200">
+                <section id="Login" class="qui-page bg-gray-50 dark:bg-slate-900">
+        <div class="qui-page-content">
+            <div class="w-full h-full flex items-center justify-center text-gray-900 relative">
+                <div class="absolute right-0 bottom-0 left-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -100 1440 320"><path class="login_Waves" fill="#EDF2F7" fill-opacity="1" d="M0,96L26.7,112C53.3,128,107,160,160,181.3C213.3,203,267,213,320,192C373.3,171,427,117,480,122.7C533.3,128,587,192,640,229.3C693.3,267,747,277,800,245.3C853.3,213,907,139,960,138.7C1013.3,139,1067,213,1120,224C1173.3,235,1227,181,1280,154.7C1333.3,128,1387,128,1413,128L1440,128L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path></svg>
+                </div>
+                <div class="qui-page-action-btn-cancel cancel2 w-full h-full z-10 absolute left-0 top-0"></div>
+                <div class="p-8 mx-1 relative bg-white dark:bg-slate-800 rounded-lg shadow z-20">
+                    <div class="mb-6 text-center">
+                        <p class="text-slate-500">Login</p>
+                    </div>
+                    <div class="rounded p-4">
+                        <form id="loginForm" action="https://rz.sb/index.php/action/login?_=18fff72603bc70ca8fbb14f57833fc94">
+                            <input type="hidden" name="referer" value="https://rz.sb/">
+                            <label class="block text-gray-700">
+                                <input class="w-full mb-4 rounded bg-gray-50 dark:bg-slate-700 p-2 text-sm text-slate-500 placeholder:text-slate-400/70 hover:border-slate-400 focus:outline-none transition border dark:border-slate-800" placeholder="用户名" type="text" id="name" name="name" autocomplete="on">
+                            </label>
+                            <label class="block text-gray-700">
+                                <input class="w-full mb-4 rounded bg-gray-50 dark:bg-slate-700 p-2 text-sm text-slate-500 placeholder:text-slate-400/70 hover:border-slate-400 focus:outline-none transition border dark:border-slate-800" placeholder="密码" type="password" id="password" name="password" autocomplete="on">
+                            </label>
+                            <div class="mt-3 flex items-center justify-between gap-2">
+                                <label for="remember" class="text-sm text-slate-500"><input checked="" type="checkbox" name="remember" class="checkbox" value="1" id="remember"> 下次自动登录</label>
+                                <button class="login_button inline-flex justify-center items-center space-x-2 border focus:outline-none px-5 py-1 text-xs leading-6 rounded border-blue-400 bg-blue-400 text-white hover:text-white hover:bg-blue-500 hover:border-blue-500 active:bg-blue-400 active:border-blue-400 transform transition duration-75 active:scale-90">登陆</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            <header class="w-full px-4 pt-2 md:pt-4 pb-2 md:pb-1 sticky top-0 z-20 bg-white dark:bg-slate-800 md:rounded-tr-xl md:border-l dark:border-l-slate-800 md:dark:border-t dark:border-t-slate-700 md:dark:border-r dark:border-r-slate-700 transition">
+                <form method="post" action="https://rz.sb/" role="search" class="flex items-center space-x-3 w-full">
+                    <div class="menu_button flex items-center justify-center md:hidden">
+                        <button type="button" class="menu_button_item flex justify-center items-center">
+                            <span class="menu_button_item-container">
+                                <span class="menu_button_item-top"></span>
+                                <span class="menu_button_item-middle"></span>
+                                <span class="menu_button_item-bottom"></span>
+                            </span>
+                        </button>
+                    </div>
+                    <label class="relative flex flex-1 md:!ml-0">
+                        <input class="form-input peer w-full rounded bg-gray-50 dark:bg-slate-700 px-3 py-2 pl-9 text-sm text-slate-400 placeholder:text-slate-400/70 hover:border-slate-400 focus:outline-none transition" placeholder="Search here..." name="s" type="text" id="search">
+                        <div class="pointer-events-none absolute flex h-full w-10 items-center justify-center text-slate-400">
+                            <i class="ri-search-2-line transition-colors duration-200"></i>
+                        </div>
+                    </label>
+                    <button type="submit" id="showLoadingTip" class="inline-flex justify-center items-center space-x-2 border focus:outline-none px-5 py-1 text-xs leading-6 rounded border-blue-400 bg-blue-400 text-white hover:text-white hover:bg-blue-500 hover:border-blue-500 active:bg-blue-400 active:border-blue-400 transform transition duration-75 active:scale-90">
+                        搜索
+                    </button>
+                </form>
+            </header>
+            
+
+<div id="BottomActionDialog" class="qui-bottom-action">
+    <div class="qui-bottom-action-mask"></div>
+    <div class="qui-bottom-action-content dark:text-slate-400 dark:bg-slate-800">
+        <div class="qui-bottom-action-header">
+            <div class="qui-bottom-action-header-btn-confirm text-xs cursor-pointer" title="点击此处访问该文章"><span>1</span> <font>条评论</font></div>
+            <div class="qui-bottom-action-header-bar">
+                <div class="qui-bottom-action-header-bar-cont dark:bg-slate-700"></div>
+            </div>
+            <div class="qui-bottom-action-header-btn-cancel bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:text-slate-400 rounded-full p-1 flex items-center justify-center cursor-pointer">
+                <i class="ri-close-line"></i></div>
+        </div>
+        <div class="qui-bottom-action-panel mt-3 text-gray-600 dark:text-gray-400 relative">
+
+            <div id="comments" class="comments">
+                <div class="mx-auto p-4 comments-lists">
+                    <div class="comments-null h-64 flex justify-center items-center">空空如也~</div>
+                    <div class="comments-list"></div>
+                </div>
+                
+                <form method="post" action="https://rz.sb/circle/comment" id="comment-form" role="form" class="IndexCommentform comment-form comment-respond sticky left-0 bottom-0 w-full p-2 bg-gray-50 dark:bg-slate-700 border-t dark:border-t-slate-800 rounded-t-lg">
+                                            <div class="user-info-body w-full bg-white dark:bg-slate-800 rounded-t hidden">
+                            <div class="p-2 flex items-center justify-between gap-2">
+                                <input class="form-input peer w-full rounded bg-gray-50 dark:bg-slate-700 p-2 text-sm text-slate-500 placeholder:text-slate-400/70 hover:border-slate-400 focus:outline-none transition" placeholder="*昵称" id="author" value="" type="text" name="author" autocomplete="on">
+                                <input class="form-input peer w-full rounded bg-gray-50 dark:bg-slate-700 p-2 text-sm text-slate-500 placeholder:text-slate-400/70 hover:border-slate-400 focus:outline-none transition" placeholder="*邮箱" id="mail" value="" type="email" name="mail" autocomplete="on">
+                                <input class="form-input peer w-full rounded bg-gray-50 dark:bg-slate-700 p-2 text-sm text-slate-500 placeholder:text-slate-400/70 hover:border-slate-400 focus:outline-none transition" placeholder="网址" id="url" value="" type="url" name="url" autocomplete="on">
+                            </div>
+                        </div>
+                                        <div class="absolute right-0 top-2 z-20 flex items-center justify-center bg-gray-50 dark:bg-slate-700 text-slate-500 cursor-pointer text-sm">
+                        <div id="cancelReply" class="cancelReply" onclick="cancelReply();" title="点击取消回复" style="display: none;">取消</div>
+                    </div>
+                    <textarea id="message-textarea" name="text" oninput="autoResize(this)" rows="4" cols="0" class="message-textarea w-full flex-1 p-2 rounded OwO-textarea textarea text-slate-500 placeholder:text-slate-400/70 text-sm dark:bg-slate-800 resize-none" placeholder="说点什么吧..."></textarea>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
+                                                            <a href="#" class="user-info w-8 h-8 flex justify-center items-center bg-white dark:bg-slate-800 text-slate-500 hover:border border-blue-400 rounded p-1">
+                                    <img class="rounded" src="https://cravatar.cn/avatar/d41d8cd98f00b204e9800998ecf8427e?d=mm" width="30" height="30">                                </a>
+                                                        <a title="添加表情" id="emoji-icons-btn" href="#" class="w-8 h-8 flex justify-center items-center bg-white dark:bg-slate-800 text-slate-500 hover:border border-blue-400 rounded">
+                                <i class="ri-emotion-happy-line"></i>
+                            </a>
+                            <a title="添加链接" href="#" onclick="document.getElementById('message-textarea').value+='[链接描述](https://)' " class="w-8 h-8 flex justify-center items-center bg-white dark:bg-slate-800 text-slate-500 hover:border border-blue-400 rounded">
+                                <i class="ri-link-m"></i>
+                            </a>
+                            <span title="私密评论" class="comment-secret w-8 h-8 flex justify-center items-center bg-white dark:bg-slate-800 text-slate-500 hover:border border-blue-400 rounded">
+                                <input type="checkbox" id="secret-button2" name="private" class="hidden">
+                                <label for="secret-button2" class="secret-label" title="开启该功能，该动态为私密">
+                                    <i class="ri-chat-private-line"></i>
+                                    <i class="ri-chat-private-fill hidden"></i>
+                                </label>
+                            </span>
+                        </div>
+                        <input type="submit" class="submit inline-flex justify-center items-center space-x-2 border focus:outline-none px-5 py-1 text-xs leading-6 rounded border-blue-400 bg-blue-400 text-white hover:text-white hover:bg-blue-500 hover:border-blue-500 active:bg-blue-400 active:border-blue-400 transform transition duration-75 active:scale-90" value="发送">
+                    </div>
+                    <div class="emoji-icons hidden">
+                        <div class="grid grid-cols-6 md:grid-cols-15 gap-2 overflow-auto h-40 mt-2 border-8 border-white dark:border-slate-800 bg-white dark:bg-slate-800 rounded place-items-center">
+                            <i class="emoji-icon">😀</i><i class="emoji-icon">😁</i><i class="emoji-icon">😂</i><i class="emoji-icon">😃</i><i class="emoji-icon">😄</i><i class="emoji-icon">😅</i><i class="emoji-icon">😆</i><i class="emoji-icon">😇</i><i class="emoji-icon">😈</i><i class="emoji-icon">😉</i><i class="emoji-icon">😊</i><i class="emoji-icon">😋</i><i class="emoji-icon">😌</i><i class="emoji-icon">😍</i><i class="emoji-icon">😎</i><i class="emoji-icon">😏</i><i class="emoji-icon">😐</i><i class="emoji-icon">😑</i><i class="emoji-icon">😒</i><i class="emoji-icon">😓</i><i class="emoji-icon">😔</i><i class="emoji-icon">😕</i><i class="emoji-icon">😖</i><i class="emoji-icon">😗</i><i class="emoji-icon">😘</i><i class="emoji-icon">😙</i><i class="emoji-icon">😚</i><i class="emoji-icon">😛</i><i class="emoji-icon">😜</i><i class="emoji-icon">😝</i><i class="emoji-icon">😞</i><i class="emoji-icon">😟</i><i class="emoji-icon">😠</i><i class="emoji-icon">😡</i><i class="emoji-icon">😢</i><i class="emoji-icon">😣</i><i class="emoji-icon">😤</i><i class="emoji-icon">😥</i><i class="emoji-icon">😦</i><i class="emoji-icon">😧</i><i class="emoji-icon">😨</i><i class="emoji-icon">😩</i><i class="emoji-icon">😪</i><i class="emoji-icon">😫</i><i class="emoji-icon">😬</i><i class="emoji-icon">😭</i><i class="emoji-icon">😮</i><i class="emoji-icon">😯</i><i class="emoji-icon">😰</i><i class="emoji-icon">😱</i><i class="emoji-icon">😲</i><i class="emoji-icon">😳</i><i class="emoji-icon">😴</i><i class="emoji-icon">😵</i><i class="emoji-icon">😶</i><i class="emoji-icon">😷</i><i class="emoji-icon">😸</i><i class="emoji-icon">😹</i><i class="emoji-icon">😺</i><i class="emoji-icon">😻</i><i class="emoji-icon">😼</i><i class="emoji-icon">😽</i><i class="emoji-icon">😾</i><i class="emoji-icon">😿</i><i class="emoji-icon">🙀</i><i class="emoji-icon">🙁</i><i class="emoji-icon">🙂</i><i class="emoji-icon">🙃</i><i class="emoji-icon">🙄</i><i class="emoji-icon">🙅</i><i class="emoji-icon">🙆</i><i class="emoji-icon">🙇</i><i class="emoji-icon">🙈</i><i class="emoji-icon">🙉</i><i class="emoji-icon">🙊</i><i class="emoji-icon">🙋</i><i class="emoji-icon">🙌</i><i class="emoji-icon">🙍</i><i class="emoji-icon">🙎</i><i class="emoji-icon">🙏</i><i class="emoji-icon">🤚</i><i class="emoji-icon">🤛</i><i class="emoji-icon">🤜</i><i class="emoji-icon">🤝</i><i class="emoji-icon">🤞</i><i class="emoji-icon">🤟</i><i class="emoji-icon">🤠</i><i class="emoji-icon">🤡</i><i class="emoji-icon">🤢</i><i class="emoji-icon">🤣</i><i class="emoji-icon">🤤</i><i class="emoji-icon">🤥</i><i class="emoji-icon">🤦</i><i class="emoji-icon">🤧</i><i class="emoji-icon">🤨</i><i class="emoji-icon">🤩</i><i class="emoji-icon">🤪</i><i class="emoji-icon">🤫</i><i class="emoji-icon">🤬</i><i class="emoji-icon">🤭</i><i class="emoji-icon">🤮</i><i class="emoji-icon">🤯</i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    </div>
+            <div class="pjax-content bg-white dark:bg-slate-800 md:border-l dark:border-l-slate-800 md:dark:border-r dark:border-r-slate-700 md:dark:border-b dark:border-b-slate-700 relative md:rounded-br-xl">
+                 
+                    <div class="page-loader w-full h-full absolute bottom-0 z-50 bg-white dark:bg-slate-800 px-4 pt-2 pb-2" style="display: none;">
+                        <div class="v-align-center bg-gray-50 dark:bg-slate-700 relative w-full h-full table rounded">
+                        <div class="middle-content table-cell text-center align-middle">
+                            <div class="anim-pg bg-gray-200 dark:bg-slate-600">
+                            <span class="bg-blue-400"></span>
+                            </div>
+                            <p class="text-sm text-gray-400">Loading...</p>
+                        </div>
+                        </div>
+                    </div>
+                
+<div class="bg-white links-head dark:bg-slate-800 whitespace-nowrap text-sm px-4 border-b-4 border-b-gray-50 dark:border-b-slate-700 sticky top-0 z-10">
+    <div class="flex relative">
+        <ul class="flex space-x-4 dark:text-gray-400">
+            <li class="page_tab_common w-8 py-2 h-full text-center transition page_tab_active">友圈 <sup> (每隔2h刷新)</sup></li>
+        </ul>
+        <div style="height: 2px;" class="tab__line w-8 absolute left-0 -bottom-3px bg-blue-400 transition"></div>
+    </div>
+</div>
+
+<div class="page_content w-full relative overflow-x-hidden h-screens md:h-81vh text-slate-500 dark:bg-slate-700">
+    <section id="post_all" class="page_tab_body w-full">
+         
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?06c08d5a" src="https://r.jdeal.cn/f.php?06c08d5a" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://www.mmbkz.cn/9daba997.html" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>测试</b>
+                            <div class="article-contents inline">
+                                <p>测试</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>火喵酱</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-18 10:03:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?51af55aa" src="https://r.jdeal.cn/f.php?51af55aa" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://dujun.io/e26d28d5-1dce-5dc6-8aff-f720b036b8dd.html" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>天才程序员陨落</b>
+                            <div class="article-contents inline">
+                                <p>DS 今天开始涨价，实际消耗远不是网传的几倍涨幅。...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>杜郎俊赏</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-17 13:48:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?8dfbfdc3" src="https://r.jdeal.cn/f.php?8dfbfdc3" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://zhongxiaojie.cn/2026/08/1728/" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>Findu — 十年</b>
+                            <div class="article-contents inline">
+                                <p>
+前段时间，看到了自己十年前做的这个app。也是自己开发的第一款功能比较完善的app，在22年的时候，自己把他从应用商店下掉了。主要原因是app使用的im基础框架已经不在开放，虽然部分功能还能使用，...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>obaby</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-17 09:52:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?93797427" src="https://r.jdeal.cn/f.php?93797427" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://www.blatr.cn/trend/196" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>动态#1786895356196</b>
+                            <div class="article-contents inline">
+                                <p>想不明白 这种猎奇烂片网上娱乐娱乐也差不多了 为什么会有那么高票房啊[疑问]...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>青灯暮雨</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-16 23:49:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?06c08d5a" src="https://r.jdeal.cn/f.php?06c08d5a" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://www.mmbkz.cn/74cb6358.html" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>说说：#2026-08-16 12:22</b>
+                            <div class="article-contents inline">
+                                <p>烧豆角土豆条，再炖一会好了，吃着有些硬qaq，下次就多煮一会儿，再放点粉条，哈哈哈哈...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>火喵酱</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-16 20:22:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?52eed281" src="https://r.jdeal.cn/f.php?52eed281" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://airy.ink/daily/464" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>沉默</b>
+                            <div class="article-contents inline">
+                                <p>分享欲越来越淡薄了，只要没人找我说话，基本上不会主动开口，我不懂。
+上周六没有吃成火锅，第二天自己一个人跑去吃了，单纯有点馋，依旧江边，天气倒是可以，也拍了几张照，上次已经发了。
+周三上午上班上到一...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>瓦匠个人小站</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-16 02:39:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?8b606da9" src="https://r.jdeal.cn/f.php?8b606da9" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://blog.zhheo.com/p/3gr7k8xj.html" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>给DeepSeek-V4-Flash借一双眼睛：ZCode视觉子Agent方案</b>
+                            <div class="article-contents inline">
+                                <p>这篇文章介绍了作者使用 **deepseek-v4-flash** 作为 ZCode 主力模型时遇到的**识图困扰**：纯文本模型看不了图，截图发过去只剩文件路径。作者通过开源项目 **zcode-...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>Heo</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-14 17:46:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?8b606da9" src="https://r.jdeal.cn/f.php?8b606da9" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://blog.zhheo.com/p/lgodvfdh.html" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>Mole Mac 上手：界面精美，优秀好用的Mac清理工具</b>
+                            <div class="article-contents inline">
+                                <p>这篇文章介绍了作者在用过CleanMyMac、柠檬清理等多款Mac清理工具后，最终发现并上手新工具**Mole**的体验。文章详细评测了Mole的**五大核心功能**：软件清理、应用卸载、系统优化、...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>Heo</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-14 16:22:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?51af55aa" src="https://r.jdeal.cn/f.php?51af55aa" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://dujun.io/zhurongji-dies-in-beijing-at-age-98.html" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>朱镕基同志在北京逝世，享年98岁</b>
+                            <div class="article-contents inline">
+                                <p>中国共产党中央委员会、中华人民共和国全国人民代表大会常务委员会、中华人民共和国国务院、中国人民政治协商会议全国委员会沉痛宣告：中国共产党的优秀党员，久经考验的忠诚的共产主义战士，杰出的无产阶级革命家...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>杜郎俊赏</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-12 20:13:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?4e547a3a" src="https://r.jdeal.cn/f.php?4e547a3a" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://www.edzbe.com/book/diary/20260806.html" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>假日笔记：这个夏天，很快就过去了。</b>
+                            <div class="article-contents inline">
+                                <p>暑期已过半，几乎每天都来回于娃儿的各种课外补习班，贝勒爷的机器人集训、奥数晋级、硬笔书法比赛、英语外教课，珺主的钢琴考级、佳音英语课、外教课，因为他们的课程是准时准点的，我的作息也只能配合着时间安排...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>耳朵的主人</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-12 07:29:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?8dfbfdc3" src="https://r.jdeal.cn/f.php?8dfbfdc3" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://zhongxiaojie.cn/2026/08/1722/" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>平静</b>
+                            <div class="article-contents inline">
+                                <p>
+最近这段时间，心理一直堵得慌。太多的事情，在开始的时候没有注意，后来终于还是在某些瞬间炸裂开来。在刀尖上跳舞，注定要伤痕累累，至于是无心还是有意，已经不再重要了。
+
+宝子的小姨，前段时间换了大房子...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>obaby</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-11 10:27:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?93797427" src="https://r.jdeal.cn/f.php?93797427" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://www.blatr.cn/trend/195" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>动态#1786414761195</b>
+                            <div class="article-contents inline">
+                                <p>我嘞个豆 收到短信现在用的流量套餐停止办理了
+难道以后流量套餐真的要涨价了吗 我以为一个月三四十块话费已经很多了[眼含热泪]
+什么都涨 唯独百姓的钱包没涨...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>青灯暮雨</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-11 10:19:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?af88e6b0" src="https://r.jdeal.cn/f.php?af88e6b0" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://pwsz.com/life/5627.html" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>科学的尽头是玄学？</b>
+                            <div class="article-contents inline">
+                                <p>白海豚，请听我说，感谢你让我又双叒叕留下应急防汛值班，休整的时间正好打理下博客，写写最近的感悟，谢谢你，谢谢你 […]
+Source...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>品味苏州</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-10 23:26:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?b0bf7e31" src="https://r.jdeal.cn/f.php?b0bf7e31" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://www.weisay.com/blog/summer-ice-cream.html" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>夏日里的小乐趣：自制冰淇淋</b>
+                            <div class="article-contents inline">
+                                <p>炎炎夏日，总少不了冰淇淋的陪伴。一次突发奇想，我们没有去购买现成的冰淇淋，而是尝试在家里用简单的食材做出属于自己的味道。从水果到米饭，一场充满未知的小实验开始了。结果是否惊艳并不重要，重要的是一家人...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>威言威语</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-10 20:02:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?385aa8dc" src="https://r.jdeal.cn/f.php?385aa8dc" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://199508.com/post/2339" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>灵感时刻-2026-08-10 09:22:42</b>
+                            <div class="article-contents inline">
+                                <p>入秋比盛夏多了一分舒服，阳光和风都能让人产生愉悦。兴许也因为我也生于这个季节，所有的岁月都不需要回头，你要变的比现在更强。...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>大雄日记</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-10 09:22:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?52eed281" src="https://r.jdeal.cn/f.php?52eed281" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://airy.ink/times/463" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>最后的黄昏</b>
+                            <div class="article-contents inline">
+                                <p>
+
+
+
+</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>瓦匠个人小站</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-09 22:02:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?af88e6b0" src="https://r.jdeal.cn/f.php?af88e6b0" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://pwsz.com/life/5578.html" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>东吴水师，乘风破浪</b>
+                            <div class="article-contents inline">
+                                <p>不知何时起，夏日玩桨板在全国各地蔚然成风，今年更是屡上热搜。前两年都在家门口的金鸡湖玩，今年金鸡湖管控不让下水 […]
+Source...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>品味苏州</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-09 00:20:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?321bc10b" src="https://r.jdeal.cn/f.php?321bc10b" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://oxxx.cn/archives/1496.html" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>浮生半日闲</b>
+                            <div class="article-contents inline">
+                                <p>不知道从何时起，我就很喜欢看小说。碰巧最近也一直在追一部小说，吃饭看，睡觉看，偶尔刷刷短视频也切回去看，但是看到最后，我发现还在连载，于是我十分痛苦的删掉了这部小说。说起小说这东西，记忆最早的时候还...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>森木志</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-05 17:21:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?085fbb43" src="https://r.jdeal.cn/f.php?085fbb43" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://blog.2broear.com/notes/03-08-2026_fuxk-china-app" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>中国特色APP，到底谁来治？</b>
+                            <div class="article-contents inline">
+                                <p>上个星期回去，给我爸拿了张流量卡给他换上，在手机短信无意看到一条抖音月付待支付短信。我随口一问是不是在抖音买东西没给钱，结果我爸说都给了的，输了密码验证交易。打开抖音app，商城买了很多东西，付款方...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>2BROEAR</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-08-03 19:20:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?085fbb43" src="https://r.jdeal.cn/f.php?085fbb43" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://blog.2broear.com/news/30-07-2026_move-life-on" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>意难平，忆中平。</b>
+                            <div class="article-contents inline">
+                                <p>最近生活中发生了一系列变故，让我在情 商 职 生活各方面都受到了一些打击。也不能理解为诸事不顺吧，生活有时候就是这样，每个人或多或少都经历过。但事情既然已经发生了，也就没法逆转，抱怨没有用，还是微笑...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>2BROEAR</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-07-30 16:30:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?321bc10b" src="https://r.jdeal.cn/f.php?321bc10b" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://oxxx.cn/archives/1495.html" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>日常观影记录</b>
+                            <div class="article-contents inline">
+                                <p>刚看完电影回来三点了，一时间也睡不着，就想着把前几天笔记里面写了一部分的内容一起记录一下，先叠个buff，我不是专业影评人，纯观众纯乐子，别喷我因为最近《功夫女足》很火，还没上映我就想着到时候可以去...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>森木志</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-07-29 03:59:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?def781f9" src="https://r.jdeal.cn/f.php?def781f9" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://www.vian.top/712.html" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>最近</b>
+                            <div class="article-contents inline">
+                                <p>又挺久没更新了。谁让我想到了在深圳时时常看的彩六主播，他每天直播彩六游戏，我也每天看，大家的时间非常的重合。直到有一天他真的AFK了就像他的名字。每个人都会“到达”直面生活的时间，我也不能跳出怪圈之...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>Vian</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-07-26 20:10:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?b0bf7e31" src="https://r.jdeal.cn/f.php?b0bf7e31" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://www.weisay.com/blog/website-hack-investigation.html" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>一次网站被黑的排查记录</b>
+                            <div class="article-contents inline">
+                                <p>一个不起眼的弹窗，让我开始重新检查自己的博客。原本以为只是一次普通的页面异常，却意外发现了陌生的管理员账号、隐藏的插件，以及一条完整的入侵时间线。整个排查过程，比想象中更复杂，也让我对 WordPr...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>威言威语</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-07-24 20:55:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?385aa8dc" src="https://r.jdeal.cn/f.php?385aa8dc" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://199508.com/post/2338" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>灵感时刻-2026-07-24 19:19:57</b>
+                            <div class="article-contents inline">
+                                <p>平淡的一天，以低血糖结束。</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>大雄日记</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-07-24 19:19:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?8692129a" src="https://r.jdeal.cn/f.php?8692129a" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://rawchen.com/210" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>时隔10个月又来香港CityWalk 🇭🇰</b>
+                            <div class="article-contents inline">
+                                <p>等来一个不错的天气，周内来香港逛街还是挺不错的，人少点。依然还是喜欢在冰室喝丝袜奶茶，物价还是那么贵，做个观光BUS要50块，矿泉水10块。上一次还是好久之前了可能是之前住在深圳吧方便点。又是暴走2...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>rawchen</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-07-17 01:09:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?784bb734" src="https://r.jdeal.cn/f.php?784bb734" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://www.jdeal.cn/562.html" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>叮，智能桌面灯牌系统已完工！</b>
+                            <div class="article-contents inline">
+                                <p>完成前几天的 ESP32 红绿灯后，我想着简单的红绿灯提醒，显然满足不了折腾的热情，于是直接升级玩法，完成了一次全方位的桌面智能灯牌改造。本次改造选用了三块原本用于做冰箱贴的发光灯牌，原厂为三颗LR...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>Jdeal | Life is like a Design.</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-07-16 14:00:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?149081b2" src="https://r.jdeal.cn/f.php?149081b2" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://wuziya.com/316.html" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>星辰研究所</b>
+                            <div class="article-contents inline">
+                                <p>大道无情人有情，莫向外求，但从心觅。不周山下东方不错-星辰研究所抖音短剧...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>安静角落</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-07-13 23:48:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?df8f2ea6" src="https://r.jdeal.cn/f.php?df8f2ea6" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://dusays.com/archives/877/" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>周末的 3 种过法</b>
+                            <div class="article-contents inline">
+                                <p>杜老师以前周末经常过得很”散”，一晃就是一天。后来杜老师摸索出 3 种周末过法，今天跟大家分享一下。一、为什么周末容易”散”杜老师一开始的周末是这样的：周六睡到中午起床刷手机，刷到下午晚饭点外卖，吃...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>杜老师说</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-07-13 00:00:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?784bb734" src="https://r.jdeal.cn/f.php?784bb734" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://www.jdeal.cn/561.html" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>我的工位专属红绿灯</b>
+                            <div class="article-contents inline">
+                                <p>真的太久太久没安安静静写点东西和捣鼓小玩意了！日常被工作和生活的琐事填满，好久没有沉浸式折腾硬件、调试代码的纯粹快乐了。前几天蹲拼夕夕入手的 ESP32C3 PRO MINI 开发板终于到货，闲置的...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>Jdeal | Life is like a Design.</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-07-10 10:00:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="post-item bg-white dark:bg-slate-800 flex border-b-4 border-b-gray-50 dark:border-b-slate-700 py-3 px-4" view-image="">
+                    <div class="tracking-widest my-3 pr-3">
+                        <img class="bg-white dark:bg-slate-800 flex justify-center items-center border dark:border-slate-600 rounded lazyloaded" data-src="https://r.jdeal.cn/f.php?df8f2ea6" src="https://r.jdeal.cn/f.php?df8f2ea6" width="40" height="40">
+                    </div>
+                    <div class="flex-1">
+                        <a href="https://dusays.com/archives/876/" target="_blank" class="post-excerpt text-sm my-3 break-normal flex flex-col gap-2">
+                            <b>居家办公 5 个减少分心的动作</b>
+                            <div class="article-contents inline">
+                                <p>杜老师居家办公一年多，最大的感受是”分心比想象中容易得多”。今天杜老师就把自己用了一年多、一直稳定在用的 5 个减少分心的动作分享给大家。一、居家办公为什么容易分心杜老师一开始觉得居家办公应该很专注...</p>
+                            </div>
+                        </a>
+                        <div class="flex items-center justify-between text-gray-400 dark:text-gray-500">
+                            <div class="flex items-center gap-2">
+                                <small>杜老师说</small>
+                            </div>
+                            <div class="flex flex-1 justify-end">
+                                <ul class="flex items-center">
+                                    <li>
+                                        <div>
+                                            <span class="flex items-center gap-2">
+                                                <small>2026-07-07 00:00:00</small>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                    </section> 
+</div>
+			</div>
+        </main>
+    </div>
+<footer class="p-4 text-center fixed bottom-0 right-0 hidden md:block">
+	<p class="text-sm text-gray-400">©<a href="/" rel="nofollow noopener">RZ.SB</a> 2018-2026</p>
+    
+    <script>
+        Config = {
+            homeUrl: 'https://rz.sb/',
+            themeUrl: 'https://rz.sb/usr/themes/A-Sleek/',
+            pageSize : '5',
+            SrcCdnDir: 'https://rz.sb/usr/themes/A-Sleek/',
+            login: 'false',
+            author: '',
+            mail: '',
+            dark_mode: 'off'
+        } 
+    </script>
+</footer>
+
+<script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/load.js?v=2026"></script><script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/lazyload.js"></script>
+<script>
+//window.document.oncontextmenu = function(){ return false;} 
+</script>
+
+
+
+<script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/pjax.js"></script><script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/tokeninput.js"></script><script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/view-image.min.js"></script><script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/qq_widget.js"></script><script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/flexible.js"></script><script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/marked.min.js"></script><script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/plugins/tinymce/tinymce.min.js"></script><script type="text/javascript" src="https://rz.sb/usr/themes/A-Sleek/src/js/app.js?v=202511082302"></script></body></html>

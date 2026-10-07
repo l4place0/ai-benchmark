@@ -1,0 +1,10 @@
+{
+  "sampleRate": 22050,
+  "samples": 4680960,
+  "duration": 212.28843537414966,
+  "fps": 60,
+  "frames": 12960,
+  "peakRMS": 1.1471796020896645,
+  "beatBPM": 130,
+  "source": "song.wav; waveform-derived RMS, low-pass bass and high-pass treble"
+}

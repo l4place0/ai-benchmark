@@ -1,0 +1,7 @@
+{
+  "port": 9333,
+  "ws": "ws://127.0.0.1:9333/devtools/browser/679cbed0-f54b-4525-8af8-a9f9c312a4fd",
+  "browser": "Chrome/154.0.8037.58",
+  "profile": "D:\\l4place\\Workspace\\ai-benchmark\\deepseek-v4.1-flash\\dsh\\World.Execute(me)\\shot01\\_dev\\tmp\\chrome-30508-5794",
+  "pid": 12564
+}

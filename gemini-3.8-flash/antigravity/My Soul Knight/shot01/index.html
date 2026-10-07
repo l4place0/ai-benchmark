@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>[虚空方碑 // 终焉孤客] - 极简像素风动作肉鸽</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- 480x270 Native Virtual Resolution Canvas -->
+        <canvas id="game-canvas" width="480" height="270"></canvas>
+
+        <!-- Sound Toggle -->
+        <button id="btn-sound" class="sound-toggle-btn" title="切换声音 [M]">音频: 开启</button>
+
+        <!-- Center Combo Indicator -->
+        <div id="combo-box">连击 x5</div>
+
+        <!-- Floor Transition Banner -->
+        <div id="floor-banner">
+            <div id="banner-big" class="banner-big">第一区 // 潜入行动</div>
+            <div id="banner-sub" class="banner-sub">肃清敌方据点</div>
+        </div>
+
+        <!-- Dynamic In-Game HUD -->
+        <div id="hud-layer">
+            <!-- TOP BAR -->
+            <div class="hud-top">
+                <div class="player-status">
+                    <!-- HP Bar -->
+                    <div class="status-row">
+                        <span class="status-label">生命</span>
+                        <div class="meter-frame">
+                            <div id="hp-damage-bar" class="meter-fill hp-damage" style="width: 100%;"></div>
+                            <div id="hp-bar" class="meter-fill hp" style="width: 100%;"></div>
+                        </div>
+                        <span id="hp-text" class="status-value">5/5</span>
+                    </div>
+
+                    <!-- Armor Bar -->
+                    <div class="status-row">
+                        <span class="status-label">护甲</span>
+                        <div class="meter-frame">
+                            <div id="shield-bar" class="meter-fill armor" style="width: 100%;"></div>
+                        </div>
+                        <span id="shield-text" class="status-value">3/3</span>
+                    </div>
+
+                    <!-- Ink / EXP Bar -->
+                    <div class="status-row">
+                        <span id="lvl-text" class="status-label">能量</span>
+                        <div class="meter-frame">
+                            <div id="exp-bar" class="meter-fill ink" style="width: 0%;"></div>
+                        </div>
+                        <span id="exp-text" class="status-value">0</span>
+                    </div>
+
+                    <!-- Dash Pips -->
+                    <div class="status-row">
+                        <span class="status-label">冲刺</span>
+                        <div id="dash-pips-container" class="dash-pips">
+                            <div class="dash-pip ready"></div>
+                            <div class="dash-pip ready"></div>
+                            <div class="dash-pip ready"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hud-top-right">
+                    <div id="room-badge" class="room-badge">
+                        <div class="indicator-dot"></div>
+                        <span id="room-name-text">第 1 区 // 潜入区</span>
+                    </div>
+                    <!-- Minimap Canvas -->
+                    <canvas id="minimap-canvas" width="130" height="130"></canvas>
+                </div>
+            </div>
+
+            <!-- BOSS HEALTH OVERLAY -->
+            <div id="boss-hud">
+                <div class="boss-title-row">
+                    <span id="boss-name" class="boss-title">余烬守卫 // 虚空方碑</span>
+                    <span id="boss-phase" class="boss-phase-badge">阶段一</span>
+                </div>
+                <div class="boss-meter-frame">
+                    <div id="boss-bar" class="boss-meter-fill"></div>
+                </div>
+            </div>
+
+            <!-- CONTROLS HINT -->
+            <div id="controls-hint" class="controls-hint">
+                [WASD] 移动 • [鼠标左键/空格] 射击 • [鼠标右键/Shift] 冲刺 • [Q/滚轮] 切枪 • [E] 拾取/互动 • [R] 装填 • [B] 战术AI托管
+            </div>
+
+            <!-- BOTTOM BAR -->
+            <div class="hud-bottom">
+                <!-- Active Shards / Relics Tray -->
+                <div id="relics-tray" class="relics-tray"></div>
+
+                <!-- Weapons Display -->
+                <div class="weapons-tray">
+                    <div id="weapon-slot-0" class="weapon-slot active">
+                        <span id="w0-name" class="weapon-name">钉枪</span>
+                        <span id="w0-ammo" class="weapon-ammo">14 / 14</span>
+                        <span class="weapon-keyhint">[1] 主武器</span>
+                    </div>
+                    <div id="weapon-slot-1" class="weapon-slot">
+                        <span id="w1-name" class="weapon-name">电磁炮</span>
+                        <span id="w1-ammo" class="weapon-ammo">4 / 4</span>
+                        <span class="weapon-keyhint">[2] 副手 (Q切换)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- UPGRADE CARD SELECTION MODAL -->
+        <div id="level-modal" class="modal-overlay">
+            <div class="level-up-container">
+                <div class="modal-header-title">
+                    <span>⚡ 选择核心战术晶片</span>
+                </div>
+                <div id="cards-grid" class="cards-grid"></div>
+            </div>
+        </div>
+
+        <!-- GAME OVER / VICTORY MODAL -->
+        <div id="end-modal" class="modal-overlay">
+            <div class="game-over-box">
+                <div id="end-title" class="game-over-title defeat">系统离线 // 任务失败</div>
+                <div class="stats-list">
+                    <div class="stats-row">
+                        <span>到达区域</span>
+                        <span id="stat-chamber">第 1 区</span>
+                    </div>
+                    <div class="stats-row">
+                        <span>歼灭敌军</span>
+                        <span id="stat-kills">0</span>
+                    </div>
+                    <div class="stats-row">
+                        <span>最高连击</span>
+                        <span id="stat-combo">0</span>
+                    </div>
+                    <div class="stats-row">
+                        <span>累计伤害</span>
+                        <span id="stat-damage">0</span>
+                    </div>
+                    <div class="stats-row">
+                        <span>行动耗时</span>
+                        <span id="stat-time">00:00</span>
+                    </div>
+                    <div class="stats-row">
+                        <span>装配晶片</span>
+                        <span id="stat-relics">0</span>
+                    </div>
+                </div>
+                <button id="btn-restart" class="btn-cyber">重启系统 [R]</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="audio.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

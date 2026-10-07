@@ -1,0 +1,93 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>probe</title></head>
+<body style="margin:0;background:#111">
+<canvas id="c" width="1920" height="1080"></canvas>
+<script>
+const VS = `#version 300 es
+void main(){ vec2 p = vec2((gl_VertexID<<1)&2, gl_VertexID&2); gl_Position = vec4(p*2.0-1.0,0,1); }`;
+
+// representative load: raymarched sphere + noise, ~72 steps, 3 lights
+const FS = `#version 300 es
+precision highp float;
+uniform vec2 uRes; uniform float uT; out vec4 outColor;
+float hash(vec3 p){ p=fract(p*0.3183099+vec3(0.1,0.2,0.3)); p*=17.0; return fract(p.x*p.y*p.z*(p.x+p.y+p.z)); }
+float noise(vec3 x){ vec3 i=floor(x), f=fract(x); f=f*f*(3.0-2.0*f);
+  return mix(mix(mix(hash(i),hash(i+vec3(1,0,0)),f.x),mix(hash(i+vec3(0,1,0)),hash(i+vec3(1,1,0)),f.x),f.y),
+             mix(mix(hash(i+vec3(0,0,1)),hash(i+vec3(1,0,1)),f.x),mix(hash(i+vec3(0,1,1)),hash(i+vec3(1,1,1)),f.x),f.y),f.z); }
+float map(vec3 p){ float d=length(p)-1.0; d+=0.15*noise(p*3.0+uT); return d; }
+void main(){
+  vec2 uv=(gl_FragCoord.xy*2.0-uRes)/uRes.y;
+  vec3 ro=vec3(0,0,3), rd=normalize(vec3(uv,-1.6));
+  float t=0.0; int steps=0;
+  for(int i=0;i<72;i++){ vec3 p=ro+rd*t; float d=map(p); steps++; if(d<0.002||t>6.0) break; t+=d; }
+  vec3 p=ro+rd*t;
+  vec3 n=normalize(vec3(map(p+vec3(0.001,0,0))-map(p-vec3(0.001,0,0)),
+                        map(p+vec3(0,0.001,0))-map(p-vec3(0,0.001,0)),
+                        map(p+vec3(0,0,0.001))-map(p-vec3(0,0,0.001))));
+  float l=max(dot(n,normalize(vec3(1,1,1))),0.0);
+  outColor=vec4(vec3(l)*vec3(0.4,0.8,1.0)+float(steps)*0.001,1.0);
+}`;
+
+function gl2(canvas){
+  const gl = canvas.getContext('webgl2', {antialias:false, preserveDrawingBuffer:true, alpha:false});
+  if(!gl) return null;
+  const mk=(type,src)=>{const s=gl.createShader(type);gl.shaderSource(s,src);gl.compileShader(s);
+    if(!gl.getShaderParameter(s,gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s)); return s;};
+  const pr=gl.createProgram();gl.attachShader(pr,mk(gl.VERTEX_SHADER,VS));gl.attachShader(pr,mk(gl.FRAGMENT_SHADER,FS));
+  gl.linkProgram(pr); if(!gl.getProgramParameter(pr,gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(pr));
+  gl.useProgram(pr);
+  return {gl, pr};
+}
+
+window.probe = async function(){
+  const report = {};
+  const c = document.getElementById('c');
+  const ctx = gl2(c);
+  if(!ctx){ report.gl = 'FAILED'; return report; }
+  const {gl, pr} = ctx;
+  const dbg = gl.getExtension('WEBGL_debug_renderer_info');
+  report.gl = 'ok';
+  report.vendor = dbg ? gl.getParameter(dbg.UNMASKED_VENDOR_WEBGL) : gl.getParameter(gl.VENDOR);
+  report.renderer = dbg ? gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER);
+  report.maxTex = gl.getParameter(gl.MAX_TEXTURE_SIZE);
+  report.colorBufferFloat = !!gl.getExtension('EXT_color_buffer_float');
+
+  const uRes = gl.getUniformLocation(pr,'uRes'), uT = gl.getUniformLocation(pr,'uT');
+  gl.uniform2f(uRes, c.width, c.height);
+  gl.viewport(0,0,c.width,c.height);
+  // warmup
+  for(let i=0;i<3;i++){ gl.uniform1f(uT,i*0.01); gl.drawArrays(gl.TRIANGLES,0,3); }
+  gl.finish();
+  const N = 30, t0 = performance.now();
+  for(let i=0;i<N;i++){ gl.uniform1f(uT,i*0.03); gl.drawArrays(gl.TRIANGLES,0,3); }
+  gl.finish();
+  report.frameMs = (performance.now()-t0)/N;
+
+  // readPixels cost
+  const px = new Uint8Array(1920*1080*4);
+  const t1 = performance.now();
+  gl.readPixels(0,0,1920,1080,gl.RGBA,gl.UNSIGNED_BYTE,px);
+  report.readPixelsMs = performance.now()-t1;
+
+  // toBlob cost
+  const t2 = performance.now();
+  const blob = await new Promise(r=>c.toBlob(r,'image/png'));
+  report.toBlobMs = performance.now()-t2;
+  report.pngBytes = blob.size;
+
+  // WebCodecs
+  report.hasVideoEncoder = (typeof VideoEncoder !== 'undefined');
+  if(report.hasVideoEncoder){
+    for(const codec of ['avc1.4d0034','avc1.640028','vp09.00.10.08']){
+      try{
+        const s = await VideoEncoder.isConfigSupported({codec, width:1920, height:1080, bitrate:12000000, framerate:60,
+          avc:{format:'annexb'}});
+        report['cfg_'+codec] = s.supported;
+      }catch(e){ report['cfg_'+codec] = 'ERR '+e.message; }
+    }
+  }
+  report.hasOffscreen = (typeof OffscreenCanvas !== 'undefined');
+  return report;
+};
+</script>
+</body></html>

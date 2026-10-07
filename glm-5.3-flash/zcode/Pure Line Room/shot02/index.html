@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>纯线房间 · Pure Line Room</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <button id="muteBtn" title="声音开关" aria-label="声音开关">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 9.5 L8 9.5 L13 5 L13 19 L8 14.5 L4 14.5 Z"/>
+      <path class="wave" d="M16 9 C17.5 10.5 17.5 13.5 16 15"/>
+      <path class="wave" d="M18.5 7 C21 9.5 21 14.5 18.5 17"/>
+      <line class="slash" x1="4" y1="20" x2="20" y2="4"/>
+    </svg>
+  </button>
+
+  <div id="hint">拖动空白处旋转视角 · 滚轮缩放 · 双击复位 · 悬停与点击房间里的物件</div>
+
+  <div id="intro">
+    <div class="frame">
+      <div class="sub">PURE LINE ROOM</div>
+      <h1>纯&nbsp;线&nbsp;房&nbsp;间</h1>
+      <div class="rule"></div>
+      <p>一间用线条画出来的房间。<br>它有自己的时间、光线与声音。<br>—— 试着碰碰它的每一件东西。</p>
+      <div class="enter">轻触任意处进入</div>
+    </div>
+  </div>
+
+  <script>
+    // 轻量错误捕获（供自动化测试读取；不影响运行）
+    window.__errs = [];
+    window.addEventListener('error', function (e) {
+      window.__errs.push(e.message + ' @ ' + (e.filename || '').split('/').pop() + ':' + e.lineno);
+    });
+  </script>
+  <script src="js/math3d.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/objects/door.js"></script>
+  <script src="js/objects/lamp.js"></script>
+  <script src="js/objects/switch.js"></script>
+  <script src="js/objects/window.js"></script>
+  <script src="js/objects/art.js"></script>
+  <script src="js/objects/clock.js"></script>
+  <script src="js/objects/desk.js"></script>
+  <script src="js/objects/cup.js"></script>
+  <script src="js/objects/globe.js"></script>
+  <script src="js/objects/bookshelf.js"></script>
+  <script src="js/objects/plant.js"></script>
+  <script src="js/objects/sofa.js"></script>
+  <script src="js/objects/cushions.js"></script>
+  <script src="js/objects/coffeetable.js"></script>
+  <script src="js/objects/rug.js"></script>
+  <script src="js/objects/chair.js"></script>
+  <script src="js/objects/sideboard.js"></script>
+  <script src="js/objects/player.js"></script>
+  <script src="js/objects/fan.js"></script>
+  <script src="js/objects/chime.js"></script>
+  <!-- objects: agent modules -->
+  <script src="js/main.js"></script>
+</body>
+</html>

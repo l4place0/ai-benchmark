@@ -1,0 +1,16 @@
+{
+  "name": "world-execute-me-opus55-remake",
+  "version": "1.0.0",
+  "description": "Fidelity reproduction of Opus 5.5 world.execute(me); MV",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/server.mjs",
+    "render": "node scripts/render_video.mjs",
+    "render:vocaloid": "node scripts/render_video.mjs 212.35 world_execute_me_vocaloid_remake.mp4",
+    "snapshots": "node scripts/capture_snapshots.mjs"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

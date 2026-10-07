@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>时光画廊 · 沉浸式西方艺术史之旅</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./js/gallery3d/gallery.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "./vendor/three/three.module.js",
+        "three/addons/": "./vendor/three/addons/"
+      }
+    }
+  </script>
+  <script>
+    // 轻量诊断：捕获运行时错误供 QA 读取（不影响正常功能）
+    window.__errs = [];
+    window.addEventListener('error', (e) => window.__errs.push('E: ' + e.message + ' @' + (e.filename || '') + ':' + e.lineno));
+    window.addEventListener('unhandledrejection', (e) => window.__errs.push('P: ' + e.reason));
+    (() => { const ce = console.error.bind(console); console.error = (...a) => { try { window.__errs.push('C: ' + a.map(x => (x && x.stack) ? x.stack.split('\n')[0] : String(x)).join(' ')); } catch {} ce(...a); }; })();
+  </script>
+</head>
+<body>
+  <main id="app">
+    <section id="screen-welcome" class="screen"></section>
+    <section id="screen-timeline" class="screen"><div id="timeline-root"></div></section>
+    <section id="screen-gallery" class="screen">
+      <canvas id="gallery-canvas"></canvas>
+    </section>
+    <div id="detail-root"></div>
+  </main>
+  <div id="veil"></div>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

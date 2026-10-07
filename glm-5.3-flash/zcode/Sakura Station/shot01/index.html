@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>桜町駅 · Sakura Station — 三渲二樱花车站</title>
+<style>
+  html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #0c1016; }
+  #app { display: block; width: 100%; height: 100%; cursor: crosshair; }
+  .ui { position: fixed; font-family: "Yu Gothic UI", "Meiryo", "Noto Sans SC", "Microsoft YaHei", sans-serif; color: #2c3444; pointer-events: none; z-index: 10; }
+  #title { top: 18px; left: 22px; }
+  #title .jp { font-size: 30px; font-weight: 700; letter-spacing: 6px; color: #33415e; text-shadow: 0 1px 0 rgba(255,255,255,.7); }
+  #title .en { font-size: 12px; letter-spacing: 4px; color: #6d7a90; margin-top: 2px; }
+  #hint { bottom: 16px; left: 50%; transform: translateX(-50%); background: rgba(252,251,248,.82); border: 1px solid rgba(80,95,120,.25);
+          border-radius: 10px; padding: 8px 16px; font-size: 13px; backdrop-filter: blur(4px); box-shadow: 0 2px 12px rgba(30,40,60,.12); white-space: nowrap; }
+  #hint b { color: #c25e7c; font-weight: 600; }
+  #hint .k { display: inline-block; background: #3d4a63; color: #fff; border-radius: 4px; padding: 0 5px; font-size: 11px; margin: 0 1px; }
+  #loading { inset: 0; background: #f4f0ea; display: flex; flex-direction: column; align-items: center; justify-content: center;
+             transition: opacity .9s ease; z-index: 20; }
+  #loading .big { font-size: 34px; color: #46536e; letter-spacing: 10px; font-weight: 600; }
+  #loading .small { margin-top: 10px; font-size: 13px; color: #8b93a5; letter-spacing: 3px; }
+  #loading .petal { font-size: 30px; animation: fall 1.6s ease-in-out infinite alternate; display: inline-block; margin-bottom: 12px; }
+  @keyframes fall { from { transform: translateY(-6px) rotate(-12deg); } to { transform: translateY(6px) rotate(14deg); } }
+  #err { top: 12px; right: 12px; max-width: 46vw; background: rgba(90,20,24,.92); color: #ffe3e3; font-size: 12px;
+         padding: 8px 12px; border-radius: 8px; display: none; white-space: pre-wrap; z-index: 30; pointer-events: none; }
+  .hide { opacity: 0 !important; }
+</style>
+<script type="importmap">
+  { "imports": { "three": "./js/lib/three.module.js" } }
+</script>
+</head>
+<body>
+<canvas id="app"></canvas>
+<div id="title" class="ui"><div class="jp">桜町駅</div><div class="en">SAKURAMACHI STATION · SAKURA LINE</div></div>
+<div id="hint" class="ui">点击画面锁定视角漫步 &nbsp;·&nbsp; <span class="k">W</span><span class="k">A</span><span class="k">S</span><span class="k">D</span> 移动 &nbsp;<span class="k">Shift</span> 疾走 &nbsp;·&nbsp; 鼠标环视 &nbsp;·&nbsp; <span class="k">1</span>–<span class="k">5</span> 机位 &nbsp;<span class="k">Esc</span> 释放</div>
+<div id="loading" class="ui"><div class="petal">🌸</div><div class="big">桜町駅</div><div class="small">正在铺开春日的街道 …</div></div>
+<div id="err" class="ui"></div>
+<script type="module">
+  window.__errors = [];
+  const errBox = document.getElementById('err');
+  function showErr(m){ window.__errors.push(String(m)); errBox.style.display = 'block'; errBox.textContent = window.__errors.slice(-3).join('\n'); }
+  addEventListener('error', e => showErr(e.message || e));
+  addEventListener('unhandledrejection', e => showErr(e.reason && e.reason.message || e.reason));
+</script>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>

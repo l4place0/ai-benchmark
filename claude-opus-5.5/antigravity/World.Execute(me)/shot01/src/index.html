@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>world.execute(me); — procedural fan MV</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #000; overflow: hidden; }
+  #gl { display: block; width: 1920px; height: 1080px; }
+  body.preview #gl { width: 100vw; height: 56.25vw; max-height: 100vh; max-width: 177.78vh; margin: auto; }
+  #ui { position: fixed; left: 8px; bottom: 8px; color: #5ef2ff; font: 12px monospace; z-index: 9; }
+  #over { display: none; }
+</style>
+<script type="importmap">
+{ "imports": { "three": "../node_modules/three/build/three.module.js", "three/addons/": "../node_modules/three/examples/jsm/" } }
+</script>
+</head>
+<body>
+<canvas id="gl" width="1920" height="1080"></canvas>
+<canvas id="over" width="1920" height="1080"></canvas>
+<div id="ui"></div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

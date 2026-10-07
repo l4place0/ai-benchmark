@@ -1,0 +1,165 @@
+{
+  "bpm": 130.00225337239178,
+  "phaseSeconds": 0.244,
+  "beatCount": 446,
+  "cutCount": 114,
+  "method": "Essentia multifeature beat tracker, global spectral-flux phase fit, local onset refinement ±38ms; cuts quantized to 60fps. Vocal pickup events kept separate.",
+  "oldCutOffsets": [
+    {
+      "time": 3.58,
+      "nearestBeat": 3.48,
+      "errorMs": 100
+    },
+    {
+      "time": 7.19,
+      "nearestBeat": 7.17,
+      "errorMs": 20
+    },
+    {
+      "time": 10.9,
+      "nearestBeat": 10.86,
+      "errorMs": 40
+    },
+    {
+      "time": 16.04,
+      "nearestBeat": 15.93,
+      "errorMs": 110
+    },
+    {
+      "time": 22.15,
+      "nearestBeat": 21.95,
+      "errorMs": 200
+    },
+    {
+      "time": 29.28,
+      "nearestBeat": 29.31,
+      "errorMs": -30
+    },
+    {
+      "time": 33.01,
+      "nearestBeat": 33.02,
+      "errorMs": -10
+    },
+    {
+      "time": 36.77,
+      "nearestBeat": 36.69,
+      "errorMs": 80
+    },
+    {
+      "time": 40.36,
+      "nearestBeat": 40.4,
+      "errorMs": -40
+    },
+    {
+      "time": 44.04,
+      "nearestBeat": 44.09,
+      "errorMs": -50
+    },
+    {
+      "time": 50.95,
+      "nearestBeat": 51,
+      "errorMs": -50
+    },
+    {
+      "time": 58.65,
+      "nearestBeat": 58.86,
+      "errorMs": -210
+    },
+    {
+      "time": 66.17,
+      "nearestBeat": 66.242856,
+      "errorMs": -73
+    },
+    {
+      "time": 73.53,
+      "nearestBeat": 73.62,
+      "errorMs": -90
+    },
+    {
+      "time": 80.93,
+      "nearestBeat": 81.01,
+      "errorMs": -80
+    },
+    {
+      "time": 88.34,
+      "nearestBeat": 88.39631815384615,
+      "errorMs": -56
+    },
+    {
+      "time": 95.28,
+      "nearestBeat": 95.35,
+      "errorMs": -70
+    },
+    {
+      "time": 103.03,
+      "nearestBeat": 103.16,
+      "errorMs": -130
+    },
+    {
+      "time": 110.4,
+      "nearestBeat": 110.55,
+      "errorMs": -150
+    },
+    {
+      "time": 117.95,
+      "nearestBeat": 117.94,
+      "errorMs": 10
+    },
+    {
+      "time": 125.33,
+      "nearestBeat": 125.3,
+      "errorMs": 30
+    },
+    {
+      "time": 134.38,
+      "nearestBeat": 134.55,
+      "errorMs": -170
+    },
+    {
+      "time": 140.75,
+      "nearestBeat": 140.54,
+      "errorMs": 210
+    },
+    {
+      "time": 147.52,
+      "nearestBeat": 147.46,
+      "errorMs": 60
+    },
+    {
+      "time": 154.31,
+      "nearestBeat": 154.4,
+      "errorMs": -90
+    },
+    {
+      "time": 158.79,
+      "nearestBeat": 159.01,
+      "errorMs": -220
+    },
+    {
+      "time": 162.23,
+      "nearestBeat": 162.25,
+      "errorMs": -20
+    },
+    {
+      "time": 169.61,
+      "nearestBeat": 169.62567938461538,
+      "errorMs": -16
+    },
+    {
+      "time": 176.96,
+      "nearestBeat": 177,
+      "errorMs": -40
+    },
+    {
+      "time": 184.33,
+      "nearestBeat": 184.38,
+      "errorMs": -50
+    },
+    {
+      "time": 193.46,
+      "nearestBeat": 193.63,
+      "errorMs": -170
+    }
+  ],
+  "maxFrameQuantizationErrorMs": 7.653948717944559
+}

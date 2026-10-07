@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "width": 1920,
+  "height": 1080,
+  "fps": "60/1",
+  "frameCount": 12862,
+  "videoDuration": 214.366667,
+  "songDuration": 212.362449,
+  "audioDuration": 214.366667,
+  "audioChannels": 2,
+  "audioCodec": "aac",
+  "audioSampleRate": "44100",
+  "videoCodec": "h264",
+  "pixelFormat": "yuv420p",
+  "sizeBytes": 166795150,
+  "presentationTimestamps": {
+    "count": 12862,
+    "maximumDeviationSeconds": 3.333333467026023e-7,
+    "passed": true
+  },
+  "completeDecode": {
+    "passed": true,
+    "errors": ""
+  },
+  "audioSynchronization": {
+    "offsetSamples": 0,
+    "offsetMilliseconds": 0,
+    "correlation": 0.999096600943704
+  },
+  "motion": [
+    {
+      "time": 18,
+      "uniqueAdjacentFrames": 3,
+      "hashes": [
+        "a2bd4d1b2b30f9d625afc658410010760d71c6a2db411eaf412197bc6e9b7f4d",
+        "b1a1de1e10dcf8209a6a8bbae608ee49257a9b692740a0706ad016368cb99376",
+        "ff733fd8bca1edba7719cab686141b8d4c98dc570d2dc32b5ad22b188fb7b1ee"
+      ]
+    },
+    {
+      "time": 62,
+      "uniqueAdjacentFrames": 3,
+      "hashes": [
+        "05e5da2f20260e805bbe3c84bcd89e1fef41942dded7b6db32adec523ff8cc36",
+        "5f0e84b0aa0f4f9df6668c4b085268bba2a0cdc633a1f88c1a5543dfab52ca91",
+        "2b4d5c89c5c2285e4f715978a54bc6634f46492a07a549ffaeba5eafd0304a1d"
+      ]
+    },
+    {
+      "time": 150,
+      "uniqueAdjacentFrames": 3,
+      "hashes": [
+        "47083a9fa0c348c5e0c9d70bb72ad93ff2868f3b9046a14a137f2bab383f38c8",
+        "b0325d50dcc2730b9c42a753e089362dbaf617468f8883231c58892a4aafc57c",
+        "e87889aee4375173dc7f1288e411751bd1b56a7ab8e63c9305a199f4dcb101c9"
+      ]
+    },
+    {
+      "time": 200,
+      "uniqueAdjacentFrames": 3,
+      "hashes": [
+        "bb24b93af84a05d23432685d0581d6180a408d0654dad5414e4f64dc1718496f",
+        "3c4897497b558d4b2737cea4426ff6e6068bc4a3d1732668b40b478b5ae2cbd7",
+        "0488cca0e6c57e3ecbe04296deabb2d8f59a03f7e903530d6ba9942edc2d3d9c"
+      ]
+    }
+  ],
+  "versions": {
+    "node": "v26.4.0",
+    "ffmpeg": "ffmpeg version 9.0.2-full_build-www.gyan.dev Copyright (c) 2000-2026 the FFmpeg developers\r",
+    "ffprobe": "ffprobe version 9.0.2-full_build-www.gyan.dev Copyright (c) 2007-2026 the FFmpeg developers\r",
+    "chrome": "155.0.8059.39",
+    "renderer": "Canvas2D — Paper Theatre v2"
+  },
+  "sha256": "dc488550001e662e3ede0d9d4cf9f4d0e32fe9b3336f946e333e583a3a3c3ad1"
+}

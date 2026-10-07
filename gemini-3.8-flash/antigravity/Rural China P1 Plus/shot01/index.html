@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大型客家土楼村落 3D 体素景观 (Hakka Tulou Village Diorama)</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: #1a1c1e;
+            color: #e0e0e0;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+        }
+        #canvas-container {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        #ui-header {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(24, 26, 28, 0.88);
+            backdrop-filter: blur(10px);
+            padding: 16px 22px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 440px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+            pointer-events: auto;
+            z-index: 10;
+        }
+        h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #f5eedc;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .badge {
+            background: #c98a3b;
+            color: #1a140d;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+        p.subtitle {
+            font-size: 13px;
+            color: #a0a5aa;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .stat-item {
+            background: rgba(255, 255, 255, 0.04);
+            padding: 8px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .stat-val {
+            font-size: 15px;
+            font-weight: 700;
+            color: #e5b369;
+        }
+        .stat-lbl {
+            font-size: 11px;
+            color: #8c9096;
+            margin-top: 2px;
+        }
+        #controls-panel {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(24, 26, 28, 0.88);
+            backdrop-filter: blur(12px);
+            padding: 10px 18px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            display: flex;
+            gap: 10px;
+            box-shadow: 0 10px 36px rgba(0, 0, 0, 0.4);
+            z-index: 10;
+        }
+        button.view-btn {
+            background: rgba(255, 255, 255, 0.08);
+            color: #e0e4e8;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        button.view-btn:hover {
+            background: #c98a3b;
+            color: #1a1208;
+            border-color: #c98a3b;
+            transform: translateY(-2px);
+        }
+        button.view-btn.active {
+            background: #d89643;
+            color: #1a1208;
+            border-color: #d89643;
+        }
+        #legend-panel {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(24, 26, 28, 0.88);
+            backdrop-filter: blur(10px);
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 320px;
+            font-size: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+            z-index: 10;
+        }
+        .legend-title {
+            font-weight: 700;
+            color: #e5b369;
+            margin-bottom: 10px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 7px;
+            color: #bcc1c8;
+        }
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+        #loading-screen {
+            position: absolute;
+            inset: 0;
+            background: #141618;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            transition: opacity 0.4s ease;
+        }
+        .spinner {
+            width: 48px;
+            height: 48px;
+            border: 4px solid rgba(201, 138, 59, 0.2);
+            border-top-color: #c98a3b;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-bottom: 16px;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+
+    <!-- 100% 本地脚本，无任何外部 CDN 依赖 -->
+    <script src="three.min.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script src="GLTFLoader.js"></script>
+    <script src="model_data.js"></script>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <p id="loading-text" style="color: #c98a3b; font-weight: 600; font-size: 16px;">正在加载大型客家土楼村落 3D 模型...</p>
+        <p style="color: #727780; font-size: 13px; margin-top: 6px;">Voxel Art Hakka Tulou Village (35.4万体素 / 20.4万面)</p>
+    </div>
+
+    <div id="canvas-container"></div>
+
+    <div id="ui-header">
+        <h1>大型客家土楼村落 <span class="badge">Voxel Art</span></h1>
+        <p class="subtitle">福建山区客家聚落微缩景观：包含3座核心/次级/方形土楼、客家宗祠、13栋传统民居、道路水系、梯田茶园与植被生活景观。</p>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-val">3 座</div>
+                <div class="stat-lbl">客家土楼建筑</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-val">13 栋</div>
+                <div class="stat-lbl">传统客家民居</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-val">35.4万</div>
+                <div class="stat-lbl">离散体素单元</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="legend-panel">
+        <div class="legend-title">聚落空间图例 / Legend</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#d4a462;"></div>一号核心大圆楼 (外径34/4层/木环廊/祖堂)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#bc7c4e;"></div>二号中型圆楼 (外径24/风化老土墙/青苔瓦)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#daae72;"></div>三号客家方楼 (24x24/角楼飞檐/防御方堡)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#e0ccae;"></div>客家宗祠 (对称合院/燕尾脊翘角/门当户对)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#4a5056;"></div>中式灰瓦坡屋顶 (阶梯式层叠屋檐)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#548e9c;"></div>高山石滩溪流、半月风水塘与自流灌溉水渠</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#5c8e3e;"></div>高山竹林、古榕树、柿子树与等高线梯田茶园</div>
+    </div>
+
+    <div id="controls-panel">
+        <button class="view-btn active" onclick="setPresetView('iso', this)">主轴测全景 (Isometric)</button>
+        <button class="view-btn" onclick="setPresetView('diorama', this)">聚落航拍 (Diorama)</button>
+        <button class="view-btn" onclick="setPresetView('detail', this)">核心圆楼特写 (Detail)</button>
+        <button class="view-btn" onclick="setPresetView('relations', this)">村落空间结构 (Relations)</button>
+        <button class="view-btn" onclick="toggleLighting(this)">昼 / 暮光影 (Lighting)</button>
+    </div>
+
+    <script>
+        const container = document.getElementById('canvas-container');
+        const loadingScreen = document.getElementById('loading-screen');
+        const loadingText = document.getElementById('loading-text');
+
+        // Scene setup
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0xb8c8d8);
+
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1200);
+        camera.position.set(180, 160, 180);
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: "high-performance" });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.15;
+        container.appendChild(renderer.domElement);
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.05;
+        controls.target.set(0, 12, 0);
+        controls.maxDistance = 600;
+        controls.minDistance = 15;
+
+        // Lighting (Natural afternoon sunlight from Southwest)
+        const hemiLight = new THREE.HemisphereLight(0xfff8ee, 0x5a6a7c, 0.75);
+        scene.add(hemiLight);
+
+        const dirLight = new THREE.DirectionalLight(0xffeecc, 1.85);
+        dirLight.position.set(120, 180, 140);
+        dirLight.castShadow = true;
+        dirLight.shadow.mapSize.width = 2048;
+        dirLight.shadow.mapSize.height = 2048;
+        dirLight.shadow.camera.near = 10;
+        dirLight.shadow.camera.far = 600;
+        dirLight.shadow.camera.left = -120;
+        dirLight.shadow.camera.right = 120;
+        dirLight.shadow.camera.top = 120;
+        dirLight.shadow.camera.bottom = -120;
+        scene.add(dirLight);
+
+        // Helper to convert base64 to ArrayBuffer
+        function base64ToArrayBuffer(base64) {
+            const binaryString = window.atob(base64);
+            const len = binaryString.length;
+            const bytes = new Uint8Array(len);
+            for (let i = 0; i < len; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+            }
+            return bytes.buffer;
+        }
+
+        // Camera presets (Y-Up Centered)
+        const presetViews = {
+            iso: { pos: [180, 160, 180], target: [0, 12, 0] },
+            diorama: { pos: [140, 130, 200], target: [0, 10, 0] },
+            detail: { pos: [25, 45, 35], target: [-2, 12, -6] },
+            relations: { pos: [0, 180, 160], target: [0, 10, 0] }
+        };
+
+        // Apply materials and add model to scene
+        function onModelLoaded(gltf) {
+            const model = gltf.scene;
+            model.traverse((node) => {
+                if (node.isMesh) {
+                    node.castShadow = true;
+                    node.receiveShadow = true;
+                    if (node.material) {
+                        node.material.roughness = 0.85;
+                        node.material.metalness = 0.05;
+                    }
+                }
+            });
+            scene.add(model);
+            loadingScreen.style.opacity = '0';
+            setTimeout(() => { loadingScreen.style.display = 'none'; }, 400);
+            applyCameraView(presetViews.iso);
+        }
+
+        // Load model: Primary from embedded base64 (works 100% on file:// protocol without CORS), fallback to fetch
+        const loader = new THREE.GLTFLoader();
+
+        if (window.TULOU_GLB_BASE64) {
+            loadingText.innerText = "正在解析体素模型数据...";
+            try {
+                const buffer = base64ToArrayBuffer(window.TULOU_GLB_BASE64);
+                loader.parse(buffer, '', onModelLoaded, (err) => {
+                    console.error("Parse error:", err);
+                    tryFetch();
+                });
+            } catch (e) {
+                console.error("Base64 error:", e);
+                tryFetch();
+            }
+        } else {
+            tryFetch();
+        }
+
+        function tryFetch() {
+            loadingText.innerText = "正在通过网络加载 tulou_village.glb...";
+            loader.load('tulou_village.glb', onModelLoaded, undefined, (error) => {
+                console.error("Load error:", error);
+                loadingScreen.innerHTML = `
+                    <div style="background: rgba(30,32,36,0.95); padding: 30px; border-radius: 12px; border: 1px solid #c98a3b; text-align: center; max-width: 480px;">
+                        <h2 style="color: #e5b369; margin-bottom: 12px;">模型加载提示</h2>
+                        <p style="color: #bcc1c8; font-size: 14px; line-height: 1.6; margin-bottom: 16px;">
+                            浏览器对直接双击打开的本地 <code>file:///</code> 协议具有安全限制。<br>
+                            请点击下方按钮直接选择当前目录下的 <code>tulou_village.glb</code> 文件即可立即免限制载入：
+                        </p>
+                        <input type="file" id="file-picker" accept=".glb,.gltf" style="display:none;" onchange="handleFileSelect(event)">
+                        <button onclick="document.getElementById('file-picker').click()" style="background:#c98a3b; color:#1a140d; border:none; padding:10px 20px; font-weight:700; border-radius:6px; cursor:pointer;">
+                            📂 选择当前目录下的 tulou_village.glb
+                        </button>
+                    </div>
+                `;
+            });
+        }
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                loader.parse(e.target.result, '', onModelLoaded);
+            };
+            reader.readAsArrayBuffer(file);
+        }
+
+
+        function setPresetView(key, btn) {
+            document.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+            const v = presetViews[key];
+            if (v) applyCameraView(v);
+        }
+
+        function applyCameraView(v) {
+            const startPos = camera.position.clone();
+            const startTarget = controls.target.clone();
+            const endPos = new THREE.Vector3(v.pos[0], v.pos[1], v.pos[2]);
+            const endTarget = new THREE.Vector3(v.target[0], v.target[1], v.target[2]);
+
+            let t = 0;
+            const animateCam = () => {
+                t += 0.04;
+                if (t <= 1) {
+                    camera.position.lerpVectors(startPos, endPos, t);
+                    controls.target.lerpVectors(startTarget, endTarget, t);
+                    controls.update();
+                    requestAnimationFrame(animateCam);
+                } else {
+                    camera.position.copy(endPos);
+                    controls.target.copy(endTarget);
+                    controls.update();
+                }
+            };
+            animateCam();
+        }
+
+        let isSunset = false;
+        function toggleLighting(btn) {
+            isSunset = !isSunset;
+            if (isSunset) {
+                scene.background.setHex(0xb27860);
+                hemiLight.color.setHex(0xffaa77);
+                hemiLight.groundColor.setHex(0x334455);
+                dirLight.color.setHex(0xff7744);
+                dirLight.intensity = 2.2;
+                dirLight.position.set(240, 60, -80);
+            } else {
+                scene.background.setHex(0xb8c8d8);
+                hemiLight.color.setHex(0xffeed4);
+                hemiLight.groundColor.setHex(0x5a6878);
+                dirLight.color.setHex(0xffeed4);
+                dirLight.intensity = 1.8;
+                dirLight.position.set(160, 220, 140);
+            }
+        }
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        function animate() {
+            requestAnimationFrame(animate);
+            controls.update();
+            renderer.render(scene, camera);
+        }
+        animate();
+    </script>
+</body>
+</html>

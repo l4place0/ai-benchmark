@@ -1,0 +1,83 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>enctest</title></head>
+<body style="margin:0;background:#000">
+<canvas id="c" width="1920" height="1080" style="width:1920px;height:1080px"></canvas>
+<script>
+const VS = `#version 300 es
+void main(){ vec2 p = vec2((gl_VertexID<<1)&2, gl_VertexID&2); gl_Position = vec4(p*2.0-1.0,0,1); }`;
+const FS = `#version 300 es
+precision highp float;
+uniform vec2 uRes; uniform float uT; out vec4 o;
+float h(vec3 p){p=fract(p*0.3183099+vec3(0.71,0.113,0.419));p*=17.0;return fract(p.x*p.y*p.z*(p.x+p.y+p.z));}
+float n(vec3 x){vec3 i=floor(x),f=fract(x);f=f*f*(3.-2.*f);
+ return mix(mix(mix(h(i),h(i+vec3(1,0,0)),f.x),mix(h(i+vec3(0,1,0)),h(i+vec3(1,1,0)),f.x),f.y),
+            mix(mix(h(i+vec3(0,0,1)),h(i+vec3(1,0,1)),f.x),mix(h(i+vec3(0,1,1)),h(i+vec3(1,1,1)),f.x),f.y),f.z);}
+void main(){
+  vec2 uv=(gl_FragCoord.xy*2.0-uRes)/uRes.y;
+  vec3 col=vec3(0.02,0.03,0.06);
+  float r=length(uv);
+  float a=atan(uv.y,uv.x);
+  float ring=abs(r-0.55-0.06*sin(a*6.0+uT*2.0))-0.012;
+  col+=vec3(0.3,0.9,1.0)*smoothstep(0.01,0.0,ring);
+  float g=fract(uv.x*8.0), g2=fract(uv.y*8.0);
+  col+=vec3(0.1,0.3,0.5)*(1.0-smoothstep(0.0,0.02,min(g,g2)))*0.3;
+  col*=0.7+0.5*n(vec3(uv*6.0,uT*0.4));
+  o=vec4(col,1.0);
+}`;
+const c = document.getElementById('c');
+const gl = c.getContext('webgl2', { antialias: false, preserveDrawingBuffer: true, alpha: false, desynchronized: false });
+const mk = (t, s) => { const o = gl.createShader(t); gl.shaderSource(o, s); gl.compileShader(o);
+  if (!gl.getShaderParameter(o, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(o)); return o; };
+const pr = gl.createProgram();
+gl.attachShader(pr, mk(gl.VERTEX_SHADER, VS)); gl.attachShader(pr, mk(gl.FRAGMENT_SHADER, FS));
+gl.linkProgram(pr); gl.useProgram(pr);
+const uRes = gl.getUniformLocation(pr, 'uRes'), uT = gl.getUniformLocation(pr, 'uT');
+gl.uniform2f(uRes, c.width, c.height); gl.viewport(0, 0, c.width, c.height);
+
+function drawFrame(i) { gl.uniform1f(uT, i / 60); gl.drawArrays(gl.TRIANGLES, 0, 3); }
+
+window.T = {
+  async run(total, opts = {}) {
+    const FPS = 60, GOP = opts.gop || 120;
+    const tick = 1000000 / FPS;
+    let seq = 0, bytes = 0, chunks = 0;
+    const t0 = performance.now();
+    const enc = new VideoEncoder({
+      output: (chunk) => {
+        const buf = new Uint8Array(chunk.byteLength);
+        chunk.copyTo(buf);
+        bytes += buf.length; chunks++;
+        fetch('/chunk?seq=' + (seq++), { method: 'POST', body: buf }).catch(() => {});
+      },
+      error: (e) => { window.__encError = String(e); },
+    });
+    const cfg = {
+      codec: 'avc1.640028', width: 1920, height: 1080,
+      bitrate: opts.bitrate || 20000000, framerate: FPS,
+      latencyMode: 'quality', avc: { format: 'annexb' },
+    };
+    const sup = await VideoEncoder.isConfigSupported(cfg);
+    if (!sup.supported) throw new Error('config unsupported');
+    enc.configure(cfg);
+    for (let i = 0; i < total; i++) {
+      drawFrame(i);
+      const f = new VideoFrame(c, { timestamp: Math.round(i * tick), duration: Math.round(tick) });
+      enc.encode(f, { keyFrame: i % GOP === 0 });
+      f.close();
+      if (i % 60 === 59) { await enc.flush(); }
+      if (i % 300 === 299) {
+        fetch('/status', { method: 'POST', body: JSON.stringify({ done: i + 1, total, chunks, bytes, ms: performance.now() - t0 }) }).catch(() => {});
+      }
+    }
+    await enc.flush();
+    enc.close();
+    const ms = performance.now() - t0;
+    return { total, chunks, bytes, ms, fps: total / (ms / 1000), err: window.__encError || null,
+             sent: seq };
+  },
+  renderOne(i) { drawFrame(i); return true; },
+  glinfo() { const d = gl.getExtension('WEBGL_debug_renderer_info'); return d ? gl.getParameter(d.UNMASKED_RENDERER_WEBGL) : '?'; },
+};
+window.__ready = true;
+</script>
+</body></html>

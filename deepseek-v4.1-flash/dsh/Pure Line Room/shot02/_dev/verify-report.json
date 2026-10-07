@@ -1,0 +1,568 @@
+{
+  "booted": true,
+  "pageErrors": [],
+  "consoleErrors": [],
+  "network": [],
+  "notes": [],
+  "diag": {
+    "objects": 33,
+    "parts": 69,
+    "prims": 5011,
+    "nan": 0,
+    "moduleErrors": [],
+    "renderMs": 20.599999997764826,
+    "drawn": 4126,
+    "drawables": 4126,
+    "nightT": 0,
+    "parts_detail": [
+      "blinds/blinds-rail | 百叶帘 | 升降",
+      "blinds/blinds-stack | 百叶帘 | 升降",
+      "curtain/curtain-left | 窗帘 | 开合",
+      "curtain/curtain-right | 窗帘 | 开合",
+      "door/door-leaf | 门 | 点击开合",
+      "door/door-handle | 门把手 | 转动",
+      "switch/switch-plate | 开关面板",
+      "switch/switch-rocker | 灯光开关 | 切换昼夜",
+      "socket/socket | 插座 | 试试看",
+      "clock/clock-face | 挂钟 | 点击报时",
+      "wall-art/art-big | 装饰画 | 换一幅",
+      "wall-art/art-small-l | 装饰画 | 换一幅",
+      "wall-art/art-small-r | 装饰画 | 换一幅",
+      "shelf/shelf-plant | 小盆栽 | 碰一下",
+      "shelf/shelf-books | 两本书 | 挪一下",
+      "floor-lamp/lamp-floor | 落地灯 | 开关",
+      "coat-rack/coat-hooks | 衣帽钩 | 摆一下",
+      "coat-rack/coat | 挂衣 | 摆一下",
+      "desk/drawer-a | 抽屉 | 拉出/推回",
+      "desk/drawer-b | 抽屉 | 拉出/推回",
+      "desk/door | 柜门 | 开关",
+      "desk-lamp/lamp-switch | 台灯 | 开灯/关灯",
+      "mug/mug | 杯子 | 蒸汽",
+      "chair/chair | 椅子 | 拖动",
+      "globe/globe | 地球仪 | 拖动旋转",
+      "books/book-a | 书 | 抽出/推回",
+      "books/book-b | 书 | 抽出/推回",
+      "pen-cup/pen-cup | 笔筒 | 晃动",
+      "bookshelf/book-c5 | 书 | 抽出 / 推回",
+      "bookshelf/book-c4 | 书 | 抽出 / 推回",
+      "bookshelf/book-c3 | 书 | 抽出 / 推回",
+      "bookshelf/bookend | 书立 | 轻推",
+      "bookshelf/book-c2 | 书 | 抽出 / 推回",
+      "sideboard/door-left | 柜门 | 开 / 关",
+      "sideboard/door-right | 柜门 | 开 / 关",
+      "turntable/power | 唱片机 | 播放 / 停止",
+      "turntable/cover | 防尘盖 | 掀开 / 合上",
+      "rug/rug | 地毯 | 掀角",
+      "sofa/cushion-1 | 坐垫 | 按一下",
+      "sofa/cushion-2 | 坐垫 | 按一下",
+      "sofa/cushion-3 | 坐垫 | 按一下",
+      "sofa/pillow-1 | 抱枕 | 拍一下",
+      "sofa/pillow-2 | 抱枕 | 拍一下",
+      "sofa/pillow-3 | 抱枕 | 拍一下",
+      "coffee-table/body | 茶几 | 拖动",
+      "poster/poster | 海报 | 换一幅",
+      "ceiling-fan/body | 吊扇 | 点击切换档位",
+      "ceiling-fan/blades | 扇叶 | 点击切换档位",
+      "ceiling-fan/chain | 风扇拉链 | 点击切换档位",
+      "pendant-lamp/shade | 吊灯 | 点击开关",
+      "pendant-lamp/pull | 拉线开关 | 点击开关",
+      "wind-chime/frame | 风铃 | 点击拨动",
+      "wind-chime/tube-0 | 风铃管 | 点击拨动",
+      "wind-chime/tube-1 | 风铃管 | 点击拨动",
+      "wind-chime/tube-2 | 风铃管 | 点击拨动",
+      "wind-chime/tube-3 | 风铃管 | 点击拨动",
+      "wind-chime/tube-4 | 风铃管 | 点击拨动",
+      "mobile-cranes/branch | 纸鹤挂饰 | 点击旋转",
+      "mobile-cranes/crane-0 | 纸鹤 | 点击旋转",
+      "mobile-cranes/crane-1 | 纸鹤 | 点击旋转",
+      "mobile-cranes/crane-2 | 纸鹤 | 点击旋转",
+      "mobile-stars/spiral | 星星挂饰 | 点击旋转",
+      "mobile-stars/star-0 | 星星 | 点击旋转",
+      "mobile-stars/star-1 | 星星 | 点击旋转",
+      "mobile-stars/star-2 | 星星 | 点击旋转",
+      "mobile-stars/star-3 | 星星 | 点击旋转",
+      "mobile-stars/star-4 | 星星 | 点击旋转",
+      "mobile-stars/star-5 | 星星 | 点击旋转",
+      "mobile-stars/star-6 | 星星 | 点击旋转"
+    ]
+  },
+  "post": {
+    "night": true,
+    "lampOn": true,
+    "pendantOn": true,
+    "lampFloorOn": false,
+    "blindsOpen": 8.519097064444658e-69,
+    "curtainOpen": 0.9999999999999993,
+    "fanSpeed": 3,
+    "vinylPlaying": true,
+    "muted": false,
+    "hintDots": true
+  },
+  "sweep": [
+    {
+      "key": "curtain/curtain-right",
+      "hoverMatched": true,
+      "landedOn": "curtain/curtain-right",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "curtainOpen:1->0.8577902550813692"
+      ],
+      "error": null
+    },
+    {
+      "key": "bookshelf/book-c5",
+      "hoverMatched": true,
+      "landedOn": "bookshelf/book-c5",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "curtainOpen:0.3603834044485182->0.025825814203252813"
+      ],
+      "error": null
+    },
+    {
+      "key": "sofa/pillow-2",
+      "hoverMatched": true,
+      "landedOn": "sofa/pillow-2",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [],
+      "error": null
+    },
+    {
+      "key": "ceiling-fan/blades",
+      "hoverMatched": true,
+      "landedOn": "ceiling-fan/blades",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "fanSpeed:0->1"
+      ],
+      "error": null
+    },
+    {
+      "key": "poster/poster",
+      "hoverMatched": false,
+      "landedOn": "coffee-table/body",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "curtainOpen:0.0008859695087389414->0.0004938108220532356"
+      ],
+      "error": null
+    },
+    {
+      "key": "sofa/cushion-2",
+      "hoverMatched": true,
+      "landedOn": "sofa/cushion-2",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "curtainOpen:0.00013425322651482632->0"
+      ],
+      "error": null
+    },
+    {
+      "key": "wall-art/art-small-r",
+      "hoverMatched": true,
+      "landedOn": "wall-art/art-small-r",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [],
+      "error": null
+    },
+    {
+      "key": "pendant-lamp/shade",
+      "hoverMatched": true,
+      "landedOn": "pendant-lamp/shade",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "pendantOn:false->true",
+        "curtainOpen:0->2.738482574634593e-7"
+      ],
+      "error": null
+    },
+    {
+      "key": "sideboard/door-right",
+      "hoverMatched": true,
+      "landedOn": "sideboard/door-right",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "curtainOpen:7.780632021986534e-7->3.06803806376951e-7"
+      ],
+      "error": null
+    },
+    {
+      "key": "sofa/cushion-1",
+      "hoverMatched": true,
+      "landedOn": "sofa/cushion-1",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "curtainOpen:5.7137199807081716e-8->0"
+      ],
+      "error": null
+    },
+    {
+      "key": "wall-art/art-big",
+      "hoverMatched": true,
+      "landedOn": "wall-art/art-big",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [],
+      "error": null
+    },
+    {
+      "key": "curtain/curtain-left",
+      "hoverMatched": true,
+      "landedOn": "curtain/curtain-left",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "curtainOpen:0->0.04521208957011846"
+      ],
+      "error": null
+    },
+    {
+      "key": "chair/chair",
+      "hoverMatched": true,
+      "landedOn": "chair/chair",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "curtainOpen:0.524128398797181->0.8875022163577287"
+      ],
+      "error": null
+    },
+    {
+      "key": "coffee-table/body",
+      "hoverMatched": false,
+      "landedOn": "sofa/pillow-3",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [],
+      "error": null
+    },
+    {
+      "key": "turntable/cover",
+      "hoverMatched": true,
+      "landedOn": "turntable/cover",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [],
+      "error": null
+    },
+    {
+      "key": "wall-art/art-small-l",
+      "hoverMatched": false,
+      "landedOn": "wall-art/art-big",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "curtainOpen:0.9994582382168814->0.999273827441282"
+      ],
+      "error": null
+    },
+    {
+      "key": "sofa/pillow-3",
+      "hoverMatched": true,
+      "landedOn": "sofa/pillow-3",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "curtainOpen:0.9997147176541329->0.9999585795143855"
+      ],
+      "error": null
+    },
+    {
+      "key": "clock/clock-face",
+      "hoverMatched": true,
+      "landedOn": "clock/clock-face",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [],
+      "error": null
+    },
+    {
+      "key": "desk/door",
+      "hoverMatched": true,
+      "landedOn": "desk/door",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [],
+      "error": null
+    },
+    {
+      "key": "door/door-leaf",
+      "hoverMatched": true,
+      "landedOn": "door/door-leaf",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "curtainOpen:0.9999992468360572->0.9999993896565637"
+      ],
+      "error": null
+    },
+    {
+      "key": "books/book-b",
+      "hoverMatched": true,
+      "landedOn": "books/book-b",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "curtainOpen:0.9999997759430109->0.9999999742401253"
+      ],
+      "error": null
+    },
+    {
+      "key": "rug/rug",
+      "hoverMatched": true,
+      "landedOn": "rug/rug",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [],
+      "error": null
+    },
+    {
+      "key": "globe/globe",
+      "hoverMatched": true,
+      "landedOn": "globe/globe",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [],
+      "error": null
+    },
+    {
+      "key": "desk/drawer-b",
+      "hoverMatched": true,
+      "landedOn": "desk/drawer-b",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "curtainOpen:0.999999999297002->0.9999999994905081"
+      ],
+      "error": null
+    },
+    {
+      "key": "sofa/pillow-1",
+      "hoverMatched": true,
+      "landedOn": "sofa/pillow-1",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "curtainOpen:0.9999999998255352->0.9999999999857356"
+      ],
+      "error": null
+    },
+    {
+      "key": "bookshelf/book-c3",
+      "hoverMatched": true,
+      "landedOn": "bookshelf/book-c3",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [],
+      "error": null
+    },
+    {
+      "key": "bookshelf/bookend",
+      "hoverMatched": true,
+      "landedOn": "bookshelf/bookend",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [],
+      "error": null
+    },
+    {
+      "key": "blinds/blinds-stack",
+      "hoverMatched": true,
+      "landedOn": "blinds/blinds-stack",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "blindsOpen:1->0.6192723664108235",
+        "curtainOpen:0.9999999999993574->0.9999999999996613"
+      ],
+      "error": null
+    },
+    {
+      "key": "sofa/cushion-3",
+      "hoverMatched": true,
+      "landedOn": "sofa/cushion-3",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "curtainOpen:0.9999999999999122->1"
+      ],
+      "error": null
+    },
+    {
+      "key": "pen-cup/pen-cup",
+      "hoverMatched": false,
+      "landedOn": null,
+      "anyHover": false,
+      "hoverT": 0,
+      "stateChange": [
+        "blindsOpen:0.006072276844919606->0.0000953138674755597"
+      ],
+      "error": null
+    },
+    {
+      "key": "desk/drawer-a",
+      "hoverMatched": true,
+      "landedOn": "desk/drawer-a",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "blindsOpen:0->0.000042705149905078",
+        "curtainOpen:1->0.9999999999999993"
+      ],
+      "error": null
+    },
+    {
+      "key": "mug/mug",
+      "hoverMatched": true,
+      "landedOn": "mug/mug",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "blindsOpen:0.000015531977158489467->0"
+      ],
+      "error": null
+    },
+    {
+      "key": "sideboard/door-left",
+      "hoverMatched": true,
+      "landedOn": "sideboard/door-left",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [
+        "blindsOpen:0->1.8050686110532136e-7"
+      ],
+      "error": null
+    },
+    {
+      "key": "mobile-stars/spiral",
+      "hoverMatched": false,
+      "landedOn": "mobile-stars/star-0",
+      "anyHover": true,
+      "hoverT": 0.528,
+      "stateChange": [],
+      "error": null
+    }
+  ],
+  "hoverVisual": [
+    {
+      "key": "sofa/pillow-2",
+      "baseline": 0,
+      "hovered": 1568
+    },
+    {
+      "key": "ceiling-fan/blades",
+      "baseline": 1874,
+      "hovered": 2355
+    },
+    {
+      "key": "pendant-lamp/shade",
+      "baseline": 512,
+      "hovered": 2274
+    },
+    {
+      "key": "coffee-table/body",
+      "baseline": 0,
+      "hovered": 9600
+    },
+    {
+      "key": "rug/rug",
+      "baseline": 0,
+      "hovered": 14400
+    },
+    {
+      "key": "desk/drawer-b",
+      "baseline": 0,
+      "hovered": 1026
+    },
+    {
+      "key": "poster/poster",
+      "baseline": 0,
+      "hovered": 8344
+    },
+    {
+      "key": "sideboard/door-right",
+      "baseline": 84,
+      "hovered": 1477
+    },
+    {
+      "key": "sofa/cushion-2",
+      "baseline": 0,
+      "hovered": 1286
+    },
+    {
+      "key": "wall-art/art-big",
+      "baseline": 0,
+      "hovered": 9383
+    },
+    {
+      "key": "curtain/curtain-left",
+      "baseline": 582,
+      "hovered": 813
+    },
+    {
+      "key": "turntable/cover",
+      "baseline": 0,
+      "hovered": 1212
+    },
+    {
+      "key": "curtain/curtain-right",
+      "baseline": 1309,
+      "hovered": 1879
+    },
+    {
+      "key": "sofa/pillow-3",
+      "baseline": 0,
+      "hovered": 1497
+    },
+    {
+      "key": "door/door-leaf",
+      "baseline": 0,
+      "hovered": 6525
+    },
+    {
+      "key": "chair/chair",
+      "baseline": 38,
+      "hovered": 1739
+    },
+    {
+      "key": "sofa/cushion-1",
+      "baseline": 0,
+      "hovered": 3013
+    },
+    {
+      "key": "wall-art/art-small-r",
+      "baseline": 0,
+      "hovered": 3853
+    },
+    {
+      "key": "clock/clock-face",
+      "baseline": 252,
+      "hovered": 773
+    },
+    {
+      "key": "sofa/pillow-1",
+      "baseline": 0,
+      "hovered": 1178
+    },
+    {
+      "key": "desk/door",
+      "baseline": 0,
+      "hovered": 1179
+    },
+    {
+      "key": "sofa/cushion-3",
+      "baseline": 0,
+      "hovered": 1900
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>world.execute(me); — procedural fan MV</title>
+<style>
+  html,body { margin:0; padding:0; background:#000; overflow:hidden; height:100%; }
+  #stage { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; }
+  canvas { width:100vw; height:56.25vw; max-height:100vh; max-width:177.78vh; display:block;
+           image-rendering:auto; box-shadow:0 0 60px #000; }
+  #hud { position:absolute; left:10px; bottom:8px; color:#4a6a86; font:12px ui-monospace,monospace;
+         pointer-events:none; user-select:none; }
+  #err { position:absolute; inset:0; padding:24px; color:#ff8080; font:13px ui-monospace,monospace;
+         white-space:pre-wrap; overflow:auto; display:none; background:#0a0000cc; }
+</style>
+</head>
+<body>
+<div id="stage"><canvas id="c" width="1920" height="1080"></canvas></div>
+<div id="hud">world.execute(me); // procedural fan MV — [space] play/pause · [←/→] step · [t] time</div>
+<pre id="err"></pre>
+<script type="module">
+import { MV, DURATION, FPS, TOTAL_FRAMES } from './js/main.js';
+
+const canvas = document.getElementById('c');
+const errEl = document.getElementById('err');
+const q = new URLSearchParams(location.search);
+
+function fail(e) {
+  errEl.style.display = 'block';
+  errEl.textContent = 'ERROR\n' + (e && e.stack || e);
+  window.__error = String(e && e.stack || e);
+  console.error(e);
+}
+
+const api = {
+  ready: false, DURATION, FPS, TOTAL_FRAMES,
+  t: 0, playing: false,
+  async init() {
+    const mv = await MV.create(canvas, { assetBase: './assets' });
+    this.mv = mv;
+    this.mv.totalFrames = TOTAL_FRAMES;
+    this.ready = true;
+    const t0 = q.has('t') ? Number(q.get('t')) : 0;
+    this.renderTime(t0);
+    if (q.has('t') && q.has('still')) this.freeze = true;
+    if (q.has('capture')) this.freeze = true;
+    if (!this.freeze) this.loop();
+    return true;
+  },
+  /** deterministic render of a frame range, used by _dev/capture.mjs */
+  async capture(start = 0, end = TOTAL_FRAMES, bitrate = 24000000, seqBase = 0, accel = 'no-preference') {
+    const { captureAll } = await import('./js/capture.js');
+    this.captureResult = await captureAll(this.mv, { start, end, bitrate, seqBase, accel });
+    return this.captureResult;
+  },
+  renderTime(t) { this.t = t; return this.mv.renderTime(t); },
+  renderFrame(i) { return this.mv.renderFrame(i); },
+  seek(t) { this.t = t; this.mv.renderTime(t); },
+  loop() {
+    if (this.raf) return;
+    const step = () => {
+      this.raf = requestAnimationFrame(step);
+      if (!this.playing) return;
+      const now = performance.now();
+      if (this._last == null) this._last = now;
+      const dt = Math.min(0.25, (now - this._last) / 1000);
+      this._last = now;
+      this.t += dt;
+      if (this.t > DURATION) this.t = 0;
+      this.mv.renderTime(this.t);
+      if (this.audio) {
+        if (this.audio.currentTime < this.t - 0.25) this.audio.currentTime = this.t;
+      }
+    };
+    this.raf = requestAnimationFrame(step);
+  },
+  toggle() {
+    this.playing = !this.playing;
+    this._last = null;
+    if (this.playing && !this.audio) {
+      this.audio = new Audio('./assets/world.execute(me).mp3');
+      this.audio.currentTime = this.t;
+      this.audio.play().catch(() => {});
+    }
+    if (!this.playing && this.audio) this.audio.pause();
+  },
+};
+
+window.MV = api;
+addEventListener('keydown', (e) => {
+  if (e.code === 'Space') { api.toggle(); e.preventDefault(); }
+  else if (e.code === 'ArrowRight') api.seek(Math.min(DURATION, api.t + 1 / FPS));
+  else if (e.code === 'ArrowLeft') api.seek(Math.max(0, api.t - 1 / FPS));
+});
+
+api.init().catch(fail);
+</script>
+</body>
+</html>

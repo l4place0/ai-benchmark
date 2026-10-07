@@ -1,0 +1,238 @@
+/* css/style.css */
+/* 东方乡土建筑微缩体素景观 - 东方典雅现代交互界面 */
+
+:root {
+  --bg-primary: #181c20;
+  --panel-bg: rgba(26, 30, 36, 0.82);
+  --panel-border: rgba(210, 180, 140, 0.25);
+  --text-main: #f0f3f6;
+  --text-sub: #b0bac5;
+  --accent-earth: #c79255;
+  --accent-red: #c02c25;
+  --accent-hover: #e0aa6a;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+}
+
+#canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* UI 覆盖层 */
+#ui-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.interactive {
+  pointer-events: auto;
+}
+
+/* 顶部标题栏 */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-card {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  backdrop-filter: blur(12px);
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.title-card h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title-badge {
+  font-size: 0.75rem;
+  background: rgba(199, 146, 85, 0.2);
+  color: var(--accent-earth);
+  border: 1px solid var(--accent-earth);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.title-sub {
+  font-size: 0.8rem;
+  color: var(--text-sub);
+  margin-top: 4px;
+}
+
+/* 顶部操作快捷栏 */
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-action {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  color: var(--text-main);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-action:hover {
+  background: rgba(199, 146, 85, 0.25);
+  border-color: var(--accent-earth);
+  color: #fff;
+}
+
+/* 左侧控制浮窗：层级树 */
+.sidebar-panel {
+  position: absolute;
+  left: 20px;
+  top: 95px;
+  width: 250px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  backdrop-filter: blur(12px);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+.panel-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-earth);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 6px;
+}
+
+.layer-tree {
+  list-style: none;
+  font-size: 0.82rem;
+}
+
+.layer-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  color: var(--text-sub);
+  cursor: pointer;
+}
+
+.layer-item:hover {
+  color: #fff;
+}
+
+.layer-sub {
+  padding-left: 18px;
+}
+
+.layer-item input[type="checkbox"] {
+  accent-color: var(--accent-earth);
+  cursor: pointer;
+}
+
+/* 底部视图切换与状态描述 */
+.bottom-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.view-desc-badge {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  backdrop-filter: blur(12px);
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  color: #f7e6ce;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 600px;
+}
+
+.view-switcher {
+  display: flex;
+  gap: 8px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  backdrop-filter: blur(12px);
+  padding: 6px;
+  border-radius: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+.btn-view {
+  background: transparent;
+  border: none;
+  color: var(--text-sub);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-view:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-view.active {
+  background: var(--accent-earth);
+  color: #181c20;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(199, 146, 85, 0.4);
+}

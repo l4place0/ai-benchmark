@@ -1,0 +1,204 @@
+/* =============================================================================
+   Pure Line Room — style.css
+   The page is deliberately bare: a white sheet, one canvas, and three small
+   pieces of type. Everything expressive happens inside the drawing.
+   ========================================================================== */
+
+:root {
+  --ink: #1b1c24;
+  --ink-soft: rgba(27, 28, 36, 0.55);
+  --ink-faint: rgba(27, 28, 36, 0.32);
+  --paper: #ffffff;
+  --accent: #c98b3f;
+  --font: "Segoe UI", system-ui, -apple-system, "PingFang SC",
+          "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font);
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+#stage {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+  cursor: grab;
+  background: var(--paper);
+}
+#stage:active { cursor: grabbing; }
+
+/* ---------------------------------------------------------------- loading --- */
+#loading {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper);
+  color: var(--ink-soft);
+  letter-spacing: 0.22em;
+  font-size: 13px;
+  z-index: 40;
+  transition: opacity 0.7s ease;
+}
+#loading.gone { opacity: 0; pointer-events: none; }
+
+/* ------------------------------------------------------------------- title --- */
+#title {
+  position: fixed;
+  left: 40px;
+  bottom: 62px;
+  z-index: 20;
+  pointer-events: none;
+  transition: opacity 1.6s ease, transform 1.6s ease;
+}
+#title.fade { opacity: 0; transform: translateY(10px); }
+#title h1 {
+  margin: 0;
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: 0.30em;
+}
+#title .en {
+  margin: 4px 0 12px 2px;
+  font-size: 11px;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+#title .hint {
+  margin: 0 0 0 2px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--ink-faint);
+}
+
+/* -------------------------------------------------------------------- hud ---- */
+#hud {
+  position: fixed;
+  right: 26px;
+  top: 22px;
+  z-index: 20;
+  text-align: right;
+  pointer-events: none;
+}
+.mono {
+  font-family: "Cascadia Mono", "Consolas", ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+#clock {
+  font-size: 22px;
+  letter-spacing: 0.14em;
+}
+#state {
+  margin-top: 5px;
+  font-size: 11px;
+  letter-spacing: 0.10em;
+  color: var(--ink-soft);
+}
+
+/* ----------------------------------------------------------------- legend --- */
+#legend {
+  position: fixed;
+  left: 26px;
+  top: 24px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  letter-spacing: 0.10em;
+  color: var(--ink-faint);
+  pointer-events: none;
+}
+#legend .keys {
+  margin-top: 6px;
+  color: rgba(27, 28, 36, 0.24);
+}
+
+/* ------------------------------------------------------------------- mute --- */
+#mute {
+  position: fixed;
+  right: 26px;
+  bottom: 22px;
+  z-index: 22;
+  font: inherit;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--ink-soft);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(27, 28, 36, 0.18);
+  border-radius: 999px;
+  padding: 7px 14px;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+#mute:hover { color: var(--accent); border-color: var(--accent); }
+
+/* -------------------------------------------------------------------- tip --- */
+#tip {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 19;
+  pointer-events: none;
+  padding: 0;
+  opacity: 0;
+  transform-origin: 0 0;
+  transition: opacity 0.22s ease;
+  will-change: transform;
+}
+#tip.on { opacity: 1; }
+#tipName, #tipHint {
+  display: inline-block;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(27, 28, 36, 0.16);
+  padding: 3px 8px;
+  line-height: 1.35;
+}
+#tipName {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  transform: translate(14px, -30px);
+}
+#tipHint {
+  font-size: 10px;
+  letter-spacing: 0.10em;
+  color: var(--ink-soft);
+  transform: translate(14px, -30px);
+  margin-left: 6px;
+}
+#tip.on #tipHint { margin-left: 6px; }
+#tip::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: -4px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.9;
+}
+
+@media (max-width: 720px) {
+  #title { left: 20px; bottom: 54px; }
+  #title h1 { font-size: 24px; letter-spacing: 0.22em; }
+  #legend { font-size: 10px; }
+  #clock { font-size: 17px; }
+  #hud { right: 16px; top: 16px; }
+}

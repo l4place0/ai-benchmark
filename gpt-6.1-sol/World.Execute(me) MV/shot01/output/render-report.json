@@ -1,0 +1,11 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "frames": 12862,
+  "duration": 214.36666666666667,
+  "songDuration": 212.362449,
+  "elapsedSeconds": 908.282,
+  "errors": [],
+  "source": "Browser WebGL + Canvas, deterministic frame timestamps"
+}

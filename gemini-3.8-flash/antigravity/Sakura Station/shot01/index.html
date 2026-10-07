@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>三渲二樱花车站 (Sakuragaoka Station) - Three.js Anime Scene</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+
+  <!-- ES Module Import Map for Three.js -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./js/libs/three.module.js",
+      "three/addons/controls/OrbitControls.js": "./js/libs/OrbitControls.js",
+      "three/addons/": "./node_modules/three/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- 3D Canvas Viewport -->
+  <div id="canvas-container"></div>
+
+  <!-- Anime Glassmorphism HUD Overlay -->
+  <div id="ui-overlay">
+    <!-- Top Header Bar -->
+    <header class="top-bar">
+      <div class="glass-card brand-badge interactive">
+        <div class="brand-icon">🌸</div>
+        <div class="brand-text">
+          <h1>桜ヶ丘駅 <span>3渲2动画场景</span></h1>
+          <div class="brand-sub">SAKURAGAOKA STATION &middot; SPRING AFTERNOON</div>
+        </div>
+      </div>
+
+      <div class="top-controls interactive">
+        <!-- Time of Day Switcher -->
+        <select id="time-select" class="styled-select" title="调整环境光照与天空时间">
+          <option value="afternoon" selected>☀️ 春日午后 (16:00)</option>
+          <option value="sunset">🌅 暮色晚霞 (18:30)</option>
+          <option value="morning">🌤️ 清晨初曦 (07:30)</option>
+        </select>
+
+        <!-- Sound Synthesizer Toggle -->
+        <button id="btn-audio" class="ui-btn" title="开启/静音动画环境音效 (道口铃声、春风、列车)">
+          🔇 声音 (静音)
+        </button>
+
+        <!-- Fullscreen Button -->
+        <button id="btn-fullscreen" class="ui-btn" title="全屏显示">
+          ⛶ 全屏
+        </button>
+
+        <!-- Help Info Button -->
+        <button id="btn-help" class="ui-btn" title="操作说明">
+          ℹ️ 说明
+        </button>
+      </div>
+    </header>
+
+    <!-- Floating Roam Instruction Toast -->
+    <div id="roam-toast" class="roam-tip">
+      <span>🚶 漫游控制:</span>
+      <span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 行走</span>
+      <span><kbd>Shift</kbd> 奔跑</span>
+      <span>按住鼠标拖拽环视</span>
+    </div>
+
+    <!-- Bottom Controls & Camera Shots Palette -->
+    <footer class="bottom-bar">
+      <!-- 5 Cinematic Shots + Roam Mode -->
+      <div class="glass-card shots-palette interactive">
+        <span class="palette-label">🎬 镜头导览:</span>
+        <button id="btn-shot1" class="ui-btn shot-btn active">
+          主街透视 <span class="key-hint">1</span>
+        </button>
+        <button id="btn-shot2" class="ui-btn shot-btn">
+          电车站台 <span class="key-hint">2</span>
+        </button>
+        <button id="btn-shot3" class="ui-btn shot-btn">
+          铁路道口 <span class="key-hint">3</span>
+        </button>
+        <button id="btn-shot4" class="ui-btn shot-btn">
+          站前广场 <span class="key-hint">4</span>
+        </button>
+        <button id="btn-shot5" class="ui-btn shot-btn">
+          小镇俯瞰 <span class="key-hint">5</span>
+        </button>
+        <button id="btn-fps" class="ui-btn mode-btn">
+          🚶 自由漫游 <span class="key-hint">R</span>
+        </button>
+        <button id="btn-orbit" class="ui-btn mode-btn">
+          🔄 自由环视 <span class="key-hint">O</span>
+        </button>
+      </div>
+
+      <!-- Interactive Scene Actions -->
+      <div class="glass-card tools-palette interactive">
+        <!-- Cherry Blossom Storm (花吹雪) -->
+        <button id="btn-storm" class="ui-btn" title="切换风力与樱花花瓣飞舞强度">
+          🍃 柔和微风
+        </button>
+
+        <!-- Train Doors Toggle -->
+        <button id="btn-doors" class="ui-btn" title="切换电车滑动车门开闭">
+          🚪 电车车门 (开)
+        </button>
+
+        <!-- Train Horn Trigger -->
+        <button id="btn-horn" class="ui-btn" title="鸣响近郊通勤电车笛声">
+          📢 电车鸣笛 <span class="key-hint">H</span>
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Help / About Modal -->
+  <div id="help-modal" class="modal-backdrop">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h2>🌸 三渲二樱花车站 (Sakura Station)</h2>
+        <button id="modal-close-btn" class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>基于 <strong>Three.js</strong> 打造的日系二次元“三渲二”樱花车站场景，致敬新海诚动画电影风格与日本近郊小镇慢生活风情。</p>
+        <br>
+        <strong>🎮 交互操作指南：</strong>
+        <ul>
+          <li><strong>镜头导览 [1 - 5]：</strong> 点击或按数字键 1-5 快速切换经典电影级镜头（主街、站台、踏切、广场、俯瞰）。</li>
+          <li><strong>自由漫游 [R]：</strong> 进入第一人称行走视角，使用 <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 漫游小镇街道、站台与广场，按住 <kbd>Shift</kbd> 可奔跑，鼠标左键拖拽旋转视线。</li>
+          <li><strong>自由环视 [O]：</strong> 进入轨道视角，鼠标左键旋转、滚轮缩放、右键平移。</li>
+          <li><strong>花吹雪：</strong> 切换风速，触发大量樱花花瓣在空中螺旋翻滚与漂移。</li>
+          <li><strong>电车控制：</strong> 点击车门开闭按钮伴随发车铃音，按 <kbd>H</kbd> 触发双音列车鸣笛。</li>
+          <li><strong>声音开关 [M]：</strong> 启用基于 Web Audio API 合成的地道日式踏切警报铃声、春日微风与车站提示音。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Script Helper -->
+  <script>
+    document.getElementById('btn-help').addEventListener('click', () => {
+      document.getElementById('help-modal').classList.add('show');
+    });
+    document.getElementById('modal-close-btn').addEventListener('click', () => {
+      document.getElementById('help-modal').classList.remove('show');
+    });
+    document.getElementById('help-modal').addEventListener('click', (e) => {
+      if (e.target.id === 'help-modal') {
+        document.getElementById('help-modal').classList.remove('show');
+      }
+    });
+  </script>
+
+  <!-- Main Application Entry Module -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

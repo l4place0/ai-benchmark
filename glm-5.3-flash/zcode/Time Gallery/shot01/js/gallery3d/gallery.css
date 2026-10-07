@@ -1,0 +1,249 @@
+/* ============================================================
+   gallery.css — 3D 画廊 HUD（3D Agent 专属）
+   设计语言与全站统一：羊皮纸 #f3ecdd · 深蓝 #2b4a9b · 金 #c8a24b
+   动效缓动 cubic-bezier(.22,1,.36,1) / 弹性 cubic-bezier(.34,1.56,.64,1)
+   ============================================================ */
+
+#screen-gallery { background: #4a4238; }
+#screen-gallery canvas {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  display: block;
+}
+
+.g3d-root {
+  position: absolute; inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 20;
+  font-family: "Palatino Linotype", Georgia, "Microsoft YaHei", "PingFang SC", sans-serif;
+  --gp: #f3ecdd; --gp2: #f8f2e4; --gi: #2b4a9b; --gg: #c8a24b; --gd: #a3823a;
+  --gb: #3d2f22; --gb2: #6b5a41;
+  --ge: cubic-bezier(.22, 1, .36, 1);
+  --gs: cubic-bezier(.34, 1.56, .64, 1);
+}
+
+/* ---------------- 准星 ---------------- */
+.g3d-crosshair {
+  position: absolute; left: 50%; top: 50%;
+  width: 0; height: 0;
+  opacity: 1;
+  transition: opacity .3s var(--ge);
+}
+.g3d-crosshair .g3d-dot {
+  position: absolute; left: -2.5px; top: -2.5px;
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--gp);
+  box-shadow: 0 0 6px rgba(243, 236, 221, .9), 0 0 1px rgba(0,0,0,.6);
+}
+.g3d-crosshair .g3d-ring {
+  position: absolute; left: -11px; top: -11px;
+  width: 22px; height: 22px; border-radius: 50%;
+  border: 1.5px solid rgba(243, 236, 221, .75);
+  box-shadow: 0 0 8px rgba(0,0,0,.35);
+  transition: transform .3s var(--gs), border-color .3s var(--ge), opacity .3s var(--ge);
+}
+.g3d-crosshair.hover .g3d-ring {
+  transform: scale(1.55);
+  border-color: var(--gg);
+  opacity: 1;
+}
+.g3d-crosshair.hover .g3d-dot { background: var(--gg); }
+
+/* ---------------- 底部提示条 ---------------- */
+.g3d-hint {
+  position: absolute; left: 50%; bottom: 92px;
+  transform: translateX(-50%);
+  padding: 10px 24px;
+  border-radius: 999px;
+  background: rgba(243, 236, 221, .93);
+  border: 1px solid rgba(200, 162, 75, .65);
+  box-shadow: 0 6px 24px rgba(30, 22, 10, .35), inset 0 0 0 1px rgba(255,255,255,.35);
+  color: var(--gb);
+  font-size: 15px;
+  letter-spacing: .06em;
+  white-space: nowrap;
+  animation: g3d-hint-in .38s var(--gs) both;
+}
+.g3d-hint b {
+  display: inline-block;
+  min-width: 20px; text-align: center;
+  padding: 1px 7px; margin-right: 2px;
+  border-radius: 6px;
+  background: var(--gi); color: var(--gp);
+  font-size: 13px; font-weight: 800;
+}
+.g3d-hint[hidden] { display: none; }
+
+@keyframes g3d-hint-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(14px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+/* ---------------- 时期横幅 ---------------- */
+.g3d-banner {
+  position: absolute; left: 50%; top: 58px;
+  transform: translateX(-50%) translateY(-16px);
+  padding: 12px 42px;
+  font-size: 26px; font-weight: 900;
+  letter-spacing: .22em;
+  color: var(--gp);
+  text-shadow: 0 2px 14px rgba(20, 14, 6, .75), 0 0 2px rgba(20,14,6,.6);
+  opacity: 0;
+  transition: opacity .6s var(--ge), transform .6s var(--ge);
+  border-top: 1px solid rgba(200, 162, 75, .0);
+  border-bottom: 1px solid rgba(200, 162, 75, .0);
+}
+.g3d-banner.on {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  border-top: 1px solid rgba(200, 162, 75, .8);
+  border-bottom: 1px solid rgba(200, 162, 75, .8);
+}
+
+/* ---------------- 右上返回按钮 ---------------- */
+.g3d-exitbtn {
+  position: absolute; top: 20px; right: 22px;
+  pointer-events: auto;
+  padding: 10px 20px;
+  border: 1px solid rgba(200, 162, 75, .75);
+  border-radius: 999px;
+  background: rgba(243, 236, 221, .92);
+  color: var(--gb);
+  font-family: inherit;
+  font-size: 14.5px; font-weight: 700; letter-spacing: .1em;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(30, 22, 10, .3), inset 0 0 0 1px rgba(255,255,255,.4);
+  transition: transform .35s var(--gs), box-shadow .35s var(--ge), background .35s var(--ge), color .35s var(--ge);
+}
+.g3d-exitbtn:hover {
+  background: var(--gi);
+  color: var(--gp);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(24, 34, 78, .4), 0 0 0 1px rgba(200,162,75,.6);
+}
+.g3d-exitbtn:active {
+  transform: translateY(0) scale(.96);
+  transition-duration: .12s;
+}
+
+/* ---------------- 遮罩（引导 / 暂停） ---------------- */
+.g3d-overlay {
+  position: absolute; inset: 0;
+  pointer-events: auto;
+  display: flex; align-items: center; justify-content: center;
+  background:
+    radial-gradient(1200px 760px at 50% 42%, rgba(28, 22, 12, .38), rgba(20, 15, 8, .62)),
+    rgba(20, 15, 8, .18);
+  backdrop-filter: blur(2px);
+  opacity: 1;
+  transition: opacity .45s var(--ge);
+  animation: g3d-overlay-in .5s var(--ge) both;
+}
+.g3d-overlay[hidden] { display: none; }
+
+@keyframes g3d-overlay-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.g3d-card {
+  background: linear-gradient(168deg, var(--gp2), var(--gp) 58%, #ece2cc);
+  border: 1px solid rgba(200, 162, 75, .8);
+  border-radius: 18px;
+  box-shadow:
+    0 30px 80px rgba(15, 10, 4, .5),
+    inset 0 0 0 1px rgba(255, 255, 255, .5),
+    inset 0 0 60px rgba(200, 162, 75, .12);
+  padding: 40px 56px 36px;
+  text-align: center;
+  max-width: min(560px, 84vw);
+  animation: g3d-card-in .6s var(--gs) both;
+}
+@keyframes g3d-card-in {
+  from { opacity: 0; transform: translateY(26px) scale(.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.g3d-card-eyebrow {
+  font-size: 11.5px; font-weight: 700;
+  letter-spacing: .34em;
+  color: var(--gd);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.g3d-card-title {
+  margin: 0 0 6px;
+  font-size: 40px; font-weight: 900;
+  letter-spacing: .12em;
+  color: var(--gi);
+}
+.g3d-card-sub {
+  font-size: 16.5px; font-weight: 700;
+  letter-spacing: .14em;
+  color: var(--gb2);
+  margin-bottom: 22px;
+  min-height: 22px;
+}
+.g3d-keys {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 9px 16px;
+  font-size: 13.5px; color: var(--gb);
+  margin-bottom: 28px;
+  max-width: 420px;
+  margin-left: auto; margin-right: auto;
+}
+.g3d-keys kbd {
+  display: inline-block;
+  min-width: 22px;
+  padding: 2px 7px;
+  margin: 0 2px;
+  border: 1px solid rgba(61, 47, 34, .32);
+  border-bottom-width: 2.5px;
+  border-radius: 6px;
+  background: #fffdf6;
+  font-family: inherit;
+  font-size: 12px; font-weight: 700;
+  color: var(--gb);
+}
+
+.g3d-enter {
+  pointer-events: auto;
+  padding: 13px 44px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #3559b8, var(--gi) 55%, #20356f);
+  color: var(--gp);
+  font-family: inherit;
+  font-size: 17px; font-weight: 800; letter-spacing: .18em;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(24, 34, 78, .45), inset 0 1px 0 rgba(255,255,255,.28);
+  transition: transform .35s var(--gs), box-shadow .35s var(--ge), filter .35s var(--ge);
+}
+.g3d-enter:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.08);
+  box-shadow: 0 18px 40px rgba(24, 34, 78, .55), inset 0 1px 0 rgba(255,255,255,.28);
+}
+.g3d-enter:active {
+  transform: translateY(-1px) scale(.97);
+  transition-duration: .12s;
+}
+
+/* 暂停卡 */
+.g3d-card-pause { padding: 30px 52px; }
+.g3d-pause-title {
+  font-size: 28px; font-weight: 900; letter-spacing: .2em;
+  color: var(--gi); margin-bottom: 6px;
+}
+.g3d-pause-sub { font-size: 14px; color: var(--gb2); letter-spacing: .1em; }
+
+/* ---------------- 禁用态（详情面板打开 / 未进入）：隐藏准星与提示 ---------------- */
+.g3d-idle .g3d-crosshair { opacity: 0; }
+.g3d-idle .g3d-hint,
+.g3d-idle .g3d-banner { opacity: 0 !important; transition: none; }
+.g3d-idle .g3d-exitbtn {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s var(--ge);
+}

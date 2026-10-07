@@ -1,0 +1,126 @@
+{
+  "period": {
+    "id": "modernism",
+    "nameZh": "现代主义",
+    "nameEn": "Modernism",
+    "years": "1900–1950",
+    "introZh": "世纪之交的现代主义彻底挣脱了再现世界的枷锁：克里姆特在金箔与装饰纹样中融合情欲与死亡，蒙克用扭曲的线条呐喊出现代人的焦虑，康定斯基则让色彩与形状独立成诗、迈向纯粹抽象。绘画从“描绘所见”转向“表达内心”，现代艺术自此启程。",
+    "accent": "#b0433a",
+    "coverPaintingId": "gustav-klimt-the-kiss",
+    "painters": [
+      {
+        "nameZh": "古斯塔夫·克里姆特",
+        "nameEn": "Gustav Klimt",
+        "years": "1862–1918"
+      },
+      {
+        "nameZh": "爱德华·蒙克",
+        "nameEn": "Edvard Munch",
+        "years": "1863–1944"
+      },
+      {
+        "nameZh": "瓦西里·康定斯基",
+        "nameEn": "Wassily Kandinsky",
+        "years": "1866–1944"
+      }
+    ]
+  },
+  "paintings": [
+    {
+      "id": "gustav-klimt-the-kiss",
+      "file": "assets/paintings/modernism/gustav-klimt-the-kiss.jpg",
+      "titleZh": "吻",
+      "titleEn": "The Kiss",
+      "artistZh": "古斯塔夫·克里姆特",
+      "artistEn": "Gustav Klimt",
+      "artistBirth": "1862",
+      "artistDeath": "1918",
+      "year": "1907–1908",
+      "period": "modernism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 1927
+    },
+    {
+      "id": "gustav-klimt-portrait-of-adele-bloch-bauer-i",
+      "file": "assets/paintings/modernism/gustav-klimt-portrait-of-adele-bloch-bauer-i.jpg",
+      "titleZh": "阿黛尔·布洛赫-鲍尔肖像一号",
+      "titleEn": "Portrait of Adele Bloch-Bauer I",
+      "artistZh": "古斯塔夫·克里姆特",
+      "artistEn": "Gustav Klimt",
+      "artistBirth": "1862",
+      "artistDeath": "1918",
+      "year": "1907",
+      "period": "modernism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gustav_Klimt_046.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1415,
+      "height": 1416
+    },
+    {
+      "id": "edvard-munch-the-scream",
+      "file": "assets/paintings/modernism/edvard-munch-the-scream.jpg",
+      "titleZh": "呐喊",
+      "titleEn": "The Scream",
+      "artistZh": "爱德华·蒙克",
+      "artistEn": "Edvard Munch",
+      "artistBirth": "1863",
+      "artistDeath": "1944",
+      "year": "1893",
+      "period": "modernism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Edvard_Munch,_1893,_The_Scream,_oil,_tempera_and_pastel_on_cardboard,_91_x_73_cm,_National_Gallery_of_Norway.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 2383
+    },
+    {
+      "id": "edvard-munch-madonna",
+      "file": "assets/paintings/modernism/edvard-munch-madonna.jpg",
+      "titleZh": "圣母",
+      "titleEn": "Madonna",
+      "artistZh": "爱德华·蒙克",
+      "artistEn": "Edvard Munch",
+      "artistBirth": "1863",
+      "artistDeath": "1944",
+      "year": "1894–1895",
+      "period": "modernism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Edvard_Munch_-_Madonna_-_Google_Art_Project.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1920,
+      "height": 2533
+    },
+    {
+      "id": "wassily-kandinsky-composition-vii",
+      "file": "assets/paintings/modernism/wassily-kandinsky-composition-vii.jpg",
+      "titleZh": "构成第七号",
+      "titleEn": "Composition VII",
+      "artistZh": "瓦西里·康定斯基",
+      "artistEn": "Wassily Kandinsky",
+      "artistBirth": "1866",
+      "artistDeath": "1944",
+      "year": "1913",
+      "period": "modernism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vassily_Kandinsky,_1913_-_Composition_7.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1000,
+      "height": 657
+    },
+    {
+      "id": "wassily-kandinsky-the-blue-rider",
+      "file": "assets/paintings/modernism/wassily-kandinsky-the-blue-rider.jpg",
+      "titleZh": "蓝骑士",
+      "titleEn": "The Blue Rider",
+      "artistZh": "瓦西里·康定斯基",
+      "artistEn": "Wassily Kandinsky",
+      "artistBirth": "1866",
+      "artistDeath": "1944",
+      "year": "1903",
+      "period": "modernism",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wassily_Kandinsky,_1903,_The_Blue_Rider_(Der_Blaue_Reiter),_oil_on_canvas,_52.1_x_54.6_cm,_Stiftung_Sammlung_E.G._B%C3%BChrle,_Zurich.jpg",
+      "license": "Public Domain (Wikimedia Commons PD-Art)",
+      "width": 1232,
+      "height": 1183
+    }
+  ]
+}

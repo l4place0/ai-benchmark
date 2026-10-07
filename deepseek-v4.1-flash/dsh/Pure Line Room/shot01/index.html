@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>纯线房间 / Pure Line Room</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="stage"></canvas>
+
+  <div id="loading">正在绘制房间…</div>
+
+  <div id="hud">
+    <div id="clock" class="mono">--:--:--</div>
+    <div id="state" class="mono">—</div>
+  </div>
+
+  <div id="title">
+    <h1>纯线房间</h1>
+    <p class="en">Pure Line Room</p>
+    <p class="hint">拖拽环视 · 滚轮远近 · 点击房间里的东西</p>
+  </div>
+
+  <div id="legend">
+    <span>拖拽 &nbsp;环视</span>
+    <span>滚轮 &nbsp;远近</span>
+    <span>点击 &nbsp;操作</span>
+    <span>拖椅子 &nbsp;移动</span>
+    <span class="keys">M 静音 &nbsp;·&nbsp; L 开灯 &nbsp;·&nbsp; C 合墙 &nbsp;·&nbsp; R 复位 &nbsp;·&nbsp; T 锁定时间</span>
+  </div>
+
+  <button id="mute" type="button">声音：开 (M)</button>
+  <div id="tip">
+    <div id="tipName"></div>
+    <div id="tipHint"></div>
+  </div>
+
+  <script src="js/math3d.js"></script>
+  <script src="js/scene.js"></script>
+  <script src="js/palette.js"></script>
+  <script src="js/anim.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/interact.js"></script>
+  <script src="js/outdoor.js"></script>
+  <script src="js/room.js"></script>
+  <script src="js/desk.js"></script>
+  <script src="js/shelf.js"></script>
+  <script src="js/lounge.js"></script>
+  <script src="js/ceiling.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

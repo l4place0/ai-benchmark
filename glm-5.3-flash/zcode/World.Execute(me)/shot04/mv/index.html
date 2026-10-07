@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>world.execute(me); - fan program</title>
+<style>html,body{margin:0;padding:0;background:#000;overflow:hidden}canvas{display:block}</style>
+</head>
+<body>
+<canvas id="c" data-w="1920" data-h="1080"></canvas>
+<script src="../config/timeline.js"></script>
+<script>
+// tiny CommonJS loader for the src modules (served over local http)
+(async function () {
+  const files = ['glutil', 'programs', 'text', 'scenes', 'main'];
+  const loaded = {};
+  window.require = function (name) {
+    const key = name.replace('./', '').replace('.js', '');
+    if (!loaded[key]) throw new Error('require before load: ' + key);
+    return loaded[key];
+  };
+  for (const f of files) {
+    const src = await (await fetch('src/' + f + '.js')).text();
+    const module = { exports: {} };
+    try {
+      new Function('module', 'require', 'exports', src)(module, window.require, module.exports);
+    } catch (e) {
+      document.title = 'ERR ' + f;
+      console.error('load fail', f, e);
+      throw e;
+    }
+    loaded[f] = module.exports;
+  }
+  const MV = require('main');
+  window.MV = MV;
+  const canvas = document.getElementById('c');
+  const params = new URLSearchParams(location.search);
+  if (params.get('w')) canvas.dataset.w = params.get('w');
+  if (params.get('h')) canvas.dataset.h = params.get('h');
+  if (params.get('iso')) MV.iso = params.get('iso');
+  try {
+    MV.init(canvas);
+  } catch (e) {
+    document.title = 'INIT_FAIL';
+    console.error(e && e.stack || e);
+    window.__err = String(e && e.stack || e);
+    return;
+  }
+  window.__err = null;
+  document.title = 'READY';
+  // deterministic single-frame render entry
+  window.__renderFrame = function (tSec, frame) {
+    MV.render(tSec, frame);
+    return true;
+  };
+  window.__readPixels = function () { return MV.readPixelsRGBA(); };
+  // render+read in ONE evaluate (avoids preserveDrawingBuffer slow paths)
+  window.__rr = function (tSec, frame) {
+    MV.render(tSec, frame);
+    return MV.readPixelsRGBA();
+  };
+  // render farm protocol: node sends {cmd:'frame',frame,t}; page replies [f64 header][RGBA]
+  if (params.get('farm')) {
+    const ws = new WebSocket('ws://' + location.host + '/ws');
+    ws.binaryType = 'arraybuffer';
+    ws.onopen = () => { window.__farmReady = true; };
+    ws.onmessage = (ev) => {
+      const msg = JSON.parse(ev.data);
+      if (msg.cmd !== 'frame') return;
+      const px = window.__rr(msg.t, msg.frame);
+      const out = new ArrayBuffer(8 + px.length);
+      const dv = new DataView(out);
+      dv.setFloat64(0, msg.frame, true);
+      new Uint8Array(out, 8).set(px);
+      ws.send(out);
+    };
+  }
+  window.__info = function () {
+    const gl = MV.gl;
+    const dbg = gl.getExtension('WEBGL_debug_renderer_info');
+    return {
+      renderer: dbg ? gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER),
+      w: MV.W, h: MV.H,
+    };
+  };
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>东方地域建筑体素景观「客家土楼」 (Hakka Tulou Voxel Diorama)</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏮</text></svg>">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./node_modules/three/build/three.module.js",
+      "three/addons/": "./node_modules/three/examples/jsm/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <!-- 3D 渲染画布容器 -->
+  <div id="canvas-container"></div>
+
+  <!-- 交互 UI 覆盖层 -->
+  <div id="ui-overlay">
+    <!-- 顶部状态栏 -->
+    <header class="top-header">
+      <div class="title-card interactive">
+        <h1>
+          客家土楼 · 体素微缩景观
+          <span class="title-badge">VOXEL ART</span>
+        </h1>
+        <div class="title-sub">FUJIAN HAKKA TULOU &middot; EASTERN VERNACULAR ARCHITECTURE</div>
+      </div>
+
+      <div class="header-actions interactive">
+        <button id="btn-capture" class="btn-action" title="截取当前高分辨率画面">
+          📸 截取画面
+        </button>
+        <button id="btn-export-obj" class="btn-action" title="导出标准 Wavefront OBJ 3D 模型">
+          💾 导出 3D 模型 (.obj)
+        </button>
+      </div>
+    </header>
+
+    <!-- 左侧层级控制面板 -->
+    <aside class="sidebar-panel interactive">
+      <div class="panel-title">
+        <span>📂 建筑与环境对象层级</span>
+      </div>
+      <ul class="layer-tree">
+        <li class="layer-item">
+          <input type="checkbox" id="layer-terrain" data-layer="Terrain" checked>
+          <label for="layer-terrain">🏞️ Terrain (地形与梯田)</label>
+        </li>
+        <li class="layer-item">
+          <input type="checkbox" id="layer-tulou" data-layer="Tulou" checked>
+          <label for="layer-tulou">🏰 Tulou (客家土楼主体)</label>
+        </li>
+        <li class="layer-item layer-sub">
+          <input type="checkbox" id="layer-outerwall" data-layer="Tulou/OuterWall" checked>
+          <label for="layer-outerwall">🧱 OuterWall (夯土外墙)</label>
+        </li>
+        <li class="layer-item layer-sub">
+          <input type="checkbox" id="layer-roof" data-layer="Tulou/Roof" checked>
+          <label for="layer-roof">🏮 Roof (中式瓦屋顶)</label>
+        </li>
+        <li class="layer-item layer-sub">
+          <input type="checkbox" id="layer-floors" data-layer="Tulou/Floors" checked>
+          <label for="layer-floors">🪵 Floors (三层楼板)</label>
+        </li>
+        <li class="layer-item layer-sub">
+          <input type="checkbox" id="layer-courtyard" data-layer="Tulou/Courtyard" checked>
+          <label for="layer-courtyard">⛲ Courtyard (中央天井与古井)</label>
+        </li>
+        <li class="layer-item layer-sub">
+          <input type="checkbox" id="layer-corridor" data-layer="Tulou/WoodenCorridor" checked>
+          <label for="layer-corridor">⛩️ WoodenCorridor (木质环廊)</label>
+        </li>
+        <li class="layer-item layer-sub">
+          <input type="checkbox" id="layer-doors" data-layer="Tulou/Doors" checked>
+          <label for="layer-doors">🚪 Doors (内部房门)</label>
+        </li>
+        <li class="layer-item layer-sub">
+          <input type="checkbox" id="layer-windows" data-layer="Tulou/Windows" checked>
+          <label for="layer-windows">🪟 Windows (外墙门窗)</label>
+        </li>
+        <li class="layer-item layer-sub">
+          <input type="checkbox" id="layer-stairs" data-layer="Tulou/Staircases" checked>
+          <label for="layer-stairs">🪜 Staircases (木质楼梯)</label>
+        </li>
+        <li class="layer-item layer-sub">
+          <input type="checkbox" id="layer-entrance" data-layer="Tulou/Entrance" checked>
+          <label for="layer-entrance">⛩️ Entrance (南向主入口)</label>
+        </li>
+        <li class="layer-item">
+          <input type="checkbox" id="layer-vegetation" data-layer="Vegetation" checked>
+          <label for="layer-vegetation">🎋 Vegetation (毛竹林与古松)</label>
+        </li>
+        <li class="layer-item">
+          <input type="checkbox" id="layer-props" data-layer="VillageProps" checked>
+          <label for="layer-props">🌾 VillageProps (乡村器物)</label>
+        </li>
+        <li class="layer-item">
+          <input type="checkbox" id="layer-lighting" data-layer="Lighting" checked>
+          <label for="layer-lighting">💡 Lighting (自然日光与灯笼)</label>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- 底部镜头切换与描述 -->
+    <footer class="bottom-bar">
+      <div id="view-description" class="view-desc-badge interactive">
+        3/4 等距微缩鸟瞰图 - 完整展示客家土楼三层环形结构、中央天井与山地乡村
+      </div>
+
+      <nav class="view-switcher interactive">
+        <button class="btn-view active" data-view="isometric_overview">
+          📐 3/4 等距全景
+        </button>
+        <button class="btn-view" data-view="architecture_detail">
+          ⛩️ 建筑入口特写
+        </button>
+        <button class="btn-view" data-view="courtyard_interior">
+          ⛲ 天井环廊特写
+        </button>
+        <button class="btn-view" data-view="topdown">
+          🎯 正俯视同心圆
+        </button>
+        <button class="btn-view" data-view="village_landscape">
+          🏞️ 乡村山地远景
+        </button>
+      </nav>
+    </footer>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
