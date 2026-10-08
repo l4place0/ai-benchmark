@@ -1,8 +1,0 @@
-file 'D:/l4place/Workspace/ai-benchmark/claude-opus-5.5/antigravity/World.Execute(me)/shot01/out/snaps/snap_0031.80.jpg'
-file 'D:/l4place/Workspace/ai-benchmark/claude-opus-5.5/antigravity/World.Execute(me)/shot01/out/snaps/snap_0062.00.jpg'
-file 'D:/l4place/Workspace/ai-benchmark/claude-opus-5.5/antigravity/World.Execute(me)/shot01/out/snaps/snap_0068.50.jpg'
-file 'D:/l4place/Workspace/ai-benchmark/claude-opus-5.5/antigravity/World.Execute(me)/shot01/out/snaps/snap_0087.00.jpg'
-file 'D:/l4place/Workspace/ai-benchmark/claude-opus-5.5/antigravity/World.Execute(me)/shot01/out/snaps/snap_0093.00.jpg'
-file 'D:/l4place/Workspace/ai-benchmark/claude-opus-5.5/antigravity/World.Execute(me)/shot01/out/snaps/snap_0106.00.jpg'
-file 'D:/l4place/Workspace/ai-benchmark/claude-opus-5.5/antigravity/World.Execute(me)/shot01/out/snaps/snap_0146.00.jpg'
-file 'D:/l4place/Workspace/ai-benchmark/claude-opus-5.5/antigravity/World.Execute(me)/shot01/out/snaps/snap_0204.50.jpg'

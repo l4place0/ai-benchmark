@@ -1,4 +1,0 @@
-file 'D:/l4place/Workspace/ai-benchmark/claude-opus-5.5/antigravity/World.Execute(me)/shot01/out/snaps/snap_0008.00.jpg'
-file 'D:/l4place/Workspace/ai-benchmark/claude-opus-5.5/antigravity/World.Execute(me)/shot01/out/snaps/snap_0018.00.jpg'
-file 'D:/l4place/Workspace/ai-benchmark/claude-opus-5.5/antigravity/World.Execute(me)/shot01/out/snaps/snap_0026.00.jpg'
-file 'D:/l4place/Workspace/ai-benchmark/claude-opus-5.5/antigravity/World.Execute(me)/shot01/out/snaps/snap_0031.00.jpg'
