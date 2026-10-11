@@ -7,7 +7,7 @@
 
 ## 🎮 How to Play
 
-Open [index.html](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/My%20Soul%20Knight/shot01/index.html) directly in any modern web browser.
+Open [index.html](index.html) directly in any modern web browser.
 
 ### Key Controls
 | Action | Input |

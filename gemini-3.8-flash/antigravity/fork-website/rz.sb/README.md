@@ -65,14 +65,14 @@ flowchart TD
 
 | 页面名称 | 路由地址 | 核心功能与呈现特性 | 截图对照 |
 | :--- | :--- | :--- | :--- |
-| **1. 首页随笔流** | `/` | 5 大分类标签滑块平滑切换、AI 终端与生活多媒体博文流、抽屉评论、搜索过滤 | [`gen_copy_desktop.png`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/fork-website/rz.sb/gen_copy_desktop.png) |
-| **2. 关于我** | `/about` | 站长 INFJ 极客履历、技术栈、全套联系方式、持有域名列表、博客建站信息、免责声明 | [`replica_about.png`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/fork-website/rz.sb/replica_about.png) |
-| **3. 历史归档** | `/archives` | 分类文章数胶囊统计、全量标签云（#端侧智能 #骑行 #主机游戏...）、按年份时间轴及文章跳链 | [`replica_archives.png`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/fork-website/rz.sb/replica_archives.png) |
-| **4. 互动留言板** | `/messages` | 820+ 访客留言展示、真实评论上墙与回复嵌套；底部留言框支持 75 款 Emoji/OwO 颜文字即点即插 | [`replica_messages.png`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/fork-website/rz.sb/replica_messages.png) |
-| **5. 相册中心** | `/photos` | 《重庆赛博游记》、《江南烟雨行》、《绿茵看球》、《CR7》等相册集，支持 ViewImage 原生灯箱浏览 | [`replica_photos.png`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/fork-website/rz.sb/replica_photos.png) |
-| **6. 朋友圈动态** | `/circle` | 博友动态聚合时间线（"友圈 每隔2h刷新"），包含博友网站头像、博文标题链接、正文摘要及发布时间 | [`replica_circle.png`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/fork-website/rz.sb/replica_circle.png) |
-| **7. 友情链接** | `/links` | 精选博友卡片（含站点预览大图、头像、简介、"逛一逛"按钮）及友链申请须知 | [`replica_links.png`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/fork-website/rz.sb/replica_links.png) |
-| **8. 文章详情页** | `/archives/362/` | 完整正文排版阅读页，包含分类标签、三联代码终端实景大图、版权信息卡、点赞、多级评论 | [`replica_post_detail.png`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/fork-website/rz.sb/replica_post_detail.png) |
+| **1. 首页随笔流** | `/` | 5 大分类标签滑块平滑切换、AI 终端与生活多媒体博文流、抽屉评论、搜索过滤 | [`gen_copy_desktop.png`](gen_copy_desktop.png) |
+| **2. 关于我** | `/about` | 站长 INFJ 极客履历、技术栈、全套联系方式、持有域名列表、博客建站信息、免责声明 | [`replica_about.png`](replica_about.png) |
+| **3. 历史归档** | `/archives` | 分类文章数胶囊统计、全量标签云（#端侧智能 #骑行 #主机游戏...）、按年份时间轴及文章跳链 | [`replica_archives.png`](replica_archives.png) |
+| **4. 互动留言板** | `/messages` | 820+ 访客留言展示、真实评论上墙与回复嵌套；底部留言框支持 75 款 Emoji/OwO 颜文字即点即插 | [`replica_messages.png`](replica_messages.png) |
+| **5. 相册中心** | `/photos` | 《重庆赛博游记》、《江南烟雨行》、《绿茵看球》、《CR7》等相册集，支持 ViewImage 原生灯箱浏览 | [`replica_photos.png`](replica_photos.png) |
+| **6. 朋友圈动态** | `/circle` | 博友动态聚合时间线（"友圈 每隔2h刷新"），包含博友网站头像、博文标题链接、正文摘要及发布时间 | [`replica_circle.png`](replica_circle.png) |
+| **7. 友情链接** | `/links` | 精选博友卡片（含站点预览大图、头像、简介、"逛一逛"按钮）及友链申请须知 | [`replica_links.png`](replica_links.png) |
+| **8. 文章详情页** | `/archives/362/` | 完整正文排版阅读页，包含分类标签、三联代码终端实景大图、版权信息卡、点赞、多级评论 | [`replica_post_detail.png`](replica_post_detail.png) |
 
 ---
 

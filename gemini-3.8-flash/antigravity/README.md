@@ -8,8 +8,8 @@
 
 | 项目名称 | 任务编号 | 评测结论 | 交付规格 | 核心技术方案 | 详情文档 |
 |---|---|---|---|---|---|
-| **Mili《world.execute(me);》同人 MV** | `shot02` | **C** | 1080p @ 60FPS (216.0s, 383.56MB) | AI 概念生图垫底 + 3D/4D 拓扑几何投影 + 锁步无头压制 | [`README.md`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/README.md) |
-| **桜ヶ丘駅 (Sakuragaoka Station)** | `shot02` | **不合格** | Three.js 交互式 WebGL 场景 | 3-Step 离散色阶、法线反转外壳描边、Canvas 程序化贴图 | [`README.md`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/Sakura%20Station/shot02/README.md) |
+| **Mili《world.execute(me);》同人 MV** | `shot02` | **C** | 1080p @ 60FPS (216.0s, 383.56MB) | AI 概念生图垫底 + 3D/4D 拓扑几何投影 + 锁步无头压制 | [`README.md`](World.Execute%28me%29%20MV/shot02/README.md) |
+| **桜ヶ丘駅 (Sakuragaoka Station)** | `shot02` | **不合格** | Three.js 交互式 WebGL 场景 | 3-Step 离散色阶、法线反转外壳描边、Canvas 程序化贴图 | [`README.md`](Sakura%20Station/shot02/README.md) |
 
 ---
 
@@ -21,8 +21,8 @@
   > **“你只是生成了几份图片资产，然后充当MV背景图，并没有灵活的利用起这些资产，如拆分图片，做一些Live2d动效等。”**  
   > （针对自评“高质量”的反驳与纠正）**“错误的，质量也不高。”**
 * **评测时间：** 2026-10-03
-* **工作目录：** [`World.Execute(me)/shot02/`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/)
-* **交付成片：** [`World.Execute(me)/shot02/output/shot02.mp4`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/output/shot02.mp4) (1080p @ 60.00 FPS, 03:36.00 / 216.00s, 383,557,796 bytes)
+* **工作目录：** [`World.Execute(me)/shot02/`](World.Execute%28me%29%20MV/shot02/)
+* **交付成片：** [`World.Execute(me)/shot02/output/shot02.mp4`](World.Execute%28me%29%20MV/shot02/output/shot02.mp4) (1080p @ 60.00 FPS, 03:36.00 / 216.00s, 383,557,796 bytes)
 
 ---
 
@@ -53,7 +53,7 @@
 
 5. **无头逐帧锁步渲染与压制交付**
    * 调起无头 Edge/Chromium 浏览器，通过双向 WebSocket 与本地 FFmpeg 建立锁步数据流；
-   * 完整压制 **12,960 帧**，耗时 1658 秒，零掉帧、零撕裂生成 H.264 High Profile (CRF 18) + 320kbps AAC 完整成片视频 [`shot02.mp4`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/output/shot02.mp4)。
+   * 完整压制 **12,960 帧**，耗时 1658 秒，零掉帧、零撕裂生成 H.264 High Profile (CRF 18) + 320kbps AAC 完整成片视频 [`shot02.mp4`](World.Execute%28me%29%20MV/shot02/output/shot02.mp4)。
 
 ---
 
@@ -112,8 +112,8 @@
 
 | 产物名称 | 文件路径 | 状态与参数 |
 |---|---|---|
-| **最终成片视频** | [`World.Execute(me)/shot02/output/shot02.mp4`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/output/shot02.mp4) | 1920×1080, 60fps, 216.0s, 383.56MB |
-| **同人封面** | [`World.Execute(me)/shot02/output/cover.jpg`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/output/cover.jpg) | 1920×1080 JPG |
-| **各乐章关键帧截图** | [`World.Execute(me)/shot02/output/snapshots/`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/output/snapshots/) | 12 张 1080p 全景逐乐章截图 |
-| **交互式播放器** | [`World.Execute(me)/shot02/start.bat`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/start.bat) | 浏览器双击一键启动本地体验 |
-| **子任务详细文档** | [`World.Execute(me)/shot02/README.md`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/README.md) | 包含完整乐章解析、复盘分析与改进方案 |
+| **最终成片视频** | [`World.Execute(me)/shot02/output/shot02.mp4`](World.Execute%28me%29%20MV/shot02/output/shot02.mp4) | 1920×1080, 60fps, 216.0s, 383.56MB |
+| **同人封面** | [`World.Execute(me)/shot02/output/cover.jpg`](World.Execute%28me%29%20MV/shot02/output/cover.jpg) | 1920×1080 JPG |
+| **各乐章关键帧截图** | [`World.Execute(me)/shot02/output/snapshots/`](World.Execute%28me%29%20MV/shot02/output/snapshots/) | 12 张 1080p 全景逐乐章截图 |
+| **交互式播放器** | [`World.Execute(me)/shot02/start.bat`](World.Execute%28me%29%20MV/shot02/start.bat) | 浏览器双击一键启动本地体验 |
+| **子任务详细文档** | [`World.Execute(me)/shot02/README.md`](World.Execute%28me%29%20MV/shot02/README.md) | 包含完整乐章解析、复盘分析与改进方案 |

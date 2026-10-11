@@ -13,7 +13,7 @@
   > （针对自评“高质量”的反驳与纠正）**“错误的，质量也不高。”**
 * **评测时间：** 2026-10-03
 * **工作目录：** `World.Execute(me)/shot02`
-* **交付成片：** [`World.Execute(me)/shot02/output/shot02.mp4`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/output/shot02.mp4) (1080p @ 60FPS, 216.00s, 383.56 MB)
+* **交付成片：** [`World.Execute(me)/shot02/output/shot02.mp4`](output/shot02.mp4) (1080p @ 60FPS, 216.00s, 383.56 MB)
 
 ---
 
@@ -106,11 +106,11 @@
 
 | 交付成果 | 规格标准 | 实测结果 | 状态 |
 |---|---|---|---|
-| **最终成片** | 1080p @ 60FPS MP4 | 1920×1080, 60.00 fps, H.264 High Profile, 320kbps AAC | **已交付** ([`output/shot02.mp4`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/output/shot02.mp4)) |
+| **最终成片** | 1080p @ 60FPS MP4 | 1920×1080, 60.00 fps, H.264 High Profile, 320kbps AAC | **已交付** ([`output/shot02.mp4`](output/shot02.mp4)) |
 | **视频时长** | 覆盖歌曲全长 ($\ge 212.35\text{s}$) | **216.00 秒**（含 3.65 秒尾声结算与光标闪烁） | **已达标** |
 | **总合成帧数** | 严格逐帧锁步计算 | **12,960 帧**（纯函数确定性，零掉帧） | **已达标** |
 | **文件大小** | CRF 18 高保真码率 | **383,557,796 字节 (~365 MB)**，码率 14.2 Mbps | **已达标** |
 | **环境隔离** | 严禁污染工作区外部 | 100% 收敛于 `World.Execute(me)/shot02/` 内部 | **已达标** |
-| **乐章截图** | 覆盖全曲关键乐章 | 12 张 1080p 乐章全景截图存放在 [`output/snapshots/`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/output/snapshots/) | **已生成** |
-| **同人封面** | 官方画集封面 | [`output/cover.jpg`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/output/cover.jpg) | **已生成** |
-| **交互播放器** | 浏览器实时原声播放 | 支持毫秒级拖拽、乐章秒选、全屏播放 ([`start.bat`](file:///d:/l4place/Workspace/ai-benchmark/gemini-3.8-flash/antigravity/World.Execute%28me%29/shot02/start.bat)) | **已交付** |
+| **乐章截图** | 覆盖全曲关键乐章 | 12 张 1080p 乐章全景截图存放在 [`output/snapshots/`](output/snapshots/) | **已生成** |
+| **同人封面** | 官方画集封面 | [`output/cover.jpg`](output/cover.jpg) | **已生成** |
+| **交互播放器** | 浏览器实时原声播放 | 支持毫秒级拖拽、乐章秒选、全屏播放 ([`start.bat`](start.bat)) | **已交付** |
